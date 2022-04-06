@@ -1,7 +1,7 @@
 import { createRequire as __WEBPACK_EXTERNAL_createRequire } from "module";
 /******/ var __webpack_modules__ = ({
 
-/***/ 7351:
+/***/ 351:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -26,8 +26,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issue = exports.issueCommand = void 0;
-const os = __importStar(__nccwpck_require__(2037));
-const utils_1 = __nccwpck_require__(5278);
+const os = __importStar(__nccwpck_require__(37));
+const utils_1 = __nccwpck_require__(278);
 /**
  * Commands
  *
@@ -99,7 +99,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 2186:
+/***/ 186:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -133,12 +133,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getIDToken = exports.getState = exports.saveState = exports.group = exports.endGroup = exports.startGroup = exports.info = exports.notice = exports.warning = exports.error = exports.debug = exports.isDebug = exports.setFailed = exports.setCommandEcho = exports.setOutput = exports.getBooleanInput = exports.getMultilineInput = exports.getInput = exports.addPath = exports.setSecret = exports.exportVariable = exports.ExitCode = void 0;
-const command_1 = __nccwpck_require__(7351);
+const command_1 = __nccwpck_require__(351);
 const file_command_1 = __nccwpck_require__(717);
-const utils_1 = __nccwpck_require__(5278);
-const os = __importStar(__nccwpck_require__(2037));
-const path = __importStar(__nccwpck_require__(1017));
-const oidc_utils_1 = __nccwpck_require__(8041);
+const utils_1 = __nccwpck_require__(278);
+const os = __importStar(__nccwpck_require__(37));
+const path = __importStar(__nccwpck_require__(17));
+const oidc_utils_1 = __nccwpck_require__(41);
 /**
  * The code to exit an action
  */
@@ -445,9 +445,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issueCommand = void 0;
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const fs = __importStar(__nccwpck_require__(7147));
-const os = __importStar(__nccwpck_require__(2037));
-const utils_1 = __nccwpck_require__(5278);
+const fs = __importStar(__nccwpck_require__(147));
+const os = __importStar(__nccwpck_require__(37));
+const utils_1 = __nccwpck_require__(278);
 function issueCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -465,7 +465,7 @@ exports.issueCommand = issueCommand;
 
 /***/ }),
 
-/***/ 8041:
+/***/ 41:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -480,9 +480,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OidcClient = void 0;
-const http_client_1 = __nccwpck_require__(9925);
-const auth_1 = __nccwpck_require__(3702);
-const core_1 = __nccwpck_require__(2186);
+const http_client_1 = __nccwpck_require__(925);
+const auth_1 = __nccwpck_require__(702);
+const core_1 = __nccwpck_require__(186);
 class OidcClient {
     static createHttpClient(allowRetry = true, maxRetry = 10) {
         const requestOptions = {
@@ -548,7 +548,7 @@ exports.OidcClient = OidcClient;
 
 /***/ }),
 
-/***/ 5278:
+/***/ 278:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -594,7 +594,7 @@ exports.toCommandProperties = toCommandProperties;
 
 /***/ }),
 
-/***/ 3702:
+/***/ 702:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -659,14 +659,14 @@ exports.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHand
 
 /***/ }),
 
-/***/ 9925:
+/***/ 925:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const http = __nccwpck_require__(3685);
-const https = __nccwpck_require__(5687);
-const pm = __nccwpck_require__(6443);
+const http = __nccwpck_require__(685);
+const https = __nccwpck_require__(687);
+const pm = __nccwpck_require__(443);
 let tunnel;
 var HttpCodes;
 (function (HttpCodes) {
@@ -1085,7 +1085,7 @@ class HttpClient {
         if (useProxy) {
             // If using proxy, need tunnel
             if (!tunnel) {
-                tunnel = __nccwpck_require__(4294);
+                tunnel = __nccwpck_require__(294);
             }
             const agentOptions = {
                 maxSockets: maxSockets,
@@ -1203,7 +1203,7 @@ exports.HttpClient = HttpClient;
 
 /***/ }),
 
-/***/ 6443:
+/***/ 443:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1267,6986 +1267,6931 @@ exports.checkBypass = checkBypass;
 
 /***/ }),
 
-/***/ 1508:
+/***/ 68:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+/* module decorator */ module = __nccwpck_require__.nmd(module);
 
+const colorConvert = __nccwpck_require__(931);
 
-var object        = __nccwpck_require__(6561)
-  , stringifiable = __nccwpck_require__(8080)
-  , forOf         = __nccwpck_require__(6756);
-
-module.exports = function (text, style) {
-	var result = "";
-	text = stringifiable(text);
-	object(style);
-	forOf(text, function (char) { result += style[char] || char; });
-	return result;
+const wrapAnsi16 = (fn, offset) => function () {
+	const code = fn.apply(colorConvert, arguments);
+	return `\u001B[${code + offset}m`;
 };
 
+const wrapAnsi256 = (fn, offset) => function () {
+	const code = fn.apply(colorConvert, arguments);
+	return `\u001B[${38 + offset};5;${code}m`;
+};
 
-/***/ }),
+const wrapAnsi16m = (fn, offset) => function () {
+	const rgb = fn.apply(colorConvert, arguments);
+	return `\u001B[${38 + offset};2;${rgb[0]};${rgb[1]};${rgb[2]}m`;
+};
 
-/***/ 6241:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var d              = __nccwpck_require__(4571)
-  , assign         = __nccwpck_require__(1377)
-  , forEach        = __nccwpck_require__(9575)
-  , map            = __nccwpck_require__(7289)
-  , primitiveSet   = __nccwpck_require__(2796)
-  , setPrototypeOf = __nccwpck_require__(7165)
-  , memoize        = __nccwpck_require__(5841)
-  , memoizeMethods = __nccwpck_require__(1936)
-  , sgr            = __nccwpck_require__(8139)
-  , supportsColor  = __nccwpck_require__(4947);
-
-var mods           = sgr.mods
-  , join           = Array.prototype.join
-  , defineProperty = Object.defineProperty
-  , max            = Math.max
-  , min            = Math.min
-  , variantModes   = primitiveSet("_fg", "_bg")
-  , xtermMatch     = process.platform === "win32" ? __nccwpck_require__(9035) : null;
-
-var getFn;
-
-// Some use cli-color as: console.log(clc.red('Error!'));
-// Which is inefficient as on each call it configures new clc object
-// with memoization we reuse once created object
-var memoized = memoize(function (scope, mod) {
-	return defineProperty(getFn(), "_cliColorData", d(assign({}, scope._cliColorData, mod)));
-});
-
-var proto = Object.create(
-	Function.prototype,
-	assign(
-		map(mods, function (mod) {
-			return d.gs(function () { return memoized(this, mod); });
-		}),
-		memoizeMethods({
-			// xterm (255) color
-			xterm: d(function (code) {
-				code = isNaN(code) ? 255 : min(max(code, 0), 255);
-				return defineProperty(
-					getFn(), "_cliColorData",
-					d(
-						assign({}, this._cliColorData, {
-							_fg: [xtermMatch ? xtermMatch[code] : "38;5;" + code, 39]
-						})
-					)
-				);
-			}),
-			bgXterm: d(function (code) {
-				code = isNaN(code) ? 255 : min(max(code, 0), 255);
-				return defineProperty(
-					getFn(), "_cliColorData",
-					d(
-						assign({}, this._cliColorData, {
-							_bg: [xtermMatch ? xtermMatch[code] + 10 : "48;5;" + code, 49]
-						})
-					)
-				);
-			})
-		})
-	)
-);
-
-var getEndRe = memoize(function (code) { return new RegExp("\x1b\\[" + code + "m", "g"); }, {
-	primitive: true
-});
-
-getFn = function () {
-	return setPrototypeOf(
-		function self(/* …msg*/) {
-			var start = ""
-			  , end = ""
-			  , msg = join.call(arguments, " ")
-			  , conf = self._cliColorData
-			  , hasAnsi = sgr.hasCSI(msg);
-			forEach(
-				conf,
-				function (mod, key) {
-					end = sgr(mod[1]) + end;
-					start += sgr(mod[0]);
-					if (hasAnsi) {
-						msg = msg.replace(getEndRe(mod[1]), variantModes[key] ? sgr(mod[0]) : "");
-					}
-				},
-				null,
-				true
-			);
-			if (!supportsColor.isColorSupported()) return msg;
-			return start + msg + end;
+function assembleStyles() {
+	const codes = new Map();
+	const styles = {
+		modifier: {
+			reset: [0, 0],
+			// 21 isn't widely supported and 22 does the same thing
+			bold: [1, 22],
+			dim: [2, 22],
+			italic: [3, 23],
+			underline: [4, 24],
+			inverse: [7, 27],
+			hidden: [8, 28],
+			strikethrough: [9, 29]
 		},
-		proto
-	);
-};
+		color: {
+			black: [30, 39],
+			red: [31, 39],
+			green: [32, 39],
+			yellow: [33, 39],
+			blue: [34, 39],
+			magenta: [35, 39],
+			cyan: [36, 39],
+			white: [37, 39],
+			gray: [90, 39],
 
-module.exports = Object.defineProperties(getFn(), {
-	xtermSupported: d(!xtermMatch),
-	_cliColorData: d("", {})
+			// Bright color
+			redBright: [91, 39],
+			greenBright: [92, 39],
+			yellowBright: [93, 39],
+			blueBright: [94, 39],
+			magentaBright: [95, 39],
+			cyanBright: [96, 39],
+			whiteBright: [97, 39]
+		},
+		bgColor: {
+			bgBlack: [40, 49],
+			bgRed: [41, 49],
+			bgGreen: [42, 49],
+			bgYellow: [43, 49],
+			bgBlue: [44, 49],
+			bgMagenta: [45, 49],
+			bgCyan: [46, 49],
+			bgWhite: [47, 49],
+
+			// Bright color
+			bgBlackBright: [100, 49],
+			bgRedBright: [101, 49],
+			bgGreenBright: [102, 49],
+			bgYellowBright: [103, 49],
+			bgBlueBright: [104, 49],
+			bgMagentaBright: [105, 49],
+			bgCyanBright: [106, 49],
+			bgWhiteBright: [107, 49]
+		}
+	};
+
+	// Fix humans
+	styles.color.grey = styles.color.gray;
+
+	for (const groupName of Object.keys(styles)) {
+		const group = styles[groupName];
+
+		for (const styleName of Object.keys(group)) {
+			const style = group[styleName];
+
+			styles[styleName] = {
+				open: `\u001B[${style[0]}m`,
+				close: `\u001B[${style[1]}m`
+			};
+
+			group[styleName] = styles[styleName];
+
+			codes.set(style[0], style[1]);
+		}
+
+		Object.defineProperty(styles, groupName, {
+			value: group,
+			enumerable: false
+		});
+
+		Object.defineProperty(styles, 'codes', {
+			value: codes,
+			enumerable: false
+		});
+	}
+
+	const ansi2ansi = n => n;
+	const rgb2rgb = (r, g, b) => [r, g, b];
+
+	styles.color.close = '\u001B[39m';
+	styles.bgColor.close = '\u001B[49m';
+
+	styles.color.ansi = {
+		ansi: wrapAnsi16(ansi2ansi, 0)
+	};
+	styles.color.ansi256 = {
+		ansi256: wrapAnsi256(ansi2ansi, 0)
+	};
+	styles.color.ansi16m = {
+		rgb: wrapAnsi16m(rgb2rgb, 0)
+	};
+
+	styles.bgColor.ansi = {
+		ansi: wrapAnsi16(ansi2ansi, 10)
+	};
+	styles.bgColor.ansi256 = {
+		ansi256: wrapAnsi256(ansi2ansi, 10)
+	};
+	styles.bgColor.ansi16m = {
+		rgb: wrapAnsi16m(rgb2rgb, 10)
+	};
+
+	for (let key of Object.keys(colorConvert)) {
+		if (typeof colorConvert[key] !== 'object') {
+			continue;
+		}
+
+		const suite = colorConvert[key];
+
+		if (key === 'ansi16') {
+			key = 'ansi';
+		}
+
+		if ('ansi16' in suite) {
+			styles.color.ansi[key] = wrapAnsi16(suite.ansi16, 0);
+			styles.bgColor.ansi[key] = wrapAnsi16(suite.ansi16, 10);
+		}
+
+		if ('ansi256' in suite) {
+			styles.color.ansi256[key] = wrapAnsi256(suite.ansi256, 0);
+			styles.bgColor.ansi256[key] = wrapAnsi256(suite.ansi256, 10);
+		}
+
+		if ('rgb' in suite) {
+			styles.color.ansi16m[key] = wrapAnsi16m(suite.rgb, 0);
+			styles.bgColor.ansi16m[key] = wrapAnsi16m(suite.rgb, 10);
+		}
+	}
+
+	return styles;
+}
+
+// Make the export immutable
+Object.defineProperty(module, 'exports', {
+	enumerable: true,
+	get: assembleStyles
 });
 
 
 /***/ }),
 
-/***/ 6470:
-/***/ ((module) => {
-
-
-
-module.exports = "\x07";
-
-
-/***/ }),
-
-/***/ 9828:
+/***/ 391:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+/* MIT license */
+var cssKeywords = __nccwpck_require__(510);
 
+// NOTE: conversions should only return primitive values (i.e. arrays, or
+//       values that give correct `typeof` results).
+//       do not use box values types (i.e. Number(), String(), etc.)
 
-var generate          = __nccwpck_require__(2906)
-  , from              = __nccwpck_require__(2406)
-  , iterable          = __nccwpck_require__(3205)
-  , isValue           = __nccwpck_require__(2285)
-  , stringifiable     = __nccwpck_require__(1481)
-  , repeat            = __nccwpck_require__(5650)
-  , getStrippedLength = __nccwpck_require__(5478);
+var reverseKeywords = {};
+for (var key in cssKeywords) {
+	if (cssKeywords.hasOwnProperty(key)) {
+		reverseKeywords[cssKeywords[key]] = key;
+	}
+}
 
-var push = Array.prototype.push;
+var convert = module.exports = {
+	rgb: {channels: 3, labels: 'rgb'},
+	hsl: {channels: 3, labels: 'hsl'},
+	hsv: {channels: 3, labels: 'hsv'},
+	hwb: {channels: 3, labels: 'hwb'},
+	cmyk: {channels: 4, labels: 'cmyk'},
+	xyz: {channels: 3, labels: 'xyz'},
+	lab: {channels: 3, labels: 'lab'},
+	lch: {channels: 3, labels: 'lch'},
+	hex: {channels: 1, labels: ['hex']},
+	keyword: {channels: 1, labels: ['keyword']},
+	ansi16: {channels: 1, labels: ['ansi16']},
+	ansi256: {channels: 1, labels: ['ansi256']},
+	hcg: {channels: 3, labels: ['h', 'c', 'g']},
+	apple: {channels: 3, labels: ['r16', 'g16', 'b16']},
+	gray: {channels: 1, labels: ['gray']}
+};
 
-module.exports = function (inputRows /*, options*/) {
-	var options = Object(arguments[1])
-	  , colsMeta = []
-	  , colsOptions = options.columns || []
-	  , rows = [];
+// hide .channels and .labels properties
+for (var model in convert) {
+	if (convert.hasOwnProperty(model)) {
+		if (!('channels' in convert[model])) {
+			throw new Error('missing channels property: ' + model);
+		}
 
-	from(iterable(inputRows), function (row) {
-		var rowRows = [[]];
-		from(iterable(row), function (cellStr, columnIndex) {
-			var cellRows = stringifiable(cellStr).split("\n");
-			while (cellRows.length > rowRows.length) rowRows.push(generate(columnIndex, ""));
-			cellRows.forEach(function (cellRow, rowRowIndex) {
-				rowRows[rowRowIndex][columnIndex] = cellRow;
-			});
-		});
-		push.apply(rows, rowRows);
-	});
+		if (!('labels' in convert[model])) {
+			throw new Error('missing channel labels property: ' + model);
+		}
 
+		if (convert[model].labels.length !== convert[model].channels) {
+			throw new Error('channel and label counts mismatch: ' + model);
+		}
+
+		var channels = convert[model].channels;
+		var labels = convert[model].labels;
+		delete convert[model].channels;
+		delete convert[model].labels;
+		Object.defineProperty(convert[model], 'channels', {value: channels});
+		Object.defineProperty(convert[model], 'labels', {value: labels});
+	}
+}
+
+convert.rgb.hsl = function (rgb) {
+	var r = rgb[0] / 255;
+	var g = rgb[1] / 255;
+	var b = rgb[2] / 255;
+	var min = Math.min(r, g, b);
+	var max = Math.max(r, g, b);
+	var delta = max - min;
+	var h;
+	var s;
+	var l;
+
+	if (max === min) {
+		h = 0;
+	} else if (r === max) {
+		h = (g - b) / delta;
+	} else if (g === max) {
+		h = 2 + (b - r) / delta;
+	} else if (b === max) {
+		h = 4 + (r - g) / delta;
+	}
+
+	h = Math.min(h * 60, 360);
+
+	if (h < 0) {
+		h += 360;
+	}
+
+	l = (min + max) / 2;
+
+	if (max === min) {
+		s = 0;
+	} else if (l <= 0.5) {
+		s = delta / (max + min);
+	} else {
+		s = delta / (2 - max - min);
+	}
+
+	return [h, s * 100, l * 100];
+};
+
+convert.rgb.hsv = function (rgb) {
+	var rdif;
+	var gdif;
+	var bdif;
+	var h;
+	var s;
+
+	var r = rgb[0] / 255;
+	var g = rgb[1] / 255;
+	var b = rgb[2] / 255;
+	var v = Math.max(r, g, b);
+	var diff = v - Math.min(r, g, b);
+	var diffc = function (c) {
+		return (v - c) / 6 / diff + 1 / 2;
+	};
+
+	if (diff === 0) {
+		h = s = 0;
+	} else {
+		s = diff / v;
+		rdif = diffc(r);
+		gdif = diffc(g);
+		bdif = diffc(b);
+
+		if (r === v) {
+			h = bdif - gdif;
+		} else if (g === v) {
+			h = (1 / 3) + rdif - bdif;
+		} else if (b === v) {
+			h = (2 / 3) + gdif - rdif;
+		}
+		if (h < 0) {
+			h += 1;
+		} else if (h > 1) {
+			h -= 1;
+		}
+	}
+
+	return [
+		h * 360,
+		s * 100,
+		v * 100
+	];
+};
+
+convert.rgb.hwb = function (rgb) {
+	var r = rgb[0];
+	var g = rgb[1];
+	var b = rgb[2];
+	var h = convert.rgb.hsl(rgb)[0];
+	var w = 1 / 255 * Math.min(r, Math.min(g, b));
+
+	b = 1 - 1 / 255 * Math.max(r, Math.max(g, b));
+
+	return [h, w * 100, b * 100];
+};
+
+convert.rgb.cmyk = function (rgb) {
+	var r = rgb[0] / 255;
+	var g = rgb[1] / 255;
+	var b = rgb[2] / 255;
+	var c;
+	var m;
+	var y;
+	var k;
+
+	k = Math.min(1 - r, 1 - g, 1 - b);
+	c = (1 - r - k) / (1 - k) || 0;
+	m = (1 - g - k) / (1 - k) || 0;
+	y = (1 - b - k) / (1 - k) || 0;
+
+	return [c * 100, m * 100, y * 100, k * 100];
+};
+
+/**
+ * See https://en.m.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance
+ * */
+function comparativeDistance(x, y) {
 	return (
-		rows
-			.map(function (row) {
-				return from(iterable(row), function (str, index) {
-					var col = colsMeta[index], strLength;
-					if (!col) col = colsMeta[index] = { width: 0 };
-					str = stringifiable(str);
-					strLength = getStrippedLength(str);
-					if (strLength > col.width) col.width = strLength;
-					return { str: str, length: strLength };
-				});
-			})
-			.map(function (row) {
-				return row
-					.map(function (item, index) {
-						var pad, align = "left", colOptions = colsOptions && colsOptions[index];
-						align = colOptions && colOptions.align === "right" ? "right" : "left";
-						pad = repeat.call(" ", colsMeta[index].width - item.length);
-						if (align === "left") return item.str + pad;
-						return pad + item.str;
-					})
-					.join(isValue(options.sep) ? options.sep : " | ");
-			})
-			.join("\n") + "\n"
+		Math.pow(x[0] - y[0], 2) +
+		Math.pow(x[1] - y[1], 2) +
+		Math.pow(x[2] - y[2], 2)
 	);
-};
-
-
-/***/ }),
-
-/***/ 5715:
-/***/ ((module) => {
-
-
-
-module.exports = {
-	screen: "\x1b[2J",
-	screenLeft: "\x1b[1J",
-	screenRight: "\x1b[J",
-	line: "\x1b[2K",
-	lineLeft: "\x1b[1K",
-	lineRight: "\x1b[K"
-};
-
-
-/***/ }),
-
-/***/ 5478:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-/*
- * get actual length of ANSI-formatted string
- */
-
-var strip = __nccwpck_require__(1335);
-
-module.exports = function (str) { return strip(str).length; };
-
-
-/***/ }),
-
-/***/ 1047:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var d = __nccwpck_require__(4571);
-
-module.exports = Object.defineProperties(__nccwpck_require__(6241), {
-	windowSize: d(__nccwpck_require__(9717)),
-	erase: d(__nccwpck_require__(5715)),
-	move: d(__nccwpck_require__(3759)),
-	beep: d(__nccwpck_require__(6470)),
-	columns: d(__nccwpck_require__(9828)),
-	strip: d(__nccwpck_require__(1335)),
-	getStrippedLength: d(__nccwpck_require__(5478)),
-	slice: d(__nccwpck_require__(2421)),
-	throbber: d(__nccwpck_require__(7307)),
-	reset: d(__nccwpck_require__(1749)),
-	art: d(__nccwpck_require__(1508))
-});
-
-
-/***/ }),
-
-/***/ 8139:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-/* CSI - control sequence introducer */
-/* SGR - set graphic rendition */
-
-var assign       = __nccwpck_require__(1377)
-  , includes     = __nccwpck_require__(7689)
-  , forOwn       = __nccwpck_require__(9575)
-  , onlyKey      = __nccwpck_require__(7726)
-  , forEachRight = __nccwpck_require__(8137)
-  , uniq         = __nccwpck_require__(5684);
-
-var CSI = "\x1b[";
-
-var sgr = function (code) { return CSI + code + "m"; };
-
-sgr.CSI = CSI;
-
-var mods = assign(
-	{
-		// Style
-		bold: { _bold: [1, 22] },
-		italic: { _italic: [3, 23] },
-		underline: { _underline: [4, 24] },
-		blink: { _blink: [5, 25] },
-		inverse: { _inverse: [7, 27] },
-		strike: { _strike: [9, 29] }
-
-		// Color
-	},
-	["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"].reduce(function (
-		obj,
-		color,
-		index
-	) {
-		// foreground
-		obj[color] = { _fg: [30 + index, 39] };
-		obj[color + "Bright"] = { _fg: [90 + index, 39] };
-
-		// background
-		obj["bg" + color[0].toUpperCase() + color.slice(1)] = { _bg: [40 + index, 49] };
-		obj["bg" + color[0].toUpperCase() + color.slice(1) + "Bright"] = { _bg: [100 + index, 49] };
-
-		return obj;
-	}, {})
-);
-
-sgr.mods = mods;
-
-sgr.openers = {};
-sgr.closers = {};
-
-forOwn(mods, function (mod) {
-	var modPair = mod[onlyKey(mod)];
-
-	sgr.openers[modPair[0]] = modPair;
-	sgr.closers[modPair[1]] = modPair;
-});
-
-sgr.openStyle = function (openedMods, code) { openedMods.push(sgr.openers[code]); };
-
-sgr.closeStyle = function (openedMods, code) {
-	forEachRight.call(openedMods, function (modPair, index) {
-		if (modPair[1] === code) {
-			openedMods.splice(index, 1);
-		}
-	});
-};
-
-/* prepend openers */
-sgr.prepend = function (currentMods) {
-	return currentMods.map(function (modPair) { return sgr(modPair[0]); });
-};
-
-/* complete non-closed openers with corresponding closers */
-sgr.complete = function (openedMods, closerCodes) {
-	closerCodes.forEach(function (code) { sgr.closeStyle(openedMods, code); });
-
-	// mods must be closed from the last opened to first opened
-	openedMods = openedMods.reverse();
-
-	openedMods = openedMods.map(function (modPair) { return modPair[1]; });
-
-	// one closer can close many openers (31, 32 -> 39)
-	openedMods = uniq.call(openedMods);
-
-	return openedMods.map(sgr);
-};
-
-var hasCSI = function (str) { return includes.call(str, CSI); };
-
-sgr.hasCSI = hasCSI;
-
-var extractCode = function (csi) {
-	var code = csi.slice(2, -1);
-	code = Number(code);
-	return code;
-};
-
-sgr.extractCode = extractCode;
-
-module.exports = sgr;
-
-
-/***/ }),
-
-/***/ 4947:
-/***/ ((module) => {
-
-
-
-// store whether supports-color mode is enabled or not.
-var state = null;
-
-// force supports-color mode
-var enableColor = function () { state = true; };
-
-// disable supports-color mode
-var disableColor = function () { state = false; };
-
-// use the NO_COLOR environment variable (default)
-var autoDetectSupport = function () { state = null; };
-
-// determine whether supports-color mode is enabled.
-var isColorSupported = function () { return state === null ? !process.env.NO_COLOR : state; };
-
-module.exports = {
-	enableColor: enableColor,
-	disableColor: disableColor,
-	autoDetectSupport: autoDetectSupport,
-	isColorSupported: isColorSupported
-};
-
-
-/***/ }),
-
-/***/ 226:
-/***/ ((module) => {
-
-
-
-module.exports = [
-	"000000", "800000", "008000", "808000", "000080", "800080", "008080", "c0c0c0", "808080",
-	"ff0000", "00ff00", "ffff00", "0000ff", "ff00ff", "00ffff", "ffffff", "000000", "00005f",
-	"000087", "0000af", "0000d7", "0000ff", "005f00", "005f5f", "005f87", "005faf", "005fd7",
-	"005fff", "008700", "00875f", "008787", "0087af", "0087d7", "0087ff", "00af00", "00af5f",
-	"00af87", "00afaf", "00afd7", "00afff", "00d700", "00d75f", "00d787", "00d7af", "00d7d7",
-	"00d7ff", "00ff00", "00ff5f", "00ff87", "00ffaf", "00ffd7", "00ffff", "5f0000", "5f005f",
-	"5f0087", "5f00af", "5f00d7", "5f00ff", "5f5f00", "5f5f5f", "5f5f87", "5f5faf", "5f5fd7",
-	"5f5fff", "5f8700", "5f875f", "5f8787", "5f87af", "5f87d7", "5f87ff", "5faf00", "5faf5f",
-	"5faf87", "5fafaf", "5fafd7", "5fafff", "5fd700", "5fd75f", "5fd787", "5fd7af", "5fd7d7",
-	"5fd7ff", "5fff00", "5fff5f", "5fff87", "5fffaf", "5fffd7", "5fffff", "870000", "87005f",
-	"870087", "8700af", "8700d7", "8700ff", "875f00", "875f5f", "875f87", "875faf", "875fd7",
-	"875fff", "878700", "87875f", "878787", "8787af", "8787d7", "8787ff", "87af00", "87af5f",
-	"87af87", "87afaf", "87afd7", "87afff", "87d700", "87d75f", "87d787", "87d7af", "87d7d7",
-	"87d7ff", "87ff00", "87ff5f", "87ff87", "87ffaf", "87ffd7", "87ffff", "af0000", "af005f",
-	"af0087", "af00af", "af00d7", "af00ff", "af5f00", "af5f5f", "af5f87", "af5faf", "af5fd7",
-	"af5fff", "af8700", "af875f", "af8787", "af87af", "af87d7", "af87ff", "afaf00", "afaf5f",
-	"afaf87", "afafaf", "afafd7", "afafff", "afd700", "afd75f", "afd787", "afd7af", "afd7d7",
-	"afd7ff", "afff00", "afff5f", "afff87", "afffaf", "afffd7", "afffff", "d70000", "d7005f",
-	"d70087", "d700af", "d700d7", "d700ff", "d75f00", "d75f5f", "d75f87", "d75faf", "d75fd7",
-	"d75fff", "d78700", "d7875f", "d78787", "d787af", "d787d7", "d787ff", "d7af00", "d7af5f",
-	"d7af87", "d7afaf", "d7afd7", "d7afff", "d7d700", "d7d75f", "d7d787", "d7d7af", "d7d7d7",
-	"d7d7ff", "d7ff00", "d7ff5f", "d7ff87", "d7ffaf", "d7ffd7", "d7ffff", "ff0000", "ff005f",
-	"ff0087", "ff00af", "ff00d7", "ff00ff", "ff5f00", "ff5f5f", "ff5f87", "ff5faf", "ff5fd7",
-	"ff5fff", "ff8700", "ff875f", "ff8787", "ff87af", "ff87d7", "ff87ff", "ffaf00", "ffaf5f",
-	"ffaf87", "ffafaf", "ffafd7", "ffafff", "ffd700", "ffd75f", "ffd787", "ffd7af", "ffd7d7",
-	"ffd7ff", "ffff00", "ffff5f", "ffff87", "ffffaf", "ffffd7", "ffffff", "080808", "121212",
-	"1c1c1c", "262626", "303030", "3a3a3a", "444444", "4e4e4e", "585858", "626262", "6c6c6c",
-	"767676", "808080", "8a8a8a", "949494", "9e9e9e", "a8a8a8", "b2b2b2", "bcbcbc", "c6c6c6",
-	"d0d0d0", "dadada", "e4e4e4", "eeeeee"
-];
-
-
-/***/ }),
-
-/***/ 9035:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var push = Array.prototype.push
-  , reduce = Array.prototype.reduce
-  , abs = Math.abs
-  , colors
-  , match
-  , result
-  , i;
-
-colors = (__nccwpck_require__(226).map)(function (color) {
-	return {
-		r: parseInt(color.slice(0, 2), 16),
-		g: parseInt(color.slice(2, 4), 16),
-		b: parseInt(color.slice(4), 16)
-	};
-});
-
-match = colors.slice(0, 16);
-
-module.exports = result = [];
-
-i = 0;
-while (i < 8) {
-	result.push(30 + i++);
 }
-i = 0;
-while (i < 8) {
-	result.push(90 + i++);
-}
-push.apply(
-	result,
-	colors.slice(16).map(function (data) {
-		var index, diff = Infinity;
-		match.every(function (innerMatch, currentIndex) {
-			var ndiff = reduce.call(
-				"rgb",
-				function (currentDiff, channel) {
-					currentDiff += abs(innerMatch[channel] - data[channel]);
-					return currentDiff;
-				},
-				0
-			);
-			if (ndiff < diff) {
-				index = currentIndex;
-				diff = ndiff;
+
+convert.rgb.keyword = function (rgb) {
+	var reversed = reverseKeywords[rgb];
+	if (reversed) {
+		return reversed;
+	}
+
+	var currentClosestDistance = Infinity;
+	var currentClosestKeyword;
+
+	for (var keyword in cssKeywords) {
+		if (cssKeywords.hasOwnProperty(keyword)) {
+			var value = cssKeywords[keyword];
+
+			// Compute comparative distance
+			var distance = comparativeDistance(rgb, value);
+
+			// Check if its less, if so set as closest
+			if (distance < currentClosestDistance) {
+				currentClosestDistance = distance;
+				currentClosestKeyword = keyword;
 			}
-			return ndiff;
-		});
-		return result[index];
-	})
-);
-
-
-/***/ }),
-
-/***/ 3759:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var d     = __nccwpck_require__(4571)
-  , trunc = __nccwpck_require__(9394);
-
-var up, down, right, left, abs = Math.abs, floor = Math.floor, max = Math.max;
-
-var getMove = function (control) {
-	return function (num) {
-		num = isNaN(num) ? 0 : max(floor(num), 0);
-		return num ? "\x1b[" + num + control : "";
-	};
-};
-
-module.exports = Object.defineProperties(
-	function (x, y) {
-		x = isNaN(x) ? 0 : floor(x);
-		y = isNaN(y) ? 0 : floor(y);
-		return (x > 0 ? right(x) : left(-x)) + (y > 0 ? down(y) : up(-y));
-	},
-	{
-		up: d((up = getMove("A"))),
-		down: d((down = getMove("B"))),
-		right: d((right = getMove("C"))),
-		left: d((left = getMove("D"))),
-		to: d(function (x, y) {
-			x = isNaN(x) ? 1 : max(floor(x), 0) + 1;
-			y = isNaN(y) ? 1 : max(floor(y), 0) + 1;
-			return "\x1b[" + y + ";" + x + "H";
-		}),
-		lines: d(function (n) {
-			var dir;
-			n = trunc(n) || 0;
-			dir = n >= 0 ? "B" : "A";
-			n = floor(abs(n));
-			return "\x1b[" + n + dir + "\x1b[1G";
-		}),
-		top: d("\x1b[5000F"),
-		bottom: d("\x1b[5000B"),
-		lineBegin: d("\x1b[5000D"),
-		lineEnd: d("\x1b[5000C")
-	}
-);
-
-
-/***/ }),
-
-/***/ 5648:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	// Borrowed from ansi-regex package
-	// https://github.com/chalk/ansi-regex/blob/a28b8e7ee67aa9996ba44bf123f0436eea62d285/index.js
-
-	return new RegExp(
-		"[\\u001B\\u009B][[\\]()#;?]" +
-			"*(?:(?:(?:(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]+)*|[a-zA-Z\\d]" +
-			"+(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)" +
-			"|" +
-			"(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-ntqry=><~]))",
-		"g"
-	);
-};
-
-
-/***/ }),
-
-/***/ 1749:
-/***/ ((module) => {
-
-
-
-module.exports = "\x1b[2J\x1b[0;0H";
-
-
-/***/ }),
-
-/***/ 2421:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-/* eslint max-lines: "off" */
-
-
-
-var reAnsi        = __nccwpck_require__(5648)
-  , stringifiable = __nccwpck_require__(8080)
-  , length        = __nccwpck_require__(5478)
-  , sgr           = __nccwpck_require__(8139)
-  , max           = Math.max;
-
-var Token = function (token) { this.token = token; };
-
-var tokenize = function (str) {
-	var match = reAnsi().exec(str);
-
-	if (!match) {
-		return [str];
-	}
-
-	var index = match.index, head, prehead, tail;
-
-	if (index === 0) {
-		head = match[0];
-		tail = str.slice(head.length);
-
-		return [new Token(head)].concat(tokenize(tail));
-	}
-
-	prehead = str.slice(0, index);
-	head = match[0];
-	tail = str.slice(index + head.length);
-
-	return [prehead, new Token(head)].concat(tokenize(tail));
-};
-
-var isChunkInSlice = function (chunk, index, begin, end) {
-	var endIndex = chunk.length + index;
-
-	if (begin > endIndex) return false;
-	if (end < index) return false;
-	return true;
-};
-
-// eslint-disable-next-line max-lines-per-function
-var sliceSeq = function (seq, begin, end) {
-	var sliced = seq.reduce(
-		function (state, chunk) {
-			var index = state.index;
-
-			if (chunk instanceof Token) {
-				var code = sgr.extractCode(chunk.token);
-
-				if (index <= begin) {
-					if (code in sgr.openers) {
-						sgr.openStyle(state.preOpeners, code);
-					}
-					if (code in sgr.closers) {
-						sgr.closeStyle(state.preOpeners, code);
-					}
-				} else if (index < end) {
-					if (code in sgr.openers) {
-						sgr.openStyle(state.inOpeners, code);
-						state.seq.push(chunk);
-					} else if (code in sgr.closers) {
-						state.inClosers.push(code);
-						state.seq.push(chunk);
-					}
-				}
-			} else {
-				var nextChunk = "";
-
-				if (isChunkInSlice(chunk, index, begin, end)) {
-					var relBegin = Math.max(begin - index, 0)
-					  , relEnd = Math.min(end - index, chunk.length);
-
-					nextChunk = chunk.slice(relBegin, relEnd);
-				}
-
-				state.seq.push(nextChunk);
-				state.index = index + chunk.length;
-			}
-
-			return state;
-		},
-		{
-			index: 0,
-			seq: [],
-
-			// preOpeners -> [ mod ]
-			// preOpeners must be prepended to the slice if they wasn't closed til the end of it
-			// preOpeners must be closed if they wasn't closed til the end of the slice
-			preOpeners: [],
-
-			// inOpeners  -> [ mod ]
-			// inOpeners already in the slice and must not be prepended to the slice
-			// inOpeners must be closed if they wasn't closed til the end of the slice
-			inOpeners: [], // opener CSI inside slice
-
-			// inClosers -> [ code ]
-			// closer CSIs for determining which pre/in-Openers must be closed
-			inClosers: []
 		}
-	);
+	}
 
-	sliced.seq = [].concat(
-		sgr.prepend(sliced.preOpeners), sliced.seq,
-		sgr.complete([].concat(sliced.preOpeners, sliced.inOpeners), sliced.inClosers)
-	);
-
-	return sliced.seq;
+	return currentClosestKeyword;
 };
 
-module.exports = function (str /*, begin, end*/) {
-	var seq, begin = Number(arguments[1]), end = Number(arguments[2]), len;
-
-	str = stringifiable(str);
-	len = length(str);
-
-	if (isNaN(begin)) {
-		begin = 0;
-	}
-	if (isNaN(end)) {
-		end = len;
-	}
-	if (begin < 0) {
-		begin = max(len + begin, 0);
-	}
-	if (end < 0) {
-		end = max(len + end, 0);
-	}
-
-	seq = tokenize(str);
-	seq = sliceSeq(seq, begin, end);
-	return seq
-		.map(function (chunk) {
-			if (chunk instanceof Token) {
-				return chunk.token;
-			}
-
-			return chunk;
-		})
-		.join("");
+convert.keyword.rgb = function (keyword) {
+	return cssKeywords[keyword];
 };
 
+convert.rgb.xyz = function (rgb) {
+	var r = rgb[0] / 255;
+	var g = rgb[1] / 255;
+	var b = rgb[2] / 255;
 
-/***/ }),
+	// assume sRGB
+	r = r > 0.04045 ? Math.pow(((r + 0.055) / 1.055), 2.4) : (r / 12.92);
+	g = g > 0.04045 ? Math.pow(((g + 0.055) / 1.055), 2.4) : (g / 12.92);
+	b = b > 0.04045 ? Math.pow(((b + 0.055) / 1.055), 2.4) : (b / 12.92);
 
-/***/ 1335:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+	var x = (r * 0.4124) + (g * 0.3576) + (b * 0.1805);
+	var y = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
+	var z = (r * 0.0193) + (g * 0.1192) + (b * 0.9505);
 
-// Strip ANSI formatting from string
-
-
-
-var stringifiable = __nccwpck_require__(1481)
-  , r             = __nccwpck_require__(5648)();
-
-module.exports = function (str) { return stringifiable(str).replace(r, ""); };
-
-
-/***/ }),
-
-/***/ 7307:
-/***/ ((module, exports, __nccwpck_require__) => {
-
-
-
-var compose      = __nccwpck_require__(4274)
-  , callable     = __nccwpck_require__(6097)
-  , d            = __nccwpck_require__(4571)
-  , validTimeout = __nccwpck_require__(9953);
-
-var chars = "-\\|/", l = chars.length, ThrobberIterator;
-
-ThrobberIterator = function () {
-	// no setup needed
+	return [x * 100, y * 100, z * 100];
 };
-Object.defineProperties(ThrobberIterator.prototype, {
-	index: d(-1),
-	running: d(false),
-	next: d(function () {
-		var str = this.running ? "\u0008" : "";
-		if (!this.running) this.running = true;
-		return str + chars[(this.index = (this.index + 1) % l)];
-	}),
-	reset: d(function () {
-		if (!this.running) return "";
-		this.index = -1;
-		this.running = false;
-		return "\u0008";
-	})
-});
 
-module.exports = exports = function (write, interval /*, format*/) {
-	var format = arguments[2], token, iterator = new ThrobberIterator();
-	callable(write);
-	interval = validTimeout(interval);
-	if (format !== undefined) write = compose.call(write, callable(format));
-	return {
-		start: function () {
-			if (token) return;
-			token = setInterval(function () { write(iterator.next()); }, interval);
-		},
-		restart: function () {
-			this.stop();
-			this.start();
-		},
-		stop: function () {
-			if (!token) return;
-			clearInterval(token);
-			token = null;
-			write(iterator.reset());
+convert.rgb.lab = function (rgb) {
+	var xyz = convert.rgb.xyz(rgb);
+	var x = xyz[0];
+	var y = xyz[1];
+	var z = xyz[2];
+	var l;
+	var a;
+	var b;
+
+	x /= 95.047;
+	y /= 100;
+	z /= 108.883;
+
+	x = x > 0.008856 ? Math.pow(x, 1 / 3) : (7.787 * x) + (16 / 116);
+	y = y > 0.008856 ? Math.pow(y, 1 / 3) : (7.787 * y) + (16 / 116);
+	z = z > 0.008856 ? Math.pow(z, 1 / 3) : (7.787 * z) + (16 / 116);
+
+	l = (116 * y) - 16;
+	a = 500 * (x - y);
+	b = 200 * (y - z);
+
+	return [l, a, b];
+};
+
+convert.hsl.rgb = function (hsl) {
+	var h = hsl[0] / 360;
+	var s = hsl[1] / 100;
+	var l = hsl[2] / 100;
+	var t1;
+	var t2;
+	var t3;
+	var rgb;
+	var val;
+
+	if (s === 0) {
+		val = l * 255;
+		return [val, val, val];
+	}
+
+	if (l < 0.5) {
+		t2 = l * (1 + s);
+	} else {
+		t2 = l + s - l * s;
+	}
+
+	t1 = 2 * l - t2;
+
+	rgb = [0, 0, 0];
+	for (var i = 0; i < 3; i++) {
+		t3 = h + 1 / 3 * -(i - 1);
+		if (t3 < 0) {
+			t3++;
 		}
-	};
-};
-
-Object.defineProperty(exports, "Iterator", (d(ThrobberIterator)));
-
-
-/***/ }),
-
-/***/ 9717:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-
-
-var d = __nccwpck_require__(4571);
-
-Object.defineProperties(exports, {
-	width: d.gs("ce", function () { return process.stdout.columns || 0; }),
-	height: d.gs("ce", function () { return process.stdout.rows || 0; })
-});
-
-
-/***/ }),
-
-/***/ 6362:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue             = __nccwpck_require__(3134)
-  , ensureValue         = __nccwpck_require__(942)
-  , ensurePlainFunction = __nccwpck_require__(3681)
-  , copy                = __nccwpck_require__(3382)
-  , normalizeOptions    = __nccwpck_require__(4488)
-  , map                 = __nccwpck_require__(7289);
-
-var bind = Function.prototype.bind
-  , defineProperty = Object.defineProperty
-  , hasOwnProperty = Object.prototype.hasOwnProperty
-  , define;
-
-define = function (name, desc, options) {
-	var value = ensureValue(desc) && ensurePlainFunction(desc.value), dgs;
-	dgs = copy(desc);
-	delete dgs.writable;
-	delete dgs.value;
-	dgs.get = function () {
-		if (!options.overwriteDefinition && hasOwnProperty.call(this, name)) return value;
-		desc.value = bind.call(value, options.resolveContext ? options.resolveContext(this) : this);
-		defineProperty(this, name, desc);
-		return this[name];
-	};
-	return dgs;
-};
-
-module.exports = function (props/*, options*/) {
-	var options = normalizeOptions(arguments[1]);
-	if (isValue(options.resolveContext)) ensurePlainFunction(options.resolveContext);
-	return map(props, function (desc, name) { return define(name, desc, options); });
-};
-
-
-/***/ }),
-
-/***/ 4571:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue         = __nccwpck_require__(3134)
-  , isPlainFunction = __nccwpck_require__(6796)
-  , assign          = __nccwpck_require__(1377)
-  , normalizeOpts   = __nccwpck_require__(4488)
-  , contains        = __nccwpck_require__(7689);
-
-var d = (module.exports = function (dscr, value/*, options*/) {
-	var c, e, w, options, desc;
-	if (arguments.length < 2 || typeof dscr !== "string") {
-		options = value;
-		value = dscr;
-		dscr = null;
-	} else {
-		options = arguments[2];
-	}
-	if (isValue(dscr)) {
-		c = contains.call(dscr, "c");
-		e = contains.call(dscr, "e");
-		w = contains.call(dscr, "w");
-	} else {
-		c = w = true;
-		e = false;
-	}
-
-	desc = { value: value, configurable: c, enumerable: e, writable: w };
-	return !options ? desc : assign(normalizeOpts(options), desc);
-});
-
-d.gs = function (dscr, get, set/*, options*/) {
-	var c, e, options, desc;
-	if (typeof dscr !== "string") {
-		options = set;
-		set = get;
-		get = dscr;
-		dscr = null;
-	} else {
-		options = arguments[3];
-	}
-	if (!isValue(get)) {
-		get = undefined;
-	} else if (!isPlainFunction(get)) {
-		options = get;
-		get = set = undefined;
-	} else if (!isValue(set)) {
-		set = undefined;
-	} else if (!isPlainFunction(set)) {
-		options = set;
-		set = undefined;
-	}
-	if (isValue(dscr)) {
-		c = contains.call(dscr, "c");
-		e = contains.call(dscr, "e");
-	} else {
-		c = true;
-		e = false;
-	}
-
-	desc = { get: get, set: set, configurable: c, enumerable: e };
-	return !options ? desc : assign(normalizeOpts(options), desc);
-};
-
-
-/***/ }),
-
-/***/ 7579:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isPlainFunction = __nccwpck_require__(6796)
-  , ensureValue     = __nccwpck_require__(942)
-  , isValue         = __nccwpck_require__(3134)
-  , map             = __nccwpck_require__(7289)
-  , contains        = __nccwpck_require__(7689);
-
-var call = Function.prototype.call
-  , defineProperty = Object.defineProperty
-  , getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
-  , getPrototypeOf = Object.getPrototypeOf
-  , hasOwnProperty = Object.prototype.hasOwnProperty
-  , cacheDesc = { configurable: false, enumerable: false, writable: false, value: null }
-  , define;
-
-define = function (name, options) {
-	var value, dgs, cacheName, desc, writable = false, resolvable, flat;
-	options = Object(ensureValue(options));
-	cacheName = options.cacheName;
-	flat = options.flat;
-	if (!isValue(cacheName)) cacheName = name;
-	delete options.cacheName;
-	value = options.value;
-	resolvable = isPlainFunction(value);
-	delete options.value;
-	dgs = { configurable: Boolean(options.configurable), enumerable: Boolean(options.enumerable) };
-	if (name !== cacheName) {
-		dgs.get = function () {
-			if (hasOwnProperty.call(this, cacheName)) return this[cacheName];
-			cacheDesc.value = resolvable ? call.call(value, this, options) : value;
-			cacheDesc.writable = writable;
-			defineProperty(this, cacheName, cacheDesc);
-			cacheDesc.value = null;
-			if (desc) defineProperty(this, name, desc);
-			return this[cacheName];
-		};
-	} else if (!flat) {
-		dgs.get = function self() {
-			var ownDesc;
-			if (hasOwnProperty.call(this, name)) {
-				ownDesc = getOwnPropertyDescriptor(this, name);
-				// It happens in Safari, that getter is still called after property
-				// was defined with a value, following workarounds that
-				// While in IE11 it may happen that here ownDesc is undefined (go figure)
-				if (ownDesc) {
-					if (ownDesc.hasOwnProperty("value")) return ownDesc.value;
-					if (typeof ownDesc.get === "function" && ownDesc.get !== self) {
-						return ownDesc.get.call(this);
-					}
-					return value;
-				}
-			}
-			desc.value = resolvable ? call.call(value, this, options) : value;
-			defineProperty(this, name, desc);
-			desc.value = null;
-			return this[name];
-		};
-	} else {
-		dgs.get = function self() {
-			var base = this, ownDesc;
-			if (hasOwnProperty.call(this, name)) {
-				// It happens in Safari, that getter is still called after property
-				// was defined with a value, following workarounds that
-				ownDesc = getOwnPropertyDescriptor(this, name);
-				if (ownDesc.hasOwnProperty("value")) return ownDesc.value;
-				if (typeof ownDesc.get === "function" && ownDesc.get !== self) {
-					return ownDesc.get.call(this);
-				}
-			}
-			while (!hasOwnProperty.call(base, name)) base = getPrototypeOf(base);
-			desc.value = resolvable ? call.call(value, base, options) : value;
-			defineProperty(base, name, desc);
-			desc.value = null;
-			return base[name];
-		};
-	}
-	dgs.set = function (value) {
-		if (hasOwnProperty.call(this, name)) {
-			throw new TypeError("Cannot assign to lazy defined '" + name + "' property of " + this);
+		if (t3 > 1) {
+			t3--;
 		}
-		dgs.get.call(this);
-		this[cacheName] = value;
-	};
-	if (options.desc) {
-		desc = {
-			configurable: contains.call(options.desc, "c"),
-			enumerable: contains.call(options.desc, "e")
-		};
-		if (cacheName === name) {
-			desc.writable = contains.call(options.desc, "w");
-			desc.value = null;
+
+		if (6 * t3 < 1) {
+			val = t1 + (t2 - t1) * 6 * t3;
+		} else if (2 * t3 < 1) {
+			val = t2;
+		} else if (3 * t3 < 2) {
+			val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
 		} else {
-			writable = contains.call(options.desc, "w");
-			desc.get = dgs.get;
-			desc.set = dgs.set;
-		}
-		delete options.desc;
-	} else if (cacheName === name) {
-		desc = {
-			configurable: Boolean(options.configurable),
-			enumerable: Boolean(options.enumerable),
-			writable: Boolean(options.writable),
-			value: null
-		};
-	}
-	delete options.configurable;
-	delete options.enumerable;
-	delete options.writable;
-	return dgs;
-};
-
-module.exports = function (props) {
-	return map(props, function (desc, name) { return define(name, desc); });
-};
-
-
-/***/ }),
-
-/***/ 4087:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-module.exports = __nccwpck_require__(9819);
-
-
-/***/ }),
-
-/***/ 9819:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-// Generated by CoffeeScript 1.3.1
-
-/*
-Module difflib -- helpers for computing deltas between objects.
-
-Function getCloseMatches(word, possibilities, n=3, cutoff=0.6):
-    Use SequenceMatcher to return list of the best "good enough" matches.
-
-Function contextDiff(a, b):
-    For two lists of strings, return a delta in context diff format.
-
-Function ndiff(a, b):
-    Return a delta: the difference between `a` and `b` (lists of strings).
-
-Function restore(delta, which):
-    Return one of the two sequences that generated an ndiff delta.
-
-Function unifiedDiff(a, b):
-    For two lists of strings, return a delta in unified diff format.
-
-Class SequenceMatcher:
-    A flexible class for comparing pairs of sequences of any type.
-
-Class Differ:
-    For producing human-readable deltas from sequences of lines of text.
-*/
-
-
-(function() {
-  var Differ, Heap, IS_CHARACTER_JUNK, IS_LINE_JUNK, SequenceMatcher, assert, contextDiff, floor, getCloseMatches, max, min, ndiff, restore, unifiedDiff, _any, _arrayCmp, _calculateRatio, _countLeading, _formatRangeContext, _formatRangeUnified, _has,
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
-  floor = Math.floor, max = Math.max, min = Math.min;
-
-  Heap = __nccwpck_require__(6106);
-
-  assert = __nccwpck_require__(9491);
-
-  _calculateRatio = function(matches, length) {
-    if (length) {
-      return 2.0 * matches / length;
-    } else {
-      return 1.0;
-    }
-  };
-
-  _arrayCmp = function(a, b) {
-    var i, la, lb, _i, _ref, _ref1;
-    _ref = [a.length, b.length], la = _ref[0], lb = _ref[1];
-    for (i = _i = 0, _ref1 = min(la, lb); 0 <= _ref1 ? _i < _ref1 : _i > _ref1; i = 0 <= _ref1 ? ++_i : --_i) {
-      if (a[i] < b[i]) {
-        return -1;
-      }
-      if (a[i] > b[i]) {
-        return 1;
-      }
-    }
-    return la - lb;
-  };
-
-  _has = function(obj, key) {
-    return Object.prototype.hasOwnProperty.call(obj, key);
-  };
-
-  _any = function(items) {
-    var item, _i, _len;
-    for (_i = 0, _len = items.length; _i < _len; _i++) {
-      item = items[_i];
-      if (item) {
-        return true;
-      }
-    }
-    return false;
-  };
-
-  SequenceMatcher = (function() {
-
-    SequenceMatcher.name = 'SequenceMatcher';
-
-    /*
-      SequenceMatcher is a flexible class for comparing pairs of sequences of
-      any type, so long as the sequence elements are hashable.  The basic
-      algorithm predates, and is a little fancier than, an algorithm
-      published in the late 1980's by Ratcliff and Obershelp under the
-      hyperbolic name "gestalt pattern matching".  The basic idea is to find
-      the longest contiguous matching subsequence that contains no "junk"
-      elements (R-O doesn't address junk).  The same idea is then applied
-      recursively to the pieces of the sequences to the left and to the right
-      of the matching subsequence.  This does not yield minimal edit
-      sequences, but does tend to yield matches that "look right" to people.
-    
-      SequenceMatcher tries to compute a "human-friendly diff" between two
-      sequences.  Unlike e.g. UNIX(tm) diff, the fundamental notion is the
-      longest *contiguous* & junk-free matching subsequence.  That's what
-      catches peoples' eyes.  The Windows(tm) windiff has another interesting
-      notion, pairing up elements that appear uniquely in each sequence.
-      That, and the method here, appear to yield more intuitive difference
-      reports than does diff.  This method appears to be the least vulnerable
-      to synching up on blocks of "junk lines", though (like blank lines in
-      ordinary text files, or maybe "<P>" lines in HTML files).  That may be
-      because this is the only method of the 3 that has a *concept* of
-      "junk" <wink>.
-    
-      Example, comparing two strings, and considering blanks to be "junk":
-    
-      >>> isjunk = (c) -> c is ' '
-      >>> s = new SequenceMatcher(isjunk,
-                                  'private Thread currentThread;',
-                                  'private volatile Thread currentThread;')
-    
-      .ratio() returns a float in [0, 1], measuring the "similarity" of the
-      sequences.  As a rule of thumb, a .ratio() value over 0.6 means the
-      sequences are close matches:
-    
-      >>> s.ratio().toPrecision(3)
-      '0.866'
-    
-      If you're only interested in where the sequences match,
-      .getMatchingBlocks() is handy:
-    
-      >>> for [a, b, size] in s.getMatchingBlocks()
-      ...   console.log("a[#{a}] and b[#{b}] match for #{size} elements");
-      a[0] and b[0] match for 8 elements
-      a[8] and b[17] match for 21 elements
-      a[29] and b[38] match for 0 elements
-    
-      Note that the last tuple returned by .get_matching_blocks() is always a
-      dummy, (len(a), len(b), 0), and this is the only case in which the last
-      tuple element (number of elements matched) is 0.
-    
-      If you want to know how to change the first sequence into the second,
-      use .get_opcodes():
-    
-      >>> for [op, a1, a2, b1, b2] in s.getOpcodes()
-      ...   console.log "#{op} a[#{a1}:#{a2}] b[#{b1}:#{b2}]"
-      equal a[0:8] b[0:8]
-      insert a[8:8] b[8:17]
-      equal a[8:29] b[17:38]
-    
-      See the Differ class for a fancy human-friendly file differencer, which
-      uses SequenceMatcher both to compare sequences of lines, and to compare
-      sequences of characters within similar (near-matching) lines.
-    
-      See also function getCloseMatches() in this module, which shows how
-      simple code building on SequenceMatcher can be used to do useful work.
-    
-      Timing:  Basic R-O is cubic time worst case and quadratic time expected
-      case.  SequenceMatcher is quadratic time for the worst case and has
-      expected-case behavior dependent in a complicated way on how many
-      elements the sequences have in common; best case time is linear.
-    
-      Methods:
-    
-      constructor(isjunk=null, a='', b='')
-          Construct a SequenceMatcher.
-    
-      setSeqs(a, b)
-          Set the two sequences to be compared.
-    
-      setSeq1(a)
-          Set the first sequence to be compared.
-    
-      setSeq2(b)
-          Set the second sequence to be compared.
-    
-      findLongestMatch(alo, ahi, blo, bhi)
-          Find longest matching block in a[alo:ahi] and b[blo:bhi].
-    
-      getMatchingBlocks()
-          Return list of triples describing matching subsequences.
-    
-      getOpcodes()
-          Return list of 5-tuples describing how to turn a into b.
-    
-      ratio()
-          Return a measure of the sequences' similarity (float in [0,1]).
-    
-      quickRatio()
-          Return an upper bound on .ratio() relatively quickly.
-    
-      realQuickRatio()
-          Return an upper bound on ratio() very quickly.
-    */
-
-
-    function SequenceMatcher(isjunk, a, b, autojunk) {
-      this.isjunk = isjunk;
-      if (a == null) {
-        a = '';
-      }
-      if (b == null) {
-        b = '';
-      }
-      this.autojunk = autojunk != null ? autojunk : true;
-      /*
-          Construct a SequenceMatcher.
-      
-          Optional arg isjunk is null (the default), or a one-argument
-          function that takes a sequence element and returns true iff the
-          element is junk.  Null is equivalent to passing "(x) -> 0", i.e.
-          no elements are considered to be junk.  For example, pass
-              (x) -> x in ' \t'
-          if you're comparing lines as sequences of characters, and don't
-          want to synch up on blanks or hard tabs.
-      
-          Optional arg a is the first of two sequences to be compared.  By
-          default, an empty string.  The elements of a must be hashable.  See
-          also .setSeqs() and .setSeq1().
-      
-          Optional arg b is the second of two sequences to be compared.  By
-          default, an empty string.  The elements of b must be hashable. See
-          also .setSeqs() and .setSeq2().
-      
-          Optional arg autojunk should be set to false to disable the
-          "automatic junk heuristic" that treats popular elements as junk
-          (see module documentation for more information).
-      */
-
-      this.a = this.b = null;
-      this.setSeqs(a, b);
-    }
-
-    SequenceMatcher.prototype.setSeqs = function(a, b) {
-      /* 
-      Set the two sequences to be compared. 
-      
-      >>> s = new SequenceMatcher()
-      >>> s.setSeqs('abcd', 'bcde')
-      >>> s.ratio()
-      0.75
-      */
-      this.setSeq1(a);
-      return this.setSeq2(b);
-    };
-
-    SequenceMatcher.prototype.setSeq1 = function(a) {
-      /* 
-      Set the first sequence to be compared. 
-      
-      The second sequence to be compared is not changed.
-      
-      >>> s = new SequenceMatcher(null, 'abcd', 'bcde')
-      >>> s.ratio()
-      0.75
-      >>> s.setSeq1('bcde')
-      >>> s.ratio()
-      1.0
-      
-      SequenceMatcher computes and caches detailed information about the
-      second sequence, so if you want to compare one sequence S against
-      many sequences, use .setSeq2(S) once and call .setSeq1(x)
-      repeatedly for each of the other sequences.
-      
-      See also setSeqs() and setSeq2().
-      */
-      if (a === this.a) {
-        return;
-      }
-      this.a = a;
-      return this.matchingBlocks = this.opcodes = null;
-    };
-
-    SequenceMatcher.prototype.setSeq2 = function(b) {
-      /*
-          Set the second sequence to be compared. 
-      
-          The first sequence to be compared is not changed.
-      
-          >>> s = new SequenceMatcher(null, 'abcd', 'bcde')
-          >>> s.ratio()
-          0.75
-          >>> s.setSeq2('abcd')
-          >>> s.ratio()
-          1.0
-      
-          SequenceMatcher computes and caches detailed information about the
-          second sequence, so if you want to compare one sequence S against
-          many sequences, use .setSeq2(S) once and call .setSeq1(x)
-          repeatedly for each of the other sequences.
-      
-          See also setSeqs() and setSeq1().
-      */
-      if (b === this.b) {
-        return;
-      }
-      this.b = b;
-      this.matchingBlocks = this.opcodes = null;
-      this.fullbcount = null;
-      return this._chainB();
-    };
-
-    SequenceMatcher.prototype._chainB = function() {
-      var b, b2j, elt, i, idxs, indices, isjunk, junk, n, ntest, popular, _i, _j, _len, _len1, _ref;
-      b = this.b;
-      this.b2j = b2j = {};
-      for (i = _i = 0, _len = b.length; _i < _len; i = ++_i) {
-        elt = b[i];
-        indices = _has(b2j, elt) ? b2j[elt] : b2j[elt] = [];
-        indices.push(i);
-      }
-      junk = {};
-      isjunk = this.isjunk;
-      if (isjunk) {
-        _ref = Object.keys(b2j);
-        for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
-          elt = _ref[_j];
-          if (isjunk(elt)) {
-            junk[elt] = true;
-            delete b2j[elt];
-          }
-        }
-      }
-      popular = {};
-      n = b.length;
-      if (this.autojunk && n >= 200) {
-        ntest = floor(n / 100) + 1;
-        for (elt in b2j) {
-          idxs = b2j[elt];
-          if (idxs.length > ntest) {
-            popular[elt] = true;
-            delete b2j[elt];
-          }
-        }
-      }
-      this.isbjunk = function(b) {
-        return _has(junk, b);
-      };
-      return this.isbpopular = function(b) {
-        return _has(popular, b);
-      };
-    };
-
-    SequenceMatcher.prototype.findLongestMatch = function(alo, ahi, blo, bhi) {
-      /* 
-      Find longest matching block in a[alo...ahi] and b[blo...bhi].  
-      
-      If isjunk is not defined:
-      
-      Return [i,j,k] such that a[i...i+k] is equal to b[j...j+k], where
-          alo <= i <= i+k <= ahi
-          blo <= j <= j+k <= bhi
-      and for all [i',j',k'] meeting those conditions,
-          k >= k'
-          i <= i'
-          and if i == i', j <= j'
-      
-      In other words, of all maximal matching blocks, return one that
-      starts earliest in a, and of all those maximal matching blocks that
-      start earliest in a, return the one that starts earliest in b.
-      
-      >>> isjunk = (x) -> x is ' '
-      >>> s = new SequenceMatcher(isjunk, ' abcd', 'abcd abcd')
-      >>> s.findLongestMatch(0, 5, 0, 9)
-      [1, 0, 4]
-      
-      >>> s = new SequenceMatcher(null, 'ab', 'c')
-      >>> s.findLongestMatch(0, 2, 0, 1)
-      [0, 0, 0]
-      */
-
-      var a, b, b2j, besti, bestj, bestsize, i, isbjunk, j, j2len, k, newj2len, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
-      _ref = [this.a, this.b, this.b2j, this.isbjunk], a = _ref[0], b = _ref[1], b2j = _ref[2], isbjunk = _ref[3];
-      _ref1 = [alo, blo, 0], besti = _ref1[0], bestj = _ref1[1], bestsize = _ref1[2];
-      j2len = {};
-      for (i = _i = alo; alo <= ahi ? _i < ahi : _i > ahi; i = alo <= ahi ? ++_i : --_i) {
-        newj2len = {};
-        _ref2 = (_has(b2j, a[i]) ? b2j[a[i]] : []);
-        for (_j = 0, _len = _ref2.length; _j < _len; _j++) {
-          j = _ref2[_j];
-          if (j < blo) {
-            continue;
-          }
-          if (j >= bhi) {
-            break;
-          }
-          k = newj2len[j] = (j2len[j - 1] || 0) + 1;
-          if (k > bestsize) {
-            _ref3 = [i - k + 1, j - k + 1, k], besti = _ref3[0], bestj = _ref3[1], bestsize = _ref3[2];
-          }
-        }
-        j2len = newj2len;
-      }
-      while (besti > alo && bestj > blo && !isbjunk(b[bestj - 1]) && a[besti - 1] === b[bestj - 1]) {
-        _ref4 = [besti - 1, bestj - 1, bestsize + 1], besti = _ref4[0], bestj = _ref4[1], bestsize = _ref4[2];
-      }
-      while (besti + bestsize < ahi && bestj + bestsize < bhi && !isbjunk(b[bestj + bestsize]) && a[besti + bestsize] === b[bestj + bestsize]) {
-        bestsize++;
-      }
-      while (besti > alo && bestj > blo && isbjunk(b[bestj - 1]) && a[besti - 1] === b[bestj - 1]) {
-        _ref5 = [besti - 1, bestj - 1, bestsize + 1], besti = _ref5[0], bestj = _ref5[1], bestsize = _ref5[2];
-      }
-      while (besti + bestsize < ahi && bestj + bestsize < bhi && isbjunk(b[bestj + bestsize]) && a[besti + bestsize] === b[bestj + bestsize]) {
-        bestsize++;
-      }
-      return [besti, bestj, bestsize];
-    };
-
-    SequenceMatcher.prototype.getMatchingBlocks = function() {
-      /*
-          Return list of triples describing matching subsequences.
-      
-          Each triple is of the form [i, j, n], and means that
-          a[i...i+n] == b[j...j+n].  The triples are monotonically increasing in
-          i and in j.  it's also guaranteed that if
-          [i, j, n] and [i', j', n'] are adjacent triples in the list, and
-          the second is not the last triple in the list, then i+n != i' or
-          j+n != j'.  IOW, adjacent triples never describe adjacent equal
-          blocks.
-      
-          The last triple is a dummy, [a.length, b.length, 0], and is the only
-          triple with n==0.
-      
-          >>> s = new SequenceMatcher(null, 'abxcd', 'abcd')
-          >>> s.getMatchingBlocks()
-          [[0, 0, 2], [3, 2, 2], [5, 4, 0]]
-      */
-
-      var ahi, alo, bhi, blo, i, i1, i2, j, j1, j2, k, k1, k2, la, lb, matchingBlocks, nonAdjacent, queue, x, _i, _len, _ref, _ref1, _ref2, _ref3, _ref4;
-      if (this.matchingBlocks) {
-        return this.matchingBlocks;
-      }
-      _ref = [this.a.length, this.b.length], la = _ref[0], lb = _ref[1];
-      queue = [[0, la, 0, lb]];
-      matchingBlocks = [];
-      while (queue.length) {
-        _ref1 = queue.pop(), alo = _ref1[0], ahi = _ref1[1], blo = _ref1[2], bhi = _ref1[3];
-        _ref2 = x = this.findLongestMatch(alo, ahi, blo, bhi), i = _ref2[0], j = _ref2[1], k = _ref2[2];
-        if (k) {
-          matchingBlocks.push(x);
-          if (alo < i && blo < j) {
-            queue.push([alo, i, blo, j]);
-          }
-          if (i + k < ahi && j + k < bhi) {
-            queue.push([i + k, ahi, j + k, bhi]);
-          }
-        }
-      }
-      matchingBlocks.sort(_arrayCmp);
-      i1 = j1 = k1 = 0;
-      nonAdjacent = [];
-      for (_i = 0, _len = matchingBlocks.length; _i < _len; _i++) {
-        _ref3 = matchingBlocks[_i], i2 = _ref3[0], j2 = _ref3[1], k2 = _ref3[2];
-        if (i1 + k1 === i2 && j1 + k1 === j2) {
-          k1 += k2;
-        } else {
-          if (k1) {
-            nonAdjacent.push([i1, j1, k1]);
-          }
-          _ref4 = [i2, j2, k2], i1 = _ref4[0], j1 = _ref4[1], k1 = _ref4[2];
-        }
-      }
-      if (k1) {
-        nonAdjacent.push([i1, j1, k1]);
-      }
-      nonAdjacent.push([la, lb, 0]);
-      return this.matchingBlocks = nonAdjacent;
-    };
-
-    SequenceMatcher.prototype.getOpcodes = function() {
-      /* 
-      Return list of 5-tuples describing how to turn a into b.
-      
-      Each tuple is of the form [tag, i1, i2, j1, j2].  The first tuple
-      has i1 == j1 == 0, and remaining tuples have i1 == the i2 from the
-      tuple preceding it, and likewise for j1 == the previous j2.
-      
-      The tags are strings, with these meanings:
-      
-      'replace':  a[i1...i2] should be replaced by b[j1...j2]
-      'delete':   a[i1...i2] should be deleted.
-                  Note that j1==j2 in this case.
-      'insert':   b[j1...j2] should be inserted at a[i1...i1].
-                  Note that i1==i2 in this case.
-      'equal':    a[i1...i2] == b[j1...j2]
-      
-      >>> s = new SequenceMatcher(null, 'qabxcd', 'abycdf')
-      >>> s.getOpcodes()
-      [ [ 'delete'  , 0 , 1 , 0 , 0 ] ,
-        [ 'equal'   , 1 , 3 , 0 , 2 ] ,
-        [ 'replace' , 3 , 4 , 2 , 3 ] ,
-        [ 'equal'   , 4 , 6 , 3 , 5 ] ,
-        [ 'insert'  , 6 , 6 , 5 , 6 ] ]
-      */
-
-      var ai, answer, bj, i, j, size, tag, _i, _len, _ref, _ref1, _ref2;
-      if (this.opcodes) {
-        return this.opcodes;
-      }
-      i = j = 0;
-      this.opcodes = answer = [];
-      _ref = this.getMatchingBlocks();
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        _ref1 = _ref[_i], ai = _ref1[0], bj = _ref1[1], size = _ref1[2];
-        tag = '';
-        if (i < ai && j < bj) {
-          tag = 'replace';
-        } else if (i < ai) {
-          tag = 'delete';
-        } else if (j < bj) {
-          tag = 'insert';
-        }
-        if (tag) {
-          answer.push([tag, i, ai, j, bj]);
-        }
-        _ref2 = [ai + size, bj + size], i = _ref2[0], j = _ref2[1];
-        if (size) {
-          answer.push(['equal', ai, i, bj, j]);
-        }
-      }
-      return answer;
-    };
-
-    SequenceMatcher.prototype.getGroupedOpcodes = function(n) {
-      var codes, group, groups, i1, i2, j1, j2, nn, tag, _i, _len, _ref, _ref1, _ref2, _ref3;
-      if (n == null) {
-        n = 3;
-      }
-      /* 
-      Isolate change clusters by eliminating ranges with no changes.
-      
-      Return a list groups with upto n lines of context.
-      Each group is in the same format as returned by get_opcodes().
-      
-      >>> a = [1...40].map(String)
-      >>> b = a.slice()
-      >>> b[8...8] = 'i'
-      >>> b[20] += 'x'
-      >>> b[23...28] = []
-      >>> b[30] += 'y'
-      >>> s = new SequenceMatcher(null, a, b)
-      >>> s.getGroupedOpcodes()
-      [ [ [ 'equal'  , 5 , 8  , 5 , 8 ],
-          [ 'insert' , 8 , 8  , 8 , 9 ],
-          [ 'equal'  , 8 , 11 , 9 , 12 ] ],
-        [ [ 'equal'   , 16 , 19 , 17 , 20 ],
-          [ 'replace' , 19 , 20 , 20 , 21 ],
-          [ 'equal'   , 20 , 22 , 21 , 23 ],
-          [ 'delete'  , 22 , 27 , 23 , 23 ],
-          [ 'equal'   , 27 , 30 , 23 , 26 ] ],
-        [ [ 'equal'   , 31 , 34 , 27 , 30 ],
-          [ 'replace' , 34 , 35 , 30 , 31 ],
-          [ 'equal'   , 35 , 38 , 31 , 34 ] ] ]
-      */
-
-      codes = this.getOpcodes();
-      if (!codes.length) {
-        codes = [['equal', 0, 1, 0, 1]];
-      }
-      if (codes[0][0] === 'equal') {
-        _ref = codes[0], tag = _ref[0], i1 = _ref[1], i2 = _ref[2], j1 = _ref[3], j2 = _ref[4];
-        codes[0] = [tag, max(i1, i2 - n), i2, max(j1, j2 - n), j2];
-      }
-      if (codes[codes.length - 1][0] === 'equal') {
-        _ref1 = codes[codes.length - 1], tag = _ref1[0], i1 = _ref1[1], i2 = _ref1[2], j1 = _ref1[3], j2 = _ref1[4];
-        codes[codes.length - 1] = [tag, i1, min(i2, i1 + n), j1, min(j2, j1 + n)];
-      }
-      nn = n + n;
-      groups = [];
-      group = [];
-      for (_i = 0, _len = codes.length; _i < _len; _i++) {
-        _ref2 = codes[_i], tag = _ref2[0], i1 = _ref2[1], i2 = _ref2[2], j1 = _ref2[3], j2 = _ref2[4];
-        if (tag === 'equal' && i2 - i1 > nn) {
-          group.push([tag, i1, min(i2, i1 + n), j1, min(j2, j1 + n)]);
-          groups.push(group);
-          group = [];
-          _ref3 = [max(i1, i2 - n), max(j1, j2 - n)], i1 = _ref3[0], j1 = _ref3[1];
-        }
-        group.push([tag, i1, i2, j1, j2]);
-      }
-      if (group.length && !(group.length === 1 && group[0][0] === 'equal')) {
-        groups.push(group);
-      }
-      return groups;
-    };
-
-    SequenceMatcher.prototype.ratio = function() {
-      /*
-          Return a measure of the sequences' similarity (float in [0,1]).
-      
-          Where T is the total number of elements in both sequences, and
-          M is the number of matches, this is 2.0*M / T.
-          Note that this is 1 if the sequences are identical, and 0 if
-          they have nothing in common.
-      
-          .ratio() is expensive to compute if you haven't already computed
-          .getMatchingBlocks() or .getOpcodes(), in which case you may
-          want to try .quickRatio() or .realQuickRatio() first to get an
-          upper bound.
-          
-          >>> s = new SequenceMatcher(null, 'abcd', 'bcde')
-          >>> s.ratio()
-          0.75
-          >>> s.quickRatio()
-          0.75
-          >>> s.realQuickRatio()
-          1.0
-      */
-
-      var match, matches, _i, _len, _ref;
-      matches = 0;
-      _ref = this.getMatchingBlocks();
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        match = _ref[_i];
-        matches += match[2];
-      }
-      return _calculateRatio(matches, this.a.length + this.b.length);
-    };
-
-    SequenceMatcher.prototype.quickRatio = function() {
-      /*
-          Return an upper bound on ratio() relatively quickly.
-      
-          This isn't defined beyond that it is an upper bound on .ratio(), and
-          is faster to compute.
-      */
-
-      var avail, elt, fullbcount, matches, numb, _i, _j, _len, _len1, _ref, _ref1;
-      if (!this.fullbcount) {
-        this.fullbcount = fullbcount = {};
-        _ref = this.b;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          elt = _ref[_i];
-          fullbcount[elt] = (fullbcount[elt] || 0) + 1;
-        }
-      }
-      fullbcount = this.fullbcount;
-      avail = {};
-      matches = 0;
-      _ref1 = this.a;
-      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-        elt = _ref1[_j];
-        if (_has(avail, elt)) {
-          numb = avail[elt];
-        } else {
-          numb = fullbcount[elt] || 0;
-        }
-        avail[elt] = numb - 1;
-        if (numb > 0) {
-          matches++;
-        }
-      }
-      return _calculateRatio(matches, this.a.length + this.b.length);
-    };
-
-    SequenceMatcher.prototype.realQuickRatio = function() {
-      /*
-          Return an upper bound on ratio() very quickly.
-      
-          This isn't defined beyond that it is an upper bound on .ratio(), and
-          is faster to compute than either .ratio() or .quickRatio().
-      */
-
-      var la, lb, _ref;
-      _ref = [this.a.length, this.b.length], la = _ref[0], lb = _ref[1];
-      return _calculateRatio(min(la, lb), la + lb);
-    };
-
-    return SequenceMatcher;
-
-  })();
-
-  getCloseMatches = function(word, possibilities, n, cutoff) {
-    var result, s, score, x, _i, _j, _len, _len1, _ref, _results;
-    if (n == null) {
-      n = 3;
-    }
-    if (cutoff == null) {
-      cutoff = 0.6;
-    }
-    /*
-      Use SequenceMatcher to return list of the best "good enough" matches.
-    
-      word is a sequence for which close matches are desired (typically a
-      string).
-    
-      possibilities is a list of sequences against which to match word
-      (typically a list of strings).
-    
-      Optional arg n (default 3) is the maximum number of close matches to
-      return.  n must be > 0.
-    
-      Optional arg cutoff (default 0.6) is a float in [0, 1].  Possibilities
-      that don't score at least that similar to word are ignored.
-    
-      The best (no more than n) matches among the possibilities are returned
-      in a list, sorted by similarity score, most similar first.
-    
-      >>> getCloseMatches('appel', ['ape', 'apple', 'peach', 'puppy'])
-      ['apple', 'ape']
-      >>> KEYWORDS = require('coffee-script').RESERVED
-      >>> getCloseMatches('wheel', KEYWORDS)
-      ['when', 'while']
-      >>> getCloseMatches('accost', KEYWORDS)
-      ['const']
-    */
-
-    if (!(n > 0)) {
-      throw new Error("n must be > 0: (" + n + ")");
-    }
-    if (!((0.0 <= cutoff && cutoff <= 1.0))) {
-      throw new Error("cutoff must be in [0.0, 1.0]: (" + cutoff + ")");
-    }
-    result = [];
-    s = new SequenceMatcher();
-    s.setSeq2(word);
-    for (_i = 0, _len = possibilities.length; _i < _len; _i++) {
-      x = possibilities[_i];
-      s.setSeq1(x);
-      if (s.realQuickRatio() >= cutoff && s.quickRatio() >= cutoff && s.ratio() >= cutoff) {
-        result.push([s.ratio(), x]);
-      }
-    }
-    result = Heap.nlargest(result, n, _arrayCmp);
-    _results = [];
-    for (_j = 0, _len1 = result.length; _j < _len1; _j++) {
-      _ref = result[_j], score = _ref[0], x = _ref[1];
-      _results.push(x);
-    }
-    return _results;
-  };
-
-  _countLeading = function(line, ch) {
-    /*
-      Return number of `ch` characters at the start of `line`.
-    
-      >>> _countLeading('   abc', ' ')
-      3
-    */
-
-    var i, n, _ref;
-    _ref = [0, line.length], i = _ref[0], n = _ref[1];
-    while (i < n && line[i] === ch) {
-      i++;
-    }
-    return i;
-  };
-
-  Differ = (function() {
-
-    Differ.name = 'Differ';
-
-    /*
-      Differ is a class for comparing sequences of lines of text, and
-      producing human-readable differences or deltas.  Differ uses
-      SequenceMatcher both to compare sequences of lines, and to compare
-      sequences of characters within similar (near-matching) lines.
-    
-      Each line of a Differ delta begins with a two-letter code:
-    
-          '- '    line unique to sequence 1
-          '+ '    line unique to sequence 2
-          '  '    line common to both sequences
-          '? '    line not present in either input sequence
-    
-      Lines beginning with '? ' attempt to guide the eye to intraline
-      differences, and were not present in either input sequence.  These lines
-      can be confusing if the sequences contain tab characters.
-    
-      Note that Differ makes no claim to produce a *minimal* diff.  To the
-      contrary, minimal diffs are often counter-intuitive, because they synch
-      up anywhere possible, sometimes accidental matches 100 pages apart.
-      Restricting synch points to contiguous matches preserves some notion of
-      locality, at the occasional cost of producing a longer diff.
-    
-      Example: Comparing two texts.
-    
-      >>> text1 = ['1. Beautiful is better than ugly.\n',
-      ...   '2. Explicit is better than implicit.\n',
-      ...   '3. Simple is better than complex.\n',
-      ...   '4. Complex is better than complicated.\n']
-      >>> text1.length
-      4
-      >>> text2 = ['1. Beautiful is better than ugly.\n',
-      ...   '3.   Simple is better than complex.\n',
-      ...   '4. Complicated is better than complex.\n',
-      ...   '5. Flat is better than nested.\n']
-    
-      Next we instantiate a Differ object:
-    
-      >>> d = new Differ()
-    
-      Note that when instantiating a Differ object we may pass functions to
-      filter out line and character 'junk'.
-    
-      Finally, we compare the two:
-    
-      >>> result = d.compare(text1, text2)
-      [ '  1. Beautiful is better than ugly.\n',
-        '- 2. Explicit is better than implicit.\n',
-        '- 3. Simple is better than complex.\n',
-        '+ 3.   Simple is better than complex.\n',
-        '?   ++\n',
-        '- 4. Complex is better than complicated.\n',
-        '?          ^                     ---- ^\n',
-        '+ 4. Complicated is better than complex.\n',
-        '?         ++++ ^                      ^\n',
-        '+ 5. Flat is better than nested.\n' ]
-    
-      Methods:
-    
-      constructor(linejunk=null, charjunk=null)
-          Construct a text differencer, with optional filters.
-      compare(a, b)
-          Compare two sequences of lines; generate the resulting delta.
-    */
-
-
-    function Differ(linejunk, charjunk) {
-      this.linejunk = linejunk;
-      this.charjunk = charjunk;
-      /*
-          Construct a text differencer, with optional filters.
-      
-          The two optional keyword parameters are for filter functions:
-      
-          - `linejunk`: A function that should accept a single string argument,
-            and return true iff the string is junk. The module-level function
-            `IS_LINE_JUNK` may be used to filter out lines without visible
-            characters, except for at most one splat ('#').  It is recommended
-            to leave linejunk null. 
-      
-          - `charjunk`: A function that should accept a string of length 1. The
-            module-level function `IS_CHARACTER_JUNK` may be used to filter out
-            whitespace characters (a blank or tab; **note**: bad idea to include
-            newline in this!).  Use of IS_CHARACTER_JUNK is recommended.
-      */
-
-    }
-
-    Differ.prototype.compare = function(a, b) {
-      /*
-          Compare two sequences of lines; generate the resulting delta.
-      
-          Each sequence must contain individual single-line strings ending with
-          newlines. Such sequences can be obtained from the `readlines()` method
-          of file-like objects.  The delta generated also consists of newline-
-          terminated strings, ready to be printed as-is via the writeline()
-          method of a file-like object.
-      
-          Example:
-      
-          >>> d = new Differ
-          >>> d.compare(['one\n', 'two\n', 'three\n'],
-          ...           ['ore\n', 'tree\n', 'emu\n'])
-          [ '- one\n',
-            '?  ^\n',
-            '+ ore\n',
-            '?  ^\n',
-            '- two\n',
-            '- three\n',
-            '?  -\n',
-            '+ tree\n',
-            '+ emu\n' ]
-      */
-
-      var ahi, alo, bhi, blo, cruncher, g, line, lines, tag, _i, _j, _len, _len1, _ref, _ref1;
-      cruncher = new SequenceMatcher(this.linejunk, a, b);
-      lines = [];
-      _ref = cruncher.getOpcodes();
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        _ref1 = _ref[_i], tag = _ref1[0], alo = _ref1[1], ahi = _ref1[2], blo = _ref1[3], bhi = _ref1[4];
-        switch (tag) {
-          case 'replace':
-            g = this._fancyReplace(a, alo, ahi, b, blo, bhi);
-            break;
-          case 'delete':
-            g = this._dump('-', a, alo, ahi);
-            break;
-          case 'insert':
-            g = this._dump('+', b, blo, bhi);
-            break;
-          case 'equal':
-            g = this._dump(' ', a, alo, ahi);
-            break;
-          default:
-            throw new Error("unknow tag (" + tag + ")");
-        }
-        for (_j = 0, _len1 = g.length; _j < _len1; _j++) {
-          line = g[_j];
-          lines.push(line);
-        }
-      }
-      return lines;
-    };
-
-    Differ.prototype._dump = function(tag, x, lo, hi) {
-      /*
-          Generate comparison results for a same-tagged range.
-      */
-
-      var i, _i, _results;
-      _results = [];
-      for (i = _i = lo; lo <= hi ? _i < hi : _i > hi; i = lo <= hi ? ++_i : --_i) {
-        _results.push("" + tag + " " + x[i]);
-      }
-      return _results;
-    };
-
-    Differ.prototype._plainReplace = function(a, alo, ahi, b, blo, bhi) {
-      var first, g, line, lines, second, _i, _j, _len, _len1, _ref;
-      assert(alo < ahi && blo < bhi);
-      if (bhi - blo < ahi - alo) {
-        first = this._dump('+', b, blo, bhi);
-        second = this._dump('-', a, alo, ahi);
-      } else {
-        first = this._dump('-', a, alo, ahi);
-        second = this._dump('+', b, blo, bhi);
-      }
-      lines = [];
-      _ref = [first, second];
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        g = _ref[_i];
-        for (_j = 0, _len1 = g.length; _j < _len1; _j++) {
-          line = g[_j];
-          lines.push(line);
-        }
-      }
-      return lines;
-    };
-
-    Differ.prototype._fancyReplace = function(a, alo, ahi, b, blo, bhi) {
-      /*
-          When replacing one block of lines with another, search the blocks
-          for *similar* lines; the best-matching pair (if any) is used as a
-          synch point, and intraline difference marking is done on the
-          similar pair. Lots of work, but often worth it.
-      
-          Example:
-          >>> d = new Differ
-          >>> d._fancyReplace(['abcDefghiJkl\n'], 0, 1,
-          ...                 ['abcdefGhijkl\n'], 0, 1)
-          [ '- abcDefghiJkl\n',
-            '?    ^  ^  ^\n',
-            '+ abcdefGhijkl\n',
-            '?    ^  ^  ^\n' ]
-      */
-
-      var aelt, ai, ai1, ai2, atags, belt, bestRatio, besti, bestj, bj, bj1, bj2, btags, cruncher, cutoff, eqi, eqj, i, j, la, lb, line, lines, tag, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _n, _o, _ref, _ref1, _ref10, _ref11, _ref12, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
-      _ref = [0.74, 0.75], bestRatio = _ref[0], cutoff = _ref[1];
-      cruncher = new SequenceMatcher(this.charjunk);
-      _ref1 = [null, null], eqi = _ref1[0], eqj = _ref1[1];
-      lines = [];
-      for (j = _i = blo; blo <= bhi ? _i < bhi : _i > bhi; j = blo <= bhi ? ++_i : --_i) {
-        bj = b[j];
-        cruncher.setSeq2(bj);
-        for (i = _j = alo; alo <= ahi ? _j < ahi : _j > ahi; i = alo <= ahi ? ++_j : --_j) {
-          ai = a[i];
-          if (ai === bj) {
-            if (eqi === null) {
-              _ref2 = [i, j], eqi = _ref2[0], eqj = _ref2[1];
-            }
-            continue;
-          }
-          cruncher.setSeq1(ai);
-          if (cruncher.realQuickRatio() > bestRatio && cruncher.quickRatio() > bestRatio && cruncher.ratio() > bestRatio) {
-            _ref3 = [cruncher.ratio(), i, j], bestRatio = _ref3[0], besti = _ref3[1], bestj = _ref3[2];
-          }
-        }
-      }
-      if (bestRatio < cutoff) {
-        if (eqi === null) {
-          _ref4 = this._plainReplace(a, alo, ahi, b, blo, bhi);
-          for (_k = 0, _len = _ref4.length; _k < _len; _k++) {
-            line = _ref4[_k];
-            lines.push(line);
-          }
-          return lines;
-        }
-        _ref5 = [eqi, eqj, 1.0], besti = _ref5[0], bestj = _ref5[1], bestRatio = _ref5[2];
-      } else {
-        eqi = null;
-      }
-      _ref6 = this._fancyHelper(a, alo, besti, b, blo, bestj);
-      for (_l = 0, _len1 = _ref6.length; _l < _len1; _l++) {
-        line = _ref6[_l];
-        lines.push(line);
-      }
-      _ref7 = [a[besti], b[bestj]], aelt = _ref7[0], belt = _ref7[1];
-      if (eqi === null) {
-        atags = btags = '';
-        cruncher.setSeqs(aelt, belt);
-        _ref8 = cruncher.getOpcodes();
-        for (_m = 0, _len2 = _ref8.length; _m < _len2; _m++) {
-          _ref9 = _ref8[_m], tag = _ref9[0], ai1 = _ref9[1], ai2 = _ref9[2], bj1 = _ref9[3], bj2 = _ref9[4];
-          _ref10 = [ai2 - ai1, bj2 - bj1], la = _ref10[0], lb = _ref10[1];
-          switch (tag) {
-            case 'replace':
-              atags += Array(la + 1).join('^');
-              btags += Array(lb + 1).join('^');
-              break;
-            case 'delete':
-              atags += Array(la + 1).join('-');
-              break;
-            case 'insert':
-              btags += Array(lb + 1).join('+');
-              break;
-            case 'equal':
-              atags += Array(la + 1).join(' ');
-              btags += Array(lb + 1).join(' ');
-              break;
-            default:
-              throw new Error("unknow tag (" + tag + ")");
-          }
-        }
-        _ref11 = this._qformat(aelt, belt, atags, btags);
-        for (_n = 0, _len3 = _ref11.length; _n < _len3; _n++) {
-          line = _ref11[_n];
-          lines.push(line);
-        }
-      } else {
-        lines.push('  ' + aelt);
-      }
-      _ref12 = this._fancyHelper(a, besti + 1, ahi, b, bestj + 1, bhi);
-      for (_o = 0, _len4 = _ref12.length; _o < _len4; _o++) {
-        line = _ref12[_o];
-        lines.push(line);
-      }
-      return lines;
-    };
-
-    Differ.prototype._fancyHelper = function(a, alo, ahi, b, blo, bhi) {
-      var g;
-      g = [];
-      if (alo < ahi) {
-        if (blo < bhi) {
-          g = this._fancyReplace(a, alo, ahi, b, blo, bhi);
-        } else {
-          g = this._dump('-', a, alo, ahi);
-        }
-      } else if (blo < bhi) {
-        g = this._dump('+', b, blo, bhi);
-      }
-      return g;
-    };
-
-    Differ.prototype._qformat = function(aline, bline, atags, btags) {
-      /*
-          Format "?" output and deal with leading tabs.
-      
-          Example:
-      
-          >>> d = new Differ
-          >>> d._qformat('\tabcDefghiJkl\n', '\tabcdefGhijkl\n',
-          [ '- \tabcDefghiJkl\n',
-            '? \t ^ ^  ^\n',
-            '+ \tabcdefGhijkl\n',
-            '? \t ^ ^  ^\n' ]
-      */
-
-      var common, lines;
-      lines = [];
-      common = min(_countLeading(aline, '\t'), _countLeading(bline, '\t'));
-      common = min(common, _countLeading(atags.slice(0, common), ' '));
-      common = min(common, _countLeading(btags.slice(0, common), ' '));
-      atags = atags.slice(common).replace(/\s+$/, '');
-      btags = btags.slice(common).replace(/\s+$/, '');
-      lines.push('- ' + aline);
-      if (atags.length) {
-        lines.push("? " + (Array(common + 1).join('\t')) + atags + "\n");
-      }
-      lines.push('+ ' + bline);
-      if (btags.length) {
-        lines.push("? " + (Array(common + 1).join('\t')) + btags + "\n");
-      }
-      return lines;
-    };
-
-    return Differ;
-
-  })();
-
-  IS_LINE_JUNK = function(line, pat) {
-    if (pat == null) {
-      pat = /^\s*#?\s*$/;
-    }
-    /*
-      Return 1 for ignorable line: iff `line` is blank or contains a single '#'.
-        
-      Examples:
-    
-      >>> IS_LINE_JUNK('\n')
-      true
-      >>> IS_LINE_JUNK('  #   \n')
-      true
-      >>> IS_LINE_JUNK('hello\n')
-      false
-    */
-
-    return pat.test(line);
-  };
-
-  IS_CHARACTER_JUNK = function(ch, ws) {
-    if (ws == null) {
-      ws = ' \t';
-    }
-    /*
-      Return 1 for ignorable character: iff `ch` is a space or tab.
-    
-      Examples:
-      >>> IS_CHARACTER_JUNK(' ').should.be.true
-      true
-      >>> IS_CHARACTER_JUNK('\t').should.be.true
-      true
-      >>> IS_CHARACTER_JUNK('\n').should.be.false
-      false
-      >>> IS_CHARACTER_JUNK('x').should.be.false
-      false
-    */
-
-    return __indexOf.call(ws, ch) >= 0;
-  };
-
-  _formatRangeUnified = function(start, stop) {
-    /*
-      Convert range to the "ed" format'
-    */
-
-    var beginning, length;
-    beginning = start + 1;
-    length = stop - start;
-    if (length === 1) {
-      return "" + beginning;
-    }
-    if (!length) {
-      beginning--;
-    }
-    return "" + beginning + "," + length;
-  };
-
-  unifiedDiff = function(a, b, _arg) {
-    var file1Range, file2Range, first, fromdate, fromfile, fromfiledate, group, i1, i2, j1, j2, last, line, lines, lineterm, n, started, tag, todate, tofile, tofiledate, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
-    _ref = _arg != null ? _arg : {}, fromfile = _ref.fromfile, tofile = _ref.tofile, fromfiledate = _ref.fromfiledate, tofiledate = _ref.tofiledate, n = _ref.n, lineterm = _ref.lineterm;
-    /*
-      Compare two sequences of lines; generate the delta as a unified diff.
-    
-      Unified diffs are a compact way of showing line changes and a few
-      lines of context.  The number of context lines is set by 'n' which
-      defaults to three.
-    
-      By default, the diff control lines (those with ---, +++, or @@) are
-      created with a trailing newline.  
-    
-      For inputs that do not have trailing newlines, set the lineterm
-      argument to "" so that the output will be uniformly newline free.
-    
-      The unidiff format normally has a header for filenames and modification
-      times.  Any or all of these may be specified using strings for
-      'fromfile', 'tofile', 'fromfiledate', and 'tofiledate'.
-      The modification times are normally expressed in the ISO 8601 format.
-    
-      Example:
-    
-      >>> unifiedDiff('one two three four'.split(' '),
-      ...             'zero one tree four'.split(' '), {
-      ...               fromfile: 'Original'
-      ...               tofile: 'Current',
-      ...               fromfiledate: '2005-01-26 23:30:50',
-      ...               tofiledate: '2010-04-02 10:20:52',
-      ...               lineterm: ''
-      ...             })
-      [ '--- Original\t2005-01-26 23:30:50',
-        '+++ Current\t2010-04-02 10:20:52',
-        '@@ -1,4 +1,4 @@',
-        '+zero',
-        ' one',
-        '-two',
-        '-three',
-        '+tree',
-        ' four' ]
-    */
-
-    if (fromfile == null) {
-      fromfile = '';
-    }
-    if (tofile == null) {
-      tofile = '';
-    }
-    if (fromfiledate == null) {
-      fromfiledate = '';
-    }
-    if (tofiledate == null) {
-      tofiledate = '';
-    }
-    if (n == null) {
-      n = 3;
-    }
-    if (lineterm == null) {
-      lineterm = '\n';
-    }
-    lines = [];
-    started = false;
-    _ref1 = (new SequenceMatcher(null, a, b)).getGroupedOpcodes();
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      group = _ref1[_i];
-      if (!started) {
-        started = true;
-        fromdate = fromfiledate ? "\t" + fromfiledate : '';
-        todate = tofiledate ? "\t" + tofiledate : '';
-        lines.push("--- " + fromfile + fromdate + lineterm);
-        lines.push("+++ " + tofile + todate + lineterm);
-      }
-      _ref2 = [group[0], group[group.length - 1]], first = _ref2[0], last = _ref2[1];
-      file1Range = _formatRangeUnified(first[1], last[2]);
-      file2Range = _formatRangeUnified(first[3], last[4]);
-      lines.push("@@ -" + file1Range + " +" + file2Range + " @@" + lineterm);
-      for (_j = 0, _len1 = group.length; _j < _len1; _j++) {
-        _ref3 = group[_j], tag = _ref3[0], i1 = _ref3[1], i2 = _ref3[2], j1 = _ref3[3], j2 = _ref3[4];
-        if (tag === 'equal') {
-          _ref4 = a.slice(i1, i2);
-          for (_k = 0, _len2 = _ref4.length; _k < _len2; _k++) {
-            line = _ref4[_k];
-            lines.push(' ' + line);
-          }
-          continue;
-        }
-        if (tag === 'replace' || tag === 'delete') {
-          _ref5 = a.slice(i1, i2);
-          for (_l = 0, _len3 = _ref5.length; _l < _len3; _l++) {
-            line = _ref5[_l];
-            lines.push('-' + line);
-          }
-        }
-        if (tag === 'replace' || tag === 'insert') {
-          _ref6 = b.slice(j1, j2);
-          for (_m = 0, _len4 = _ref6.length; _m < _len4; _m++) {
-            line = _ref6[_m];
-            lines.push('+' + line);
-          }
-        }
-      }
-    }
-    return lines;
-  };
-
-  _formatRangeContext = function(start, stop) {
-    /*
-      Convert range to the "ed" format'
-    */
-
-    var beginning, length;
-    beginning = start + 1;
-    length = stop - start;
-    if (!length) {
-      beginning--;
-    }
-    if (length <= 1) {
-      return "" + beginning;
-    }
-    return "" + beginning + "," + (beginning + length - 1);
-  };
-
-  contextDiff = function(a, b, _arg) {
-    var file1Range, file2Range, first, fromdate, fromfile, fromfiledate, group, i1, i2, j1, j2, last, line, lines, lineterm, n, prefix, started, tag, todate, tofile, tofiledate, _, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
-    _ref = _arg != null ? _arg : {}, fromfile = _ref.fromfile, tofile = _ref.tofile, fromfiledate = _ref.fromfiledate, tofiledate = _ref.tofiledate, n = _ref.n, lineterm = _ref.lineterm;
-    /*
-      Compare two sequences of lines; generate the delta as a context diff.
-    
-      Context diffs are a compact way of showing line changes and a few
-      lines of context.  The number of context lines is set by 'n' which
-      defaults to three.
-    
-      By default, the diff control lines (those with *** or ---) are
-      created with a trailing newline.  This is helpful so that inputs
-      created from file.readlines() result in diffs that are suitable for
-      file.writelines() since both the inputs and outputs have trailing
-      newlines.
-    
-      For inputs that do not have trailing newlines, set the lineterm
-      argument to "" so that the output will be uniformly newline free.
-    
-      The context diff format normally has a header for filenames and
-      modification times.  Any or all of these may be specified using
-      strings for 'fromfile', 'tofile', 'fromfiledate', and 'tofiledate'.
-      The modification times are normally expressed in the ISO 8601 format.
-      If not specified, the strings default to blanks.
-    
-      Example:
-      >>> a = ['one\n', 'two\n', 'three\n', 'four\n']
-      >>> b = ['zero\n', 'one\n', 'tree\n', 'four\n']
-      >>> contextDiff(a, b, {fromfile: 'Original', tofile: 'Current'})
-      [ '*** Original\n',
-        '--- Current\n',
-        '***************\n',
-        '*** 1,4 ****\n',
-        '  one\n',
-        '! two\n',
-        '! three\n',
-        '  four\n',
-        '--- 1,4 ----\n',
-        '+ zero\n',
-        '  one\n',
-        '! tree\n',
-        '  four\n' ]
-    */
-
-    if (fromfile == null) {
-      fromfile = '';
-    }
-    if (tofile == null) {
-      tofile = '';
-    }
-    if (fromfiledate == null) {
-      fromfiledate = '';
-    }
-    if (tofiledate == null) {
-      tofiledate = '';
-    }
-    if (n == null) {
-      n = 3;
-    }
-    if (lineterm == null) {
-      lineterm = '\n';
-    }
-    prefix = {
-      insert: '+ ',
-      "delete": '- ',
-      replace: '! ',
-      equal: '  '
-    };
-    started = false;
-    lines = [];
-    _ref1 = (new SequenceMatcher(null, a, b)).getGroupedOpcodes();
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      group = _ref1[_i];
-      if (!started) {
-        started = true;
-        fromdate = fromfiledate ? "\t" + fromfiledate : '';
-        todate = tofiledate ? "\t" + tofiledate : '';
-        lines.push("*** " + fromfile + fromdate + lineterm);
-        lines.push("--- " + tofile + todate + lineterm);
-        _ref2 = [group[0], group[group.length - 1]], first = _ref2[0], last = _ref2[1];
-        lines.push('***************' + lineterm);
-        file1Range = _formatRangeContext(first[1], last[2]);
-        lines.push("*** " + file1Range + " ****" + lineterm);
-        if (_any((function() {
-          var _j, _len1, _ref3, _results;
-          _results = [];
-          for (_j = 0, _len1 = group.length; _j < _len1; _j++) {
-            _ref3 = group[_j], tag = _ref3[0], _ = _ref3[1], _ = _ref3[2], _ = _ref3[3], _ = _ref3[4];
-            _results.push(tag === 'replace' || tag === 'delete');
-          }
-          return _results;
-        })())) {
-          for (_j = 0, _len1 = group.length; _j < _len1; _j++) {
-            _ref3 = group[_j], tag = _ref3[0], i1 = _ref3[1], i2 = _ref3[2], _ = _ref3[3], _ = _ref3[4];
-            if (tag !== 'insert') {
-              _ref4 = a.slice(i1, i2);
-              for (_k = 0, _len2 = _ref4.length; _k < _len2; _k++) {
-                line = _ref4[_k];
-                lines.push(prefix[tag] + line);
-              }
-            }
-          }
-        }
-        file2Range = _formatRangeContext(first[3], last[4]);
-        lines.push("--- " + file2Range + " ----" + lineterm);
-        if (_any((function() {
-          var _l, _len3, _ref5, _results;
-          _results = [];
-          for (_l = 0, _len3 = group.length; _l < _len3; _l++) {
-            _ref5 = group[_l], tag = _ref5[0], _ = _ref5[1], _ = _ref5[2], _ = _ref5[3], _ = _ref5[4];
-            _results.push(tag === 'replace' || tag === 'insert');
-          }
-          return _results;
-        })())) {
-          for (_l = 0, _len3 = group.length; _l < _len3; _l++) {
-            _ref5 = group[_l], tag = _ref5[0], _ = _ref5[1], _ = _ref5[2], j1 = _ref5[3], j2 = _ref5[4];
-            if (tag !== 'delete') {
-              _ref6 = b.slice(j1, j2);
-              for (_m = 0, _len4 = _ref6.length; _m < _len4; _m++) {
-                line = _ref6[_m];
-                lines.push(prefix[tag] + line);
-              }
-            }
-          }
-        }
-      }
-    }
-    return lines;
-  };
-
-  ndiff = function(a, b, linejunk, charjunk) {
-    if (charjunk == null) {
-      charjunk = IS_CHARACTER_JUNK;
-    }
-    /*
-      Compare `a` and `b` (lists of strings); return a `Differ`-style delta.
-    
-      Optional keyword parameters `linejunk` and `charjunk` are for filter
-      functions (or None):
-    
-      - linejunk: A function that should accept a single string argument, and
-        return true iff the string is junk.  The default is null, and is
-        recommended; 
-    
-      - charjunk: A function that should accept a string of length 1. The
-        default is module-level function IS_CHARACTER_JUNK, which filters out
-        whitespace characters (a blank or tab; note: bad idea to include newline
-        in this!).
-    
-      Example:
-      >>> a = ['one\n', 'two\n', 'three\n']
-      >>> b = ['ore\n', 'tree\n', 'emu\n']
-      >>> ndiff(a, b)
-      [ '- one\n',
-        '?  ^\n',
-        '+ ore\n',
-        '?  ^\n',
-        '- two\n',
-        '- three\n',
-        '?  -\n',
-        '+ tree\n',
-        '+ emu\n' ]
-    */
-
-    return (new Differ(linejunk, charjunk)).compare(a, b);
-  };
-
-  restore = function(delta, which) {
-    /*
-      Generate one of the two sequences that generated a delta.
-    
-      Given a `delta` produced by `Differ.compare()` or `ndiff()`, extract
-      lines originating from file 1 or 2 (parameter `which`), stripping off line
-      prefixes.
-    
-      Examples:
-      >>> a = ['one\n', 'two\n', 'three\n']
-      >>> b = ['ore\n', 'tree\n', 'emu\n']
-      >>> diff = ndiff(a, b)
-      >>> restore(diff, 1)
-      [ 'one\n',
-        'two\n',
-        'three\n' ]
-      >>> restore(diff, 2)
-      [ 'ore\n',
-        'tree\n',
-        'emu\n' ]
-    */
-
-    var line, lines, prefixes, tag, _i, _len, _ref;
-    tag = {
-      1: '- ',
-      2: '+ '
-    }[which];
-    if (!tag) {
-      throw new Error("unknow delta choice (must be 1 or 2): " + which);
-    }
-    prefixes = ['  ', tag];
-    lines = [];
-    for (_i = 0, _len = delta.length; _i < _len; _i++) {
-      line = delta[_i];
-      if (_ref = line.slice(0, 2), __indexOf.call(prefixes, _ref) >= 0) {
-        lines.push(line.slice(2));
-      }
-    }
-    return lines;
-  };
-
-  exports._arrayCmp = _arrayCmp;
-
-  exports.SequenceMatcher = SequenceMatcher;
-
-  exports.getCloseMatches = getCloseMatches;
-
-  exports._countLeading = _countLeading;
-
-  exports.Differ = Differ;
-
-  exports.IS_LINE_JUNK = IS_LINE_JUNK;
-
-  exports.IS_CHARACTER_JUNK = IS_CHARACTER_JUNK;
-
-  exports._formatRangeUnified = _formatRangeUnified;
-
-  exports.unifiedDiff = unifiedDiff;
-
-  exports._formatRangeContext = _formatRangeContext;
-
-  exports.contextDiff = contextDiff;
-
-  exports.ndiff = ndiff;
-
-  exports.restore = restore;
-
-}).call(this);
-
-
-/***/ }),
-
-/***/ 1128:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Inspired by Google Closure:
-// http://closure-library.googlecode.com/svn/docs/
-// closure_goog_array_array.js.html#goog.array.clear
-
-
-
-var value = __nccwpck_require__(5282);
-
-module.exports = function () {
-	value(this).length = 0;
-	return this;
-};
-
-
-/***/ }),
-
-/***/ 2324:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var numberIsNaN       = __nccwpck_require__(6881)
-  , toPosInt          = __nccwpck_require__(3755)
-  , value             = __nccwpck_require__(5282)
-  , indexOf           = Array.prototype.indexOf
-  , objHasOwnProperty = Object.prototype.hasOwnProperty
-  , abs               = Math.abs
-  , floor             = Math.floor;
-
-module.exports = function (searchElement /*, fromIndex*/) {
-	var i, length, fromIndex, val;
-	if (!numberIsNaN(searchElement)) return indexOf.apply(this, arguments);
-
-	length = toPosInt(value(this).length);
-	fromIndex = arguments[1];
-	if (isNaN(fromIndex)) fromIndex = 0;
-	else if (fromIndex >= 0) fromIndex = floor(fromIndex);
-	else fromIndex = toPosInt(this.length) - floor(abs(fromIndex));
-
-	for (i = fromIndex; i < length; ++i) {
-		if (objHasOwnProperty.call(this, i)) {
-			val = this[i];
-			if (numberIsNaN(val)) return i; // Jslint: ignore
-		}
-	}
-	return -1;
-};
-
-
-/***/ }),
-
-/***/ 8137:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var toPosInt          = __nccwpck_require__(3755)
-  , callable          = __nccwpck_require__(6097)
-  , value             = __nccwpck_require__(5282)
-  , objHasOwnProperty = Object.prototype.hasOwnProperty
-  , call              = Function.prototype.call;
-
-module.exports = function (cb /*, thisArg*/) {
-	var i, self, thisArg;
-
-	self = Object(value(this));
-	callable(cb);
-	thisArg = arguments[1];
-
-	for (i = toPosInt(self.length) - 1; i >= 0; --i) {
-		if (objHasOwnProperty.call(self, i)) call.call(cb, thisArg, self[i], i, self);
-	}
-};
-
-
-/***/ }),
-
-/***/ 5684:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var indexOf = __nccwpck_require__(2324)
-  , filter  = Array.prototype.filter
-  , isFirst;
-
-isFirst = function (value, index) { return indexOf.call(this, value) === index; };
-
-module.exports = function () { return filter.call(this, isFirst, this); };
-
-
-/***/ }),
-
-/***/ 2406:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(6619)() ? Array.from : __nccwpck_require__(8049);
-
-
-/***/ }),
-
-/***/ 6619:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	var from = Array.from, arr, result;
-	if (typeof from !== "function") return false;
-	arr = ["raz", "dwa"];
-	result = from(arr);
-	return Boolean(result && result !== arr && result[1] === "dwa");
-};
-
-
-/***/ }),
-
-/***/ 8049:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var iteratorSymbol = (__nccwpck_require__(1228).iterator)
-  , isArguments    = __nccwpck_require__(1375)
-  , isFunction     = __nccwpck_require__(1003)
-  , toPosInt       = __nccwpck_require__(3755)
-  , callable       = __nccwpck_require__(6097)
-  , validValue     = __nccwpck_require__(5282)
-  , isValue        = __nccwpck_require__(2285)
-  , isString       = __nccwpck_require__(5624)
-  , isArray        = Array.isArray
-  , call           = Function.prototype.call
-  , desc           = { configurable: true, enumerable: true, writable: true, value: null }
-  , defineProperty = Object.defineProperty;
-
-// eslint-disable-next-line complexity, max-lines-per-function
-module.exports = function (arrayLike /*, mapFn, thisArg*/) {
-	var mapFn = arguments[1]
-	  , thisArg = arguments[2]
-	  , Context
-	  , i
-	  , j
-	  , arr
-	  , length
-	  , code
-	  , iterator
-	  , result
-	  , getIterator
-	  , value;
-
-	arrayLike = Object(validValue(arrayLike));
-
-	if (isValue(mapFn)) callable(mapFn);
-	if (!this || this === Array || !isFunction(this)) {
-		// Result: Plain array
-		if (!mapFn) {
-			if (isArguments(arrayLike)) {
-				// Source: Arguments
-				length = arrayLike.length;
-				if (length !== 1) return Array.apply(null, arrayLike);
-				arr = new Array(1);
-				arr[0] = arrayLike[0];
-				return arr;
-			}
-			if (isArray(arrayLike)) {
-				// Source: Array
-				arr = new Array((length = arrayLike.length));
-				for (i = 0; i < length; ++i) arr[i] = arrayLike[i];
-				return arr;
-			}
-		}
-		arr = [];
-	} else {
-		// Result: Non plain array
-		Context = this;
-	}
-
-	if (!isArray(arrayLike)) {
-		if ((getIterator = arrayLike[iteratorSymbol]) !== undefined) {
-			// Source: Iterator
-			iterator = callable(getIterator).call(arrayLike);
-			if (Context) arr = new Context();
-			result = iterator.next();
-			i = 0;
-			while (!result.done) {
-				value = mapFn ? call.call(mapFn, thisArg, result.value, i) : result.value;
-				if (Context) {
-					desc.value = value;
-					defineProperty(arr, i, desc);
-				} else {
-					arr[i] = value;
-				}
-				result = iterator.next();
-				++i;
-			}
-			length = i;
-		} else if (isString(arrayLike)) {
-			// Source: String
-			length = arrayLike.length;
-			if (Context) arr = new Context();
-			for (i = 0, j = 0; i < length; ++i) {
-				value = arrayLike[i];
-				if (i + 1 < length) {
-					code = value.charCodeAt(0);
-					// eslint-disable-next-line max-depth
-					if (code >= 0xd800 && code <= 0xdbff) value += arrayLike[++i];
-				}
-				value = mapFn ? call.call(mapFn, thisArg, value, j) : value;
-				if (Context) {
-					desc.value = value;
-					defineProperty(arr, j, desc);
-				} else {
-					arr[j] = value;
-				}
-				++j;
-			}
-			length = j;
-		}
-	}
-	if (length === undefined) {
-		// Source: array or array-like
-		length = toPosInt(arrayLike.length);
-		if (Context) arr = new Context(length);
-		for (i = 0; i < length; ++i) {
-			value = mapFn ? call.call(mapFn, thisArg, arrayLike[i], i) : arrayLike[i];
-			if (Context) {
-				desc.value = value;
-				defineProperty(arr, i, desc);
-			} else {
-				arr[i] = value;
-			}
-		}
-	}
-	if (Context) {
-		desc.value = null;
-		arr.length = length;
-	}
-	return arr;
-};
-
-
-/***/ }),
-
-/***/ 2906:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var toPosInt = __nccwpck_require__(3755)
-  , value    = __nccwpck_require__(5282)
-  , slice    = Array.prototype.slice;
-
-module.exports = function (length /*, …fill*/) {
-	var arr, currentLength;
-	length = toPosInt(value(length));
-	if (length === 0) return [];
-
-	arr = arguments.length < 2 ? [undefined] : slice.call(arguments, 1, 1 + length);
-
-	while ((currentLength = arr.length) < length) {
-		arr = arr.concat(arr.slice(0, length - currentLength));
-	}
-	return arr;
-};
-
-
-/***/ }),
-
-/***/ 2353:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var from    = __nccwpck_require__(2406)
-  , isArray = Array.isArray;
-
-module.exports = function (arrayLike) { return isArray(arrayLike) ? arrayLike : from(arrayLike); };
-
-
-/***/ }),
-
-/***/ 9684:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var assign            = __nccwpck_require__(1377)
-  , isObject          = __nccwpck_require__(1380)
-  , isValue           = __nccwpck_require__(2285)
-  , captureStackTrace = Error.captureStackTrace;
-
-module.exports = function (message /*, code, ext*/) {
-	var err = new Error(message), code = arguments[1], ext = arguments[2];
-	if (!isValue(ext)) {
-		if (isObject(code)) {
-			ext = code;
-			code = null;
-		}
-	}
-	if (isValue(ext)) assign(err, ext);
-	if (isValue(code)) err.code = code;
-	if (captureStackTrace) captureStackTrace(err, module.exports);
-	return err;
-};
-
-
-/***/ }),
-
-/***/ 4274:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue  = __nccwpck_require__(2285)
-  , callable = __nccwpck_require__(6097)
-  , aFrom    = __nccwpck_require__(2406);
-
-var apply = Function.prototype.apply
-  , call = Function.prototype.call
-  , callFn = function (arg, fn) { return call.call(fn, this, arg); };
-
-module.exports = function (fnIgnored /*, …fnn*/) {
-	var fns, first;
-	var args = aFrom(arguments);
-	fns = isValue(this) ? [this].concat(args) : args;
-	fns.forEach(callable);
-	fns = fns.reverse();
-	first = fns[0];
-	fns = fns.slice(1);
-	return function (argIgnored) { return fns.reduce(callFn, apply.call(first, this, arguments)); };
-};
-
-
-/***/ }),
-
-/***/ 1490:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var toPosInt = __nccwpck_require__(3755);
-
-var test = function (arg1, arg2) { return arg2; };
-
-var desc, defineProperty, generate, mixin;
-
-try {
-	Object.defineProperty(test, "length", {
-		configurable: true,
-		writable: false,
-		enumerable: false,
-		value: 1
-	});
-}
-catch (ignore) {}
-
-if (test.length === 1) {
-	// ES6
-	desc = { configurable: true, writable: false, enumerable: false };
-	defineProperty = Object.defineProperty;
-	module.exports = function (fn, length) {
-		length = toPosInt(length);
-		if (fn.length === length) return fn;
-		desc.value = length;
-		return defineProperty(fn, "length", desc);
-	};
-} else {
-	mixin = __nccwpck_require__(1070);
-	generate = (function () {
-		var cache = [];
-		return function (length) {
-			var args, i = 0;
-			if (cache[length]) return cache[length];
-			args = [];
-			while (length--) args.push("a" + (++i).toString(36));
-			// eslint-disable-next-line no-new-func
-			return new Function(
-				"fn",
-				"return function (" + args.join(", ") + ") { return fn.apply(this, arguments); };"
-			);
-		};
-	})();
-	module.exports = function (src, length) {
-		var target;
-		length = toPosInt(length);
-		if (src.length === length) return src;
-		target = generate(length)(src);
-		try { mixin(target, src); }
-		catch (ignore) {}
-		return target;
-	};
-}
-
-
-/***/ }),
-
-/***/ 1375:
-/***/ ((module) => {
-
-
-
-var objToString = Object.prototype.toString
-  , id = objToString.call((function () { return arguments; })());
-
-module.exports = function (value) { return objToString.call(value) === id; };
-
-
-/***/ }),
-
-/***/ 1003:
-/***/ ((module) => {
-
-
-
-var objToString = Object.prototype.toString
-  , isFunctionStringTag = RegExp.prototype.test.bind(/^[object [A-Za-z0-9]*Function]$/);
-
-module.exports = function (value) {
-	return typeof value === "function" && isFunctionStringTag(objToString.call(value));
-};
-
-
-/***/ }),
-
-/***/ 6049:
-/***/ ((module) => {
-
-
-
-// eslint-disable-next-line no-empty-function
-module.exports = function () {};
-
-
-/***/ }),
-
-/***/ 2024:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var iteratorSymbol = (__nccwpck_require__(1228).iterator)
-  , isValue        = __nccwpck_require__(2285)
-  , isArrayLike    = __nccwpck_require__(3416);
-
-module.exports = function (value) {
-	if (!isValue(value)) return false;
-	if (typeof value[iteratorSymbol] === "function") return true;
-	return isArrayLike(value);
-};
-
-
-/***/ }),
-
-/***/ 3205:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isObject = __nccwpck_require__(1380)
-  , is       = __nccwpck_require__(2024);
-
-module.exports = function (value) {
-	if (is(value) && isObject(value)) return value;
-	throw new TypeError(value + " is not an iterable or array-like object");
-};
-
-
-/***/ }),
-
-/***/ 2293:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(1492)() ? Math.sign : __nccwpck_require__(8745);
-
-
-/***/ }),
-
-/***/ 1492:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	var sign = Math.sign;
-	if (typeof sign !== "function") return false;
-	return sign(10) === 1 && sign(-20) === -1;
-};
-
-
-/***/ }),
-
-/***/ 8745:
-/***/ ((module) => {
-
-
-
-module.exports = function (value) {
-	value = Number(value);
-	if (isNaN(value) || value === 0) return value;
-	return value > 0 ? 1 : -1;
-};
-
-
-/***/ }),
-
-/***/ 9394:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(9019)() ? Math.trunc : __nccwpck_require__(5707);
-
-
-/***/ }),
-
-/***/ 9019:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	var trunc = Math.trunc;
-	if (typeof trunc !== "function") return false;
-	return trunc(13.67) === 13 && trunc(-13.67) === -13;
-};
-
-
-/***/ }),
-
-/***/ 5707:
-/***/ ((module) => {
-
-
-
-var floor = Math.floor;
-
-module.exports = function (value) {
-	if (isNaN(value)) return NaN;
-	value = Number(value);
-	if (value === 0) return value;
-	if (value === Infinity) return Infinity;
-	if (value === -Infinity) return -Infinity;
-	if (value > 0) return floor(value);
-	return -floor(-value);
-};
-
-
-/***/ }),
-
-/***/ 6881:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(5587)() ? Number.isNaN : __nccwpck_require__(3259);
-
-
-/***/ }),
-
-/***/ 5587:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	var numberIsNaN = Number.isNaN;
-	if (typeof numberIsNaN !== "function") return false;
-	return !numberIsNaN({}) && numberIsNaN(NaN) && !numberIsNaN(34);
-};
-
-
-/***/ }),
-
-/***/ 3259:
-/***/ ((module) => {
-
-
-
-module.exports = function (value) {
-	// eslint-disable-next-line no-self-compare
-	return value !== value;
-};
-
-
-/***/ }),
-
-/***/ 9836:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var sign  = __nccwpck_require__(2293)
-  , abs   = Math.abs
-  , floor = Math.floor;
-
-module.exports = function (value) {
-	if (isNaN(value)) return 0;
-	value = Number(value);
-	if (value === 0 || !isFinite(value)) return value;
-	return sign(value) * floor(abs(value));
-};
-
-
-/***/ }),
-
-/***/ 3755:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var toInteger = __nccwpck_require__(9836)
-  , max       = Math.max;
-
-module.exports = function (value) { return max(0, toInteger(value)); };
-
-
-/***/ }),
-
-/***/ 7175:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Internal method, used by iteration functions.
-// Calls a function for each key-value pair found in object
-// Optionally takes compareFn to iterate object in specific order
-
-
-
-var callable                = __nccwpck_require__(6097)
-  , value                   = __nccwpck_require__(5282)
-  , bind                    = Function.prototype.bind
-  , call                    = Function.prototype.call
-  , keys                    = Object.keys
-  , objPropertyIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-module.exports = function (method, defVal) {
-	return function (obj, cb /*, thisArg, compareFn*/) {
-		var list, thisArg = arguments[2], compareFn = arguments[3];
-		obj = Object(value(obj));
-		callable(cb);
-
-		list = keys(obj);
-		if (compareFn) {
-			list.sort(typeof compareFn === "function" ? bind.call(compareFn, obj) : undefined);
-		}
-		if (typeof method !== "function") method = list[method];
-		return call.call(method, list, function (key, index) {
-			if (!objPropertyIsEnumerable.call(obj, key)) return defVal;
-			return call.call(cb, thisArg, obj[key], key, obj, index);
-		});
-	};
-};
-
-
-/***/ }),
-
-/***/ 1377:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(8732)() ? Object.assign : __nccwpck_require__(7795);
-
-
-/***/ }),
-
-/***/ 8732:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	var assign = Object.assign, obj;
-	if (typeof assign !== "function") return false;
-	obj = { foo: "raz" };
-	assign(obj, { bar: "dwa" }, { trzy: "trzy" });
-	return obj.foo + obj.bar + obj.trzy === "razdwatrzy";
-};
-
-
-/***/ }),
-
-/***/ 7795:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var keys  = __nccwpck_require__(8336)
-  , value = __nccwpck_require__(5282)
-  , max   = Math.max;
-
-module.exports = function (dest, src /*, …srcn*/) {
-	var error, i, length = max(arguments.length, 2), assign;
-	dest = Object(value(dest));
-	assign = function (key) {
-		try {
-			dest[key] = src[key];
-		} catch (e) {
-			if (!error) error = e;
-		}
-	};
-	for (i = 1; i < length; ++i) {
-		src = arguments[i];
-		keys(src).forEach(assign);
-	}
-	if (error !== undefined) throw error;
-	return dest;
-};
-
-
-/***/ }),
-
-/***/ 3382:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var aFrom  = __nccwpck_require__(2406)
-  , assign = __nccwpck_require__(1377)
-  , value  = __nccwpck_require__(5282);
-
-module.exports = function (obj /*, propertyNames, options*/) {
-	var copy = Object(value(obj)), propertyNames = arguments[1], options = Object(arguments[2]);
-	if (copy !== obj && !propertyNames) return copy;
-	var result = {};
-	if (propertyNames) {
-		aFrom(propertyNames, function (propertyName) {
-			if (options.ensure || propertyName in obj) result[propertyName] = obj[propertyName];
-		});
-	} else {
-		assign(result, obj);
-	}
-	return result;
-};
-
-
-/***/ }),
-
-/***/ 8465:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Workaround for http://code.google.com/p/v8/issues/detail?id=2804
-
-
-
-var create = Object.create, shim;
-
-if (!__nccwpck_require__(3579)()) {
-	shim = __nccwpck_require__(5410);
-}
-
-module.exports = (function () {
-	var nullObject, polyProps, desc;
-	if (!shim) return create;
-	if (shim.level !== 1) return create;
-
-	nullObject = {};
-	polyProps = {};
-	desc = { configurable: false, enumerable: false, writable: true, value: undefined };
-	Object.getOwnPropertyNames(Object.prototype).forEach(function (name) {
-		if (name === "__proto__") {
-			polyProps[name] = {
-				configurable: true,
-				enumerable: false,
-				writable: true,
-				value: undefined
-			};
-			return;
-		}
-		polyProps[name] = desc;
-	});
-	Object.defineProperties(nullObject, polyProps);
-
-	Object.defineProperty(shim, "nullPolyfill", {
-		configurable: false,
-		enumerable: false,
-		writable: false,
-		value: nullObject
-	});
-
-	return function (prototype, props) {
-		return create(prototype === null ? nullObject : prototype, props);
-	};
-})();
-
-
-/***/ }),
-
-/***/ 7726:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var value                   = __nccwpck_require__(5282)
-  , objPropertyIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-module.exports = function (obj) {
-	var i;
-	value(obj);
-	for (i in obj) {
-		if (objPropertyIsEnumerable.call(obj, i)) return i;
-	}
-	return null;
-};
-
-
-/***/ }),
-
-/***/ 9575:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(7175)("forEach");
-
-
-/***/ }),
-
-/***/ 3416:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isFunction = __nccwpck_require__(1003)
-  , isObject   = __nccwpck_require__(1380)
-  , isValue    = __nccwpck_require__(2285);
-
-module.exports = function (value) {
-	return (
-		(isValue(value) &&
-			typeof value.length === "number" &&
-			// Just checking ((typeof x === 'object') && (typeof x !== 'function'))
-			// won't work right for some cases, e.g.:
-			// type of instance of NodeList in Safari is a 'function'
-			((isObject(value) && !isFunction(value)) || typeof value === "string")) ||
-		false
-	);
-};
-
-
-/***/ }),
-
-/***/ 1448:
-/***/ ((module) => {
-
-// Deprecated
-
-
-
-module.exports = function (obj) { return typeof obj === "function"; };
-
-
-/***/ }),
-
-/***/ 1380:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue = __nccwpck_require__(2285);
-
-var map = { function: true, object: true };
-
-module.exports = function (value) { return (isValue(value) && map[typeof value]) || false; };
-
-
-/***/ }),
-
-/***/ 2285:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var _undefined = __nccwpck_require__(6049)(); // Support ES3 engines
-
-module.exports = function (val) { return val !== _undefined && val !== null; };
-
-
-/***/ }),
-
-/***/ 8336:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(7491)() ? Object.keys : __nccwpck_require__(3890);
-
-
-/***/ }),
-
-/***/ 7491:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	try {
-		Object.keys("primitive");
-		return true;
-	} catch (e) {
-		return false;
-	}
-};
-
-
-/***/ }),
-
-/***/ 3890:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue = __nccwpck_require__(2285);
-
-var keys = Object.keys;
-
-module.exports = function (object) { return keys(isValue(object) ? Object(object) : object); };
-
-
-/***/ }),
-
-/***/ 7289:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var callable = __nccwpck_require__(6097)
-  , forEach  = __nccwpck_require__(9575)
-  , call     = Function.prototype.call;
-
-module.exports = function (obj, cb /*, thisArg*/) {
-	var result = {}, thisArg = arguments[2];
-	callable(cb);
-	forEach(obj, function (value, key, targetObj, index) {
-		result[key] = call.call(cb, thisArg, value, key, targetObj, index);
-	});
-	return result;
-};
-
-
-/***/ }),
-
-/***/ 1070:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var value                    = __nccwpck_require__(5282)
-  , defineProperty           = Object.defineProperty
-  , getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
-  , getOwnPropertyNames      = Object.getOwnPropertyNames
-  , getOwnPropertySymbols    = Object.getOwnPropertySymbols;
-
-module.exports = function (target, source) {
-	var error, sourceObject = Object(value(source));
-	target = Object(value(target));
-	getOwnPropertyNames(sourceObject).forEach(function (name) {
-		try {
-			defineProperty(target, name, getOwnPropertyDescriptor(source, name));
-		} catch (e) { error = e; }
-	});
-	if (typeof getOwnPropertySymbols === "function") {
-		getOwnPropertySymbols(sourceObject).forEach(function (symbol) {
-			try {
-				defineProperty(target, symbol, getOwnPropertyDescriptor(source, symbol));
-			} catch (e) { error = e; }
-		});
-	}
-	if (error !== undefined) throw error;
-	return target;
-};
-
-
-/***/ }),
-
-/***/ 4488:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue = __nccwpck_require__(2285);
-
-var forEach = Array.prototype.forEach, create = Object.create;
-
-var process = function (src, obj) {
-	var key;
-	for (key in src) obj[key] = src[key];
-};
-
-// eslint-disable-next-line no-unused-vars
-module.exports = function (opts1 /*, …options*/) {
-	var result = create(null);
-	forEach.call(arguments, function (options) {
-		if (!isValue(options)) return;
-		process(Object(options), result);
-	});
-	return result;
-};
-
-
-/***/ }),
-
-/***/ 2796:
-/***/ ((module) => {
-
-
-
-var forEach = Array.prototype.forEach, create = Object.create;
-
-// eslint-disable-next-line no-unused-vars
-module.exports = function (arg /*, …args*/) {
-	var set = create(null);
-	forEach.call(arguments, function (name) { set[name] = true; });
-	return set;
-};
-
-
-/***/ }),
-
-/***/ 7165:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(3579)() ? Object.setPrototypeOf : __nccwpck_require__(5410);
-
-
-/***/ }),
-
-/***/ 3579:
-/***/ ((module) => {
-
-
-
-var create = Object.create, getPrototypeOf = Object.getPrototypeOf, plainObject = {};
-
-module.exports = function (/* CustomCreate*/) {
-	var setPrototypeOf = Object.setPrototypeOf, customCreate = arguments[0] || create;
-	if (typeof setPrototypeOf !== "function") return false;
-	return getPrototypeOf(setPrototypeOf(customCreate(null), plainObject)) === plainObject;
-};
-
-
-/***/ }),
-
-/***/ 5410:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-/* eslint no-proto: "off" */
-
-// Big thanks to @WebReflection for sorting this out
-// https://gist.github.com/WebReflection/5593554
-
-
-
-var isObject         = __nccwpck_require__(1380)
-  , value            = __nccwpck_require__(5282)
-  , objIsPrototypeOf = Object.prototype.isPrototypeOf
-  , defineProperty   = Object.defineProperty
-  , nullDesc         = { configurable: true, enumerable: false, writable: true, value: undefined }
-  , validate;
-
-validate = function (obj, prototype) {
-	value(obj);
-	if (prototype === null || isObject(prototype)) return obj;
-	throw new TypeError("Prototype must be null or an object");
-};
-
-module.exports = (function (status) {
-	var fn, set;
-	if (!status) return null;
-	if (status.level === 2) {
-		if (status.set) {
-			set = status.set;
-			fn = function (obj, prototype) {
-				set.call(validate(obj, prototype), prototype);
-				return obj;
-			};
-		} else {
-			fn = function (obj, prototype) {
-				validate(obj, prototype).__proto__ = prototype;
-				return obj;
-			};
-		}
-	} else {
-		fn = function self(obj, prototype) {
-			var isNullBase;
-			validate(obj, prototype);
-			isNullBase = objIsPrototypeOf.call(self.nullPolyfill, obj);
-			if (isNullBase) delete self.nullPolyfill.__proto__;
-			if (prototype === null) prototype = self.nullPolyfill;
-			obj.__proto__ = prototype;
-			if (isNullBase) defineProperty(self.nullPolyfill, "__proto__", nullDesc);
-			return obj;
-		};
-	}
-	return Object.defineProperty(fn, "level", {
-		configurable: false,
-		enumerable: false,
-		writable: false,
-		value: status.level
-	});
-})(
-	(function () {
-		var tmpObj1 = Object.create(null)
-		  , tmpObj2 = {}
-		  , set
-		  , desc = Object.getOwnPropertyDescriptor(Object.prototype, "__proto__");
-
-		if (desc) {
-			try {
-				set = desc.set; // Opera crashes at this point
-				set.call(tmpObj1, tmpObj2);
-			} catch (ignore) {}
-			if (Object.getPrototypeOf(tmpObj1) === tmpObj2) return { set: set, level: 2 };
+			val = t1;
 		}
 
-		tmpObj1.__proto__ = tmpObj2;
-		if (Object.getPrototypeOf(tmpObj1) === tmpObj2) return { level: 2 };
-
-		tmpObj1 = {};
-		tmpObj1.__proto__ = tmpObj2;
-		if (Object.getPrototypeOf(tmpObj1) === tmpObj2) return { level: 1 };
-
-		return false;
-	})()
-);
-
-__nccwpck_require__(8465);
-
-
-/***/ }),
-
-/***/ 6097:
-/***/ ((module) => {
-
-
-
-module.exports = function (fn) {
-	if (typeof fn !== "function") throw new TypeError(fn + " is not a function");
-	return fn;
-};
-
-
-/***/ }),
-
-/***/ 6561:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isObject = __nccwpck_require__(1380);
-
-module.exports = function (value) {
-	if (!isObject(value)) throw new TypeError(value + " is not an Object");
-	return value;
-};
-
-
-/***/ }),
-
-/***/ 5282:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue = __nccwpck_require__(2285);
-
-module.exports = function (value) {
-	if (!isValue(value)) throw new TypeError("Cannot use null or undefined");
-	return value;
-};
-
-
-/***/ }),
-
-/***/ 8080:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var ensureValue   = __nccwpck_require__(5282)
-  , stringifiable = __nccwpck_require__(1481);
-
-module.exports = function (value) { return stringifiable(ensureValue(value)); };
-
-
-/***/ }),
-
-/***/ 1481:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isCallable = __nccwpck_require__(1448);
-
-module.exports = function (stringifiable) {
-	try {
-		if (stringifiable && isCallable(stringifiable.toString)) return stringifiable.toString();
-		return String(stringifiable);
-	} catch (e) {
-		throw new TypeError("Passed argument cannot be stringifed");
-	}
-};
-
-
-/***/ }),
-
-/***/ 3949:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isCallable = __nccwpck_require__(1448);
-
-module.exports = function (value) {
-	try {
-		if (value && isCallable(value.toString)) return value.toString();
-		return String(value);
-	} catch (e) {
-		return "<Non-coercible to string value>";
-	}
-};
-
-
-/***/ }),
-
-/***/ 7689:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(9710)() ? String.prototype.contains : __nccwpck_require__(1706);
-
-
-/***/ }),
-
-/***/ 9710:
-/***/ ((module) => {
-
-
-
-var str = "razdwatrzy";
-
-module.exports = function () {
-	if (typeof str.contains !== "function") return false;
-	return str.contains("dwa") === true && str.contains("foo") === false;
-};
-
-
-/***/ }),
-
-/***/ 1706:
-/***/ ((module) => {
-
-
-
-var indexOf = String.prototype.indexOf;
-
-module.exports = function (searchString /*, position*/) {
-	return indexOf.call(this, searchString, arguments[1]) > -1;
-};
-
-
-/***/ }),
-
-/***/ 5650:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(4403)() ? String.prototype.repeat : __nccwpck_require__(5076);
-
-
-/***/ }),
-
-/***/ 4403:
-/***/ ((module) => {
-
-
-
-var str = "foo";
-
-module.exports = function () {
-	if (typeof str.repeat !== "function") return false;
-	return str.repeat(2) === "foofoo";
-};
-
-
-/***/ }),
-
-/***/ 5076:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Thanks
-// @rauchma http://www.2ality.com/2014/01/efficient-string-repeat.html
-// @mathiasbynens https://github.com/mathiasbynens/String.prototype.repeat/blob/4a4b567def/repeat.js
-
-
-
-var value     = __nccwpck_require__(5282)
-  , toInteger = __nccwpck_require__(9836);
-
-module.exports = function (count) {
-	var str = String(value(this)), result;
-	count = toInteger(count);
-	if (count < 0) throw new RangeError("Count must be >= 0");
-	if (!isFinite(count)) throw new RangeError("Count must be < ∞");
-
-	result = "";
-	while (count) {
-		if (count % 2) result += str;
-		if (count > 1) str += str;
-		// eslint-disable-next-line no-bitwise
-		count >>= 1;
-	}
-	return result;
-};
-
-
-/***/ }),
-
-/***/ 5624:
-/***/ ((module) => {
-
-
-
-var objToString = Object.prototype.toString, id = objToString.call("");
-
-module.exports = function (value) {
-	return (
-		typeof value === "string" ||
-		(value &&
-			typeof value === "object" &&
-			(value instanceof String || objToString.call(value) === id)) ||
-		false
-	);
-};
-
-
-/***/ }),
-
-/***/ 3298:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var safeToString = __nccwpck_require__(3949);
-
-var reNewLine = /[\n\r\u2028\u2029]/g;
-
-module.exports = function (value) {
-	var string = safeToString(value);
-	// Trim if too long
-	if (string.length > 100) string = string.slice(0, 99) + "…";
-	// Replace eventual new lines
-	string = string.replace(reNewLine, function (char) {
-		return JSON.stringify(char).slice(1, -1);
-	});
-	return string;
-};
-
-
-/***/ }),
-
-/***/ 3254:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var setPrototypeOf = __nccwpck_require__(7165)
-  , contains       = __nccwpck_require__(7689)
-  , d              = __nccwpck_require__(4571)
-  , Symbol         = __nccwpck_require__(1228)
-  , Iterator       = __nccwpck_require__(4580);
-
-var defineProperty = Object.defineProperty, ArrayIterator;
-
-ArrayIterator = module.exports = function (arr, kind) {
-	if (!(this instanceof ArrayIterator)) throw new TypeError("Constructor requires 'new'");
-	Iterator.call(this, arr);
-	if (!kind) kind = "value";
-	else if (contains.call(kind, "key+value")) kind = "key+value";
-	else if (contains.call(kind, "key")) kind = "key";
-	else kind = "value";
-	defineProperty(this, "__kind__", d("", kind));
-};
-if (setPrototypeOf) setPrototypeOf(ArrayIterator, Iterator);
-
-// Internal %ArrayIteratorPrototype% doesn't expose its constructor
-delete ArrayIterator.prototype.constructor;
-
-ArrayIterator.prototype = Object.create(Iterator.prototype, {
-	_resolve: d(function (i) {
-		if (this.__kind__ === "value") return this.__list__[i];
-		if (this.__kind__ === "key+value") return [i, this.__list__[i]];
-		return i;
-	})
-});
-defineProperty(ArrayIterator.prototype, Symbol.toStringTag, d("c", "Array Iterator"));
-
-
-/***/ }),
-
-/***/ 6756:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isArguments = __nccwpck_require__(1375)
-  , callable    = __nccwpck_require__(6097)
-  , isString    = __nccwpck_require__(5624)
-  , get         = __nccwpck_require__(5561);
-
-var isArray = Array.isArray, call = Function.prototype.call, some = Array.prototype.some;
-
-module.exports = function (iterable, cb /*, thisArg*/) {
-	var mode, thisArg = arguments[2], result, doBreak, broken, i, length, char, code;
-	if (isArray(iterable) || isArguments(iterable)) mode = "array";
-	else if (isString(iterable)) mode = "string";
-	else iterable = get(iterable);
-
-	callable(cb);
-	doBreak = function () {
-		broken = true;
-	};
-	if (mode === "array") {
-		some.call(iterable, function (value) {
-			call.call(cb, thisArg, value, doBreak);
-			return broken;
-		});
-		return;
-	}
-	if (mode === "string") {
-		length = iterable.length;
-		for (i = 0; i < length; ++i) {
-			char = iterable[i];
-			if (i + 1 < length) {
-				code = char.charCodeAt(0);
-				if (code >= 0xd800 && code <= 0xdbff) char += iterable[++i];
-			}
-			call.call(cb, thisArg, char, doBreak);
-			if (broken) break;
-		}
-		return;
-	}
-	result = iterable.next();
-
-	while (!result.done) {
-		call.call(cb, thisArg, result.value, doBreak);
-		if (broken) return;
-		result = iterable.next();
-	}
-};
-
-
-/***/ }),
-
-/***/ 5561:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isArguments    = __nccwpck_require__(1375)
-  , isString       = __nccwpck_require__(5624)
-  , ArrayIterator  = __nccwpck_require__(3254)
-  , StringIterator = __nccwpck_require__(999)
-  , iterable       = __nccwpck_require__(7747)
-  , iteratorSymbol = (__nccwpck_require__(1228).iterator);
-
-module.exports = function (obj) {
-	if (typeof iterable(obj)[iteratorSymbol] === "function") return obj[iteratorSymbol]();
-	if (isArguments(obj)) return new ArrayIterator(obj);
-	if (isString(obj)) return new StringIterator(obj);
-	return new ArrayIterator(obj);
-};
-
-
-/***/ }),
-
-/***/ 4580:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var clear    = __nccwpck_require__(1128)
-  , assign   = __nccwpck_require__(1377)
-  , callable = __nccwpck_require__(6097)
-  , value    = __nccwpck_require__(5282)
-  , d        = __nccwpck_require__(4571)
-  , autoBind = __nccwpck_require__(6362)
-  , Symbol   = __nccwpck_require__(1228);
-
-var defineProperty = Object.defineProperty, defineProperties = Object.defineProperties, Iterator;
-
-module.exports = Iterator = function (list, context) {
-	if (!(this instanceof Iterator)) throw new TypeError("Constructor requires 'new'");
-	defineProperties(this, {
-		__list__: d("w", value(list)),
-		__context__: d("w", context),
-		__nextIndex__: d("w", 0)
-	});
-	if (!context) return;
-	callable(context.on);
-	context.on("_add", this._onAdd);
-	context.on("_delete", this._onDelete);
-	context.on("_clear", this._onClear);
-};
-
-// Internal %IteratorPrototype% doesn't expose its constructor
-delete Iterator.prototype.constructor;
-
-defineProperties(
-	Iterator.prototype,
-	assign(
-		{
-			_next: d(function () {
-				var i;
-				if (!this.__list__) return undefined;
-				if (this.__redo__) {
-					i = this.__redo__.shift();
-					if (i !== undefined) return i;
-				}
-				if (this.__nextIndex__ < this.__list__.length) return this.__nextIndex__++;
-				this._unBind();
-				return undefined;
-			}),
-			next: d(function () {
-				return this._createResult(this._next());
-			}),
-			_createResult: d(function (i) {
-				if (i === undefined) return { done: true, value: undefined };
-				return { done: false, value: this._resolve(i) };
-			}),
-			_resolve: d(function (i) {
-				return this.__list__[i];
-			}),
-			_unBind: d(function () {
-				this.__list__ = null;
-				delete this.__redo__;
-				if (!this.__context__) return;
-				this.__context__.off("_add", this._onAdd);
-				this.__context__.off("_delete", this._onDelete);
-				this.__context__.off("_clear", this._onClear);
-				this.__context__ = null;
-			}),
-			toString: d(function () {
-				return "[object " + (this[Symbol.toStringTag] || "Object") + "]";
-			})
-		},
-		autoBind({
-			_onAdd: d(function (index) {
-				if (index >= this.__nextIndex__) return;
-				++this.__nextIndex__;
-				if (!this.__redo__) {
-					defineProperty(this, "__redo__", d("c", [index]));
-					return;
-				}
-				this.__redo__.forEach(function (redo, i) {
-					if (redo >= index) this.__redo__[i] = ++redo;
-				}, this);
-				this.__redo__.push(index);
-			}),
-			_onDelete: d(function (index) {
-				var i;
-				if (index >= this.__nextIndex__) return;
-				--this.__nextIndex__;
-				if (!this.__redo__) return;
-				i = this.__redo__.indexOf(index);
-				if (i !== -1) this.__redo__.splice(i, 1);
-				this.__redo__.forEach(function (redo, j) {
-					if (redo > index) this.__redo__[j] = --redo;
-				}, this);
-			}),
-			_onClear: d(function () {
-				if (this.__redo__) clear.call(this.__redo__);
-				this.__nextIndex__ = 0;
-			})
-		})
-	)
-);
-
-defineProperty(
-	Iterator.prototype,
-	Symbol.iterator,
-	d(function () {
-		return this;
-	})
-);
-
-
-/***/ }),
-
-/***/ 2811:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isArguments = __nccwpck_require__(1375)
-  , isValue     = __nccwpck_require__(2285)
-  , isString    = __nccwpck_require__(5624);
-
-var iteratorSymbol = (__nccwpck_require__(1228).iterator)
-  , isArray        = Array.isArray;
-
-module.exports = function (value) {
-	if (!isValue(value)) return false;
-	if (isArray(value)) return true;
-	if (isString(value)) return true;
-	if (isArguments(value)) return true;
-	return typeof value[iteratorSymbol] === "function";
-};
-
-
-/***/ }),
-
-/***/ 999:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Thanks @mathiasbynens
-// http://mathiasbynens.be/notes/javascript-unicode#iterating-over-symbols
-
-
-
-var setPrototypeOf = __nccwpck_require__(7165)
-  , d              = __nccwpck_require__(4571)
-  , Symbol         = __nccwpck_require__(1228)
-  , Iterator       = __nccwpck_require__(4580);
-
-var defineProperty = Object.defineProperty, StringIterator;
-
-StringIterator = module.exports = function (str) {
-	if (!(this instanceof StringIterator)) throw new TypeError("Constructor requires 'new'");
-	str = String(str);
-	Iterator.call(this, str);
-	defineProperty(this, "__length__", d("", str.length));
-};
-if (setPrototypeOf) setPrototypeOf(StringIterator, Iterator);
-
-// Internal %ArrayIteratorPrototype% doesn't expose its constructor
-delete StringIterator.prototype.constructor;
-
-StringIterator.prototype = Object.create(Iterator.prototype, {
-	_next: d(function () {
-		if (!this.__list__) return undefined;
-		if (this.__nextIndex__ < this.__length__) return this.__nextIndex__++;
-		this._unBind();
-		return undefined;
-	}),
-	_resolve: d(function (i) {
-		var char = this.__list__[i], code;
-		if (this.__nextIndex__ === this.__length__) return char;
-		code = char.charCodeAt(0);
-		if (code >= 0xd800 && code <= 0xdbff) return char + this.__list__[this.__nextIndex__++];
-		return char;
-	})
-});
-defineProperty(StringIterator.prototype, Symbol.toStringTag, d("c", "String Iterator"));
-
-
-/***/ }),
-
-/***/ 7747:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isIterable = __nccwpck_require__(2811);
-
-module.exports = function (value) {
-	if (!isIterable(value)) throw new TypeError(value + " is not iterable");
-	return value;
-};
-
-
-/***/ }),
-
-/***/ 1228:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(3338)()
-	? (__nccwpck_require__(3407).Symbol)
-	: __nccwpck_require__(4347);
-
-
-/***/ }),
-
-/***/ 3338:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var global     = __nccwpck_require__(3407)
-  , validTypes = { object: true, symbol: true };
-
-module.exports = function () {
-	var Symbol = global.Symbol;
-	var symbol;
-	if (typeof Symbol !== "function") return false;
-	symbol = Symbol("test symbol");
-	try { String(symbol); }
-	catch (e) { return false; }
-
-	// Return 'true' also for polyfills
-	if (!validTypes[typeof Symbol.iterator]) return false;
-	if (!validTypes[typeof Symbol.toPrimitive]) return false;
-	if (!validTypes[typeof Symbol.toStringTag]) return false;
-
-	return true;
-};
-
-
-/***/ }),
-
-/***/ 3880:
-/***/ ((module) => {
-
-
-
-module.exports = function (value) {
-	if (!value) return false;
-	if (typeof value === "symbol") return true;
-	if (!value.constructor) return false;
-	if (value.constructor.name !== "Symbol") return false;
-	return value[value.constructor.toStringTag] === "Symbol";
-};
-
-
-/***/ }),
-
-/***/ 7467:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var d = __nccwpck_require__(4571);
-
-var create = Object.create, defineProperty = Object.defineProperty, objPrototype = Object.prototype;
-
-var created = create(null);
-module.exports = function (desc) {
-	var postfix = 0, name, ie11BugWorkaround;
-	while (created[desc + (postfix || "")]) ++postfix;
-	desc += postfix || "";
-	created[desc] = true;
-	name = "@@" + desc;
-	defineProperty(
-		objPrototype,
-		name,
-		d.gs(null, function (value) {
-			// For IE11 issue see:
-			// https://connect.microsoft.com/IE/feedbackdetail/view/1928508/
-			//    ie11-broken-getters-on-dom-objects
-			// https://github.com/medikoo/es6-symbol/issues/12
-			if (ie11BugWorkaround) return;
-			ie11BugWorkaround = true;
-			defineProperty(this, name, d(value));
-			ie11BugWorkaround = false;
-		})
-	);
-	return name;
-};
-
-
-/***/ }),
-
-/***/ 2605:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var d            = __nccwpck_require__(4571)
-  , NativeSymbol = (__nccwpck_require__(3407).Symbol);
-
-module.exports = function (SymbolPolyfill) {
-	return Object.defineProperties(SymbolPolyfill, {
-		// To ensure proper interoperability with other native functions (e.g. Array.from)
-		// fallback to eventual native implementation of given symbol
-		hasInstance: d(
-			"", (NativeSymbol && NativeSymbol.hasInstance) || SymbolPolyfill("hasInstance")
-		),
-		isConcatSpreadable: d(
-			"",
-			(NativeSymbol && NativeSymbol.isConcatSpreadable) ||
-				SymbolPolyfill("isConcatSpreadable")
-		),
-		iterator: d("", (NativeSymbol && NativeSymbol.iterator) || SymbolPolyfill("iterator")),
-		match: d("", (NativeSymbol && NativeSymbol.match) || SymbolPolyfill("match")),
-		replace: d("", (NativeSymbol && NativeSymbol.replace) || SymbolPolyfill("replace")),
-		search: d("", (NativeSymbol && NativeSymbol.search) || SymbolPolyfill("search")),
-		species: d("", (NativeSymbol && NativeSymbol.species) || SymbolPolyfill("species")),
-		split: d("", (NativeSymbol && NativeSymbol.split) || SymbolPolyfill("split")),
-		toPrimitive: d(
-			"", (NativeSymbol && NativeSymbol.toPrimitive) || SymbolPolyfill("toPrimitive")
-		),
-		toStringTag: d(
-			"", (NativeSymbol && NativeSymbol.toStringTag) || SymbolPolyfill("toStringTag")
-		),
-		unscopables: d(
-			"", (NativeSymbol && NativeSymbol.unscopables) || SymbolPolyfill("unscopables")
-		)
-	});
-};
-
-
-/***/ }),
-
-/***/ 4823:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var d              = __nccwpck_require__(4571)
-  , validateSymbol = __nccwpck_require__(9371);
-
-var registry = Object.create(null);
-
-module.exports = function (SymbolPolyfill) {
-	return Object.defineProperties(SymbolPolyfill, {
-		for: d(function (key) {
-			if (registry[key]) return registry[key];
-			return (registry[key] = SymbolPolyfill(String(key)));
-		}),
-		keyFor: d(function (symbol) {
-			var key;
-			validateSymbol(symbol);
-			for (key in registry) {
-				if (registry[key] === symbol) return key;
-			}
-			return undefined;
-		})
-	});
-};
-
-
-/***/ }),
-
-/***/ 4347:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// ES2015 Symbol polyfill for environments that do not (or partially) support it
-
-
-
-var d                    = __nccwpck_require__(4571)
-  , validateSymbol       = __nccwpck_require__(9371)
-  , NativeSymbol         = (__nccwpck_require__(3407).Symbol)
-  , generateName         = __nccwpck_require__(7467)
-  , setupStandardSymbols = __nccwpck_require__(2605)
-  , setupSymbolRegistry  = __nccwpck_require__(4823);
-
-var create = Object.create
-  , defineProperties = Object.defineProperties
-  , defineProperty = Object.defineProperty;
-
-var SymbolPolyfill, HiddenSymbol, isNativeSafe;
-
-if (typeof NativeSymbol === "function") {
-	try {
-		String(NativeSymbol());
-		isNativeSafe = true;
-	} catch (ignore) {}
-} else {
-	NativeSymbol = null;
-}
-
-// Internal constructor (not one exposed) for creating Symbol instances.
-// This one is used to ensure that `someSymbol instanceof Symbol` always return false
-HiddenSymbol = function Symbol(description) {
-	if (this instanceof HiddenSymbol) throw new TypeError("Symbol is not a constructor");
-	return SymbolPolyfill(description);
-};
-
-// Exposed `Symbol` constructor
-// (returns instances of HiddenSymbol)
-module.exports = SymbolPolyfill = function Symbol(description) {
-	var symbol;
-	if (this instanceof Symbol) throw new TypeError("Symbol is not a constructor");
-	if (isNativeSafe) return NativeSymbol(description);
-	symbol = create(HiddenSymbol.prototype);
-	description = description === undefined ? "" : String(description);
-	return defineProperties(symbol, {
-		__description__: d("", description),
-		__name__: d("", generateName(description))
-	});
-};
-
-setupStandardSymbols(SymbolPolyfill);
-setupSymbolRegistry(SymbolPolyfill);
-
-// Internal tweaks for real symbol producer
-defineProperties(HiddenSymbol.prototype, {
-	constructor: d(SymbolPolyfill),
-	toString: d("", function () { return this.__name__; })
-});
-
-// Proper implementation of methods exposed on Symbol.prototype
-// They won't be accessible on produced symbol instances as they derive from HiddenSymbol.prototype
-defineProperties(SymbolPolyfill.prototype, {
-	toString: d(function () { return "Symbol (" + validateSymbol(this).__description__ + ")"; }),
-	valueOf: d(function () { return validateSymbol(this); })
-});
-defineProperty(
-	SymbolPolyfill.prototype,
-	SymbolPolyfill.toPrimitive,
-	d("", function () {
-		var symbol = validateSymbol(this);
-		if (typeof symbol === "symbol") return symbol;
-		return symbol.toString();
-	})
-);
-defineProperty(SymbolPolyfill.prototype, SymbolPolyfill.toStringTag, d("c", "Symbol"));
-
-// Proper implementaton of toPrimitive and toStringTag for returned symbol instances
-defineProperty(
-	HiddenSymbol.prototype, SymbolPolyfill.toStringTag,
-	d("c", SymbolPolyfill.prototype[SymbolPolyfill.toStringTag])
-);
-
-// Note: It's important to define `toPrimitive` as last one, as some implementations
-// implement `toPrimitive` natively without implementing `toStringTag` (or other specified symbols)
-// And that may invoke error in definition flow:
-// See: https://github.com/medikoo/es6-symbol/issues/13#issuecomment-164146149
-defineProperty(
-	HiddenSymbol.prototype, SymbolPolyfill.toPrimitive,
-	d("c", SymbolPolyfill.prototype[SymbolPolyfill.toPrimitive])
-);
-
-
-/***/ }),
-
-/***/ 9371:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isSymbol = __nccwpck_require__(3880);
-
-module.exports = function (value) {
-	if (!isSymbol(value)) throw new TypeError(value + " is not a symbol");
-	return value;
-};
-
-
-/***/ }),
-
-/***/ 3647:
-/***/ ((module, exports, __nccwpck_require__) => {
-
-
-
-var d        = __nccwpck_require__(4571)
-  , callable = __nccwpck_require__(6097)
-
-  , apply = Function.prototype.apply, call = Function.prototype.call
-  , create = Object.create, defineProperty = Object.defineProperty
-  , defineProperties = Object.defineProperties
-  , hasOwnProperty = Object.prototype.hasOwnProperty
-  , descriptor = { configurable: true, enumerable: false, writable: true }
-
-  , on, once, off, emit, methods, descriptors, base;
-
-on = function (type, listener) {
-	var data;
-
-	callable(listener);
-
-	if (!hasOwnProperty.call(this, '__ee__')) {
-		data = descriptor.value = create(null);
-		defineProperty(this, '__ee__', descriptor);
-		descriptor.value = null;
-	} else {
-		data = this.__ee__;
-	}
-	if (!data[type]) data[type] = listener;
-	else if (typeof data[type] === 'object') data[type].push(listener);
-	else data[type] = [data[type], listener];
-
-	return this;
-};
-
-once = function (type, listener) {
-	var once, self;
-
-	callable(listener);
-	self = this;
-	on.call(this, type, once = function () {
-		off.call(self, type, once);
-		apply.call(listener, this, arguments);
-	});
-
-	once.__eeOnceListener__ = listener;
-	return this;
-};
-
-off = function (type, listener) {
-	var data, listeners, candidate, i;
-
-	callable(listener);
-
-	if (!hasOwnProperty.call(this, '__ee__')) return this;
-	data = this.__ee__;
-	if (!data[type]) return this;
-	listeners = data[type];
-
-	if (typeof listeners === 'object') {
-		for (i = 0; (candidate = listeners[i]); ++i) {
-			if ((candidate === listener) ||
-					(candidate.__eeOnceListener__ === listener)) {
-				if (listeners.length === 2) data[type] = listeners[i ? 0 : 1];
-				else listeners.splice(i, 1);
-			}
-		}
-	} else {
-		if ((listeners === listener) ||
-				(listeners.__eeOnceListener__ === listener)) {
-			delete data[type];
-		}
+		rgb[i] = val * 255;
 	}
 
-	return this;
+	return rgb;
 };
 
-emit = function (type) {
-	var i, l, listener, listeners, args;
+convert.hsl.hsv = function (hsl) {
+	var h = hsl[0];
+	var s = hsl[1] / 100;
+	var l = hsl[2] / 100;
+	var smin = s;
+	var lmin = Math.max(l, 0.01);
+	var sv;
+	var v;
 
-	if (!hasOwnProperty.call(this, '__ee__')) return;
-	listeners = this.__ee__[type];
-	if (!listeners) return;
+	l *= 2;
+	s *= (l <= 1) ? l : 2 - l;
+	smin *= lmin <= 1 ? lmin : 2 - lmin;
+	v = (l + s) / 2;
+	sv = l === 0 ? (2 * smin) / (lmin + smin) : (2 * s) / (l + s);
 
-	if (typeof listeners === 'object') {
-		l = arguments.length;
-		args = new Array(l - 1);
-		for (i = 1; i < l; ++i) args[i - 1] = arguments[i];
+	return [h, sv * 100, v * 100];
+};
 
-		listeners = listeners.slice();
-		for (i = 0; (listener = listeners[i]); ++i) {
-			apply.call(listener, this, args);
-		}
-	} else {
-		switch (arguments.length) {
+convert.hsv.rgb = function (hsv) {
+	var h = hsv[0] / 60;
+	var s = hsv[1] / 100;
+	var v = hsv[2] / 100;
+	var hi = Math.floor(h) % 6;
+
+	var f = h - Math.floor(h);
+	var p = 255 * v * (1 - s);
+	var q = 255 * v * (1 - (s * f));
+	var t = 255 * v * (1 - (s * (1 - f)));
+	v *= 255;
+
+	switch (hi) {
+		case 0:
+			return [v, t, p];
 		case 1:
-			call.call(listeners, this);
-			break;
+			return [q, v, p];
 		case 2:
-			call.call(listeners, this, arguments[1]);
-			break;
+			return [p, v, t];
 		case 3:
-			call.call(listeners, this, arguments[1], arguments[2]);
-			break;
+			return [p, q, v];
+		case 4:
+			return [t, p, v];
+		case 5:
+			return [v, p, q];
+	}
+};
+
+convert.hsv.hsl = function (hsv) {
+	var h = hsv[0];
+	var s = hsv[1] / 100;
+	var v = hsv[2] / 100;
+	var vmin = Math.max(v, 0.01);
+	var lmin;
+	var sl;
+	var l;
+
+	l = (2 - s) * v;
+	lmin = (2 - s) * vmin;
+	sl = s * vmin;
+	sl /= (lmin <= 1) ? lmin : 2 - lmin;
+	sl = sl || 0;
+	l /= 2;
+
+	return [h, sl * 100, l * 100];
+};
+
+// http://dev.w3.org/csswg/css-color/#hwb-to-rgb
+convert.hwb.rgb = function (hwb) {
+	var h = hwb[0] / 360;
+	var wh = hwb[1] / 100;
+	var bl = hwb[2] / 100;
+	var ratio = wh + bl;
+	var i;
+	var v;
+	var f;
+	var n;
+
+	// wh + bl cant be > 1
+	if (ratio > 1) {
+		wh /= ratio;
+		bl /= ratio;
+	}
+
+	i = Math.floor(6 * h);
+	v = 1 - bl;
+	f = 6 * h - i;
+
+	if ((i & 0x01) !== 0) {
+		f = 1 - f;
+	}
+
+	n = wh + f * (v - wh); // linear interpolation
+
+	var r;
+	var g;
+	var b;
+	switch (i) {
 		default:
-			l = arguments.length;
-			args = new Array(l - 1);
-			for (i = 1; i < l; ++i) {
-				args[i - 1] = arguments[i];
-			}
-			apply.call(listeners, this, args);
+		case 6:
+		case 0: r = v; g = n; b = wh; break;
+		case 1: r = n; g = v; b = wh; break;
+		case 2: r = wh; g = v; b = n; break;
+		case 3: r = wh; g = n; b = v; break;
+		case 4: r = n; g = wh; b = v; break;
+		case 5: r = v; g = wh; b = n; break;
+	}
+
+	return [r * 255, g * 255, b * 255];
+};
+
+convert.cmyk.rgb = function (cmyk) {
+	var c = cmyk[0] / 100;
+	var m = cmyk[1] / 100;
+	var y = cmyk[2] / 100;
+	var k = cmyk[3] / 100;
+	var r;
+	var g;
+	var b;
+
+	r = 1 - Math.min(1, c * (1 - k) + k);
+	g = 1 - Math.min(1, m * (1 - k) + k);
+	b = 1 - Math.min(1, y * (1 - k) + k);
+
+	return [r * 255, g * 255, b * 255];
+};
+
+convert.xyz.rgb = function (xyz) {
+	var x = xyz[0] / 100;
+	var y = xyz[1] / 100;
+	var z = xyz[2] / 100;
+	var r;
+	var g;
+	var b;
+
+	r = (x * 3.2406) + (y * -1.5372) + (z * -0.4986);
+	g = (x * -0.9689) + (y * 1.8758) + (z * 0.0415);
+	b = (x * 0.0557) + (y * -0.2040) + (z * 1.0570);
+
+	// assume sRGB
+	r = r > 0.0031308
+		? ((1.055 * Math.pow(r, 1.0 / 2.4)) - 0.055)
+		: r * 12.92;
+
+	g = g > 0.0031308
+		? ((1.055 * Math.pow(g, 1.0 / 2.4)) - 0.055)
+		: g * 12.92;
+
+	b = b > 0.0031308
+		? ((1.055 * Math.pow(b, 1.0 / 2.4)) - 0.055)
+		: b * 12.92;
+
+	r = Math.min(Math.max(0, r), 1);
+	g = Math.min(Math.max(0, g), 1);
+	b = Math.min(Math.max(0, b), 1);
+
+	return [r * 255, g * 255, b * 255];
+};
+
+convert.xyz.lab = function (xyz) {
+	var x = xyz[0];
+	var y = xyz[1];
+	var z = xyz[2];
+	var l;
+	var a;
+	var b;
+
+	x /= 95.047;
+	y /= 100;
+	z /= 108.883;
+
+	x = x > 0.008856 ? Math.pow(x, 1 / 3) : (7.787 * x) + (16 / 116);
+	y = y > 0.008856 ? Math.pow(y, 1 / 3) : (7.787 * y) + (16 / 116);
+	z = z > 0.008856 ? Math.pow(z, 1 / 3) : (7.787 * z) + (16 / 116);
+
+	l = (116 * y) - 16;
+	a = 500 * (x - y);
+	b = 200 * (y - z);
+
+	return [l, a, b];
+};
+
+convert.lab.xyz = function (lab) {
+	var l = lab[0];
+	var a = lab[1];
+	var b = lab[2];
+	var x;
+	var y;
+	var z;
+
+	y = (l + 16) / 116;
+	x = a / 500 + y;
+	z = y - b / 200;
+
+	var y2 = Math.pow(y, 3);
+	var x2 = Math.pow(x, 3);
+	var z2 = Math.pow(z, 3);
+	y = y2 > 0.008856 ? y2 : (y - 16 / 116) / 7.787;
+	x = x2 > 0.008856 ? x2 : (x - 16 / 116) / 7.787;
+	z = z2 > 0.008856 ? z2 : (z - 16 / 116) / 7.787;
+
+	x *= 95.047;
+	y *= 100;
+	z *= 108.883;
+
+	return [x, y, z];
+};
+
+convert.lab.lch = function (lab) {
+	var l = lab[0];
+	var a = lab[1];
+	var b = lab[2];
+	var hr;
+	var h;
+	var c;
+
+	hr = Math.atan2(b, a);
+	h = hr * 360 / 2 / Math.PI;
+
+	if (h < 0) {
+		h += 360;
+	}
+
+	c = Math.sqrt(a * a + b * b);
+
+	return [l, c, h];
+};
+
+convert.lch.lab = function (lch) {
+	var l = lch[0];
+	var c = lch[1];
+	var h = lch[2];
+	var a;
+	var b;
+	var hr;
+
+	hr = h / 360 * 2 * Math.PI;
+	a = c * Math.cos(hr);
+	b = c * Math.sin(hr);
+
+	return [l, a, b];
+};
+
+convert.rgb.ansi16 = function (args) {
+	var r = args[0];
+	var g = args[1];
+	var b = args[2];
+	var value = 1 in arguments ? arguments[1] : convert.rgb.hsv(args)[2]; // hsv -> ansi16 optimization
+
+	value = Math.round(value / 50);
+
+	if (value === 0) {
+		return 30;
+	}
+
+	var ansi = 30
+		+ ((Math.round(b / 255) << 2)
+		| (Math.round(g / 255) << 1)
+		| Math.round(r / 255));
+
+	if (value === 2) {
+		ansi += 60;
+	}
+
+	return ansi;
+};
+
+convert.hsv.ansi16 = function (args) {
+	// optimization here; we already know the value and don't need to get
+	// it converted for us.
+	return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
+};
+
+convert.rgb.ansi256 = function (args) {
+	var r = args[0];
+	var g = args[1];
+	var b = args[2];
+
+	// we use the extended greyscale palette here, with the exception of
+	// black and white. normal palette only has 4 greyscale shades.
+	if (r === g && g === b) {
+		if (r < 8) {
+			return 16;
 		}
-	}
-};
 
-methods = {
-	on: on,
-	once: once,
-	off: off,
-	emit: emit
-};
-
-descriptors = {
-	on: d(on),
-	once: d(once),
-	off: d(off),
-	emit: d(emit)
-};
-
-base = defineProperties({}, descriptors);
-
-module.exports = exports = function (o) {
-	return (o == null) ? create(base) : defineProperties(Object(o), descriptors);
-};
-exports.methods = methods;
-
-
-/***/ }),
-
-/***/ 4053:
-/***/ ((module) => {
-
-var naiveFallback = function () {
-	if (typeof self === "object" && self) return self;
-	if (typeof window === "object" && window) return window;
-	throw new Error("Unable to resolve global `this`");
-};
-
-module.exports = (function () {
-	if (this) return this;
-
-	// Unexpected strict mode (may happen if e.g. bundled into ESM module)
-
-	// Thanks @mathiasbynens -> https://mathiasbynens.be/notes/globalthis
-	// In all ES5+ engines global object inherits from Object.prototype
-	// (if you approached one that doesn't please report)
-	try {
-		Object.defineProperty(Object.prototype, "__global__", {
-			get: function () { return this; },
-			configurable: true
-		});
-	} catch (error) {
-		// Unfortunate case of Object.prototype being sealed (via preventExtensions, seal or freeze)
-		return naiveFallback();
-	}
-	try {
-		// Safari case (window.__global__ is resolved with global context, but __global__ does not)
-		if (!__global__) return naiveFallback();
-		return __global__;
-	} finally {
-		delete Object.prototype.__global__;
-	}
-})();
-
-
-/***/ }),
-
-/***/ 3407:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(3831)() ? globalThis : __nccwpck_require__(4053);
-
-
-/***/ }),
-
-/***/ 3831:
-/***/ ((module) => {
-
-
-
-module.exports = function () {
-	if (typeof globalThis !== "object") return false;
-	if (!globalThis) return false;
-	return globalThis.Array === Array;
-};
-
-
-/***/ }),
-
-/***/ 6106:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-module.exports = __nccwpck_require__(5177);
-
-
-/***/ }),
-
-/***/ 5177:
-/***/ (function(module) {
-
-// Generated by CoffeeScript 1.8.0
-(function() {
-  var Heap, defaultCmp, floor, heapify, heappop, heappush, heappushpop, heapreplace, insort, min, nlargest, nsmallest, updateItem, _siftdown, _siftup;
-
-  floor = Math.floor, min = Math.min;
-
-
-  /*
-  Default comparison function to be used
-   */
-
-  defaultCmp = function(x, y) {
-    if (x < y) {
-      return -1;
-    }
-    if (x > y) {
-      return 1;
-    }
-    return 0;
-  };
-
-
-  /*
-  Insert item x in list a, and keep it sorted assuming a is sorted.
-  
-  If x is already in a, insert it to the right of the rightmost x.
-  
-  Optional args lo (default 0) and hi (default a.length) bound the slice
-  of a to be searched.
-   */
-
-  insort = function(a, x, lo, hi, cmp) {
-    var mid;
-    if (lo == null) {
-      lo = 0;
-    }
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    if (lo < 0) {
-      throw new Error('lo must be non-negative');
-    }
-    if (hi == null) {
-      hi = a.length;
-    }
-    while (lo < hi) {
-      mid = floor((lo + hi) / 2);
-      if (cmp(x, a[mid]) < 0) {
-        hi = mid;
-      } else {
-        lo = mid + 1;
-      }
-    }
-    return ([].splice.apply(a, [lo, lo - lo].concat(x)), x);
-  };
-
-
-  /*
-  Push item onto heap, maintaining the heap invariant.
-   */
-
-  heappush = function(array, item, cmp) {
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    array.push(item);
-    return _siftdown(array, 0, array.length - 1, cmp);
-  };
-
-
-  /*
-  Pop the smallest item off the heap, maintaining the heap invariant.
-   */
-
-  heappop = function(array, cmp) {
-    var lastelt, returnitem;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    lastelt = array.pop();
-    if (array.length) {
-      returnitem = array[0];
-      array[0] = lastelt;
-      _siftup(array, 0, cmp);
-    } else {
-      returnitem = lastelt;
-    }
-    return returnitem;
-  };
-
-
-  /*
-  Pop and return the current smallest value, and add the new item.
-  
-  This is more efficient than heappop() followed by heappush(), and can be
-  more appropriate when using a fixed size heap. Note that the value
-  returned may be larger than item! That constrains reasonable use of
-  this routine unless written as part of a conditional replacement:
-      if item > array[0]
-        item = heapreplace(array, item)
-   */
-
-  heapreplace = function(array, item, cmp) {
-    var returnitem;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    returnitem = array[0];
-    array[0] = item;
-    _siftup(array, 0, cmp);
-    return returnitem;
-  };
-
-
-  /*
-  Fast version of a heappush followed by a heappop.
-   */
-
-  heappushpop = function(array, item, cmp) {
-    var _ref;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    if (array.length && cmp(array[0], item) < 0) {
-      _ref = [array[0], item], item = _ref[0], array[0] = _ref[1];
-      _siftup(array, 0, cmp);
-    }
-    return item;
-  };
-
-
-  /*
-  Transform list into a heap, in-place, in O(array.length) time.
-   */
-
-  heapify = function(array, cmp) {
-    var i, _i, _j, _len, _ref, _ref1, _results, _results1;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    _ref1 = (function() {
-      _results1 = [];
-      for (var _j = 0, _ref = floor(array.length / 2); 0 <= _ref ? _j < _ref : _j > _ref; 0 <= _ref ? _j++ : _j--){ _results1.push(_j); }
-      return _results1;
-    }).apply(this).reverse();
-    _results = [];
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      i = _ref1[_i];
-      _results.push(_siftup(array, i, cmp));
-    }
-    return _results;
-  };
-
-
-  /*
-  Update the position of the given item in the heap.
-  This function should be called every time the item is being modified.
-   */
-
-  updateItem = function(array, item, cmp) {
-    var pos;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    pos = array.indexOf(item);
-    if (pos === -1) {
-      return;
-    }
-    _siftdown(array, 0, pos, cmp);
-    return _siftup(array, pos, cmp);
-  };
-
-
-  /*
-  Find the n largest elements in a dataset.
-   */
-
-  nlargest = function(array, n, cmp) {
-    var elem, result, _i, _len, _ref;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    result = array.slice(0, n);
-    if (!result.length) {
-      return result;
-    }
-    heapify(result, cmp);
-    _ref = array.slice(n);
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      elem = _ref[_i];
-      heappushpop(result, elem, cmp);
-    }
-    return result.sort(cmp).reverse();
-  };
-
-
-  /*
-  Find the n smallest elements in a dataset.
-   */
-
-  nsmallest = function(array, n, cmp) {
-    var elem, i, los, result, _i, _j, _len, _ref, _ref1, _results;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    if (n * 10 <= array.length) {
-      result = array.slice(0, n).sort(cmp);
-      if (!result.length) {
-        return result;
-      }
-      los = result[result.length - 1];
-      _ref = array.slice(n);
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        elem = _ref[_i];
-        if (cmp(elem, los) < 0) {
-          insort(result, elem, 0, null, cmp);
-          result.pop();
-          los = result[result.length - 1];
-        }
-      }
-      return result;
-    }
-    heapify(array, cmp);
-    _results = [];
-    for (i = _j = 0, _ref1 = min(n, array.length); 0 <= _ref1 ? _j < _ref1 : _j > _ref1; i = 0 <= _ref1 ? ++_j : --_j) {
-      _results.push(heappop(array, cmp));
-    }
-    return _results;
-  };
-
-  _siftdown = function(array, startpos, pos, cmp) {
-    var newitem, parent, parentpos;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    newitem = array[pos];
-    while (pos > startpos) {
-      parentpos = (pos - 1) >> 1;
-      parent = array[parentpos];
-      if (cmp(newitem, parent) < 0) {
-        array[pos] = parent;
-        pos = parentpos;
-        continue;
-      }
-      break;
-    }
-    return array[pos] = newitem;
-  };
-
-  _siftup = function(array, pos, cmp) {
-    var childpos, endpos, newitem, rightpos, startpos;
-    if (cmp == null) {
-      cmp = defaultCmp;
-    }
-    endpos = array.length;
-    startpos = pos;
-    newitem = array[pos];
-    childpos = 2 * pos + 1;
-    while (childpos < endpos) {
-      rightpos = childpos + 1;
-      if (rightpos < endpos && !(cmp(array[childpos], array[rightpos]) < 0)) {
-        childpos = rightpos;
-      }
-      array[pos] = array[childpos];
-      pos = childpos;
-      childpos = 2 * pos + 1;
-    }
-    array[pos] = newitem;
-    return _siftdown(array, startpos, pos, cmp);
-  };
-
-  Heap = (function() {
-    Heap.push = heappush;
-
-    Heap.pop = heappop;
-
-    Heap.replace = heapreplace;
-
-    Heap.pushpop = heappushpop;
-
-    Heap.heapify = heapify;
-
-    Heap.updateItem = updateItem;
-
-    Heap.nlargest = nlargest;
-
-    Heap.nsmallest = nsmallest;
-
-    function Heap(cmp) {
-      this.cmp = cmp != null ? cmp : defaultCmp;
-      this.nodes = [];
-    }
-
-    Heap.prototype.push = function(x) {
-      return heappush(this.nodes, x, this.cmp);
-    };
-
-    Heap.prototype.pop = function() {
-      return heappop(this.nodes, this.cmp);
-    };
-
-    Heap.prototype.peek = function() {
-      return this.nodes[0];
-    };
-
-    Heap.prototype.contains = function(x) {
-      return this.nodes.indexOf(x) !== -1;
-    };
-
-    Heap.prototype.replace = function(x) {
-      return heapreplace(this.nodes, x, this.cmp);
-    };
-
-    Heap.prototype.pushpop = function(x) {
-      return heappushpop(this.nodes, x, this.cmp);
-    };
-
-    Heap.prototype.heapify = function() {
-      return heapify(this.nodes, this.cmp);
-    };
-
-    Heap.prototype.updateItem = function(x) {
-      return updateItem(this.nodes, x, this.cmp);
-    };
-
-    Heap.prototype.clear = function() {
-      return this.nodes = [];
-    };
-
-    Heap.prototype.empty = function() {
-      return this.nodes.length === 0;
-    };
-
-    Heap.prototype.size = function() {
-      return this.nodes.length;
-    };
-
-    Heap.prototype.clone = function() {
-      var heap;
-      heap = new Heap();
-      heap.nodes = this.nodes.slice(0);
-      return heap;
-    };
-
-    Heap.prototype.toArray = function() {
-      return this.nodes.slice(0);
-    };
-
-    Heap.prototype.insert = Heap.prototype.push;
-
-    Heap.prototype.top = Heap.prototype.peek;
-
-    Heap.prototype.front = Heap.prototype.peek;
-
-    Heap.prototype.has = Heap.prototype.contains;
-
-    Heap.prototype.copy = Heap.prototype.clone;
-
-    return Heap;
-
-  })();
-
-  (function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-      return define([], factory);
-    } else if (true) {
-      return module.exports = factory();
-    } else {}
-  })(this, function() {
-    return Heap;
-  });
-
-}).call(this);
-
-
-/***/ }),
-
-/***/ 8794:
-/***/ ((module) => {
-
-module.exports = isPromise;
-module.exports["default"] = isPromise;
-
-function isPromise(obj) {
-  return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
-}
-
-
-/***/ }),
-
-/***/ 8329:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-const color = __nccwpck_require__(1047)
-
-const { extendedTypeOf } = __nccwpck_require__(2356)
-
-const Theme = {
-  ' ' (s) { return s },
-  '+': color.green,
-  '-': color.red
-}
-
-const subcolorizeToCallback = function (options, key, diff, output, color, indent) {
-  let subvalue
-  const prefix = key ? `${key}: ` : ''
-  const subindent = indent + '  '
-
-  const outputElisions = (n) => {
-    let maxElisions = options.maxElisions === undefined ? Infinity : options.maxElisions
-    if (n < maxElisions) {
-      for (let i = 0; i < n; i++) {
-        output(' ', subindent + '...')
-      }
-    } else {
-      output(' ', subindent + `... (${n} entries)`)
-    }
-  }
-
-  switch (extendedTypeOf(diff)) {
-    case 'object':
-      if (('__old' in diff) && ('__new' in diff) && (Object.keys(diff).length === 2)) {
-        subcolorizeToCallback(options, key, diff.__old, output, '-', indent)
-        return subcolorizeToCallback(options, key, diff.__new, output, '+', indent)
-      } else {
-        output(color, `${indent}${prefix}{`)
-        for (const subkey of Object.keys(diff)) {
-          let m
-          subvalue = diff[subkey]
-          if ((m = subkey.match(/^(.*)__deleted$/))) {
-            subcolorizeToCallback(options, m[1], subvalue, output, '-', subindent)
-          } else if ((m = subkey.match(/^(.*)__added$/))) {
-            subcolorizeToCallback(options, m[1], subvalue, output, '+', subindent)
-          } else {
-            subcolorizeToCallback(options, subkey, subvalue, output, color, subindent)
-          }
-        }
-        return output(color, `${indent}}`)
-      }
-
-    case 'array': {
-      output(color, `${indent}${prefix}[`)
-
-      let looksLikeDiff = true
-      for (const item of diff) {
-        if ((extendedTypeOf(item) !== 'array') || !((item.length === 2) || ((item.length === 1) && (item[0] === ' '))) || !(typeof (item[0]) === 'string') || (item[0].length !== 1) || !([' ', '-', '+', '~'].includes(item[0]))) {
-          looksLikeDiff = false
-        }
-      }
-
-      if (looksLikeDiff) {
-        let op
-        let elisionCount = 0
-        for ([op, subvalue] of diff) {
-          if (op === ' ' && subvalue == null) {
-            elisionCount++
-          } else {
-            if (elisionCount > 0) {
-              outputElisions(elisionCount)
-            }
-            elisionCount = 0
-
-            if (![' ', '~', '+', '-'].includes(op)) {
-              throw new Error(`Unexpected op '${op}' in ${JSON.stringify(diff, null, 2)}`)
-            }
-            if (op === '~') { op = ' ' }
-            subcolorizeToCallback(options, '', subvalue, output, op, subindent)
-          }
-        }
-        if (elisionCount > 0) {
-          outputElisions(elisionCount)
-        }
-      } else {
-        for (subvalue of diff) {
-          subcolorizeToCallback(options, '', subvalue, output, color, subindent)
-        }
-      }
-
-      return output(color, `${indent}]`)
-    }
-
-    default:
-      if (diff === 0 || diff === null || diff === false || diff === '' || diff) {
-        return output(color, indent + prefix + JSON.stringify(diff))
-      }
-  }
-}
-
-const colorizeToCallback = (diff, options, output) =>
-  subcolorizeToCallback(options, '', diff, output, ' ', '')
-
-const colorizeToArray = function (diff, options = {}) {
-  const output = []
-  colorizeToCallback(diff, options, (color, line) => output.push(`${color}${line}`))
-  return output
-}
-
-const colorize = function (diff, options = {}) {
-  const output = []
-  colorizeToCallback(diff, options, function (color, line) {
-    if (options.color != null ? options.color : true) {
-      return output.push(((options.theme != null ? options.theme[color] : undefined) != null ? (options.theme != null ? options.theme[color] : undefined) : Theme[color])(`${color}${line}`) + '\n')
-    } else {
-      return output.push(`${color}${line}\n`)
-    }
-  })
-  return output.join('')
-}
-
-module.exports = { colorize, colorizeToArray, colorizeToCallback }
-
-
-/***/ }),
-
-/***/ 9031:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-const { SequenceMatcher } = __nccwpck_require__(4087)
-const { extendedTypeOf, roundObj } = __nccwpck_require__(2356)
-const { colorize } = __nccwpck_require__(8329)
-
-class JsonDiff {
-  constructor (options) {
-    options.outputKeys = options.outputKeys || []
-    this.options = options
-  }
-
-  isScalar (obj) {
-    return typeof obj !== 'object' || obj === null
-  }
-
-  objectDiff (obj1, obj2) {
-    let result = {}
-    let score = 0
-    let equal = true
-
-    for (const [key, value] of Object.entries(obj1)) {
-      if (!(key in obj2)) {
-        result[`${key}__deleted`] = value
-        score -= 30
-        equal = false
-      }
-    }
-
-    for (const [key, value] of Object.entries(obj2)) {
-      if (!(key in obj1)) {
-        result[`${key}__added`] = value
-        score -= 30
-        equal = false
-      }
-    }
-
-    for (const [key, value1] of Object.entries(obj1)) {
-      if (key in obj2) {
-        score += 20
-        const value2 = obj2[key]
-        const change = this.diff(value1, value2)
-        if (!change.equal) {
-          result[key] = change.result
-          equal = false
-        } else if (this.options.full || this.options.outputKeys.includes(key)) {
-          result[key] = value1
-        }
-        // console.log(`key ${key} change.score=${change.score} ${change.result}`)
-        score += Math.min(20, Math.max(-10, change.score / 5)) // BATMAN!
-      }
-    }
-
-    if (equal) {
-      score = 100 * Math.max(Object.keys(obj1).length, 0.5)
-      if (!this.options.full) {
-        result = undefined
-      }
-    } else {
-      score = Math.max(0, score)
-    }
-
-    // console.log(`objectDiff(${JSON.stringify(obj1, null, 2)} <=> ${JSON.stringify(obj2, null, 2)}) == ${JSON.stringify({score, result, equal})}`)
-    return { score, result, equal }
-  }
-
-  findMatchingObject (item, index, fuzzyOriginals) {
-    // console.log("findMatchingObject: " + JSON.stringify({item, fuzzyOriginals}, null, 2))
-    let bestMatch = null
-
-    let matchIndex = 0
-    for (const [key, candidate] of Object.entries(fuzzyOriginals)) {
-      if (key !== '__next') {
-        const indexDistance = Math.abs(matchIndex - index)
-        if (extendedTypeOf(item) === extendedTypeOf(candidate)) {
-          const { score } = this.diff(item, candidate)
-          if (
-            !bestMatch ||
-            score > bestMatch.score ||
-            (score === bestMatch.score &&
-              indexDistance < bestMatch.indexDistance)
-          ) {
-            bestMatch = { score, key, indexDistance }
-          }
-        }
-        matchIndex++
-      }
-    }
-
-    // console.log"findMatchingObject result = " + JSON.stringify(bestMatch, null, 2)
-    return bestMatch
-  }
-
-  scalarize (array, originals, fuzzyOriginals) {
-    const fuzzyMatches = []
-    if (fuzzyOriginals) {
-      // Find best fuzzy match for each object in the array
-      const keyScores = {}
-      for (let index = 0; index < array.length; index++) {
-        const item = array[index]
-        if (this.isScalar(item)) {
-          continue
-        }
-        const bestMatch = this.findMatchingObject(item, index, fuzzyOriginals)
-        if (bestMatch && (!keyScores[bestMatch.key] || bestMatch.score > keyScores[bestMatch.key].score)) {
-          keyScores[bestMatch.key] = { score: bestMatch.score, index }
-        }
-      }
-      for (const [key, match] of Object.entries(keyScores)) {
-        fuzzyMatches[match.index] = key
-      }
-    }
-
-    const result = []
-    for (let index = 0; index < array.length; index++) {
-      const item = array[index]
-      if (this.isScalar(item)) {
-        result.push(item)
-      } else {
-        const key = fuzzyMatches[index] || '__$!SCALAR' + originals.__next++
-        originals[key] = item
-        result.push(key)
-      }
-    }
-    return result
-  }
-
-  isScalarized (item, originals) {
-    return typeof item === 'string' && item in originals
-  }
-
-  descalarize (item, originals) {
-    if (this.isScalarized(item, originals)) {
-      return originals[item]
-    } else {
-      return item
-    }
-  }
-
-  arrayDiff (obj1, obj2) {
-    const originals1 = { __next: 1 }
-    const seq1 = this.scalarize(obj1, originals1)
-    const originals2 = { __next: originals1.__next }
-    const seq2 = this.scalarize(obj2, originals2, originals1)
-
-    if (this.options.sort) {
-      seq1.sort()
-      seq2.sort()
-    }
-    const opcodes = new SequenceMatcher(null, seq1, seq2).getOpcodes()
-
-    // console.log(`arrayDiff:\nobj1 = ${JSON.stringify(obj1, null, 2)}\nobj2 = ${JSON.stringify(obj2, null, 2)}\nseq1 = ${JSON.stringify(seq1, null, 2)}\nseq2 = ${JSON.stringify(seq2, null, 2)}\nopcodes = ${JSON.stringify(opcodes, null, 2)}`)
-
-    let result = []
-    let score = 0
-    let equal = true
-
-    for (const [op, i1, i2, j1, j2] of opcodes) {
-      let i, j
-      let asc, end
-      let asc1, end1
-      let asc2, end2
-      if (!(op === 'equal' || (this.options.keysOnly && op === 'replace'))) {
-        equal = false
-      }
-
-      switch (op) {
-        case 'equal':
-          for (
-            i = i1, end = i2, asc = i1 <= end;
-            asc ? i < end : i > end;
-            asc ? i++ : i--
-          ) {
-            const item = seq1[i]
-            if (this.isScalarized(item, originals1)) {
-              if (!this.isScalarized(item, originals2)) {
-                throw new Error(
-                  `internal bug: isScalarized(item, originals1) != isScalarized(item, originals2) for item ${JSON.stringify(
-                    item
-                  )}`
-                )
-              }
-              const item1 = this.descalarize(item, originals1)
-              const item2 = this.descalarize(item, originals2)
-              const change = this.diff(item1, item2)
-              if (!change.equal) {
-                result.push(['~', change.result])
-                equal = false
-              } else {
-                if (this.options.full) {
-                  result.push([' ', item1])
-                } else {
-                  result.push([' '])
-                }
-              }
-            } else {
-              if (this.options.full) {
-                result.push([' ', item])
-              } else {
-                result.push([' '])
-              }
-            }
-            score += 10
-          }
-          break
-        case 'delete':
-          for (
-            i = i1, end1 = i2, asc1 = i1 <= end1;
-            asc1 ? i < end1 : i > end1;
-            asc1 ? i++ : i--
-          ) {
-            result.push(['-', this.descalarize(seq1[i], originals1)])
-            score -= 5
-          }
-          break
-        case 'insert':
-          for (
-            j = j1, end2 = j2, asc2 = j1 <= end2;
-            asc2 ? j < end2 : j > end2;
-            asc2 ? j++ : j--
-          ) {
-            result.push(['+', this.descalarize(seq2[j], originals2)])
-            score -= 5
-          }
-          break
-        case 'replace':
-          if (!this.options.keysOnly) {
-            let asc3, end3
-            let asc4, end4
-            for (
-              i = i1, end3 = i2, asc3 = i1 <= end3;
-              asc3 ? i < end3 : i > end3;
-              asc3 ? i++ : i--
-            ) {
-              result.push(['-', this.descalarize(seq1[i], originals1)])
-              score -= 5
-            }
-            for (
-              j = j1, end4 = j2, asc4 = j1 <= end4;
-              asc4 ? j < end4 : j > end4;
-              asc4 ? j++ : j--
-            ) {
-              result.push(['+', this.descalarize(seq2[j], originals2)])
-              score -= 5
-            }
-          } else {
-            let asc5, end5
-            for (
-              i = i1, end5 = i2, asc5 = i1 <= end5;
-              asc5 ? i < end5 : i > end5;
-              asc5 ? i++ : i--
-            ) {
-              const change = this.diff(
-                this.descalarize(seq1[i], originals1),
-                this.descalarize(seq2[i - i1 + j1], originals2)
-              )
-              if (!change.equal) {
-                result.push(['~', change.result])
-                equal = false
-              } else {
-                result.push([' '])
-              }
-            }
-          }
-          break
-      }
-    }
-
-    if (equal || opcodes.length === 0) {
-      if (!this.options.full) {
-        result = undefined
-      } else {
-        result = obj1
-      }
-      score = 100
-    } else {
-      score = Math.max(0, score)
-    }
-
-    return { score, result, equal }
-  }
-
-  diff (obj1, obj2) {
-    const type1 = extendedTypeOf(obj1)
-    const type2 = extendedTypeOf(obj2)
-
-    if (type1 === type2) {
-      switch (type1) {
-        case 'object':
-          return this.objectDiff(obj1, obj2)
-
-        case 'array':
-          return this.arrayDiff(obj1, obj2)
-      }
-    }
-
-    // Compare primitives or complex objects of different types
-    let score = 100
-    let result = obj1
-    let equal
-    if (!this.options.keysOnly) {
-      equal = obj1 === obj2
-      if (!equal) {
-        score = 0
-        result = { __old: obj1, __new: obj2 }
-      } else if (!this.options.full) {
-        result = undefined
-      }
-    } else {
-      equal = true
-      result = undefined
-    }
-
-    return { score, result, equal }
-  }
-}
-
-function diff (obj1, obj2, options = {}) {
-  if (options.precision !== undefined) {
-    obj1 = roundObj(obj1, options.precision)
-    obj2 = roundObj(obj2, options.precision)
-  }
-  return new JsonDiff(options).diff(obj1, obj2).result
-}
-
-function diffString (obj1, obj2, options = {}) {
-  return colorize(diff(obj1, obj2, options), options)
-}
-
-module.exports = { diff, diffString }
-
-
-/***/ }),
-
-/***/ 2356:
-/***/ ((module) => {
-
-const extendedTypeOf = function (obj) {
-  const result = typeof obj
-  if (obj == null) {
-    return 'null'
-  } else if (result === 'object' && obj.constructor === Array) {
-    return 'array'
-  } else {
-    return result
-  }
-}
-
-const roundObj = function (data, precision) {
-  const type = typeof data
-  if (type === 'array') {
-    return data.map((x) => roundObj(x, precision))
-  } else if (type === 'object') {
-    for (const key in data) {
-      data[key] = roundObj(data[key], precision)
-    }
-    return data
-  } else if (
-    type === 'number' &&
-    Number.isFinite(data) &&
-    !Number.isInteger(data)
-  ) {
-    return +data.toFixed(precision)
-  } else {
-    return data
-  }
-}
-
-module.exports = { extendedTypeOf, roundObj }
-
-
-/***/ }),
-
-/***/ 9537:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var toPosInt = __nccwpck_require__(3755)
-
-  , create = Object.create, hasOwnProperty = Object.prototype.hasOwnProperty;
-
-module.exports = function (limit) {
-	var size = 0, base = 1, queue = create(null), map = create(null), index = 0, del;
-	limit = toPosInt(limit);
-	return {
-		hit: function (id) {
-			var oldIndex = map[id], nuIndex = ++index;
-			queue[nuIndex] = id;
-			map[id] = nuIndex;
-			if (!oldIndex) {
-				++size;
-				if (size <= limit) return;
-				id = queue[base];
-				del(id);
-				return id;
-			}
-			delete queue[oldIndex];
-			if (base !== oldIndex) return;
-			while (!hasOwnProperty.call(queue, ++base)) continue; //jslint: skip
-		},
-		delete: del = function (id) {
-			var oldIndex = map[id];
-			if (!oldIndex) return;
-			delete queue[oldIndex];
-			delete map[id];
-			--size;
-			if (base !== oldIndex) return;
-			if (!size) {
-				index = 0;
-				base = 1;
-				return;
-			}
-			while (!hasOwnProperty.call(queue, ++base)) continue; //jslint: skip
-		},
-		clear: function () {
-			size = 0;
-			base = 1;
-			queue = create(null);
-			map = create(null);
-			index = 0;
+		if (r > 248) {
+			return 231;
 		}
+
+		return Math.round(((r - 8) / 247) * 24) + 232;
+	}
+
+	var ansi = 16
+		+ (36 * Math.round(r / 255 * 5))
+		+ (6 * Math.round(g / 255 * 5))
+		+ Math.round(b / 255 * 5);
+
+	return ansi;
+};
+
+convert.ansi16.rgb = function (args) {
+	var color = args % 10;
+
+	// handle greyscale
+	if (color === 0 || color === 7) {
+		if (args > 50) {
+			color += 3.5;
+		}
+
+		color = color / 10.5 * 255;
+
+		return [color, color, color];
+	}
+
+	var mult = (~~(args > 50) + 1) * 0.5;
+	var r = ((color & 1) * mult) * 255;
+	var g = (((color >> 1) & 1) * mult) * 255;
+	var b = (((color >> 2) & 1) * mult) * 255;
+
+	return [r, g, b];
+};
+
+convert.ansi256.rgb = function (args) {
+	// handle greyscale
+	if (args >= 232) {
+		var c = (args - 232) * 10 + 8;
+		return [c, c, c];
+	}
+
+	args -= 16;
+
+	var rem;
+	var r = Math.floor(args / 36) / 5 * 255;
+	var g = Math.floor((rem = args % 36) / 6) / 5 * 255;
+	var b = (rem % 6) / 5 * 255;
+
+	return [r, g, b];
+};
+
+convert.rgb.hex = function (args) {
+	var integer = ((Math.round(args[0]) & 0xFF) << 16)
+		+ ((Math.round(args[1]) & 0xFF) << 8)
+		+ (Math.round(args[2]) & 0xFF);
+
+	var string = integer.toString(16).toUpperCase();
+	return '000000'.substring(string.length) + string;
+};
+
+convert.hex.rgb = function (args) {
+	var match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+	if (!match) {
+		return [0, 0, 0];
+	}
+
+	var colorString = match[0];
+
+	if (match[0].length === 3) {
+		colorString = colorString.split('').map(function (char) {
+			return char + char;
+		}).join('');
+	}
+
+	var integer = parseInt(colorString, 16);
+	var r = (integer >> 16) & 0xFF;
+	var g = (integer >> 8) & 0xFF;
+	var b = integer & 0xFF;
+
+	return [r, g, b];
+};
+
+convert.rgb.hcg = function (rgb) {
+	var r = rgb[0] / 255;
+	var g = rgb[1] / 255;
+	var b = rgb[2] / 255;
+	var max = Math.max(Math.max(r, g), b);
+	var min = Math.min(Math.min(r, g), b);
+	var chroma = (max - min);
+	var grayscale;
+	var hue;
+
+	if (chroma < 1) {
+		grayscale = min / (1 - chroma);
+	} else {
+		grayscale = 0;
+	}
+
+	if (chroma <= 0) {
+		hue = 0;
+	} else
+	if (max === r) {
+		hue = ((g - b) / chroma) % 6;
+	} else
+	if (max === g) {
+		hue = 2 + (b - r) / chroma;
+	} else {
+		hue = 4 + (r - g) / chroma + 4;
+	}
+
+	hue /= 6;
+	hue %= 1;
+
+	return [hue * 360, chroma * 100, grayscale * 100];
+};
+
+convert.hsl.hcg = function (hsl) {
+	var s = hsl[1] / 100;
+	var l = hsl[2] / 100;
+	var c = 1;
+	var f = 0;
+
+	if (l < 0.5) {
+		c = 2.0 * s * l;
+	} else {
+		c = 2.0 * s * (1.0 - l);
+	}
+
+	if (c < 1.0) {
+		f = (l - 0.5 * c) / (1.0 - c);
+	}
+
+	return [hsl[0], c * 100, f * 100];
+};
+
+convert.hsv.hcg = function (hsv) {
+	var s = hsv[1] / 100;
+	var v = hsv[2] / 100;
+
+	var c = s * v;
+	var f = 0;
+
+	if (c < 1.0) {
+		f = (v - c) / (1 - c);
+	}
+
+	return [hsv[0], c * 100, f * 100];
+};
+
+convert.hcg.rgb = function (hcg) {
+	var h = hcg[0] / 360;
+	var c = hcg[1] / 100;
+	var g = hcg[2] / 100;
+
+	if (c === 0.0) {
+		return [g * 255, g * 255, g * 255];
+	}
+
+	var pure = [0, 0, 0];
+	var hi = (h % 1) * 6;
+	var v = hi % 1;
+	var w = 1 - v;
+	var mg = 0;
+
+	switch (Math.floor(hi)) {
+		case 0:
+			pure[0] = 1; pure[1] = v; pure[2] = 0; break;
+		case 1:
+			pure[0] = w; pure[1] = 1; pure[2] = 0; break;
+		case 2:
+			pure[0] = 0; pure[1] = 1; pure[2] = v; break;
+		case 3:
+			pure[0] = 0; pure[1] = w; pure[2] = 1; break;
+		case 4:
+			pure[0] = v; pure[1] = 0; pure[2] = 1; break;
+		default:
+			pure[0] = 1; pure[1] = 0; pure[2] = w;
+	}
+
+	mg = (1.0 - c) * g;
+
+	return [
+		(c * pure[0] + mg) * 255,
+		(c * pure[1] + mg) * 255,
+		(c * pure[2] + mg) * 255
+	];
+};
+
+convert.hcg.hsv = function (hcg) {
+	var c = hcg[1] / 100;
+	var g = hcg[2] / 100;
+
+	var v = c + g * (1.0 - c);
+	var f = 0;
+
+	if (v > 0.0) {
+		f = c / v;
+	}
+
+	return [hcg[0], f * 100, v * 100];
+};
+
+convert.hcg.hsl = function (hcg) {
+	var c = hcg[1] / 100;
+	var g = hcg[2] / 100;
+
+	var l = g * (1.0 - c) + 0.5 * c;
+	var s = 0;
+
+	if (l > 0.0 && l < 0.5) {
+		s = c / (2 * l);
+	} else
+	if (l >= 0.5 && l < 1.0) {
+		s = c / (2 * (1 - l));
+	}
+
+	return [hcg[0], s * 100, l * 100];
+};
+
+convert.hcg.hwb = function (hcg) {
+	var c = hcg[1] / 100;
+	var g = hcg[2] / 100;
+	var v = c + g * (1.0 - c);
+	return [hcg[0], (v - c) * 100, (1 - v) * 100];
+};
+
+convert.hwb.hcg = function (hwb) {
+	var w = hwb[1] / 100;
+	var b = hwb[2] / 100;
+	var v = 1 - b;
+	var c = v - w;
+	var g = 0;
+
+	if (c < 1) {
+		g = (v - c) / (1 - c);
+	}
+
+	return [hwb[0], c * 100, g * 100];
+};
+
+convert.apple.rgb = function (apple) {
+	return [(apple[0] / 65535) * 255, (apple[1] / 65535) * 255, (apple[2] / 65535) * 255];
+};
+
+convert.rgb.apple = function (rgb) {
+	return [(rgb[0] / 255) * 65535, (rgb[1] / 255) * 65535, (rgb[2] / 255) * 65535];
+};
+
+convert.gray.rgb = function (args) {
+	return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
+};
+
+convert.gray.hsl = convert.gray.hsv = function (args) {
+	return [0, 0, args[0]];
+};
+
+convert.gray.hwb = function (gray) {
+	return [0, 100, gray[0]];
+};
+
+convert.gray.cmyk = function (gray) {
+	return [0, 0, 0, gray[0]];
+};
+
+convert.gray.lab = function (gray) {
+	return [gray[0], 0, 0];
+};
+
+convert.gray.hex = function (gray) {
+	var val = Math.round(gray[0] / 100 * 255) & 0xFF;
+	var integer = (val << 16) + (val << 8) + val;
+
+	var string = integer.toString(16).toUpperCase();
+	return '000000'.substring(string.length) + string;
+};
+
+convert.rgb.gray = function (rgb) {
+	var val = (rgb[0] + rgb[1] + rgb[2]) / 3;
+	return [val / 255 * 100];
+};
+
+
+/***/ }),
+
+/***/ 931:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+var conversions = __nccwpck_require__(391);
+var route = __nccwpck_require__(880);
+
+var convert = {};
+
+var models = Object.keys(conversions);
+
+function wrapRaw(fn) {
+	var wrappedFn = function (args) {
+		if (args === undefined || args === null) {
+			return args;
+		}
+
+		if (arguments.length > 1) {
+			args = Array.prototype.slice.call(arguments);
+		}
+
+		return fn(args);
 	};
-};
 
+	// preserve .conversion property if there is one
+	if ('conversion' in fn) {
+		wrappedFn.conversion = fn.conversion;
+	}
 
-/***/ }),
+	return wrappedFn;
+}
 
-/***/ 7192:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
-
-/* eslint consistent-this: 0, no-shadow:0, no-eq-null: 0, eqeqeq: 0, no-unused-vars: 0 */
-
-// Support for asynchronous functions
-
-
-
-var aFrom        = __nccwpck_require__(2406)
-  , objectMap    = __nccwpck_require__(7289)
-  , mixin        = __nccwpck_require__(1070)
-  , defineLength = __nccwpck_require__(1490)
-  , nextTick     = __nccwpck_require__(4152);
-
-var slice = Array.prototype.slice, apply = Function.prototype.apply, create = Object.create;
-
-(__nccwpck_require__(4334).async) = function (tbi, conf) {
-	var waiting = create(null)
-	  , cache = create(null)
-	  , base = conf.memoized
-	  , original = conf.original
-	  , currentCallback
-	  , currentContext
-	  , currentArgs;
-
-	// Initial
-	conf.memoized = defineLength(function (arg) {
-		var args = arguments, last = args[args.length - 1];
-		if (typeof last === "function") {
-			currentCallback = last;
-			args = slice.call(args, 0, -1);
-		}
-		return base.apply(currentContext = this, currentArgs = args);
-	}, base);
-	try { mixin(conf.memoized, base); }
-	catch (ignore) {}
-
-	// From cache (sync)
-	conf.on("get", function (id) {
-		var cb, context, args;
-		if (!currentCallback) return;
-
-		// Unresolved
-		if (waiting[id]) {
-			if (typeof waiting[id] === "function") waiting[id] = [waiting[id], currentCallback];
-			else waiting[id].push(currentCallback);
-			currentCallback = null;
-			return;
+function wrapRounded(fn) {
+	var wrappedFn = function (args) {
+		if (args === undefined || args === null) {
+			return args;
 		}
 
-		// Resolved, assure next tick invocation
-		cb = currentCallback;
-		context = currentContext;
-		args = currentArgs;
-		currentCallback = currentContext = currentArgs = null;
-		nextTick(function () {
-			var data;
-			if (hasOwnProperty.call(cache, id)) {
-				data = cache[id];
-				conf.emit("getasync", id, args, context);
-				apply.call(cb, data.context, data.args);
-			} else {
-				// Purged in a meantime, we shouldn't rely on cached value, recall
-				currentCallback = cb;
-				currentContext = context;
-				currentArgs = args;
-				base.apply(context, args);
-			}
-		});
-	});
+		if (arguments.length > 1) {
+			args = Array.prototype.slice.call(arguments);
+		}
 
-	// Not from cache
-	conf.original = function () {
-		var args, cb, origCb, result;
-		if (!currentCallback) return apply.call(original, this, arguments);
-		args = aFrom(arguments);
-		cb = function self(err) {
-			var cb, args, id = self.id;
-			if (id == null) {
-				// Shouldn't happen, means async callback was called sync way
-				nextTick(apply.bind(self, this, arguments));
-				return undefined;
+		var result = fn(args);
+
+		// we're assuming the result is an array here.
+		// see notice in conversions.js; don't use box types
+		// in conversion functions.
+		if (typeof result === 'object') {
+			for (var len = result.length, i = 0; i < len; i++) {
+				result[i] = Math.round(result[i]);
 			}
-			delete self.id;
-			cb = waiting[id];
-			delete waiting[id];
-			if (!cb) {
-				// Already processed,
-				// outcome of race condition: asyncFn(1, cb), asyncFn.clear(), asyncFn(1, cb)
-				return undefined;
-			}
-			args = aFrom(arguments);
-			if (conf.has(id)) {
-				if (err) {
-					conf.delete(id);
-				} else {
-					cache[id] = { context: this, args: args };
-					conf.emit("setasync", id, typeof cb === "function" ? 1 : cb.length);
-				}
-			}
-			if (typeof cb === "function") {
-				result = apply.call(cb, this, args);
-			} else {
-				cb.forEach(function (cb) { result = apply.call(cb, this, args); }, this);
-			}
-			return result;
-		};
-		origCb = currentCallback;
-		currentCallback = currentContext = currentArgs = null;
-		args.push(cb);
-		result = apply.call(original, this, args);
-		cb.cb = origCb;
-		currentCallback = cb;
+		}
+
 		return result;
 	};
 
-	// After not from cache call
-	conf.on("set", function (id) {
-		if (!currentCallback) {
-			conf.delete(id);
-			return;
-		}
-		if (waiting[id]) {
-			// Race condition: asyncFn(1, cb), asyncFn.clear(), asyncFn(1, cb)
-			if (typeof waiting[id] === "function") waiting[id] = [waiting[id], currentCallback.cb];
-			else waiting[id].push(currentCallback.cb);
-		} else {
-			waiting[id] = currentCallback.cb;
-		}
-		delete currentCallback.cb;
-		currentCallback.id = id;
-		currentCallback = null;
-	});
-
-	// On delete
-	conf.on("delete", function (id) {
-		var result;
-		// If false, we don't have value yet, so we assume that intention is not
-		// to memoize this call. After value is obtained we don't cache it but
-		// gracefully pass to callback
-		if (hasOwnProperty.call(waiting, id)) return;
-		if (!cache[id]) return;
-		result = cache[id];
-		delete cache[id];
-		conf.emit("deleteasync", id, slice.call(result.args, 1));
-	});
-
-	// On clear
-	conf.on("clear", function () {
-		var oldCache = cache;
-		cache = create(null);
-		conf.emit(
-			"clearasync", objectMap(oldCache, function (data) { return slice.call(data.args, 1); })
-		);
-	});
-};
-
-
-/***/ }),
-
-/***/ 6245:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Call dispose callback on each cache purge
-
-
-
-var callable   = __nccwpck_require__(6097)
-  , forEach    = __nccwpck_require__(9575)
-  , extensions = __nccwpck_require__(4334)
-
-  , apply = Function.prototype.apply;
-
-extensions.dispose = function (dispose, conf, options) {
-	var del;
-	callable(dispose);
-	if ((options.async && extensions.async) || (options.promise && extensions.promise)) {
-		conf.on("deleteasync", del = function (id, resultArray) {
-			apply.call(dispose, null, resultArray);
-		});
-		conf.on("clearasync", function (cache) {
-			forEach(cache, function (result, id) {
- del(id, result);
-});
-		});
-		return;
-	}
-	conf.on("delete", del = function (id, result) {
- dispose(result);
-});
-	conf.on("clear", function (cache) {
-		forEach(cache, function (result, id) {
- del(id, result);
-});
-	});
-};
-
-
-/***/ }),
-
-/***/ 9474:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
-
-/* eslint consistent-this: 0 */
-
-// Timeout cached values
-
-
-
-var aFrom      = __nccwpck_require__(2406)
-  , forEach    = __nccwpck_require__(9575)
-  , nextTick   = __nccwpck_require__(4152)
-  , isPromise  = __nccwpck_require__(8794)
-  , timeout    = __nccwpck_require__(9953)
-  , extensions = __nccwpck_require__(4334);
-
-var noop = Function.prototype, max = Math.max, min = Math.min, create = Object.create;
-
-extensions.maxAge = function (maxAge, conf, options) {
-	var timeouts, postfix, preFetchAge, preFetchTimeouts;
-
-	maxAge = timeout(maxAge);
-	if (!maxAge) return;
-
-	timeouts = create(null);
-	postfix =
-		(options.async && extensions.async) || (options.promise && extensions.promise)
-			? "async"
-			: "";
-	conf.on("set" + postfix, function (id) {
-		timeouts[id] = setTimeout(function () { conf.delete(id); }, maxAge);
-		if (typeof timeouts[id].unref === "function") timeouts[id].unref();
-		if (!preFetchTimeouts) return;
-		if (preFetchTimeouts[id]) {
-			if (preFetchTimeouts[id] !== "nextTick") clearTimeout(preFetchTimeouts[id]);
-		}
-		preFetchTimeouts[id] = setTimeout(function () {
-			delete preFetchTimeouts[id];
-		}, preFetchAge);
-		if (typeof preFetchTimeouts[id].unref === "function") preFetchTimeouts[id].unref();
-	});
-	conf.on("delete" + postfix, function (id) {
-		clearTimeout(timeouts[id]);
-		delete timeouts[id];
-		if (!preFetchTimeouts) return;
-		if (preFetchTimeouts[id] !== "nextTick") clearTimeout(preFetchTimeouts[id]);
-		delete preFetchTimeouts[id];
-	});
-
-	if (options.preFetch) {
-		if (options.preFetch === true || isNaN(options.preFetch)) {
-			preFetchAge = 0.333;
-		} else {
-			preFetchAge = max(min(Number(options.preFetch), 1), 0);
-		}
-		if (preFetchAge) {
-			preFetchTimeouts = {};
-			preFetchAge = (1 - preFetchAge) * maxAge;
-			conf.on("get" + postfix, function (id, args, context) {
-				if (!preFetchTimeouts[id]) {
-					preFetchTimeouts[id] = "nextTick";
-					nextTick(function () {
-						var result;
-						if (preFetchTimeouts[id] !== "nextTick") return;
-						delete preFetchTimeouts[id];
-						conf.delete(id);
-						if (options.async) {
-							args = aFrom(args);
-							args.push(noop);
-						}
-						result = conf.memoized.apply(context, args);
-						if (options.promise) {
-							// Supress eventual error warnings
-							if (isPromise(result)) {
-								if (typeof result.done === "function") result.done(noop, noop);
-								else result.then(noop, noop);
-							}
-						}
-					});
-				}
-			});
-		}
+	// preserve .conversion property if there is one
+	if ('conversion' in fn) {
+		wrappedFn.conversion = fn.conversion;
 	}
 
-	conf.on("clear" + postfix, function () {
-		forEach(timeouts, function (id) { clearTimeout(id); });
-		timeouts = {};
-		if (preFetchTimeouts) {
-			forEach(preFetchTimeouts, function (id) { if (id !== "nextTick") clearTimeout(id); });
-			preFetchTimeouts = {};
-		}
+	return wrappedFn;
+}
+
+models.forEach(function (fromModel) {
+	convert[fromModel] = {};
+
+	Object.defineProperty(convert[fromModel], 'channels', {value: conversions[fromModel].channels});
+	Object.defineProperty(convert[fromModel], 'labels', {value: conversions[fromModel].labels});
+
+	var routes = route(fromModel);
+	var routeModels = Object.keys(routes);
+
+	routeModels.forEach(function (toModel) {
+		var fn = routes[toModel];
+
+		convert[fromModel][toModel] = wrapRounded(fn);
+		convert[fromModel][toModel].raw = wrapRaw(fn);
 	});
-};
+});
+
+module.exports = convert;
 
 
 /***/ }),
 
-/***/ 1233:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Limit cache size, LRU (least recently used) algorithm.
-
-
-
-var toPosInteger = __nccwpck_require__(3755)
-  , lruQueue     = __nccwpck_require__(9537)
-  , extensions   = __nccwpck_require__(4334);
-
-extensions.max = function (max, conf, options) {
-	var postfix, queue, hit;
-
-	max = toPosInteger(max);
-	if (!max) return;
-
-	queue = lruQueue(max);
-	postfix = (options.async && extensions.async) || (options.promise && extensions.promise)
-		? "async" : "";
-
-	conf.on("set" + postfix, hit = function (id) {
-		id = queue.hit(id);
-		if (id === undefined) return;
-		conf.delete(id);
-	});
-	conf.on("get" + postfix, hit);
-	conf.on("delete" + postfix, queue.delete);
-	conf.on("clear" + postfix, queue.clear);
-};
-
-
-/***/ }),
-
-/***/ 5796:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
-
-/* eslint max-statements: 0 */
-
-// Support for functions returning promise
-
-
-
-var objectMap     = __nccwpck_require__(7289)
-  , primitiveSet  = __nccwpck_require__(2796)
-  , ensureString  = __nccwpck_require__(8080)
-  , toShortString = __nccwpck_require__(3298)
-  , isPromise     = __nccwpck_require__(8794)
-  , nextTick      = __nccwpck_require__(4152);
-
-var create = Object.create
-  , supportedModes = primitiveSet("then", "then:finally", "done", "done:finally");
-
-(__nccwpck_require__(4334).promise) = function (mode, conf) {
-	var waiting = create(null), cache = create(null), promises = create(null);
-
-	if (mode === true) {
-		mode = null;
-	} else {
-		mode = ensureString(mode);
-		if (!supportedModes[mode]) {
-			throw new TypeError("'" + toShortString(mode) + "' is not valid promise mode");
-		}
-	}
-
-	// After not from cache call
-	conf.on("set", function (id, ignore, promise) {
-		var isFailed = false;
-
-		if (!isPromise(promise)) {
-			// Non promise result
-			cache[id] = promise;
-			conf.emit("setasync", id, 1);
-			return;
-		}
-		waiting[id] = 1;
-		promises[id] = promise;
-		var onSuccess = function (result) {
-			var count = waiting[id];
-			if (isFailed) {
-				throw new Error(
-					"Memoizee error: Detected unordered then|done & finally resolution, which " +
-						"in turn makes proper detection of success/failure impossible (when in " +
-						"'done:finally' mode)\n" +
-						"Consider to rely on 'then' or 'done' mode instead."
-				);
-			}
-			if (!count) return; // Deleted from cache before resolved
-			delete waiting[id];
-			cache[id] = result;
-			conf.emit("setasync", id, count);
-		};
-		var onFailure = function () {
-			isFailed = true;
-			if (!waiting[id]) return; // Deleted from cache (or succeed in case of finally)
-			delete waiting[id];
-			delete promises[id];
-			conf.delete(id);
-		};
-
-		var resolvedMode = mode;
-		if (!resolvedMode) resolvedMode = "then";
-
-		if (resolvedMode === "then") {
-			var nextTickFailure = function () { nextTick(onFailure); };
-			// Eventual finally needs to be attached to non rejected promise
-			// (so we not force propagation of unhandled rejection)
-			promise = promise.then(function (result) {
-				nextTick(onSuccess.bind(this, result));
-			}, nextTickFailure);
-			// If `finally` is a function we attach to it to remove cancelled promises.
-			if (typeof promise.finally === "function") {
-				promise.finally(nextTickFailure);
-			}
-		} else if (resolvedMode === "done") {
-			// Not recommended, as it may mute any eventual "Unhandled error" events
-			if (typeof promise.done !== "function") {
-				throw new Error(
-					"Memoizee error: Retrieved promise does not implement 'done' " +
-						"in 'done' mode"
-				);
-			}
-			promise.done(onSuccess, onFailure);
-		} else if (resolvedMode === "done:finally") {
-			// The only mode with no side effects assuming library does not throw unconditionally
-			// for rejected promises.
-			if (typeof promise.done !== "function") {
-				throw new Error(
-					"Memoizee error: Retrieved promise does not implement 'done' " +
-						"in 'done:finally' mode"
-				);
-			}
-			if (typeof promise.finally !== "function") {
-				throw new Error(
-					"Memoizee error: Retrieved promise does not implement 'finally' " +
-						"in 'done:finally' mode"
-				);
-			}
-			promise.done(onSuccess);
-			promise.finally(onFailure);
-		}
-	});
-
-	// From cache (sync)
-	conf.on("get", function (id, args, context) {
-		var promise;
-		if (waiting[id]) {
-			++waiting[id]; // Still waiting
-			return;
-		}
-		promise = promises[id];
-		var emit = function () { conf.emit("getasync", id, args, context); };
-		if (isPromise(promise)) {
-			if (typeof promise.done === "function") promise.done(emit);
-			else {
-				promise.then(function () { nextTick(emit); });
-			}
-		} else {
-			emit();
-		}
-	});
-
-	// On delete
-	conf.on("delete", function (id) {
-		delete promises[id];
-		if (waiting[id]) {
-			delete waiting[id];
-			return; // Not yet resolved
-		}
-		if (!hasOwnProperty.call(cache, id)) return;
-		var result = cache[id];
-		delete cache[id];
-		conf.emit("deleteasync", id, [result]);
-	});
-
-	// On clear
-	conf.on("clear", function () {
-		var oldCache = cache;
-		cache = create(null);
-		waiting = create(null);
-		promises = create(null);
-		conf.emit("clearasync", objectMap(oldCache, function (data) { return [data]; }));
-	});
-};
-
-
-/***/ }),
-
-/***/ 9822:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
-
-// Reference counter, useful for garbage collector like functionality
-
-
-
-var d          = __nccwpck_require__(4571)
-  , extensions = __nccwpck_require__(4334)
-
-  , create = Object.create, defineProperties = Object.defineProperties;
-
-extensions.refCounter = function (ignore, conf, options) {
-	var cache, postfix;
-
-	cache = create(null);
-	postfix = (options.async && extensions.async) || (options.promise && extensions.promise)
-		? "async" : "";
-
-	conf.on("set" + postfix, function (id, length) {
- cache[id] = length || 1;
-});
-	conf.on("get" + postfix, function (id) {
- ++cache[id];
-});
-	conf.on("delete" + postfix, function (id) {
- delete cache[id];
-});
-	conf.on("clear" + postfix, function () {
- cache = {};
-});
-
-	defineProperties(conf.memoized, {
-		deleteRef: d(function () {
-			var id = conf.get(arguments);
-			if (id === null) return null;
-			if (!cache[id]) return null;
-			if (!--cache[id]) {
-				conf.delete(id);
-				return true;
-			}
-			return false;
-		}),
-		getRefCount: d(function () {
-			var id = conf.get(arguments);
-			if (id === null) return 0;
-			if (!cache[id]) return 0;
-			return cache[id];
-		})
-	});
-};
-
-
-/***/ }),
-
-/***/ 5841:
+/***/ 880:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+var conversions = __nccwpck_require__(391);
 
+/*
+	this function routes a model to all other models.
 
-var normalizeOpts = __nccwpck_require__(4488)
-  , resolveLength = __nccwpck_require__(1257)
-  , plain         = __nccwpck_require__(4039);
+	all functions that are routed have a property `.conversion` attached
+	to the returned synthetic function. This property is an array
+	of strings, each with the steps in between the 'from' and 'to'
+	color models (inclusive).
 
-module.exports = function (fn/*, options*/) {
-	var options = normalizeOpts(arguments[1]), length;
+	conversions that are not possible simply are not included.
+*/
 
-	if (!options.normalizer) {
-		length = options.length = resolveLength(options.length, fn.length, options.async);
-		if (length !== 0) {
-			if (options.primitive) {
-				if (length === false) {
-					options.normalizer = __nccwpck_require__(7054);
-				} else if (length > 1) {
-					options.normalizer = __nccwpck_require__(9543)(length);
-				}
-			} else if (length === false) options.normalizer = __nccwpck_require__(2929)();
-				else if (length === 1) options.normalizer = __nccwpck_require__(1290)();
-				else options.normalizer = __nccwpck_require__(6591)(length);
-		}
-	}
+function buildGraph() {
+	var graph = {};
+	// https://jsperf.com/object-keys-vs-for-in-with-closure/3
+	var models = Object.keys(conversions);
 
-	// Assure extensions
-	if (options.async) __nccwpck_require__(7192);
-	if (options.promise) __nccwpck_require__(5796);
-	if (options.dispose) __nccwpck_require__(6245);
-	if (options.maxAge) __nccwpck_require__(9474);
-	if (options.max) __nccwpck_require__(1233);
-	if (options.refCounter) __nccwpck_require__(9822);
-
-	return plain(fn, options);
-};
-
-
-/***/ }),
-
-/***/ 5769:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-/* eslint no-eq-null: 0, eqeqeq: 0, no-unused-vars: 0 */
-
-
-
-var customError      = __nccwpck_require__(9684)
-  , defineLength     = __nccwpck_require__(1490)
-  , d                = __nccwpck_require__(4571)
-  , ee               = (__nccwpck_require__(3647).methods)
-  , resolveResolve   = __nccwpck_require__(7230)
-  , resolveNormalize = __nccwpck_require__(9076);
-
-var apply = Function.prototype.apply
-  , call = Function.prototype.call
-  , create = Object.create
-  , defineProperties = Object.defineProperties
-  , on = ee.on
-  , emit = ee.emit;
-
-module.exports = function (original, length, options) {
-	var cache = create(null)
-	  , conf
-	  , memLength
-	  , get
-	  , set
-	  , del
-	  , clear
-	  , extDel
-	  , extGet
-	  , extHas
-	  , normalizer
-	  , getListeners
-	  , setListeners
-	  , deleteListeners
-	  , memoized
-	  , resolve;
-	if (length !== false) memLength = length;
-	else if (isNaN(original.length)) memLength = 1;
-	else memLength = original.length;
-
-	if (options.normalizer) {
-		normalizer = resolveNormalize(options.normalizer);
-		get = normalizer.get;
-		set = normalizer.set;
-		del = normalizer.delete;
-		clear = normalizer.clear;
-	}
-	if (options.resolvers != null) resolve = resolveResolve(options.resolvers);
-
-	if (get) {
-		memoized = defineLength(function (arg) {
-			var id, result, args = arguments;
-			if (resolve) args = resolve(args);
-			id = get(args);
-			if (id !== null) {
-				if (hasOwnProperty.call(cache, id)) {
-					if (getListeners) conf.emit("get", id, args, this);
-					return cache[id];
-				}
-			}
-			if (args.length === 1) result = call.call(original, this, args[0]);
-			else result = apply.call(original, this, args);
-			if (id === null) {
-				id = get(args);
-				if (id !== null) throw customError("Circular invocation", "CIRCULAR_INVOCATION");
-				id = set(args);
-			} else if (hasOwnProperty.call(cache, id)) {
-				throw customError("Circular invocation", "CIRCULAR_INVOCATION");
-			}
-			cache[id] = result;
-			if (setListeners) conf.emit("set", id, null, result);
-			return result;
-		}, memLength);
-	} else if (length === 0) {
-		memoized = function () {
-			var result;
-			if (hasOwnProperty.call(cache, "data")) {
-				if (getListeners) conf.emit("get", "data", arguments, this);
-				return cache.data;
-			}
-			if (arguments.length) result = apply.call(original, this, arguments);
-			else result = call.call(original, this);
-			if (hasOwnProperty.call(cache, "data")) {
-				throw customError("Circular invocation", "CIRCULAR_INVOCATION");
-			}
-			cache.data = result;
-			if (setListeners) conf.emit("set", "data", null, result);
-			return result;
-		};
-	} else {
-		memoized = function (arg) {
-			var result, args = arguments, id;
-			if (resolve) args = resolve(arguments);
-			id = String(args[0]);
-			if (hasOwnProperty.call(cache, id)) {
-				if (getListeners) conf.emit("get", id, args, this);
-				return cache[id];
-			}
-			if (args.length === 1) result = call.call(original, this, args[0]);
-			else result = apply.call(original, this, args);
-			if (hasOwnProperty.call(cache, id)) {
-				throw customError("Circular invocation", "CIRCULAR_INVOCATION");
-			}
-			cache[id] = result;
-			if (setListeners) conf.emit("set", id, null, result);
-			return result;
+	for (var len = models.length, i = 0; i < len; i++) {
+		graph[models[i]] = {
+			// http://jsperf.com/1-vs-infinity
+			// micro-opt, but this is simple.
+			distance: -1,
+			parent: null
 		};
 	}
-	conf = {
-		original: original,
-		memoized: memoized,
-		profileName: options.profileName,
-		get: function (args) {
-			if (resolve) args = resolve(args);
-			if (get) return get(args);
-			return String(args[0]);
-		},
-		has: function (id) { return hasOwnProperty.call(cache, id); },
-		delete: function (id) {
-			var result;
-			if (!hasOwnProperty.call(cache, id)) return;
-			if (del) del(id);
-			result = cache[id];
-			delete cache[id];
-			if (deleteListeners) conf.emit("delete", id, result);
-		},
-		clear: function () {
-			var oldCache = cache;
-			if (clear) clear();
-			cache = create(null);
-			conf.emit("clear", oldCache);
-		},
-		on: function (type, listener) {
-			if (type === "get") getListeners = true;
-			else if (type === "set") setListeners = true;
-			else if (type === "delete") deleteListeners = true;
-			return on.call(this, type, listener);
-		},
-		emit: emit,
-		updateEnv: function () { original = conf.original; }
-	};
-	if (get) {
-		extDel = defineLength(function (arg) {
-			var id, args = arguments;
-			if (resolve) args = resolve(args);
-			id = get(args);
-			if (id === null) return;
-			conf.delete(id);
-		}, memLength);
-	} else if (length === 0) {
-		extDel = function () { return conf.delete("data"); };
-	} else {
-		extDel = function (arg) {
-			if (resolve) arg = resolve(arguments)[0];
-			return conf.delete(arg);
-		};
-	}
-	extGet = defineLength(function () {
-		var id, args = arguments;
-		if (length === 0) return cache.data;
-		if (resolve) args = resolve(args);
-		if (get) id = get(args);
-		else id = String(args[0]);
-		return cache[id];
-	});
-	extHas = defineLength(function () {
-		var id, args = arguments;
-		if (length === 0) return conf.has("data");
-		if (resolve) args = resolve(args);
-		if (get) id = get(args);
-		else id = String(args[0]);
-		if (id === null) return false;
-		return conf.has(id);
-	});
-	defineProperties(memoized, {
-		__memoized__: d(true),
-		delete: d(extDel),
-		clear: d(conf.clear),
-		_get: d(extGet),
-		_has: d(extHas)
-	});
-	return conf;
-};
 
+	return graph;
+}
 
-/***/ }),
+// https://en.wikipedia.org/wiki/Breadth-first_search
+function deriveBFS(fromModel) {
+	var graph = buildGraph();
+	var queue = [fromModel]; // unshift -> queue -> pop
 
-/***/ 5550:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+	graph[fromModel].distance = 0;
 
+	while (queue.length) {
+		var current = queue.pop();
+		var adjacents = Object.keys(conversions[current]);
 
+		for (var len = adjacents.length, i = 0; i < len; i++) {
+			var adjacent = adjacents[i];
+			var node = graph[adjacent];
 
-var forEach       = __nccwpck_require__(9575)
-  , normalizeOpts = __nccwpck_require__(4488)
-  , callable      = __nccwpck_require__(6097)
-  , lazy          = __nccwpck_require__(7579)
-  , resolveLength = __nccwpck_require__(1257)
-  , extensions    = __nccwpck_require__(4334);
-
-module.exports = function (memoize) {
-	return function (props) {
-		forEach(props, function (desc) {
-			var fn = callable(desc.value), length;
-			desc.value = function (options) {
-				if (options.getNormalizer) {
-					options = normalizeOpts(options);
-					if (length === undefined) {
-						length = resolveLength(
-							options.length,
-							fn.length,
-							options.async && extensions.async
-						);
-					}
-					options.normalizer = options.getNormalizer(length);
-					delete options.getNormalizer;
-				}
-				return memoize(fn.bind(this), options);
-			};
-		});
-		return lazy(props);
-	};
-};
-
-
-/***/ }),
-
-/***/ 4334:
-/***/ (() => {
-
-
-
-
-/***/ }),
-
-/***/ 1257:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var toPosInt = __nccwpck_require__(3755);
-
-module.exports = function (optsLength, fnLength, isAsync) {
-	var length;
-	if (isNaN(optsLength)) {
-		length = fnLength;
-		if (!(length >= 0)) return 1;
-		if (isAsync && length) return length - 1;
-		return length;
-	}
-	if (optsLength === false) return false;
-	return toPosInt(optsLength);
-};
-
-
-/***/ }),
-
-/***/ 9076:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var callable = __nccwpck_require__(6097);
-
-module.exports = function (userNormalizer) {
-	var normalizer;
-	if (typeof userNormalizer === "function") return { set: userNormalizer, get: userNormalizer };
-	normalizer = { get: callable(userNormalizer.get) };
-	if (userNormalizer.set !== undefined) {
-		normalizer.set = callable(userNormalizer.set);
-		if (userNormalizer.delete) normalizer.delete = callable(userNormalizer.delete);
-		if (userNormalizer.clear) normalizer.clear = callable(userNormalizer.clear);
-		return normalizer;
-	}
-	normalizer.set = normalizer.get;
-	return normalizer;
-};
-
-
-/***/ }),
-
-/***/ 7230:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var toArray  = __nccwpck_require__(2353)
-  , isValue  = __nccwpck_require__(2285)
-  , callable = __nccwpck_require__(6097);
-
-var slice = Array.prototype.slice, resolveArgs;
-
-resolveArgs = function (args) {
-	return this.map(function (resolve, i) {
-		return resolve ? resolve(args[i]) : args[i];
-	}).concat(slice.call(args, this.length));
-};
-
-module.exports = function (resolvers) {
-	resolvers = toArray(resolvers);
-	resolvers.forEach(function (resolve) {
-		if (isValue(resolve)) callable(resolve);
-	});
-	return resolveArgs.bind(resolvers);
-};
-
-
-/***/ }),
-
-/***/ 1936:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-module.exports = __nccwpck_require__(5550)(__nccwpck_require__(5841));
-
-
-/***/ }),
-
-/***/ 1290:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var indexOf = __nccwpck_require__(2324);
-
-module.exports = function () {
-	var lastId = 0, argsMap = [], cache = [];
-	return {
-		get: function (args) {
-			var index = indexOf.call(argsMap, args[0]);
-			return index === -1 ? null : cache[index];
-		},
-		set: function (args) {
-			argsMap.push(args[0]);
-			cache.push(++lastId);
-			return lastId;
-		},
-		delete: function (id) {
-			var index = indexOf.call(cache, id);
-			if (index !== -1) {
-				argsMap.splice(index, 1);
-				cache.splice(index, 1);
+			if (node.distance === -1) {
+				node.distance = graph[current].distance + 1;
+				node.parent = current;
+				queue.unshift(adjacent);
 			}
-		},
-		clear: function () {
-			argsMap = [];
-			cache = [];
 		}
-	};
-};
-
-
-/***/ }),
-
-/***/ 6591:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var indexOf = __nccwpck_require__(2324)
-  , create  = Object.create;
-
-module.exports = function (length) {
-	var lastId = 0, map = [[], []], cache = create(null);
-	return {
-		get: function (args) {
-			var index = 0, set = map, i;
-			while (index < length - 1) {
-				i = indexOf.call(set[0], args[index]);
-				if (i === -1) return null;
-				set = set[1][i];
-				++index;
-			}
-			i = indexOf.call(set[0], args[index]);
-			if (i === -1) return null;
-			return set[1][i] || null;
-		},
-		set: function (args) {
-			var index = 0, set = map, i;
-			while (index < length - 1) {
-				i = indexOf.call(set[0], args[index]);
-				if (i === -1) {
-					i = set[0].push(args[index]) - 1;
-					set[1].push([[], []]);
-				}
-				set = set[1][i];
-				++index;
-			}
-			i = indexOf.call(set[0], args[index]);
-			if (i === -1) {
-				i = set[0].push(args[index]) - 1;
-			}
-			set[1][i] = ++lastId;
-			cache[lastId] = args;
-			return lastId;
-		},
-		delete: function (id) {
-			var index = 0, set = map, i, path = [], args = cache[id];
-			while (index < length - 1) {
-				i = indexOf.call(set[0], args[index]);
-				if (i === -1) {
-					return;
-				}
-				path.push(set, i);
-				set = set[1][i];
-				++index;
-			}
-			i = indexOf.call(set[0], args[index]);
-			if (i === -1) {
-				return;
-			}
-			id = set[1][i];
-			set[0].splice(i, 1);
-			set[1].splice(i, 1);
-			while (!set[0].length && path.length) {
-				i = path.pop();
-				set = path.pop();
-				set[0].splice(i, 1);
-				set[1].splice(i, 1);
-			}
-			delete cache[id];
-		},
-		clear: function () {
-			map = [[], []];
-			cache = create(null);
-		}
-	};
-};
-
-
-/***/ }),
-
-/***/ 9543:
-/***/ ((module) => {
-
-
-
-module.exports = function (length) {
-	if (!length) {
-		return function () {
-			return "";
-		};
 	}
+
+	return graph;
+}
+
+function link(from, to) {
 	return function (args) {
-		var id = String(args[0]), i = 0, currentLength = length;
-		while (--currentLength) {
-			id += "\u0001" + args[++i];
-		}
-		return id;
+		return to(from(args));
 	};
+}
+
+function wrapConversion(toModel, graph) {
+	var path = [graph[toModel].parent, toModel];
+	var fn = conversions[graph[toModel].parent][toModel];
+
+	var cur = graph[toModel].parent;
+	while (graph[cur].parent) {
+		path.unshift(graph[cur].parent);
+		fn = link(conversions[graph[cur].parent][cur], fn);
+		cur = graph[cur].parent;
+	}
+
+	fn.conversion = path;
+	return fn;
+}
+
+module.exports = function (fromModel) {
+	var graph = deriveBFS(fromModel);
+	var conversion = {};
+
+	var models = Object.keys(graph);
+	for (var len = models.length, i = 0; i < len; i++) {
+		var toModel = models[i];
+		var node = graph[toModel];
+
+		if (node.parent === null) {
+			// no possible conversion, or this node is the source model.
+			continue;
+		}
+
+		conversion[toModel] = wrapConversion(toModel, graph);
+	}
+
+	return conversion;
 };
+
 
 
 /***/ }),
 
-/***/ 2929:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-/* eslint max-statements: 0 */
-
-
-
-var indexOf = __nccwpck_require__(2324);
-
-var create = Object.create;
-
-module.exports = function () {
-	var lastId = 0, map = [], cache = create(null);
-	return {
-		get: function (args) {
-			var index = 0, set = map, i, length = args.length;
-			if (length === 0) return set[length] || null;
-			if ((set = set[length])) {
-				while (index < length - 1) {
-					i = indexOf.call(set[0], args[index]);
-					if (i === -1) return null;
-					set = set[1][i];
-					++index;
-				}
-				i = indexOf.call(set[0], args[index]);
-				if (i === -1) return null;
-				return set[1][i] || null;
-			}
-			return null;
-		},
-		set: function (args) {
-			var index = 0, set = map, i, length = args.length;
-			if (length === 0) {
-				set[length] = ++lastId;
-			} else {
-				if (!set[length]) {
-					set[length] = [[], []];
-				}
-				set = set[length];
-				while (index < length - 1) {
-					i = indexOf.call(set[0], args[index]);
-					if (i === -1) {
-						i = set[0].push(args[index]) - 1;
-						set[1].push([[], []]);
-					}
-					set = set[1][i];
-					++index;
-				}
-				i = indexOf.call(set[0], args[index]);
-				if (i === -1) {
-					i = set[0].push(args[index]) - 1;
-				}
-				set[1][i] = ++lastId;
-			}
-			cache[lastId] = args;
-			return lastId;
-		},
-		delete: function (id) {
-			var index = 0, set = map, i, args = cache[id], length = args.length, path = [];
-			if (length === 0) {
-				delete set[length];
-			} else if ((set = set[length])) {
-				while (index < length - 1) {
-					i = indexOf.call(set[0], args[index]);
-					if (i === -1) {
-						return;
-					}
-					path.push(set, i);
-					set = set[1][i];
-					++index;
-				}
-				i = indexOf.call(set[0], args[index]);
-				if (i === -1) {
-					return;
-				}
-				id = set[1][i];
-				set[0].splice(i, 1);
-				set[1].splice(i, 1);
-				while (!set[0].length && path.length) {
-					i = path.pop();
-					set = path.pop();
-					set[0].splice(i, 1);
-					set[1].splice(i, 1);
-				}
-			}
-			delete cache[id];
-		},
-		clear: function () {
-			map = [];
-			cache = create(null);
-		}
-	};
-};
-
-
-/***/ }),
-
-/***/ 7054:
+/***/ 510:
 /***/ ((module) => {
 
 
 
-module.exports = function (args) {
-	var id, i, length = args.length;
-	if (!length) return "\u0002";
-	id = String(args[i = 0]);
-	while (--length) id += "\u0001" + args[++i];
-	return id;
+module.exports = {
+	"aliceblue": [240, 248, 255],
+	"antiquewhite": [250, 235, 215],
+	"aqua": [0, 255, 255],
+	"aquamarine": [127, 255, 212],
+	"azure": [240, 255, 255],
+	"beige": [245, 245, 220],
+	"bisque": [255, 228, 196],
+	"black": [0, 0, 0],
+	"blanchedalmond": [255, 235, 205],
+	"blue": [0, 0, 255],
+	"blueviolet": [138, 43, 226],
+	"brown": [165, 42, 42],
+	"burlywood": [222, 184, 135],
+	"cadetblue": [95, 158, 160],
+	"chartreuse": [127, 255, 0],
+	"chocolate": [210, 105, 30],
+	"coral": [255, 127, 80],
+	"cornflowerblue": [100, 149, 237],
+	"cornsilk": [255, 248, 220],
+	"crimson": [220, 20, 60],
+	"cyan": [0, 255, 255],
+	"darkblue": [0, 0, 139],
+	"darkcyan": [0, 139, 139],
+	"darkgoldenrod": [184, 134, 11],
+	"darkgray": [169, 169, 169],
+	"darkgreen": [0, 100, 0],
+	"darkgrey": [169, 169, 169],
+	"darkkhaki": [189, 183, 107],
+	"darkmagenta": [139, 0, 139],
+	"darkolivegreen": [85, 107, 47],
+	"darkorange": [255, 140, 0],
+	"darkorchid": [153, 50, 204],
+	"darkred": [139, 0, 0],
+	"darksalmon": [233, 150, 122],
+	"darkseagreen": [143, 188, 143],
+	"darkslateblue": [72, 61, 139],
+	"darkslategray": [47, 79, 79],
+	"darkslategrey": [47, 79, 79],
+	"darkturquoise": [0, 206, 209],
+	"darkviolet": [148, 0, 211],
+	"deeppink": [255, 20, 147],
+	"deepskyblue": [0, 191, 255],
+	"dimgray": [105, 105, 105],
+	"dimgrey": [105, 105, 105],
+	"dodgerblue": [30, 144, 255],
+	"firebrick": [178, 34, 34],
+	"floralwhite": [255, 250, 240],
+	"forestgreen": [34, 139, 34],
+	"fuchsia": [255, 0, 255],
+	"gainsboro": [220, 220, 220],
+	"ghostwhite": [248, 248, 255],
+	"gold": [255, 215, 0],
+	"goldenrod": [218, 165, 32],
+	"gray": [128, 128, 128],
+	"green": [0, 128, 0],
+	"greenyellow": [173, 255, 47],
+	"grey": [128, 128, 128],
+	"honeydew": [240, 255, 240],
+	"hotpink": [255, 105, 180],
+	"indianred": [205, 92, 92],
+	"indigo": [75, 0, 130],
+	"ivory": [255, 255, 240],
+	"khaki": [240, 230, 140],
+	"lavender": [230, 230, 250],
+	"lavenderblush": [255, 240, 245],
+	"lawngreen": [124, 252, 0],
+	"lemonchiffon": [255, 250, 205],
+	"lightblue": [173, 216, 230],
+	"lightcoral": [240, 128, 128],
+	"lightcyan": [224, 255, 255],
+	"lightgoldenrodyellow": [250, 250, 210],
+	"lightgray": [211, 211, 211],
+	"lightgreen": [144, 238, 144],
+	"lightgrey": [211, 211, 211],
+	"lightpink": [255, 182, 193],
+	"lightsalmon": [255, 160, 122],
+	"lightseagreen": [32, 178, 170],
+	"lightskyblue": [135, 206, 250],
+	"lightslategray": [119, 136, 153],
+	"lightslategrey": [119, 136, 153],
+	"lightsteelblue": [176, 196, 222],
+	"lightyellow": [255, 255, 224],
+	"lime": [0, 255, 0],
+	"limegreen": [50, 205, 50],
+	"linen": [250, 240, 230],
+	"magenta": [255, 0, 255],
+	"maroon": [128, 0, 0],
+	"mediumaquamarine": [102, 205, 170],
+	"mediumblue": [0, 0, 205],
+	"mediumorchid": [186, 85, 211],
+	"mediumpurple": [147, 112, 219],
+	"mediumseagreen": [60, 179, 113],
+	"mediumslateblue": [123, 104, 238],
+	"mediumspringgreen": [0, 250, 154],
+	"mediumturquoise": [72, 209, 204],
+	"mediumvioletred": [199, 21, 133],
+	"midnightblue": [25, 25, 112],
+	"mintcream": [245, 255, 250],
+	"mistyrose": [255, 228, 225],
+	"moccasin": [255, 228, 181],
+	"navajowhite": [255, 222, 173],
+	"navy": [0, 0, 128],
+	"oldlace": [253, 245, 230],
+	"olive": [128, 128, 0],
+	"olivedrab": [107, 142, 35],
+	"orange": [255, 165, 0],
+	"orangered": [255, 69, 0],
+	"orchid": [218, 112, 214],
+	"palegoldenrod": [238, 232, 170],
+	"palegreen": [152, 251, 152],
+	"paleturquoise": [175, 238, 238],
+	"palevioletred": [219, 112, 147],
+	"papayawhip": [255, 239, 213],
+	"peachpuff": [255, 218, 185],
+	"peru": [205, 133, 63],
+	"pink": [255, 192, 203],
+	"plum": [221, 160, 221],
+	"powderblue": [176, 224, 230],
+	"purple": [128, 0, 128],
+	"rebeccapurple": [102, 51, 153],
+	"red": [255, 0, 0],
+	"rosybrown": [188, 143, 143],
+	"royalblue": [65, 105, 225],
+	"saddlebrown": [139, 69, 19],
+	"salmon": [250, 128, 114],
+	"sandybrown": [244, 164, 96],
+	"seagreen": [46, 139, 87],
+	"seashell": [255, 245, 238],
+	"sienna": [160, 82, 45],
+	"silver": [192, 192, 192],
+	"skyblue": [135, 206, 235],
+	"slateblue": [106, 90, 205],
+	"slategray": [112, 128, 144],
+	"slategrey": [112, 128, 144],
+	"snow": [255, 250, 250],
+	"springgreen": [0, 255, 127],
+	"steelblue": [70, 130, 180],
+	"tan": [210, 180, 140],
+	"teal": [0, 128, 128],
+	"thistle": [216, 191, 216],
+	"tomato": [255, 99, 71],
+	"turquoise": [64, 224, 208],
+	"violet": [238, 130, 238],
+	"wheat": [245, 222, 179],
+	"white": [255, 255, 255],
+	"whitesmoke": [245, 245, 245],
+	"yellow": [255, 255, 0],
+	"yellowgreen": [154, 205, 50]
 };
 
 
 /***/ }),
 
-/***/ 4039:
+/***/ 675:
+/***/ ((module) => {
+
+/**
+ * Diff Match and Patch
+ * Copyright 2018 The diff-match-patch Authors.
+ * https://github.com/google/diff-match-patch
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @fileoverview Computes the difference between two texts to create a patch.
+ * Applies the patch onto another text, allowing for errors.
+ * @author fraser@google.com (Neil Fraser)
+ */
+
+/**
+ * Class containing the diff, match and patch methods.
+ * @constructor
+ */
+var diff_match_patch = function() {
+
+  // Defaults.
+  // Redefine these in your program to override the defaults.
+
+  // Number of seconds to map a diff before giving up (0 for infinity).
+  this.Diff_Timeout = 1.0;
+  // Cost of an empty edit operation in terms of edit characters.
+  this.Diff_EditCost = 4;
+  // At what point is no match declared (0.0 = perfection, 1.0 = very loose).
+  this.Match_Threshold = 0.5;
+  // How far to search for a match (0 = exact location, 1000+ = broad match).
+  // A match this many characters away from the expected location will add
+  // 1.0 to the score (0.0 is a perfect match).
+  this.Match_Distance = 1000;
+  // When deleting a large block of text (over ~64 characters), how close do
+  // the contents have to be to match the expected contents. (0.0 = perfection,
+  // 1.0 = very loose).  Note that Match_Threshold controls how closely the
+  // end points of a delete need to match.
+  this.Patch_DeleteThreshold = 0.5;
+  // Chunk size for context length.
+  this.Patch_Margin = 4;
+
+  // The number of bits in an int.
+  this.Match_MaxBits = 32;
+};
+
+
+//  DIFF FUNCTIONS
+
+
+/**
+ * The data structure representing a diff is an array of tuples:
+ * [[DIFF_DELETE, 'Hello'], [DIFF_INSERT, 'Goodbye'], [DIFF_EQUAL, ' world.']]
+ * which means: delete 'Hello', add 'Goodbye' and keep ' world.'
+ */
+var DIFF_DELETE = -1;
+var DIFF_INSERT = 1;
+var DIFF_EQUAL = 0;
+
+/**
+ * Class representing one diff tuple.
+ * ~Attempts to look like a two-element array (which is what this used to be).~
+ * Constructor returns an actual two-element array, to allow destructing @JackuB
+ * See https://github.com/JackuB/diff-match-patch/issues/14 for details
+ * @param {number} op Operation, one of: DIFF_DELETE, DIFF_INSERT, DIFF_EQUAL.
+ * @param {string} text Text to be deleted, inserted, or retained.
+ * @constructor
+ */
+diff_match_patch.Diff = function(op, text) {
+  return [op, text];
+};
+
+/**
+ * Find the differences between two texts.  Simplifies the problem by stripping
+ * any common prefix or suffix off the texts before diffing.
+ * @param {string} text1 Old string to be diffed.
+ * @param {string} text2 New string to be diffed.
+ * @param {boolean=} opt_checklines Optional speedup flag. If present and false,
+ *     then don't run a line-level diff first to identify the changed areas.
+ *     Defaults to true, which does a faster, slightly less optimal diff.
+ * @param {number=} opt_deadline Optional time when the diff should be complete
+ *     by.  Used internally for recursive calls.  Users should set DiffTimeout
+ *     instead.
+ * @return {!Array.<!diff_match_patch.Diff>} Array of diff tuples.
+ */
+diff_match_patch.prototype.diff_main = function(text1, text2, opt_checklines,
+    opt_deadline) {
+  // Set a deadline by which time the diff must be complete.
+  if (typeof opt_deadline == 'undefined') {
+    if (this.Diff_Timeout <= 0) {
+      opt_deadline = Number.MAX_VALUE;
+    } else {
+      opt_deadline = (new Date).getTime() + this.Diff_Timeout * 1000;
+    }
+  }
+  var deadline = opt_deadline;
+
+  // Check for null inputs.
+  if (text1 == null || text2 == null) {
+    throw new Error('Null input. (diff_main)');
+  }
+
+  // Check for equality (speedup).
+  if (text1 == text2) {
+    if (text1) {
+      return [new diff_match_patch.Diff(DIFF_EQUAL, text1)];
+    }
+    return [];
+  }
+
+  if (typeof opt_checklines == 'undefined') {
+    opt_checklines = true;
+  }
+  var checklines = opt_checklines;
+
+  // Trim off common prefix (speedup).
+  var commonlength = this.diff_commonPrefix(text1, text2);
+  var commonprefix = text1.substring(0, commonlength);
+  text1 = text1.substring(commonlength);
+  text2 = text2.substring(commonlength);
+
+  // Trim off common suffix (speedup).
+  commonlength = this.diff_commonSuffix(text1, text2);
+  var commonsuffix = text1.substring(text1.length - commonlength);
+  text1 = text1.substring(0, text1.length - commonlength);
+  text2 = text2.substring(0, text2.length - commonlength);
+
+  // Compute the diff on the middle block.
+  var diffs = this.diff_compute_(text1, text2, checklines, deadline);
+
+  // Restore the prefix and suffix.
+  if (commonprefix) {
+    diffs.unshift(new diff_match_patch.Diff(DIFF_EQUAL, commonprefix));
+  }
+  if (commonsuffix) {
+    diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, commonsuffix));
+  }
+  this.diff_cleanupMerge(diffs);
+  return diffs;
+};
+
+
+/**
+ * Find the differences between two texts.  Assumes that the texts do not
+ * have any common prefix or suffix.
+ * @param {string} text1 Old string to be diffed.
+ * @param {string} text2 New string to be diffed.
+ * @param {boolean} checklines Speedup flag.  If false, then don't run a
+ *     line-level diff first to identify the changed areas.
+ *     If true, then run a faster, slightly less optimal diff.
+ * @param {number} deadline Time when the diff should be complete by.
+ * @return {!Array.<!diff_match_patch.Diff>} Array of diff tuples.
+ * @private
+ */
+diff_match_patch.prototype.diff_compute_ = function(text1, text2, checklines,
+    deadline) {
+  var diffs;
+
+  if (!text1) {
+    // Just add some text (speedup).
+    return [new diff_match_patch.Diff(DIFF_INSERT, text2)];
+  }
+
+  if (!text2) {
+    // Just delete some text (speedup).
+    return [new diff_match_patch.Diff(DIFF_DELETE, text1)];
+  }
+
+  var longtext = text1.length > text2.length ? text1 : text2;
+  var shorttext = text1.length > text2.length ? text2 : text1;
+  var i = longtext.indexOf(shorttext);
+  if (i != -1) {
+    // Shorter text is inside the longer text (speedup).
+    diffs = [new diff_match_patch.Diff(DIFF_INSERT, longtext.substring(0, i)),
+             new diff_match_patch.Diff(DIFF_EQUAL, shorttext),
+             new diff_match_patch.Diff(DIFF_INSERT,
+                 longtext.substring(i + shorttext.length))];
+    // Swap insertions for deletions if diff is reversed.
+    if (text1.length > text2.length) {
+      diffs[0][0] = diffs[2][0] = DIFF_DELETE;
+    }
+    return diffs;
+  }
+
+  if (shorttext.length == 1) {
+    // Single character string.
+    // After the previous speedup, the character can't be an equality.
+    return [new diff_match_patch.Diff(DIFF_DELETE, text1),
+            new diff_match_patch.Diff(DIFF_INSERT, text2)];
+  }
+
+  // Check to see if the problem can be split in two.
+  var hm = this.diff_halfMatch_(text1, text2);
+  if (hm) {
+    // A half-match was found, sort out the return data.
+    var text1_a = hm[0];
+    var text1_b = hm[1];
+    var text2_a = hm[2];
+    var text2_b = hm[3];
+    var mid_common = hm[4];
+    // Send both pairs off for separate processing.
+    var diffs_a = this.diff_main(text1_a, text2_a, checklines, deadline);
+    var diffs_b = this.diff_main(text1_b, text2_b, checklines, deadline);
+    // Merge the results.
+    return diffs_a.concat([new diff_match_patch.Diff(DIFF_EQUAL, mid_common)],
+                          diffs_b);
+  }
+
+  if (checklines && text1.length > 100 && text2.length > 100) {
+    return this.diff_lineMode_(text1, text2, deadline);
+  }
+
+  return this.diff_bisect_(text1, text2, deadline);
+};
+
+
+/**
+ * Do a quick line-level diff on both strings, then rediff the parts for
+ * greater accuracy.
+ * This speedup can produce non-minimal diffs.
+ * @param {string} text1 Old string to be diffed.
+ * @param {string} text2 New string to be diffed.
+ * @param {number} deadline Time when the diff should be complete by.
+ * @return {!Array.<!diff_match_patch.Diff>} Array of diff tuples.
+ * @private
+ */
+diff_match_patch.prototype.diff_lineMode_ = function(text1, text2, deadline) {
+  // Scan the text on a line-by-line basis first.
+  var a = this.diff_linesToChars_(text1, text2);
+  text1 = a.chars1;
+  text2 = a.chars2;
+  var linearray = a.lineArray;
+
+  var diffs = this.diff_main(text1, text2, false, deadline);
+
+  // Convert the diff back to original text.
+  this.diff_charsToLines_(diffs, linearray);
+  // Eliminate freak matches (e.g. blank lines)
+  this.diff_cleanupSemantic(diffs);
+
+  // Rediff any replacement blocks, this time character-by-character.
+  // Add a dummy entry at the end.
+  diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, ''));
+  var pointer = 0;
+  var count_delete = 0;
+  var count_insert = 0;
+  var text_delete = '';
+  var text_insert = '';
+  while (pointer < diffs.length) {
+    switch (diffs[pointer][0]) {
+      case DIFF_INSERT:
+        count_insert++;
+        text_insert += diffs[pointer][1];
+        break;
+      case DIFF_DELETE:
+        count_delete++;
+        text_delete += diffs[pointer][1];
+        break;
+      case DIFF_EQUAL:
+        // Upon reaching an equality, check for prior redundancies.
+        if (count_delete >= 1 && count_insert >= 1) {
+          // Delete the offending records and add the merged ones.
+          diffs.splice(pointer - count_delete - count_insert,
+                       count_delete + count_insert);
+          pointer = pointer - count_delete - count_insert;
+          var subDiff =
+              this.diff_main(text_delete, text_insert, false, deadline);
+          for (var j = subDiff.length - 1; j >= 0; j--) {
+            diffs.splice(pointer, 0, subDiff[j]);
+          }
+          pointer = pointer + subDiff.length;
+        }
+        count_insert = 0;
+        count_delete = 0;
+        text_delete = '';
+        text_insert = '';
+        break;
+    }
+    pointer++;
+  }
+  diffs.pop();  // Remove the dummy entry at the end.
+
+  return diffs;
+};
+
+
+/**
+ * Find the 'middle snake' of a diff, split the problem in two
+ * and return the recursively constructed diff.
+ * See Myers 1986 paper: An O(ND) Difference Algorithm and Its Variations.
+ * @param {string} text1 Old string to be diffed.
+ * @param {string} text2 New string to be diffed.
+ * @param {number} deadline Time at which to bail if not yet complete.
+ * @return {!Array.<!diff_match_patch.Diff>} Array of diff tuples.
+ * @private
+ */
+diff_match_patch.prototype.diff_bisect_ = function(text1, text2, deadline) {
+  // Cache the text lengths to prevent multiple calls.
+  var text1_length = text1.length;
+  var text2_length = text2.length;
+  var max_d = Math.ceil((text1_length + text2_length) / 2);
+  var v_offset = max_d;
+  var v_length = 2 * max_d;
+  var v1 = new Array(v_length);
+  var v2 = new Array(v_length);
+  // Setting all elements to -1 is faster in Chrome & Firefox than mixing
+  // integers and undefined.
+  for (var x = 0; x < v_length; x++) {
+    v1[x] = -1;
+    v2[x] = -1;
+  }
+  v1[v_offset + 1] = 0;
+  v2[v_offset + 1] = 0;
+  var delta = text1_length - text2_length;
+  // If the total number of characters is odd, then the front path will collide
+  // with the reverse path.
+  var front = (delta % 2 != 0);
+  // Offsets for start and end of k loop.
+  // Prevents mapping of space beyond the grid.
+  var k1start = 0;
+  var k1end = 0;
+  var k2start = 0;
+  var k2end = 0;
+  for (var d = 0; d < max_d; d++) {
+    // Bail out if deadline is reached.
+    if ((new Date()).getTime() > deadline) {
+      break;
+    }
+
+    // Walk the front path one step.
+    for (var k1 = -d + k1start; k1 <= d - k1end; k1 += 2) {
+      var k1_offset = v_offset + k1;
+      var x1;
+      if (k1 == -d || (k1 != d && v1[k1_offset - 1] < v1[k1_offset + 1])) {
+        x1 = v1[k1_offset + 1];
+      } else {
+        x1 = v1[k1_offset - 1] + 1;
+      }
+      var y1 = x1 - k1;
+      while (x1 < text1_length && y1 < text2_length &&
+             text1.charAt(x1) == text2.charAt(y1)) {
+        x1++;
+        y1++;
+      }
+      v1[k1_offset] = x1;
+      if (x1 > text1_length) {
+        // Ran off the right of the graph.
+        k1end += 2;
+      } else if (y1 > text2_length) {
+        // Ran off the bottom of the graph.
+        k1start += 2;
+      } else if (front) {
+        var k2_offset = v_offset + delta - k1;
+        if (k2_offset >= 0 && k2_offset < v_length && v2[k2_offset] != -1) {
+          // Mirror x2 onto top-left coordinate system.
+          var x2 = text1_length - v2[k2_offset];
+          if (x1 >= x2) {
+            // Overlap detected.
+            return this.diff_bisectSplit_(text1, text2, x1, y1, deadline);
+          }
+        }
+      }
+    }
+
+    // Walk the reverse path one step.
+    for (var k2 = -d + k2start; k2 <= d - k2end; k2 += 2) {
+      var k2_offset = v_offset + k2;
+      var x2;
+      if (k2 == -d || (k2 != d && v2[k2_offset - 1] < v2[k2_offset + 1])) {
+        x2 = v2[k2_offset + 1];
+      } else {
+        x2 = v2[k2_offset - 1] + 1;
+      }
+      var y2 = x2 - k2;
+      while (x2 < text1_length && y2 < text2_length &&
+             text1.charAt(text1_length - x2 - 1) ==
+             text2.charAt(text2_length - y2 - 1)) {
+        x2++;
+        y2++;
+      }
+      v2[k2_offset] = x2;
+      if (x2 > text1_length) {
+        // Ran off the left of the graph.
+        k2end += 2;
+      } else if (y2 > text2_length) {
+        // Ran off the top of the graph.
+        k2start += 2;
+      } else if (!front) {
+        var k1_offset = v_offset + delta - k2;
+        if (k1_offset >= 0 && k1_offset < v_length && v1[k1_offset] != -1) {
+          var x1 = v1[k1_offset];
+          var y1 = v_offset + x1 - k1_offset;
+          // Mirror x2 onto top-left coordinate system.
+          x2 = text1_length - x2;
+          if (x1 >= x2) {
+            // Overlap detected.
+            return this.diff_bisectSplit_(text1, text2, x1, y1, deadline);
+          }
+        }
+      }
+    }
+  }
+  // Diff took too long and hit the deadline or
+  // number of diffs equals number of characters, no commonality at all.
+  return [new diff_match_patch.Diff(DIFF_DELETE, text1),
+          new diff_match_patch.Diff(DIFF_INSERT, text2)];
+};
+
+
+/**
+ * Given the location of the 'middle snake', split the diff in two parts
+ * and recurse.
+ * @param {string} text1 Old string to be diffed.
+ * @param {string} text2 New string to be diffed.
+ * @param {number} x Index of split point in text1.
+ * @param {number} y Index of split point in text2.
+ * @param {number} deadline Time at which to bail if not yet complete.
+ * @return {!Array.<!diff_match_patch.Diff>} Array of diff tuples.
+ * @private
+ */
+diff_match_patch.prototype.diff_bisectSplit_ = function(text1, text2, x, y,
+    deadline) {
+  var text1a = text1.substring(0, x);
+  var text2a = text2.substring(0, y);
+  var text1b = text1.substring(x);
+  var text2b = text2.substring(y);
+
+  // Compute both diffs serially.
+  var diffs = this.diff_main(text1a, text2a, false, deadline);
+  var diffsb = this.diff_main(text1b, text2b, false, deadline);
+
+  return diffs.concat(diffsb);
+};
+
+
+/**
+ * Split two texts into an array of strings.  Reduce the texts to a string of
+ * hashes where each Unicode character represents one line.
+ * @param {string} text1 First string.
+ * @param {string} text2 Second string.
+ * @return {{chars1: string, chars2: string, lineArray: !Array.<string>}}
+ *     An object containing the encoded text1, the encoded text2 and
+ *     the array of unique strings.
+ *     The zeroth element of the array of unique strings is intentionally blank.
+ * @private
+ */
+diff_match_patch.prototype.diff_linesToChars_ = function(text1, text2) {
+  var lineArray = [];  // e.g. lineArray[4] == 'Hello\n'
+  var lineHash = {};   // e.g. lineHash['Hello\n'] == 4
+
+  // '\x00' is a valid character, but various debuggers don't like it.
+  // So we'll insert a junk entry to avoid generating a null character.
+  lineArray[0] = '';
+
+  /**
+   * Split a text into an array of strings.  Reduce the texts to a string of
+   * hashes where each Unicode character represents one line.
+   * Modifies linearray and linehash through being a closure.
+   * @param {string} text String to encode.
+   * @return {string} Encoded string.
+   * @private
+   */
+  function diff_linesToCharsMunge_(text) {
+    var chars = '';
+    // Walk the text, pulling out a substring for each line.
+    // text.split('\n') would would temporarily double our memory footprint.
+    // Modifying text would create many large strings to garbage collect.
+    var lineStart = 0;
+    var lineEnd = -1;
+    // Keeping our own length variable is faster than looking it up.
+    var lineArrayLength = lineArray.length;
+    while (lineEnd < text.length - 1) {
+      lineEnd = text.indexOf('\n', lineStart);
+      if (lineEnd == -1) {
+        lineEnd = text.length - 1;
+      }
+      var line = text.substring(lineStart, lineEnd + 1);
+
+      if (lineHash.hasOwnProperty ? lineHash.hasOwnProperty(line) :
+          (lineHash[line] !== undefined)) {
+        chars += String.fromCharCode(lineHash[line]);
+      } else {
+        if (lineArrayLength == maxLines) {
+          // Bail out at 65535 because
+          // String.fromCharCode(65536) == String.fromCharCode(0)
+          line = text.substring(lineStart);
+          lineEnd = text.length;
+        }
+        chars += String.fromCharCode(lineArrayLength);
+        lineHash[line] = lineArrayLength;
+        lineArray[lineArrayLength++] = line;
+      }
+      lineStart = lineEnd + 1;
+    }
+    return chars;
+  }
+  // Allocate 2/3rds of the space for text1, the rest for text2.
+  var maxLines = 40000;
+  var chars1 = diff_linesToCharsMunge_(text1);
+  maxLines = 65535;
+  var chars2 = diff_linesToCharsMunge_(text2);
+  return {chars1: chars1, chars2: chars2, lineArray: lineArray};
+};
+
+
+/**
+ * Rehydrate the text in a diff from a string of line hashes to real lines of
+ * text.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ * @param {!Array.<string>} lineArray Array of unique strings.
+ * @private
+ */
+diff_match_patch.prototype.diff_charsToLines_ = function(diffs, lineArray) {
+  for (var i = 0; i < diffs.length; i++) {
+    var chars = diffs[i][1];
+    var text = [];
+    for (var j = 0; j < chars.length; j++) {
+      text[j] = lineArray[chars.charCodeAt(j)];
+    }
+    diffs[i][1] = text.join('');
+  }
+};
+
+
+/**
+ * Determine the common prefix of two strings.
+ * @param {string} text1 First string.
+ * @param {string} text2 Second string.
+ * @return {number} The number of characters common to the start of each
+ *     string.
+ */
+diff_match_patch.prototype.diff_commonPrefix = function(text1, text2) {
+  // Quick check for common null cases.
+  if (!text1 || !text2 || text1.charAt(0) != text2.charAt(0)) {
+    return 0;
+  }
+  // Binary search.
+  // Performance analysis: https://neil.fraser.name/news/2007/10/09/
+  var pointermin = 0;
+  var pointermax = Math.min(text1.length, text2.length);
+  var pointermid = pointermax;
+  var pointerstart = 0;
+  while (pointermin < pointermid) {
+    if (text1.substring(pointerstart, pointermid) ==
+        text2.substring(pointerstart, pointermid)) {
+      pointermin = pointermid;
+      pointerstart = pointermin;
+    } else {
+      pointermax = pointermid;
+    }
+    pointermid = Math.floor((pointermax - pointermin) / 2 + pointermin);
+  }
+  return pointermid;
+};
+
+
+/**
+ * Determine the common suffix of two strings.
+ * @param {string} text1 First string.
+ * @param {string} text2 Second string.
+ * @return {number} The number of characters common to the end of each string.
+ */
+diff_match_patch.prototype.diff_commonSuffix = function(text1, text2) {
+  // Quick check for common null cases.
+  if (!text1 || !text2 ||
+      text1.charAt(text1.length - 1) != text2.charAt(text2.length - 1)) {
+    return 0;
+  }
+  // Binary search.
+  // Performance analysis: https://neil.fraser.name/news/2007/10/09/
+  var pointermin = 0;
+  var pointermax = Math.min(text1.length, text2.length);
+  var pointermid = pointermax;
+  var pointerend = 0;
+  while (pointermin < pointermid) {
+    if (text1.substring(text1.length - pointermid, text1.length - pointerend) ==
+        text2.substring(text2.length - pointermid, text2.length - pointerend)) {
+      pointermin = pointermid;
+      pointerend = pointermin;
+    } else {
+      pointermax = pointermid;
+    }
+    pointermid = Math.floor((pointermax - pointermin) / 2 + pointermin);
+  }
+  return pointermid;
+};
+
+
+/**
+ * Determine if the suffix of one string is the prefix of another.
+ * @param {string} text1 First string.
+ * @param {string} text2 Second string.
+ * @return {number} The number of characters common to the end of the first
+ *     string and the start of the second string.
+ * @private
+ */
+diff_match_patch.prototype.diff_commonOverlap_ = function(text1, text2) {
+  // Cache the text lengths to prevent multiple calls.
+  var text1_length = text1.length;
+  var text2_length = text2.length;
+  // Eliminate the null case.
+  if (text1_length == 0 || text2_length == 0) {
+    return 0;
+  }
+  // Truncate the longer string.
+  if (text1_length > text2_length) {
+    text1 = text1.substring(text1_length - text2_length);
+  } else if (text1_length < text2_length) {
+    text2 = text2.substring(0, text1_length);
+  }
+  var text_length = Math.min(text1_length, text2_length);
+  // Quick check for the worst case.
+  if (text1 == text2) {
+    return text_length;
+  }
+
+  // Start by looking for a single character match
+  // and increase length until no match is found.
+  // Performance analysis: https://neil.fraser.name/news/2010/11/04/
+  var best = 0;
+  var length = 1;
+  while (true) {
+    var pattern = text1.substring(text_length - length);
+    var found = text2.indexOf(pattern);
+    if (found == -1) {
+      return best;
+    }
+    length += found;
+    if (found == 0 || text1.substring(text_length - length) ==
+        text2.substring(0, length)) {
+      best = length;
+      length++;
+    }
+  }
+};
+
+
+/**
+ * Do the two texts share a substring which is at least half the length of the
+ * longer text?
+ * This speedup can produce non-minimal diffs.
+ * @param {string} text1 First string.
+ * @param {string} text2 Second string.
+ * @return {Array.<string>} Five element Array, containing the prefix of
+ *     text1, the suffix of text1, the prefix of text2, the suffix of
+ *     text2 and the common middle.  Or null if there was no match.
+ * @private
+ */
+diff_match_patch.prototype.diff_halfMatch_ = function(text1, text2) {
+  if (this.Diff_Timeout <= 0) {
+    // Don't risk returning a non-optimal diff if we have unlimited time.
+    return null;
+  }
+  var longtext = text1.length > text2.length ? text1 : text2;
+  var shorttext = text1.length > text2.length ? text2 : text1;
+  if (longtext.length < 4 || shorttext.length * 2 < longtext.length) {
+    return null;  // Pointless.
+  }
+  var dmp = this;  // 'this' becomes 'window' in a closure.
+
+  /**
+   * Does a substring of shorttext exist within longtext such that the substring
+   * is at least half the length of longtext?
+   * Closure, but does not reference any external variables.
+   * @param {string} longtext Longer string.
+   * @param {string} shorttext Shorter string.
+   * @param {number} i Start index of quarter length substring within longtext.
+   * @return {Array.<string>} Five element Array, containing the prefix of
+   *     longtext, the suffix of longtext, the prefix of shorttext, the suffix
+   *     of shorttext and the common middle.  Or null if there was no match.
+   * @private
+   */
+  function diff_halfMatchI_(longtext, shorttext, i) {
+    // Start with a 1/4 length substring at position i as a seed.
+    var seed = longtext.substring(i, i + Math.floor(longtext.length / 4));
+    var j = -1;
+    var best_common = '';
+    var best_longtext_a, best_longtext_b, best_shorttext_a, best_shorttext_b;
+    while ((j = shorttext.indexOf(seed, j + 1)) != -1) {
+      var prefixLength = dmp.diff_commonPrefix(longtext.substring(i),
+                                               shorttext.substring(j));
+      var suffixLength = dmp.diff_commonSuffix(longtext.substring(0, i),
+                                               shorttext.substring(0, j));
+      if (best_common.length < suffixLength + prefixLength) {
+        best_common = shorttext.substring(j - suffixLength, j) +
+            shorttext.substring(j, j + prefixLength);
+        best_longtext_a = longtext.substring(0, i - suffixLength);
+        best_longtext_b = longtext.substring(i + prefixLength);
+        best_shorttext_a = shorttext.substring(0, j - suffixLength);
+        best_shorttext_b = shorttext.substring(j + prefixLength);
+      }
+    }
+    if (best_common.length * 2 >= longtext.length) {
+      return [best_longtext_a, best_longtext_b,
+              best_shorttext_a, best_shorttext_b, best_common];
+    } else {
+      return null;
+    }
+  }
+
+  // First check if the second quarter is the seed for a half-match.
+  var hm1 = diff_halfMatchI_(longtext, shorttext,
+                             Math.ceil(longtext.length / 4));
+  // Check again based on the third quarter.
+  var hm2 = diff_halfMatchI_(longtext, shorttext,
+                             Math.ceil(longtext.length / 2));
+  var hm;
+  if (!hm1 && !hm2) {
+    return null;
+  } else if (!hm2) {
+    hm = hm1;
+  } else if (!hm1) {
+    hm = hm2;
+  } else {
+    // Both matched.  Select the longest.
+    hm = hm1[4].length > hm2[4].length ? hm1 : hm2;
+  }
+
+  // A half-match was found, sort out the return data.
+  var text1_a, text1_b, text2_a, text2_b;
+  if (text1.length > text2.length) {
+    text1_a = hm[0];
+    text1_b = hm[1];
+    text2_a = hm[2];
+    text2_b = hm[3];
+  } else {
+    text2_a = hm[0];
+    text2_b = hm[1];
+    text1_a = hm[2];
+    text1_b = hm[3];
+  }
+  var mid_common = hm[4];
+  return [text1_a, text1_b, text2_a, text2_b, mid_common];
+};
+
+
+/**
+ * Reduce the number of edits by eliminating semantically trivial equalities.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ */
+diff_match_patch.prototype.diff_cleanupSemantic = function(diffs) {
+  var changes = false;
+  var equalities = [];  // Stack of indices where equalities are found.
+  var equalitiesLength = 0;  // Keeping our own length var is faster in JS.
+  /** @type {?string} */
+  var lastEquality = null;
+  // Always equal to diffs[equalities[equalitiesLength - 1]][1]
+  var pointer = 0;  // Index of current position.
+  // Number of characters that changed prior to the equality.
+  var length_insertions1 = 0;
+  var length_deletions1 = 0;
+  // Number of characters that changed after the equality.
+  var length_insertions2 = 0;
+  var length_deletions2 = 0;
+  while (pointer < diffs.length) {
+    if (diffs[pointer][0] == DIFF_EQUAL) {  // Equality found.
+      equalities[equalitiesLength++] = pointer;
+      length_insertions1 = length_insertions2;
+      length_deletions1 = length_deletions2;
+      length_insertions2 = 0;
+      length_deletions2 = 0;
+      lastEquality = diffs[pointer][1];
+    } else {  // An insertion or deletion.
+      if (diffs[pointer][0] == DIFF_INSERT) {
+        length_insertions2 += diffs[pointer][1].length;
+      } else {
+        length_deletions2 += diffs[pointer][1].length;
+      }
+      // Eliminate an equality that is smaller or equal to the edits on both
+      // sides of it.
+      if (lastEquality && (lastEquality.length <=
+          Math.max(length_insertions1, length_deletions1)) &&
+          (lastEquality.length <= Math.max(length_insertions2,
+                                           length_deletions2))) {
+        // Duplicate record.
+        diffs.splice(equalities[equalitiesLength - 1], 0,
+                     new diff_match_patch.Diff(DIFF_DELETE, lastEquality));
+        // Change second copy to insert.
+        diffs[equalities[equalitiesLength - 1] + 1][0] = DIFF_INSERT;
+        // Throw away the equality we just deleted.
+        equalitiesLength--;
+        // Throw away the previous equality (it needs to be reevaluated).
+        equalitiesLength--;
+        pointer = equalitiesLength > 0 ? equalities[equalitiesLength - 1] : -1;
+        length_insertions1 = 0;  // Reset the counters.
+        length_deletions1 = 0;
+        length_insertions2 = 0;
+        length_deletions2 = 0;
+        lastEquality = null;
+        changes = true;
+      }
+    }
+    pointer++;
+  }
+
+  // Normalize the diff.
+  if (changes) {
+    this.diff_cleanupMerge(diffs);
+  }
+  this.diff_cleanupSemanticLossless(diffs);
+
+  // Find any overlaps between deletions and insertions.
+  // e.g: <del>abcxxx</del><ins>xxxdef</ins>
+  //   -> <del>abc</del>xxx<ins>def</ins>
+  // e.g: <del>xxxabc</del><ins>defxxx</ins>
+  //   -> <ins>def</ins>xxx<del>abc</del>
+  // Only extract an overlap if it is as big as the edit ahead or behind it.
+  pointer = 1;
+  while (pointer < diffs.length) {
+    if (diffs[pointer - 1][0] == DIFF_DELETE &&
+        diffs[pointer][0] == DIFF_INSERT) {
+      var deletion = diffs[pointer - 1][1];
+      var insertion = diffs[pointer][1];
+      var overlap_length1 = this.diff_commonOverlap_(deletion, insertion);
+      var overlap_length2 = this.diff_commonOverlap_(insertion, deletion);
+      if (overlap_length1 >= overlap_length2) {
+        if (overlap_length1 >= deletion.length / 2 ||
+            overlap_length1 >= insertion.length / 2) {
+          // Overlap found.  Insert an equality and trim the surrounding edits.
+          diffs.splice(pointer, 0, new diff_match_patch.Diff(DIFF_EQUAL,
+              insertion.substring(0, overlap_length1)));
+          diffs[pointer - 1][1] =
+              deletion.substring(0, deletion.length - overlap_length1);
+          diffs[pointer + 1][1] = insertion.substring(overlap_length1);
+          pointer++;
+        }
+      } else {
+        if (overlap_length2 >= deletion.length / 2 ||
+            overlap_length2 >= insertion.length / 2) {
+          // Reverse overlap found.
+          // Insert an equality and swap and trim the surrounding edits.
+          diffs.splice(pointer, 0, new diff_match_patch.Diff(DIFF_EQUAL,
+              deletion.substring(0, overlap_length2)));
+          diffs[pointer - 1][0] = DIFF_INSERT;
+          diffs[pointer - 1][1] =
+              insertion.substring(0, insertion.length - overlap_length2);
+          diffs[pointer + 1][0] = DIFF_DELETE;
+          diffs[pointer + 1][1] =
+              deletion.substring(overlap_length2);
+          pointer++;
+        }
+      }
+      pointer++;
+    }
+    pointer++;
+  }
+};
+
+
+/**
+ * Look for single edits surrounded on both sides by equalities
+ * which can be shifted sideways to align the edit to a word boundary.
+ * e.g: The c<ins>at c</ins>ame. -> The <ins>cat </ins>came.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ */
+diff_match_patch.prototype.diff_cleanupSemanticLossless = function(diffs) {
+  /**
+   * Given two strings, compute a score representing whether the internal
+   * boundary falls on logical boundaries.
+   * Scores range from 6 (best) to 0 (worst).
+   * Closure, but does not reference any external variables.
+   * @param {string} one First string.
+   * @param {string} two Second string.
+   * @return {number} The score.
+   * @private
+   */
+  function diff_cleanupSemanticScore_(one, two) {
+    if (!one || !two) {
+      // Edges are the best.
+      return 6;
+    }
+
+    // Each port of this function behaves slightly differently due to
+    // subtle differences in each language's definition of things like
+    // 'whitespace'.  Since this function's purpose is largely cosmetic,
+    // the choice has been made to use each language's native features
+    // rather than force total conformity.
+    var char1 = one.charAt(one.length - 1);
+    var char2 = two.charAt(0);
+    var nonAlphaNumeric1 = char1.match(diff_match_patch.nonAlphaNumericRegex_);
+    var nonAlphaNumeric2 = char2.match(diff_match_patch.nonAlphaNumericRegex_);
+    var whitespace1 = nonAlphaNumeric1 &&
+        char1.match(diff_match_patch.whitespaceRegex_);
+    var whitespace2 = nonAlphaNumeric2 &&
+        char2.match(diff_match_patch.whitespaceRegex_);
+    var lineBreak1 = whitespace1 &&
+        char1.match(diff_match_patch.linebreakRegex_);
+    var lineBreak2 = whitespace2 &&
+        char2.match(diff_match_patch.linebreakRegex_);
+    var blankLine1 = lineBreak1 &&
+        one.match(diff_match_patch.blanklineEndRegex_);
+    var blankLine2 = lineBreak2 &&
+        two.match(diff_match_patch.blanklineStartRegex_);
+
+    if (blankLine1 || blankLine2) {
+      // Five points for blank lines.
+      return 5;
+    } else if (lineBreak1 || lineBreak2) {
+      // Four points for line breaks.
+      return 4;
+    } else if (nonAlphaNumeric1 && !whitespace1 && whitespace2) {
+      // Three points for end of sentences.
+      return 3;
+    } else if (whitespace1 || whitespace2) {
+      // Two points for whitespace.
+      return 2;
+    } else if (nonAlphaNumeric1 || nonAlphaNumeric2) {
+      // One point for non-alphanumeric.
+      return 1;
+    }
+    return 0;
+  }
+
+  var pointer = 1;
+  // Intentionally ignore the first and last element (don't need checking).
+  while (pointer < diffs.length - 1) {
+    if (diffs[pointer - 1][0] == DIFF_EQUAL &&
+        diffs[pointer + 1][0] == DIFF_EQUAL) {
+      // This is a single edit surrounded by equalities.
+      var equality1 = diffs[pointer - 1][1];
+      var edit = diffs[pointer][1];
+      var equality2 = diffs[pointer + 1][1];
+
+      // First, shift the edit as far left as possible.
+      var commonOffset = this.diff_commonSuffix(equality1, edit);
+      if (commonOffset) {
+        var commonString = edit.substring(edit.length - commonOffset);
+        equality1 = equality1.substring(0, equality1.length - commonOffset);
+        edit = commonString + edit.substring(0, edit.length - commonOffset);
+        equality2 = commonString + equality2;
+      }
+
+      // Second, step character by character right, looking for the best fit.
+      var bestEquality1 = equality1;
+      var bestEdit = edit;
+      var bestEquality2 = equality2;
+      var bestScore = diff_cleanupSemanticScore_(equality1, edit) +
+          diff_cleanupSemanticScore_(edit, equality2);
+      while (edit.charAt(0) === equality2.charAt(0)) {
+        equality1 += edit.charAt(0);
+        edit = edit.substring(1) + equality2.charAt(0);
+        equality2 = equality2.substring(1);
+        var score = diff_cleanupSemanticScore_(equality1, edit) +
+            diff_cleanupSemanticScore_(edit, equality2);
+        // The >= encourages trailing rather than leading whitespace on edits.
+        if (score >= bestScore) {
+          bestScore = score;
+          bestEquality1 = equality1;
+          bestEdit = edit;
+          bestEquality2 = equality2;
+        }
+      }
+
+      if (diffs[pointer - 1][1] != bestEquality1) {
+        // We have an improvement, save it back to the diff.
+        if (bestEquality1) {
+          diffs[pointer - 1][1] = bestEquality1;
+        } else {
+          diffs.splice(pointer - 1, 1);
+          pointer--;
+        }
+        diffs[pointer][1] = bestEdit;
+        if (bestEquality2) {
+          diffs[pointer + 1][1] = bestEquality2;
+        } else {
+          diffs.splice(pointer + 1, 1);
+          pointer--;
+        }
+      }
+    }
+    pointer++;
+  }
+};
+
+// Define some regex patterns for matching boundaries.
+diff_match_patch.nonAlphaNumericRegex_ = /[^a-zA-Z0-9]/;
+diff_match_patch.whitespaceRegex_ = /\s/;
+diff_match_patch.linebreakRegex_ = /[\r\n]/;
+diff_match_patch.blanklineEndRegex_ = /\n\r?\n$/;
+diff_match_patch.blanklineStartRegex_ = /^\r?\n\r?\n/;
+
+/**
+ * Reduce the number of edits by eliminating operationally trivial equalities.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ */
+diff_match_patch.prototype.diff_cleanupEfficiency = function(diffs) {
+  var changes = false;
+  var equalities = [];  // Stack of indices where equalities are found.
+  var equalitiesLength = 0;  // Keeping our own length var is faster in JS.
+  /** @type {?string} */
+  var lastEquality = null;
+  // Always equal to diffs[equalities[equalitiesLength - 1]][1]
+  var pointer = 0;  // Index of current position.
+  // Is there an insertion operation before the last equality.
+  var pre_ins = false;
+  // Is there a deletion operation before the last equality.
+  var pre_del = false;
+  // Is there an insertion operation after the last equality.
+  var post_ins = false;
+  // Is there a deletion operation after the last equality.
+  var post_del = false;
+  while (pointer < diffs.length) {
+    if (diffs[pointer][0] == DIFF_EQUAL) {  // Equality found.
+      if (diffs[pointer][1].length < this.Diff_EditCost &&
+          (post_ins || post_del)) {
+        // Candidate found.
+        equalities[equalitiesLength++] = pointer;
+        pre_ins = post_ins;
+        pre_del = post_del;
+        lastEquality = diffs[pointer][1];
+      } else {
+        // Not a candidate, and can never become one.
+        equalitiesLength = 0;
+        lastEquality = null;
+      }
+      post_ins = post_del = false;
+    } else {  // An insertion or deletion.
+      if (diffs[pointer][0] == DIFF_DELETE) {
+        post_del = true;
+      } else {
+        post_ins = true;
+      }
+      /*
+       * Five types to be split:
+       * <ins>A</ins><del>B</del>XY<ins>C</ins><del>D</del>
+       * <ins>A</ins>X<ins>C</ins><del>D</del>
+       * <ins>A</ins><del>B</del>X<ins>C</ins>
+       * <ins>A</del>X<ins>C</ins><del>D</del>
+       * <ins>A</ins><del>B</del>X<del>C</del>
+       */
+      if (lastEquality && ((pre_ins && pre_del && post_ins && post_del) ||
+                           ((lastEquality.length < this.Diff_EditCost / 2) &&
+                            (pre_ins + pre_del + post_ins + post_del) == 3))) {
+        // Duplicate record.
+        diffs.splice(equalities[equalitiesLength - 1], 0,
+                     new diff_match_patch.Diff(DIFF_DELETE, lastEquality));
+        // Change second copy to insert.
+        diffs[equalities[equalitiesLength - 1] + 1][0] = DIFF_INSERT;
+        equalitiesLength--;  // Throw away the equality we just deleted;
+        lastEquality = null;
+        if (pre_ins && pre_del) {
+          // No changes made which could affect previous entry, keep going.
+          post_ins = post_del = true;
+          equalitiesLength = 0;
+        } else {
+          equalitiesLength--;  // Throw away the previous equality.
+          pointer = equalitiesLength > 0 ?
+              equalities[equalitiesLength - 1] : -1;
+          post_ins = post_del = false;
+        }
+        changes = true;
+      }
+    }
+    pointer++;
+  }
+
+  if (changes) {
+    this.diff_cleanupMerge(diffs);
+  }
+};
+
+
+/**
+ * Reorder and merge like edit sections.  Merge equalities.
+ * Any edit section can move as long as it doesn't cross an equality.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ */
+diff_match_patch.prototype.diff_cleanupMerge = function(diffs) {
+  // Add a dummy entry at the end.
+  diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, ''));
+  var pointer = 0;
+  var count_delete = 0;
+  var count_insert = 0;
+  var text_delete = '';
+  var text_insert = '';
+  var commonlength;
+  while (pointer < diffs.length) {
+    switch (diffs[pointer][0]) {
+      case DIFF_INSERT:
+        count_insert++;
+        text_insert += diffs[pointer][1];
+        pointer++;
+        break;
+      case DIFF_DELETE:
+        count_delete++;
+        text_delete += diffs[pointer][1];
+        pointer++;
+        break;
+      case DIFF_EQUAL:
+        // Upon reaching an equality, check for prior redundancies.
+        if (count_delete + count_insert > 1) {
+          if (count_delete !== 0 && count_insert !== 0) {
+            // Factor out any common prefixies.
+            commonlength = this.diff_commonPrefix(text_insert, text_delete);
+            if (commonlength !== 0) {
+              if ((pointer - count_delete - count_insert) > 0 &&
+                  diffs[pointer - count_delete - count_insert - 1][0] ==
+                  DIFF_EQUAL) {
+                diffs[pointer - count_delete - count_insert - 1][1] +=
+                    text_insert.substring(0, commonlength);
+              } else {
+                diffs.splice(0, 0, new diff_match_patch.Diff(DIFF_EQUAL,
+                    text_insert.substring(0, commonlength)));
+                pointer++;
+              }
+              text_insert = text_insert.substring(commonlength);
+              text_delete = text_delete.substring(commonlength);
+            }
+            // Factor out any common suffixies.
+            commonlength = this.diff_commonSuffix(text_insert, text_delete);
+            if (commonlength !== 0) {
+              diffs[pointer][1] = text_insert.substring(text_insert.length -
+                  commonlength) + diffs[pointer][1];
+              text_insert = text_insert.substring(0, text_insert.length -
+                  commonlength);
+              text_delete = text_delete.substring(0, text_delete.length -
+                  commonlength);
+            }
+          }
+          // Delete the offending records and add the merged ones.
+          pointer -= count_delete + count_insert;
+          diffs.splice(pointer, count_delete + count_insert);
+          if (text_delete.length) {
+            diffs.splice(pointer, 0,
+                new diff_match_patch.Diff(DIFF_DELETE, text_delete));
+            pointer++;
+          }
+          if (text_insert.length) {
+            diffs.splice(pointer, 0,
+                new diff_match_patch.Diff(DIFF_INSERT, text_insert));
+            pointer++;
+          }
+          pointer++;
+        } else if (pointer !== 0 && diffs[pointer - 1][0] == DIFF_EQUAL) {
+          // Merge this equality with the previous one.
+          diffs[pointer - 1][1] += diffs[pointer][1];
+          diffs.splice(pointer, 1);
+        } else {
+          pointer++;
+        }
+        count_insert = 0;
+        count_delete = 0;
+        text_delete = '';
+        text_insert = '';
+        break;
+    }
+  }
+  if (diffs[diffs.length - 1][1] === '') {
+    diffs.pop();  // Remove the dummy entry at the end.
+  }
+
+  // Second pass: look for single edits surrounded on both sides by equalities
+  // which can be shifted sideways to eliminate an equality.
+  // e.g: A<ins>BA</ins>C -> <ins>AB</ins>AC
+  var changes = false;
+  pointer = 1;
+  // Intentionally ignore the first and last element (don't need checking).
+  while (pointer < diffs.length - 1) {
+    if (diffs[pointer - 1][0] == DIFF_EQUAL &&
+        diffs[pointer + 1][0] == DIFF_EQUAL) {
+      // This is a single edit surrounded by equalities.
+      if (diffs[pointer][1].substring(diffs[pointer][1].length -
+          diffs[pointer - 1][1].length) == diffs[pointer - 1][1]) {
+        // Shift the edit over the previous equality.
+        diffs[pointer][1] = diffs[pointer - 1][1] +
+            diffs[pointer][1].substring(0, diffs[pointer][1].length -
+                                        diffs[pointer - 1][1].length);
+        diffs[pointer + 1][1] = diffs[pointer - 1][1] + diffs[pointer + 1][1];
+        diffs.splice(pointer - 1, 1);
+        changes = true;
+      } else if (diffs[pointer][1].substring(0, diffs[pointer + 1][1].length) ==
+          diffs[pointer + 1][1]) {
+        // Shift the edit over the next equality.
+        diffs[pointer - 1][1] += diffs[pointer + 1][1];
+        diffs[pointer][1] =
+            diffs[pointer][1].substring(diffs[pointer + 1][1].length) +
+            diffs[pointer + 1][1];
+        diffs.splice(pointer + 1, 1);
+        changes = true;
+      }
+    }
+    pointer++;
+  }
+  // If shifts were made, the diff needs reordering and another shift sweep.
+  if (changes) {
+    this.diff_cleanupMerge(diffs);
+  }
+};
+
+
+/**
+ * loc is a location in text1, compute and return the equivalent location in
+ * text2.
+ * e.g. 'The cat' vs 'The big cat', 1->1, 5->8
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ * @param {number} loc Location within text1.
+ * @return {number} Location within text2.
+ */
+diff_match_patch.prototype.diff_xIndex = function(diffs, loc) {
+  var chars1 = 0;
+  var chars2 = 0;
+  var last_chars1 = 0;
+  var last_chars2 = 0;
+  var x;
+  for (x = 0; x < diffs.length; x++) {
+    if (diffs[x][0] !== DIFF_INSERT) {  // Equality or deletion.
+      chars1 += diffs[x][1].length;
+    }
+    if (diffs[x][0] !== DIFF_DELETE) {  // Equality or insertion.
+      chars2 += diffs[x][1].length;
+    }
+    if (chars1 > loc) {  // Overshot the location.
+      break;
+    }
+    last_chars1 = chars1;
+    last_chars2 = chars2;
+  }
+  // Was the location was deleted?
+  if (diffs.length != x && diffs[x][0] === DIFF_DELETE) {
+    return last_chars2;
+  }
+  // Add the remaining character length.
+  return last_chars2 + (loc - last_chars1);
+};
+
+
+/**
+ * Convert a diff array into a pretty HTML report.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ * @return {string} HTML representation.
+ */
+diff_match_patch.prototype.diff_prettyHtml = function(diffs) {
+  var html = [];
+  var pattern_amp = /&/g;
+  var pattern_lt = /</g;
+  var pattern_gt = />/g;
+  var pattern_para = /\n/g;
+  for (var x = 0; x < diffs.length; x++) {
+    var op = diffs[x][0];    // Operation (insert, delete, equal)
+    var data = diffs[x][1];  // Text of change.
+    var text = data.replace(pattern_amp, '&amp;').replace(pattern_lt, '&lt;')
+        .replace(pattern_gt, '&gt;').replace(pattern_para, '&para;<br>');
+    switch (op) {
+      case DIFF_INSERT:
+        html[x] = '<ins style="background:#e6ffe6;">' + text + '</ins>';
+        break;
+      case DIFF_DELETE:
+        html[x] = '<del style="background:#ffe6e6;">' + text + '</del>';
+        break;
+      case DIFF_EQUAL:
+        html[x] = '<span>' + text + '</span>';
+        break;
+    }
+  }
+  return html.join('');
+};
+
+
+/**
+ * Compute and return the source text (all equalities and deletions).
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ * @return {string} Source text.
+ */
+diff_match_patch.prototype.diff_text1 = function(diffs) {
+  var text = [];
+  for (var x = 0; x < diffs.length; x++) {
+    if (diffs[x][0] !== DIFF_INSERT) {
+      text[x] = diffs[x][1];
+    }
+  }
+  return text.join('');
+};
+
+
+/**
+ * Compute and return the destination text (all equalities and insertions).
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ * @return {string} Destination text.
+ */
+diff_match_patch.prototype.diff_text2 = function(diffs) {
+  var text = [];
+  for (var x = 0; x < diffs.length; x++) {
+    if (diffs[x][0] !== DIFF_DELETE) {
+      text[x] = diffs[x][1];
+    }
+  }
+  return text.join('');
+};
+
+
+/**
+ * Compute the Levenshtein distance; the number of inserted, deleted or
+ * substituted characters.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ * @return {number} Number of changes.
+ */
+diff_match_patch.prototype.diff_levenshtein = function(diffs) {
+  var levenshtein = 0;
+  var insertions = 0;
+  var deletions = 0;
+  for (var x = 0; x < diffs.length; x++) {
+    var op = diffs[x][0];
+    var data = diffs[x][1];
+    switch (op) {
+      case DIFF_INSERT:
+        insertions += data.length;
+        break;
+      case DIFF_DELETE:
+        deletions += data.length;
+        break;
+      case DIFF_EQUAL:
+        // A deletion and an insertion is one substitution.
+        levenshtein += Math.max(insertions, deletions);
+        insertions = 0;
+        deletions = 0;
+        break;
+    }
+  }
+  levenshtein += Math.max(insertions, deletions);
+  return levenshtein;
+};
+
+
+/**
+ * Crush the diff into an encoded string which describes the operations
+ * required to transform text1 into text2.
+ * E.g. =3\t-2\t+ing  -> Keep 3 chars, delete 2 chars, insert 'ing'.
+ * Operations are tab-separated.  Inserted text is escaped using %xx notation.
+ * @param {!Array.<!diff_match_patch.Diff>} diffs Array of diff tuples.
+ * @return {string} Delta text.
+ */
+diff_match_patch.prototype.diff_toDelta = function(diffs) {
+  var text = [];
+  for (var x = 0; x < diffs.length; x++) {
+    switch (diffs[x][0]) {
+      case DIFF_INSERT:
+        text[x] = '+' + encodeURI(diffs[x][1]);
+        break;
+      case DIFF_DELETE:
+        text[x] = '-' + diffs[x][1].length;
+        break;
+      case DIFF_EQUAL:
+        text[x] = '=' + diffs[x][1].length;
+        break;
+    }
+  }
+  return text.join('\t').replace(/%20/g, ' ');
+};
+
+
+/**
+ * Given the original text1, and an encoded string which describes the
+ * operations required to transform text1 into text2, compute the full diff.
+ * @param {string} text1 Source string for the diff.
+ * @param {string} delta Delta text.
+ * @return {!Array.<!diff_match_patch.Diff>} Array of diff tuples.
+ * @throws {!Error} If invalid input.
+ */
+diff_match_patch.prototype.diff_fromDelta = function(text1, delta) {
+  var diffs = [];
+  var diffsLength = 0;  // Keeping our own length var is faster in JS.
+  var pointer = 0;  // Cursor in text1
+  var tokens = delta.split(/\t/g);
+  for (var x = 0; x < tokens.length; x++) {
+    // Each token begins with a one character parameter which specifies the
+    // operation of this token (delete, insert, equality).
+    var param = tokens[x].substring(1);
+    switch (tokens[x].charAt(0)) {
+      case '+':
+        try {
+          diffs[diffsLength++] =
+              new diff_match_patch.Diff(DIFF_INSERT, decodeURI(param));
+        } catch (ex) {
+          // Malformed URI sequence.
+          throw new Error('Illegal escape in diff_fromDelta: ' + param);
+        }
+        break;
+      case '-':
+        // Fall through.
+      case '=':
+        var n = parseInt(param, 10);
+        if (isNaN(n) || n < 0) {
+          throw new Error('Invalid number in diff_fromDelta: ' + param);
+        }
+        var text = text1.substring(pointer, pointer += n);
+        if (tokens[x].charAt(0) == '=') {
+          diffs[diffsLength++] = new diff_match_patch.Diff(DIFF_EQUAL, text);
+        } else {
+          diffs[diffsLength++] = new diff_match_patch.Diff(DIFF_DELETE, text);
+        }
+        break;
+      default:
+        // Blank tokens are ok (from a trailing \t).
+        // Anything else is an error.
+        if (tokens[x]) {
+          throw new Error('Invalid diff operation in diff_fromDelta: ' +
+                          tokens[x]);
+        }
+    }
+  }
+  if (pointer != text1.length) {
+    throw new Error('Delta length (' + pointer +
+        ') does not equal source text length (' + text1.length + ').');
+  }
+  return diffs;
+};
+
+
+//  MATCH FUNCTIONS
+
+
+/**
+ * Locate the best instance of 'pattern' in 'text' near 'loc'.
+ * @param {string} text The text to search.
+ * @param {string} pattern The pattern to search for.
+ * @param {number} loc The location to search around.
+ * @return {number} Best match index or -1.
+ */
+diff_match_patch.prototype.match_main = function(text, pattern, loc) {
+  // Check for null inputs.
+  if (text == null || pattern == null || loc == null) {
+    throw new Error('Null input. (match_main)');
+  }
+
+  loc = Math.max(0, Math.min(loc, text.length));
+  if (text == pattern) {
+    // Shortcut (potentially not guaranteed by the algorithm)
+    return 0;
+  } else if (!text.length) {
+    // Nothing to match.
+    return -1;
+  } else if (text.substring(loc, loc + pattern.length) == pattern) {
+    // Perfect match at the perfect spot!  (Includes case of null pattern)
+    return loc;
+  } else {
+    // Do a fuzzy compare.
+    return this.match_bitap_(text, pattern, loc);
+  }
+};
+
+
+/**
+ * Locate the best instance of 'pattern' in 'text' near 'loc' using the
+ * Bitap algorithm.
+ * @param {string} text The text to search.
+ * @param {string} pattern The pattern to search for.
+ * @param {number} loc The location to search around.
+ * @return {number} Best match index or -1.
+ * @private
+ */
+diff_match_patch.prototype.match_bitap_ = function(text, pattern, loc) {
+  if (pattern.length > this.Match_MaxBits) {
+    throw new Error('Pattern too long for this browser.');
+  }
+
+  // Initialise the alphabet.
+  var s = this.match_alphabet_(pattern);
+
+  var dmp = this;  // 'this' becomes 'window' in a closure.
+
+  /**
+   * Compute and return the score for a match with e errors and x location.
+   * Accesses loc and pattern through being a closure.
+   * @param {number} e Number of errors in match.
+   * @param {number} x Location of match.
+   * @return {number} Overall score for match (0.0 = good, 1.0 = bad).
+   * @private
+   */
+  function match_bitapScore_(e, x) {
+    var accuracy = e / pattern.length;
+    var proximity = Math.abs(loc - x);
+    if (!dmp.Match_Distance) {
+      // Dodge divide by zero error.
+      return proximity ? 1.0 : accuracy;
+    }
+    return accuracy + (proximity / dmp.Match_Distance);
+  }
+
+  // Highest score beyond which we give up.
+  var score_threshold = this.Match_Threshold;
+  // Is there a nearby exact match? (speedup)
+  var best_loc = text.indexOf(pattern, loc);
+  if (best_loc != -1) {
+    score_threshold = Math.min(match_bitapScore_(0, best_loc), score_threshold);
+    // What about in the other direction? (speedup)
+    best_loc = text.lastIndexOf(pattern, loc + pattern.length);
+    if (best_loc != -1) {
+      score_threshold =
+          Math.min(match_bitapScore_(0, best_loc), score_threshold);
+    }
+  }
+
+  // Initialise the bit arrays.
+  var matchmask = 1 << (pattern.length - 1);
+  best_loc = -1;
+
+  var bin_min, bin_mid;
+  var bin_max = pattern.length + text.length;
+  var last_rd;
+  for (var d = 0; d < pattern.length; d++) {
+    // Scan for the best match; each iteration allows for one more error.
+    // Run a binary search to determine how far from 'loc' we can stray at this
+    // error level.
+    bin_min = 0;
+    bin_mid = bin_max;
+    while (bin_min < bin_mid) {
+      if (match_bitapScore_(d, loc + bin_mid) <= score_threshold) {
+        bin_min = bin_mid;
+      } else {
+        bin_max = bin_mid;
+      }
+      bin_mid = Math.floor((bin_max - bin_min) / 2 + bin_min);
+    }
+    // Use the result from this iteration as the maximum for the next.
+    bin_max = bin_mid;
+    var start = Math.max(1, loc - bin_mid + 1);
+    var finish = Math.min(loc + bin_mid, text.length) + pattern.length;
+
+    var rd = Array(finish + 2);
+    rd[finish + 1] = (1 << d) - 1;
+    for (var j = finish; j >= start; j--) {
+      // The alphabet (s) is a sparse hash, so the following line generates
+      // warnings.
+      var charMatch = s[text.charAt(j - 1)];
+      if (d === 0) {  // First pass: exact match.
+        rd[j] = ((rd[j + 1] << 1) | 1) & charMatch;
+      } else {  // Subsequent passes: fuzzy match.
+        rd[j] = (((rd[j + 1] << 1) | 1) & charMatch) |
+                (((last_rd[j + 1] | last_rd[j]) << 1) | 1) |
+                last_rd[j + 1];
+      }
+      if (rd[j] & matchmask) {
+        var score = match_bitapScore_(d, j - 1);
+        // This match will almost certainly be better than any existing match.
+        // But check anyway.
+        if (score <= score_threshold) {
+          // Told you so.
+          score_threshold = score;
+          best_loc = j - 1;
+          if (best_loc > loc) {
+            // When passing loc, don't exceed our current distance from loc.
+            start = Math.max(1, 2 * loc - best_loc);
+          } else {
+            // Already passed loc, downhill from here on in.
+            break;
+          }
+        }
+      }
+    }
+    // No hope for a (better) match at greater error levels.
+    if (match_bitapScore_(d + 1, loc) > score_threshold) {
+      break;
+    }
+    last_rd = rd;
+  }
+  return best_loc;
+};
+
+
+/**
+ * Initialise the alphabet for the Bitap algorithm.
+ * @param {string} pattern The text to encode.
+ * @return {!Object} Hash of character locations.
+ * @private
+ */
+diff_match_patch.prototype.match_alphabet_ = function(pattern) {
+  var s = {};
+  for (var i = 0; i < pattern.length; i++) {
+    s[pattern.charAt(i)] = 0;
+  }
+  for (var i = 0; i < pattern.length; i++) {
+    s[pattern.charAt(i)] |= 1 << (pattern.length - i - 1);
+  }
+  return s;
+};
+
+
+//  PATCH FUNCTIONS
+
+
+/**
+ * Increase the context until it is unique,
+ * but don't let the pattern expand beyond Match_MaxBits.
+ * @param {!diff_match_patch.patch_obj} patch The patch to grow.
+ * @param {string} text Source text.
+ * @private
+ */
+diff_match_patch.prototype.patch_addContext_ = function(patch, text) {
+  if (text.length == 0) {
+    return;
+  }
+  if (patch.start2 === null) {
+    throw Error('patch not initialized');
+  }
+  var pattern = text.substring(patch.start2, patch.start2 + patch.length1);
+  var padding = 0;
+
+  // Look for the first and last matches of pattern in text.  If two different
+  // matches are found, increase the pattern length.
+  while (text.indexOf(pattern) != text.lastIndexOf(pattern) &&
+         pattern.length < this.Match_MaxBits - this.Patch_Margin -
+         this.Patch_Margin) {
+    padding += this.Patch_Margin;
+    pattern = text.substring(patch.start2 - padding,
+                             patch.start2 + patch.length1 + padding);
+  }
+  // Add one chunk for good luck.
+  padding += this.Patch_Margin;
+
+  // Add the prefix.
+  var prefix = text.substring(patch.start2 - padding, patch.start2);
+  if (prefix) {
+    patch.diffs.unshift(new diff_match_patch.Diff(DIFF_EQUAL, prefix));
+  }
+  // Add the suffix.
+  var suffix = text.substring(patch.start2 + patch.length1,
+                              patch.start2 + patch.length1 + padding);
+  if (suffix) {
+    patch.diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, suffix));
+  }
+
+  // Roll back the start points.
+  patch.start1 -= prefix.length;
+  patch.start2 -= prefix.length;
+  // Extend the lengths.
+  patch.length1 += prefix.length + suffix.length;
+  patch.length2 += prefix.length + suffix.length;
+};
+
+
+/**
+ * Compute a list of patches to turn text1 into text2.
+ * Use diffs if provided, otherwise compute it ourselves.
+ * There are four ways to call this function, depending on what data is
+ * available to the caller:
+ * Method 1:
+ * a = text1, b = text2
+ * Method 2:
+ * a = diffs
+ * Method 3 (optimal):
+ * a = text1, b = diffs
+ * Method 4 (deprecated, use method 3):
+ * a = text1, b = text2, c = diffs
+ *
+ * @param {string|!Array.<!diff_match_patch.Diff>} a text1 (methods 1,3,4) or
+ * Array of diff tuples for text1 to text2 (method 2).
+ * @param {string|!Array.<!diff_match_patch.Diff>=} opt_b text2 (methods 1,4) or
+ * Array of diff tuples for text1 to text2 (method 3) or undefined (method 2).
+ * @param {string|!Array.<!diff_match_patch.Diff>=} opt_c Array of diff tuples
+ * for text1 to text2 (method 4) or undefined (methods 1,2,3).
+ * @return {!Array.<!diff_match_patch.patch_obj>} Array of Patch objects.
+ */
+diff_match_patch.prototype.patch_make = function(a, opt_b, opt_c) {
+  var text1, diffs;
+  if (typeof a == 'string' && typeof opt_b == 'string' &&
+      typeof opt_c == 'undefined') {
+    // Method 1: text1, text2
+    // Compute diffs from text1 and text2.
+    text1 = /** @type {string} */(a);
+    diffs = this.diff_main(text1, /** @type {string} */(opt_b), true);
+    if (diffs.length > 2) {
+      this.diff_cleanupSemantic(diffs);
+      this.diff_cleanupEfficiency(diffs);
+    }
+  } else if (a && typeof a == 'object' && typeof opt_b == 'undefined' &&
+      typeof opt_c == 'undefined') {
+    // Method 2: diffs
+    // Compute text1 from diffs.
+    diffs = /** @type {!Array.<!diff_match_patch.Diff>} */(a);
+    text1 = this.diff_text1(diffs);
+  } else if (typeof a == 'string' && opt_b && typeof opt_b == 'object' &&
+      typeof opt_c == 'undefined') {
+    // Method 3: text1, diffs
+    text1 = /** @type {string} */(a);
+    diffs = /** @type {!Array.<!diff_match_patch.Diff>} */(opt_b);
+  } else if (typeof a == 'string' && typeof opt_b == 'string' &&
+      opt_c && typeof opt_c == 'object') {
+    // Method 4: text1, text2, diffs
+    // text2 is not used.
+    text1 = /** @type {string} */(a);
+    diffs = /** @type {!Array.<!diff_match_patch.Diff>} */(opt_c);
+  } else {
+    throw new Error('Unknown call format to patch_make.');
+  }
+
+  if (diffs.length === 0) {
+    return [];  // Get rid of the null case.
+  }
+  var patches = [];
+  var patch = new diff_match_patch.patch_obj();
+  var patchDiffLength = 0;  // Keeping our own length var is faster in JS.
+  var char_count1 = 0;  // Number of characters into the text1 string.
+  var char_count2 = 0;  // Number of characters into the text2 string.
+  // Start with text1 (prepatch_text) and apply the diffs until we arrive at
+  // text2 (postpatch_text).  We recreate the patches one by one to determine
+  // context info.
+  var prepatch_text = text1;
+  var postpatch_text = text1;
+  for (var x = 0; x < diffs.length; x++) {
+    var diff_type = diffs[x][0];
+    var diff_text = diffs[x][1];
+
+    if (!patchDiffLength && diff_type !== DIFF_EQUAL) {
+      // A new patch starts here.
+      patch.start1 = char_count1;
+      patch.start2 = char_count2;
+    }
+
+    switch (diff_type) {
+      case DIFF_INSERT:
+        patch.diffs[patchDiffLength++] = diffs[x];
+        patch.length2 += diff_text.length;
+        postpatch_text = postpatch_text.substring(0, char_count2) + diff_text +
+                         postpatch_text.substring(char_count2);
+        break;
+      case DIFF_DELETE:
+        patch.length1 += diff_text.length;
+        patch.diffs[patchDiffLength++] = diffs[x];
+        postpatch_text = postpatch_text.substring(0, char_count2) +
+                         postpatch_text.substring(char_count2 +
+                             diff_text.length);
+        break;
+      case DIFF_EQUAL:
+        if (diff_text.length <= 2 * this.Patch_Margin &&
+            patchDiffLength && diffs.length != x + 1) {
+          // Small equality inside a patch.
+          patch.diffs[patchDiffLength++] = diffs[x];
+          patch.length1 += diff_text.length;
+          patch.length2 += diff_text.length;
+        } else if (diff_text.length >= 2 * this.Patch_Margin) {
+          // Time for a new patch.
+          if (patchDiffLength) {
+            this.patch_addContext_(patch, prepatch_text);
+            patches.push(patch);
+            patch = new diff_match_patch.patch_obj();
+            patchDiffLength = 0;
+            // Unlike Unidiff, our patch lists have a rolling context.
+            // https://github.com/google/diff-match-patch/wiki/Unidiff
+            // Update prepatch text & pos to reflect the application of the
+            // just completed patch.
+            prepatch_text = postpatch_text;
+            char_count1 = char_count2;
+          }
+        }
+        break;
+    }
+
+    // Update the current character count.
+    if (diff_type !== DIFF_INSERT) {
+      char_count1 += diff_text.length;
+    }
+    if (diff_type !== DIFF_DELETE) {
+      char_count2 += diff_text.length;
+    }
+  }
+  // Pick up the leftover patch if not empty.
+  if (patchDiffLength) {
+    this.patch_addContext_(patch, prepatch_text);
+    patches.push(patch);
+  }
+
+  return patches;
+};
+
+
+/**
+ * Given an array of patches, return another array that is identical.
+ * @param {!Array.<!diff_match_patch.patch_obj>} patches Array of Patch objects.
+ * @return {!Array.<!diff_match_patch.patch_obj>} Array of Patch objects.
+ */
+diff_match_patch.prototype.patch_deepCopy = function(patches) {
+  // Making deep copies is hard in JavaScript.
+  var patchesCopy = [];
+  for (var x = 0; x < patches.length; x++) {
+    var patch = patches[x];
+    var patchCopy = new diff_match_patch.patch_obj();
+    patchCopy.diffs = [];
+    for (var y = 0; y < patch.diffs.length; y++) {
+      patchCopy.diffs[y] =
+          new diff_match_patch.Diff(patch.diffs[y][0], patch.diffs[y][1]);
+    }
+    patchCopy.start1 = patch.start1;
+    patchCopy.start2 = patch.start2;
+    patchCopy.length1 = patch.length1;
+    patchCopy.length2 = patch.length2;
+    patchesCopy[x] = patchCopy;
+  }
+  return patchesCopy;
+};
+
+
+/**
+ * Merge a set of patches onto the text.  Return a patched text, as well
+ * as a list of true/false values indicating which patches were applied.
+ * @param {!Array.<!diff_match_patch.patch_obj>} patches Array of Patch objects.
+ * @param {string} text Old text.
+ * @return {!Array.<string|!Array.<boolean>>} Two element Array, containing the
+ *      new text and an array of boolean values.
+ */
+diff_match_patch.prototype.patch_apply = function(patches, text) {
+  if (patches.length == 0) {
+    return [text, []];
+  }
+
+  // Deep copy the patches so that no changes are made to originals.
+  patches = this.patch_deepCopy(patches);
+
+  var nullPadding = this.patch_addPadding(patches);
+  text = nullPadding + text + nullPadding;
+
+  this.patch_splitMax(patches);
+  // delta keeps track of the offset between the expected and actual location
+  // of the previous patch.  If there are patches expected at positions 10 and
+  // 20, but the first patch was found at 12, delta is 2 and the second patch
+  // has an effective expected position of 22.
+  var delta = 0;
+  var results = [];
+  for (var x = 0; x < patches.length; x++) {
+    var expected_loc = patches[x].start2 + delta;
+    var text1 = this.diff_text1(patches[x].diffs);
+    var start_loc;
+    var end_loc = -1;
+    if (text1.length > this.Match_MaxBits) {
+      // patch_splitMax will only provide an oversized pattern in the case of
+      // a monster delete.
+      start_loc = this.match_main(text, text1.substring(0, this.Match_MaxBits),
+                                  expected_loc);
+      if (start_loc != -1) {
+        end_loc = this.match_main(text,
+            text1.substring(text1.length - this.Match_MaxBits),
+            expected_loc + text1.length - this.Match_MaxBits);
+        if (end_loc == -1 || start_loc >= end_loc) {
+          // Can't find valid trailing context.  Drop this patch.
+          start_loc = -1;
+        }
+      }
+    } else {
+      start_loc = this.match_main(text, text1, expected_loc);
+    }
+    if (start_loc == -1) {
+      // No match found.  :(
+      results[x] = false;
+      // Subtract the delta for this failed patch from subsequent patches.
+      delta -= patches[x].length2 - patches[x].length1;
+    } else {
+      // Found a match.  :)
+      results[x] = true;
+      delta = start_loc - expected_loc;
+      var text2;
+      if (end_loc == -1) {
+        text2 = text.substring(start_loc, start_loc + text1.length);
+      } else {
+        text2 = text.substring(start_loc, end_loc + this.Match_MaxBits);
+      }
+      if (text1 == text2) {
+        // Perfect match, just shove the replacement text in.
+        text = text.substring(0, start_loc) +
+               this.diff_text2(patches[x].diffs) +
+               text.substring(start_loc + text1.length);
+      } else {
+        // Imperfect match.  Run a diff to get a framework of equivalent
+        // indices.
+        var diffs = this.diff_main(text1, text2, false);
+        if (text1.length > this.Match_MaxBits &&
+            this.diff_levenshtein(diffs) / text1.length >
+            this.Patch_DeleteThreshold) {
+          // The end points match, but the content is unacceptably bad.
+          results[x] = false;
+        } else {
+          this.diff_cleanupSemanticLossless(diffs);
+          var index1 = 0;
+          var index2;
+          for (var y = 0; y < patches[x].diffs.length; y++) {
+            var mod = patches[x].diffs[y];
+            if (mod[0] !== DIFF_EQUAL) {
+              index2 = this.diff_xIndex(diffs, index1);
+            }
+            if (mod[0] === DIFF_INSERT) {  // Insertion
+              text = text.substring(0, start_loc + index2) + mod[1] +
+                     text.substring(start_loc + index2);
+            } else if (mod[0] === DIFF_DELETE) {  // Deletion
+              text = text.substring(0, start_loc + index2) +
+                     text.substring(start_loc + this.diff_xIndex(diffs,
+                         index1 + mod[1].length));
+            }
+            if (mod[0] !== DIFF_DELETE) {
+              index1 += mod[1].length;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Strip the padding off.
+  text = text.substring(nullPadding.length, text.length - nullPadding.length);
+  return [text, results];
+};
+
+
+/**
+ * Add some padding on text start and end so that edges can match something.
+ * Intended to be called only from within patch_apply.
+ * @param {!Array.<!diff_match_patch.patch_obj>} patches Array of Patch objects.
+ * @return {string} The padding string added to each side.
+ */
+diff_match_patch.prototype.patch_addPadding = function(patches) {
+  var paddingLength = this.Patch_Margin;
+  var nullPadding = '';
+  for (var x = 1; x <= paddingLength; x++) {
+    nullPadding += String.fromCharCode(x);
+  }
+
+  // Bump all the patches forward.
+  for (var x = 0; x < patches.length; x++) {
+    patches[x].start1 += paddingLength;
+    patches[x].start2 += paddingLength;
+  }
+
+  // Add some padding on start of first diff.
+  var patch = patches[0];
+  var diffs = patch.diffs;
+  if (diffs.length == 0 || diffs[0][0] != DIFF_EQUAL) {
+    // Add nullPadding equality.
+    diffs.unshift(new diff_match_patch.Diff(DIFF_EQUAL, nullPadding));
+    patch.start1 -= paddingLength;  // Should be 0.
+    patch.start2 -= paddingLength;  // Should be 0.
+    patch.length1 += paddingLength;
+    patch.length2 += paddingLength;
+  } else if (paddingLength > diffs[0][1].length) {
+    // Grow first equality.
+    var extraLength = paddingLength - diffs[0][1].length;
+    diffs[0][1] = nullPadding.substring(diffs[0][1].length) + diffs[0][1];
+    patch.start1 -= extraLength;
+    patch.start2 -= extraLength;
+    patch.length1 += extraLength;
+    patch.length2 += extraLength;
+  }
+
+  // Add some padding on end of last diff.
+  patch = patches[patches.length - 1];
+  diffs = patch.diffs;
+  if (diffs.length == 0 || diffs[diffs.length - 1][0] != DIFF_EQUAL) {
+    // Add nullPadding equality.
+    diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, nullPadding));
+    patch.length1 += paddingLength;
+    patch.length2 += paddingLength;
+  } else if (paddingLength > diffs[diffs.length - 1][1].length) {
+    // Grow last equality.
+    var extraLength = paddingLength - diffs[diffs.length - 1][1].length;
+    diffs[diffs.length - 1][1] += nullPadding.substring(0, extraLength);
+    patch.length1 += extraLength;
+    patch.length2 += extraLength;
+  }
+
+  return nullPadding;
+};
+
+
+/**
+ * Look through the patches and break up any which are longer than the maximum
+ * limit of the match algorithm.
+ * Intended to be called only from within patch_apply.
+ * @param {!Array.<!diff_match_patch.patch_obj>} patches Array of Patch objects.
+ */
+diff_match_patch.prototype.patch_splitMax = function(patches) {
+  var patch_size = this.Match_MaxBits;
+  for (var x = 0; x < patches.length; x++) {
+    if (patches[x].length1 <= patch_size) {
+      continue;
+    }
+    var bigpatch = patches[x];
+    // Remove the big old patch.
+    patches.splice(x--, 1);
+    var start1 = bigpatch.start1;
+    var start2 = bigpatch.start2;
+    var precontext = '';
+    while (bigpatch.diffs.length !== 0) {
+      // Create one of several smaller patches.
+      var patch = new diff_match_patch.patch_obj();
+      var empty = true;
+      patch.start1 = start1 - precontext.length;
+      patch.start2 = start2 - precontext.length;
+      if (precontext !== '') {
+        patch.length1 = patch.length2 = precontext.length;
+        patch.diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, precontext));
+      }
+      while (bigpatch.diffs.length !== 0 &&
+             patch.length1 < patch_size - this.Patch_Margin) {
+        var diff_type = bigpatch.diffs[0][0];
+        var diff_text = bigpatch.diffs[0][1];
+        if (diff_type === DIFF_INSERT) {
+          // Insertions are harmless.
+          patch.length2 += diff_text.length;
+          start2 += diff_text.length;
+          patch.diffs.push(bigpatch.diffs.shift());
+          empty = false;
+        } else if (diff_type === DIFF_DELETE && patch.diffs.length == 1 &&
+                   patch.diffs[0][0] == DIFF_EQUAL &&
+                   diff_text.length > 2 * patch_size) {
+          // This is a large deletion.  Let it pass in one chunk.
+          patch.length1 += diff_text.length;
+          start1 += diff_text.length;
+          empty = false;
+          patch.diffs.push(new diff_match_patch.Diff(diff_type, diff_text));
+          bigpatch.diffs.shift();
+        } else {
+          // Deletion or equality.  Only take as much as we can stomach.
+          diff_text = diff_text.substring(0,
+              patch_size - patch.length1 - this.Patch_Margin);
+          patch.length1 += diff_text.length;
+          start1 += diff_text.length;
+          if (diff_type === DIFF_EQUAL) {
+            patch.length2 += diff_text.length;
+            start2 += diff_text.length;
+          } else {
+            empty = false;
+          }
+          patch.diffs.push(new diff_match_patch.Diff(diff_type, diff_text));
+          if (diff_text == bigpatch.diffs[0][1]) {
+            bigpatch.diffs.shift();
+          } else {
+            bigpatch.diffs[0][1] =
+                bigpatch.diffs[0][1].substring(diff_text.length);
+          }
+        }
+      }
+      // Compute the head context for the next patch.
+      precontext = this.diff_text2(patch.diffs);
+      precontext =
+          precontext.substring(precontext.length - this.Patch_Margin);
+      // Append the end context for this patch.
+      var postcontext = this.diff_text1(bigpatch.diffs)
+                            .substring(0, this.Patch_Margin);
+      if (postcontext !== '') {
+        patch.length1 += postcontext.length;
+        patch.length2 += postcontext.length;
+        if (patch.diffs.length !== 0 &&
+            patch.diffs[patch.diffs.length - 1][0] === DIFF_EQUAL) {
+          patch.diffs[patch.diffs.length - 1][1] += postcontext;
+        } else {
+          patch.diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, postcontext));
+        }
+      }
+      if (!empty) {
+        patches.splice(++x, 0, patch);
+      }
+    }
+  }
+};
+
+
+/**
+ * Take a list of patches and return a textual representation.
+ * @param {!Array.<!diff_match_patch.patch_obj>} patches Array of Patch objects.
+ * @return {string} Text representation of patches.
+ */
+diff_match_patch.prototype.patch_toText = function(patches) {
+  var text = [];
+  for (var x = 0; x < patches.length; x++) {
+    text[x] = patches[x];
+  }
+  return text.join('');
+};
+
+
+/**
+ * Parse a textual representation of patches and return a list of Patch objects.
+ * @param {string} textline Text representation of patches.
+ * @return {!Array.<!diff_match_patch.patch_obj>} Array of Patch objects.
+ * @throws {!Error} If invalid input.
+ */
+diff_match_patch.prototype.patch_fromText = function(textline) {
+  var patches = [];
+  if (!textline) {
+    return patches;
+  }
+  var text = textline.split('\n');
+  var textPointer = 0;
+  var patchHeader = /^@@ -(\d+),?(\d*) \+(\d+),?(\d*) @@$/;
+  while (textPointer < text.length) {
+    var m = text[textPointer].match(patchHeader);
+    if (!m) {
+      throw new Error('Invalid patch string: ' + text[textPointer]);
+    }
+    var patch = new diff_match_patch.patch_obj();
+    patches.push(patch);
+    patch.start1 = parseInt(m[1], 10);
+    if (m[2] === '') {
+      patch.start1--;
+      patch.length1 = 1;
+    } else if (m[2] == '0') {
+      patch.length1 = 0;
+    } else {
+      patch.start1--;
+      patch.length1 = parseInt(m[2], 10);
+    }
+
+    patch.start2 = parseInt(m[3], 10);
+    if (m[4] === '') {
+      patch.start2--;
+      patch.length2 = 1;
+    } else if (m[4] == '0') {
+      patch.length2 = 0;
+    } else {
+      patch.start2--;
+      patch.length2 = parseInt(m[4], 10);
+    }
+    textPointer++;
+
+    while (textPointer < text.length) {
+      var sign = text[textPointer].charAt(0);
+      try {
+        var line = decodeURI(text[textPointer].substring(1));
+      } catch (ex) {
+        // Malformed URI sequence.
+        throw new Error('Illegal escape in patch_fromText: ' + line);
+      }
+      if (sign == '-') {
+        // Deletion.
+        patch.diffs.push(new diff_match_patch.Diff(DIFF_DELETE, line));
+      } else if (sign == '+') {
+        // Insertion.
+        patch.diffs.push(new diff_match_patch.Diff(DIFF_INSERT, line));
+      } else if (sign == ' ') {
+        // Minor equality.
+        patch.diffs.push(new diff_match_patch.Diff(DIFF_EQUAL, line));
+      } else if (sign == '@') {
+        // Start of next patch.
+        break;
+      } else if (sign === '') {
+        // Blank line?  Whatever.
+      } else {
+        // WTF?
+        throw new Error('Invalid patch mode "' + sign + '" in: ' + line);
+      }
+      textPointer++;
+    }
+  }
+  return patches;
+};
+
+
+/**
+ * Class representing one patch operation.
+ * @constructor
+ */
+diff_match_patch.patch_obj = function() {
+  /** @type {!Array.<!diff_match_patch.Diff>} */
+  this.diffs = [];
+  /** @type {?number} */
+  this.start1 = null;
+  /** @type {?number} */
+  this.start2 = null;
+  /** @type {number} */
+  this.length1 = 0;
+  /** @type {number} */
+  this.length2 = 0;
+};
+
+
+/**
+ * Emulate GNU diff's format.
+ * Header: @@ -382,8 +481,9 @@
+ * Indices are printed as 1-based, not 0-based.
+ * @return {string} The GNU diff string.
+ */
+diff_match_patch.patch_obj.prototype.toString = function() {
+  var coords1, coords2;
+  if (this.length1 === 0) {
+    coords1 = this.start1 + ',0';
+  } else if (this.length1 == 1) {
+    coords1 = this.start1 + 1;
+  } else {
+    coords1 = (this.start1 + 1) + ',' + this.length1;
+  }
+  if (this.length2 === 0) {
+    coords2 = this.start2 + ',0';
+  } else if (this.length2 == 1) {
+    coords2 = this.start2 + 1;
+  } else {
+    coords2 = (this.start2 + 1) + ',' + this.length2;
+  }
+  var text = ['@@ -' + coords1 + ' +' + coords2 + ' @@\n'];
+  var op;
+  // Escape the body of the patch with %xx notation.
+  for (var x = 0; x < this.diffs.length; x++) {
+    switch (this.diffs[x][0]) {
+      case DIFF_INSERT:
+        op = '+';
+        break;
+      case DIFF_DELETE:
+        op = '-';
+        break;
+      case DIFF_EQUAL:
+        op = ' ';
+        break;
+    }
+    text[x + 1] = op + encodeURI(this.diffs[x][1]) + '\n';
+  }
+  return text.join('').replace(/%20/g, ' ');
+};
+
+
+// The following export code was added by @ForbesLindesay
+module.exports = diff_match_patch;
+module.exports.diff_match_patch = diff_match_patch;
+module.exports.DIFF_DELETE = DIFF_DELETE;
+module.exports.DIFF_INSERT = DIFF_INSERT;
+module.exports.DIFF_EQUAL = DIFF_EQUAL;
+
+/***/ }),
+
+/***/ 691:
+/***/ ((module) => {
+
+
+
+var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
+
+module.exports = function (str) {
+	if (typeof str !== 'string') {
+		throw new TypeError('Expected a string');
+	}
+
+	return str.replace(matchOperatorsRe, '\\$&');
+};
+
+
+/***/ }),
+
+/***/ 621:
+/***/ ((module) => {
+
+
+module.exports = (flag, argv) => {
+	argv = argv || process.argv;
+	const prefix = flag.startsWith('-') ? '' : (flag.length === 1 ? '-' : '--');
+	const pos = argv.indexOf(prefix + flag);
+	const terminatorPos = argv.indexOf('--');
+	return pos !== -1 && (terminatorPos === -1 ? true : pos < terminatorPos);
+};
+
+
+/***/ }),
+
+/***/ 468:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({ value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var dmp = _interopDefault(__nccwpck_require__(675));
+var chalk = _interopDefault(__nccwpck_require__(662));
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  return typeof obj;
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+
+
+
+
+
+
+
+
+
+
+
+var classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+
+
+
+
+
+
+var get = function get(object, property, receiver) {
+  if (object === null) object = Function.prototype;
+  var desc = Object.getOwnPropertyDescriptor(object, property);
+
+  if (desc === undefined) {
+    var parent = Object.getPrototypeOf(object);
+
+    if (parent === null) {
+      return undefined;
+    } else {
+      return get(parent, property, receiver);
+    }
+  } else if ("value" in desc) {
+    return desc.value;
+  } else {
+    var getter = desc.get;
+
+    if (getter === undefined) {
+      return undefined;
+    }
+
+    return getter.call(receiver);
+  }
+};
+
+var inherits = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+
+
+
+
+
+
+
+
+
+
+var possibleConstructorReturn = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+};
+
+
+
+
+
+var slicedToArray = function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+
+    try {
+      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);
+
+        if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"]) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }
+
+    return _arr;
+  }
+
+  return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if (Symbol.iterator in Object(arr)) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance");
+    }
+  };
+}();
+
+
+
+
+
+
+
+
+
+
+
+
+
+var toConsumableArray = function (arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  } else {
+    return Array.from(arr);
+  }
+};
+
+var Processor = function () {
+  function Processor(options) {
+    classCallCheck(this, Processor);
+
+    this.selfOptions = options || {};
+    this.pipes = {};
+  }
+
+  createClass(Processor, [{
+    key: 'options',
+    value: function options(_options) {
+      if (_options) {
+        this.selfOptions = _options;
+      }
+      return this.selfOptions;
+    }
+  }, {
+    key: 'pipe',
+    value: function pipe(name, pipeArg) {
+      var pipe = pipeArg;
+      if (typeof name === 'string') {
+        if (typeof pipe === 'undefined') {
+          return this.pipes[name];
+        } else {
+          this.pipes[name] = pipe;
+        }
+      }
+      if (name && name.name) {
+        pipe = name;
+        if (pipe.processor === this) {
+          return pipe;
+        }
+        this.pipes[pipe.name] = pipe;
+      }
+      pipe.processor = this;
+      return pipe;
+    }
+  }, {
+    key: 'process',
+    value: function process(input, pipe) {
+      var context = input;
+      context.options = this.options();
+      var nextPipe = pipe || input.pipe || 'default';
+      var lastPipe = void 0;
+      var lastContext = void 0;
+      while (nextPipe) {
+        if (typeof context.nextAfterChildren !== 'undefined') {
+          // children processed and coming back to parent
+          context.next = context.nextAfterChildren;
+          context.nextAfterChildren = null;
+        }
+
+        if (typeof nextPipe === 'string') {
+          nextPipe = this.pipe(nextPipe);
+        }
+        nextPipe.process(context);
+        lastContext = context;
+        lastPipe = nextPipe;
+        nextPipe = null;
+        if (context) {
+          if (context.next) {
+            context = context.next;
+            nextPipe = lastContext.nextPipe || context.pipe || lastPipe;
+          }
+        }
+      }
+      return context.hasResult ? context.result : undefined;
+    }
+  }]);
+  return Processor;
+}();
+
+var Pipe = function () {
+  function Pipe(name) {
+    classCallCheck(this, Pipe);
+
+    this.name = name;
+    this.filters = [];
+  }
+
+  createClass(Pipe, [{
+    key: 'process',
+    value: function process(input) {
+      if (!this.processor) {
+        throw new Error('add this pipe to a processor before using it');
+      }
+      var debug = this.debug;
+      var length = this.filters.length;
+      var context = input;
+      for (var index = 0; index < length; index++) {
+        var filter = this.filters[index];
+        if (debug) {
+          this.log('filter: ' + filter.filterName);
+        }
+        filter(context);
+        if ((typeof context === 'undefined' ? 'undefined' : _typeof(context)) === 'object' && context.exiting) {
+          context.exiting = false;
+          break;
+        }
+      }
+      if (!context.next && this.resultCheck) {
+        this.resultCheck(context);
+      }
+    }
+  }, {
+    key: 'log',
+    value: function log(msg) {
+      console.log('[jsondiffpatch] ' + this.name + ' pipe, ' + msg);
+    }
+  }, {
+    key: 'append',
+    value: function append() {
+      var _filters;
+
+      (_filters = this.filters).push.apply(_filters, arguments);
+      return this;
+    }
+  }, {
+    key: 'prepend',
+    value: function prepend() {
+      var _filters2;
+
+      (_filters2 = this.filters).unshift.apply(_filters2, arguments);
+      return this;
+    }
+  }, {
+    key: 'indexOf',
+    value: function indexOf(filterName) {
+      if (!filterName) {
+        throw new Error('a filter name is required');
+      }
+      for (var index = 0; index < this.filters.length; index++) {
+        var filter = this.filters[index];
+        if (filter.filterName === filterName) {
+          return index;
+        }
+      }
+      throw new Error('filter not found: ' + filterName);
+    }
+  }, {
+    key: 'list',
+    value: function list() {
+      return this.filters.map(function (f) {
+        return f.filterName;
+      });
+    }
+  }, {
+    key: 'after',
+    value: function after(filterName) {
+      var index = this.indexOf(filterName);
+      var params = Array.prototype.slice.call(arguments, 1);
+      if (!params.length) {
+        throw new Error('a filter is required');
+      }
+      params.unshift(index + 1, 0);
+      Array.prototype.splice.apply(this.filters, params);
+      return this;
+    }
+  }, {
+    key: 'before',
+    value: function before(filterName) {
+      var index = this.indexOf(filterName);
+      var params = Array.prototype.slice.call(arguments, 1);
+      if (!params.length) {
+        throw new Error('a filter is required');
+      }
+      params.unshift(index, 0);
+      Array.prototype.splice.apply(this.filters, params);
+      return this;
+    }
+  }, {
+    key: 'replace',
+    value: function replace(filterName) {
+      var index = this.indexOf(filterName);
+      var params = Array.prototype.slice.call(arguments, 1);
+      if (!params.length) {
+        throw new Error('a filter is required');
+      }
+      params.unshift(index, 1);
+      Array.prototype.splice.apply(this.filters, params);
+      return this;
+    }
+  }, {
+    key: 'remove',
+    value: function remove(filterName) {
+      var index = this.indexOf(filterName);
+      this.filters.splice(index, 1);
+      return this;
+    }
+  }, {
+    key: 'clear',
+    value: function clear() {
+      this.filters.length = 0;
+      return this;
+    }
+  }, {
+    key: 'shouldHaveResult',
+    value: function shouldHaveResult(should) {
+      if (should === false) {
+        this.resultCheck = null;
+        return;
+      }
+      if (this.resultCheck) {
+        return;
+      }
+      var pipe = this;
+      this.resultCheck = function (context) {
+        if (!context.hasResult) {
+          console.log(context);
+          var error = new Error(pipe.name + ' failed');
+          error.noResult = true;
+          throw error;
+        }
+      };
+      return this;
+    }
+  }]);
+  return Pipe;
+}();
+
+var Context = function () {
+  function Context() {
+    classCallCheck(this, Context);
+  }
+
+  createClass(Context, [{
+    key: 'setResult',
+    value: function setResult(result) {
+      this.result = result;
+      this.hasResult = true;
+      return this;
+    }
+  }, {
+    key: 'exit',
+    value: function exit() {
+      this.exiting = true;
+      return this;
+    }
+  }, {
+    key: 'switchTo',
+    value: function switchTo(next, pipe) {
+      if (typeof next === 'string' || next instanceof Pipe) {
+        this.nextPipe = next;
+      } else {
+        this.next = next;
+        if (pipe) {
+          this.nextPipe = pipe;
+        }
+      }
+      return this;
+    }
+  }, {
+    key: 'push',
+    value: function push(child, name) {
+      child.parent = this;
+      if (typeof name !== 'undefined') {
+        child.childName = name;
+      }
+      child.root = this.root || this;
+      child.options = child.options || this.options;
+      if (!this.children) {
+        this.children = [child];
+        this.nextAfterChildren = this.next || null;
+        this.next = child;
+      } else {
+        this.children[this.children.length - 1].next = child;
+        this.children.push(child);
+      }
+      child.next = this;
+      return this;
+    }
+  }]);
+  return Context;
+}();
+
+var isArray = typeof Array.isArray === 'function' ? Array.isArray : function (a) {
+  return a instanceof Array;
+};
+
+function cloneRegExp(re) {
+  var regexMatch = /^\/(.*)\/([gimyu]*)$/.exec(re.toString());
+  return new RegExp(regexMatch[1], regexMatch[2]);
+}
+
+function clone(arg) {
+  if ((typeof arg === 'undefined' ? 'undefined' : _typeof(arg)) !== 'object') {
+    return arg;
+  }
+  if (arg === null) {
+    return null;
+  }
+  if (isArray(arg)) {
+    return arg.map(clone);
+  }
+  if (arg instanceof Date) {
+    return new Date(arg.getTime());
+  }
+  if (arg instanceof RegExp) {
+    return cloneRegExp(arg);
+  }
+  var cloned = {};
+  for (var name in arg) {
+    if (Object.prototype.hasOwnProperty.call(arg, name)) {
+      cloned[name] = clone(arg[name]);
+    }
+  }
+  return cloned;
+}
+
+var DiffContext = function (_Context) {
+  inherits(DiffContext, _Context);
+
+  function DiffContext(left, right) {
+    classCallCheck(this, DiffContext);
+
+    var _this = possibleConstructorReturn(this, (DiffContext.__proto__ || Object.getPrototypeOf(DiffContext)).call(this));
+
+    _this.left = left;
+    _this.right = right;
+    _this.pipe = 'diff';
+    return _this;
+  }
+
+  createClass(DiffContext, [{
+    key: 'setResult',
+    value: function setResult(result) {
+      if (this.options.cloneDiffValues && (typeof result === 'undefined' ? 'undefined' : _typeof(result)) === 'object') {
+        var clone$$1 = typeof this.options.cloneDiffValues === 'function' ? this.options.cloneDiffValues : clone;
+        if (_typeof(result[0]) === 'object') {
+          result[0] = clone$$1(result[0]);
+        }
+        if (_typeof(result[1]) === 'object') {
+          result[1] = clone$$1(result[1]);
+        }
+      }
+      return Context.prototype.setResult.apply(this, arguments);
+    }
+  }]);
+  return DiffContext;
+}(Context);
+
+var PatchContext = function (_Context) {
+  inherits(PatchContext, _Context);
+
+  function PatchContext(left, delta) {
+    classCallCheck(this, PatchContext);
+
+    var _this = possibleConstructorReturn(this, (PatchContext.__proto__ || Object.getPrototypeOf(PatchContext)).call(this));
+
+    _this.left = left;
+    _this.delta = delta;
+    _this.pipe = 'patch';
+    return _this;
+  }
+
+  return PatchContext;
+}(Context);
+
+var ReverseContext = function (_Context) {
+  inherits(ReverseContext, _Context);
+
+  function ReverseContext(delta) {
+    classCallCheck(this, ReverseContext);
+
+    var _this = possibleConstructorReturn(this, (ReverseContext.__proto__ || Object.getPrototypeOf(ReverseContext)).call(this));
+
+    _this.delta = delta;
+    _this.pipe = 'reverse';
+    return _this;
+  }
+
+  return ReverseContext;
+}(Context);
+
+var isArray$1 = typeof Array.isArray === 'function' ? Array.isArray : function (a) {
+  return a instanceof Array;
+};
+
+var diffFilter = function trivialMatchesDiffFilter(context) {
+  if (context.left === context.right) {
+    context.setResult(undefined).exit();
+    return;
+  }
+  if (typeof context.left === 'undefined') {
+    if (typeof context.right === 'function') {
+      throw new Error('functions are not supported');
+    }
+    context.setResult([context.right]).exit();
+    return;
+  }
+  if (typeof context.right === 'undefined') {
+    context.setResult([context.left, 0, 0]).exit();
+    return;
+  }
+  if (typeof context.left === 'function' || typeof context.right === 'function') {
+    throw new Error('functions are not supported');
+  }
+  context.leftType = context.left === null ? 'null' : _typeof(context.left);
+  context.rightType = context.right === null ? 'null' : _typeof(context.right);
+  if (context.leftType !== context.rightType) {
+    context.setResult([context.left, context.right]).exit();
+    return;
+  }
+  if (context.leftType === 'boolean' || context.leftType === 'number') {
+    context.setResult([context.left, context.right]).exit();
+    return;
+  }
+  if (context.leftType === 'object') {
+    context.leftIsArray = isArray$1(context.left);
+  }
+  if (context.rightType === 'object') {
+    context.rightIsArray = isArray$1(context.right);
+  }
+  if (context.leftIsArray !== context.rightIsArray) {
+    context.setResult([context.left, context.right]).exit();
+    return;
+  }
+
+  if (context.left instanceof RegExp) {
+    if (context.right instanceof RegExp) {
+      context.setResult([context.left.toString(), context.right.toString()]).exit();
+    } else {
+      context.setResult([context.left, context.right]).exit();
+    }
+  }
+};
+diffFilter.filterName = 'trivial';
+
+var patchFilter = function trivialMatchesPatchFilter(context) {
+  if (typeof context.delta === 'undefined') {
+    context.setResult(context.left).exit();
+    return;
+  }
+  context.nested = !isArray$1(context.delta);
+  if (context.nested) {
+    return;
+  }
+  if (context.delta.length === 1) {
+    context.setResult(context.delta[0]).exit();
+    return;
+  }
+  if (context.delta.length === 2) {
+    if (context.left instanceof RegExp) {
+      var regexArgs = /^\/(.*)\/([gimyu]+)$/.exec(context.delta[1]);
+      if (regexArgs) {
+        context.setResult(new RegExp(regexArgs[1], regexArgs[2])).exit();
+        return;
+      }
+    }
+    context.setResult(context.delta[1]).exit();
+    return;
+  }
+  if (context.delta.length === 3 && context.delta[2] === 0) {
+    context.setResult(undefined).exit();
+  }
+};
+patchFilter.filterName = 'trivial';
+
+var reverseFilter = function trivialReferseFilter(context) {
+  if (typeof context.delta === 'undefined') {
+    context.setResult(context.delta).exit();
+    return;
+  }
+  context.nested = !isArray$1(context.delta);
+  if (context.nested) {
+    return;
+  }
+  if (context.delta.length === 1) {
+    context.setResult([context.delta[0], 0, 0]).exit();
+    return;
+  }
+  if (context.delta.length === 2) {
+    context.setResult([context.delta[1], context.delta[0]]).exit();
+    return;
+  }
+  if (context.delta.length === 3 && context.delta[2] === 0) {
+    context.setResult([context.delta[0]]).exit();
+  }
+};
+reverseFilter.filterName = 'trivial';
+
+function collectChildrenDiffFilter(context) {
+  if (!context || !context.children) {
+    return;
+  }
+  var length = context.children.length;
+  var child = void 0;
+  var result = context.result;
+  for (var index = 0; index < length; index++) {
+    child = context.children[index];
+    if (typeof child.result === 'undefined') {
+      continue;
+    }
+    result = result || {};
+    result[child.childName] = child.result;
+  }
+  if (result && context.leftIsArray) {
+    result._t = 'a';
+  }
+  context.setResult(result).exit();
+}
+collectChildrenDiffFilter.filterName = 'collectChildren';
+
+function objectsDiffFilter(context) {
+  if (context.leftIsArray || context.leftType !== 'object') {
+    return;
+  }
+
+  var name = void 0;
+  var child = void 0;
+  var propertyFilter = context.options.propertyFilter;
+  for (name in context.left) {
+    if (!Object.prototype.hasOwnProperty.call(context.left, name)) {
+      continue;
+    }
+    if (propertyFilter && !propertyFilter(name, context)) {
+      continue;
+    }
+    child = new DiffContext(context.left[name], context.right[name]);
+    context.push(child, name);
+  }
+  for (name in context.right) {
+    if (!Object.prototype.hasOwnProperty.call(context.right, name)) {
+      continue;
+    }
+    if (propertyFilter && !propertyFilter(name, context)) {
+      continue;
+    }
+    if (typeof context.left[name] === 'undefined') {
+      child = new DiffContext(undefined, context.right[name]);
+      context.push(child, name);
+    }
+  }
+
+  if (!context.children || context.children.length === 0) {
+    context.setResult(undefined).exit();
+    return;
+  }
+  context.exit();
+}
+objectsDiffFilter.filterName = 'objects';
+
+var patchFilter$1 = function nestedPatchFilter(context) {
+  if (!context.nested) {
+    return;
+  }
+  if (context.delta._t) {
+    return;
+  }
+  var name = void 0;
+  var child = void 0;
+  for (name in context.delta) {
+    child = new PatchContext(context.left[name], context.delta[name]);
+    context.push(child, name);
+  }
+  context.exit();
+};
+patchFilter$1.filterName = 'objects';
+
+var collectChildrenPatchFilter = function collectChildrenPatchFilter(context) {
+  if (!context || !context.children) {
+    return;
+  }
+  if (context.delta._t) {
+    return;
+  }
+  var length = context.children.length;
+  var child = void 0;
+  for (var index = 0; index < length; index++) {
+    child = context.children[index];
+    if (Object.prototype.hasOwnProperty.call(context.left, child.childName) && child.result === undefined) {
+      delete context.left[child.childName];
+    } else if (context.left[child.childName] !== child.result) {
+      context.left[child.childName] = child.result;
+    }
+  }
+  context.setResult(context.left).exit();
+};
+collectChildrenPatchFilter.filterName = 'collectChildren';
+
+var reverseFilter$1 = function nestedReverseFilter(context) {
+  if (!context.nested) {
+    return;
+  }
+  if (context.delta._t) {
+    return;
+  }
+  var name = void 0;
+  var child = void 0;
+  for (name in context.delta) {
+    child = new ReverseContext(context.delta[name]);
+    context.push(child, name);
+  }
+  context.exit();
+};
+reverseFilter$1.filterName = 'objects';
+
+function collectChildrenReverseFilter(context) {
+  if (!context || !context.children) {
+    return;
+  }
+  if (context.delta._t) {
+    return;
+  }
+  var length = context.children.length;
+  var child = void 0;
+  var delta = {};
+  for (var index = 0; index < length; index++) {
+    child = context.children[index];
+    if (delta[child.childName] !== child.result) {
+      delta[child.childName] = child.result;
+    }
+  }
+  context.setResult(delta).exit();
+}
+collectChildrenReverseFilter.filterName = 'collectChildren';
+
+/*
+
+LCS implementation that supports arrays or strings
+
+reference: http://en.wikipedia.org/wiki/Longest_common_subsequence_problem
+
+*/
+
+var defaultMatch = function defaultMatch(array1, array2, index1, index2) {
+  return array1[index1] === array2[index2];
+};
+
+var lengthMatrix = function lengthMatrix(array1, array2, match, context) {
+  var len1 = array1.length;
+  var len2 = array2.length;
+  var x = void 0,
+      y = void 0;
+
+  // initialize empty matrix of len1+1 x len2+1
+  var matrix = [len1 + 1];
+  for (x = 0; x < len1 + 1; x++) {
+    matrix[x] = [len2 + 1];
+    for (y = 0; y < len2 + 1; y++) {
+      matrix[x][y] = 0;
+    }
+  }
+  matrix.match = match;
+  // save sequence lengths for each coordinate
+  for (x = 1; x < len1 + 1; x++) {
+    for (y = 1; y < len2 + 1; y++) {
+      if (match(array1, array2, x - 1, y - 1, context)) {
+        matrix[x][y] = matrix[x - 1][y - 1] + 1;
+      } else {
+        matrix[x][y] = Math.max(matrix[x - 1][y], matrix[x][y - 1]);
+      }
+    }
+  }
+  return matrix;
+};
+
+var backtrack = function backtrack(matrix, array1, array2, context) {
+  var index1 = array1.length;
+  var index2 = array2.length;
+  var subsequence = {
+    sequence: [],
+    indices1: [],
+    indices2: []
+  };
+
+  while (index1 !== 0 && index2 !== 0) {
+    var sameLetter = matrix.match(array1, array2, index1 - 1, index2 - 1, context);
+    if (sameLetter) {
+      subsequence.sequence.unshift(array1[index1 - 1]);
+      subsequence.indices1.unshift(index1 - 1);
+      subsequence.indices2.unshift(index2 - 1);
+      --index1;
+      --index2;
+    } else {
+      var valueAtMatrixAbove = matrix[index1][index2 - 1];
+      var valueAtMatrixLeft = matrix[index1 - 1][index2];
+      if (valueAtMatrixAbove > valueAtMatrixLeft) {
+        --index2;
+      } else {
+        --index1;
+      }
+    }
+  }
+  return subsequence;
+};
+
+var get$1 = function get(array1, array2, match, context) {
+  var innerContext = context || {};
+  var matrix = lengthMatrix(array1, array2, match || defaultMatch, innerContext);
+  var result = backtrack(matrix, array1, array2, innerContext);
+  if (typeof array1 === 'string' && typeof array2 === 'string') {
+    result.sequence = result.sequence.join('');
+  }
+  return result;
+};
+
+var lcs = {
+  get: get$1
+};
+
+var ARRAY_MOVE = 3;
+
+var isArray$2 = typeof Array.isArray === 'function' ? Array.isArray : function (a) {
+  return a instanceof Array;
+};
+
+var arrayIndexOf = typeof Array.prototype.indexOf === 'function' ? function (array, item) {
+  return array.indexOf(item);
+} : function (array, item) {
+  var length = array.length;
+  for (var i = 0; i < length; i++) {
+    if (array[i] === item) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+function arraysHaveMatchByRef(array1, array2, len1, len2) {
+  for (var index1 = 0; index1 < len1; index1++) {
+    var val1 = array1[index1];
+    for (var index2 = 0; index2 < len2; index2++) {
+      var val2 = array2[index2];
+      if (index1 !== index2 && val1 === val2) {
+        return true;
+      }
+    }
+  }
+}
+
+function matchItems(array1, array2, index1, index2, context) {
+  var value1 = array1[index1];
+  var value2 = array2[index2];
+  if (value1 === value2) {
+    return true;
+  }
+  if ((typeof value1 === 'undefined' ? 'undefined' : _typeof(value1)) !== 'object' || (typeof value2 === 'undefined' ? 'undefined' : _typeof(value2)) !== 'object') {
+    return false;
+  }
+  var objectHash = context.objectHash;
+  if (!objectHash) {
+    // no way to match objects was provided, try match by position
+    return context.matchByPosition && index1 === index2;
+  }
+  var hash1 = void 0;
+  var hash2 = void 0;
+  if (typeof index1 === 'number') {
+    context.hashCache1 = context.hashCache1 || [];
+    hash1 = context.hashCache1[index1];
+    if (typeof hash1 === 'undefined') {
+      context.hashCache1[index1] = hash1 = objectHash(value1, index1);
+    }
+  } else {
+    hash1 = objectHash(value1);
+  }
+  if (typeof hash1 === 'undefined') {
+    return false;
+  }
+  if (typeof index2 === 'number') {
+    context.hashCache2 = context.hashCache2 || [];
+    hash2 = context.hashCache2[index2];
+    if (typeof hash2 === 'undefined') {
+      context.hashCache2[index2] = hash2 = objectHash(value2, index2);
+    }
+  } else {
+    hash2 = objectHash(value2);
+  }
+  if (typeof hash2 === 'undefined') {
+    return false;
+  }
+  return hash1 === hash2;
+}
+
+var diffFilter$1 = function arraysDiffFilter(context) {
+  if (!context.leftIsArray) {
+    return;
+  }
+
+  var matchContext = {
+    objectHash: context.options && context.options.objectHash,
+    matchByPosition: context.options && context.options.matchByPosition
+  };
+  var commonHead = 0;
+  var commonTail = 0;
+  var index = void 0;
+  var index1 = void 0;
+  var index2 = void 0;
+  var array1 = context.left;
+  var array2 = context.right;
+  var len1 = array1.length;
+  var len2 = array2.length;
+
+  var child = void 0;
+
+  if (len1 > 0 && len2 > 0 && !matchContext.objectHash && typeof matchContext.matchByPosition !== 'boolean') {
+    matchContext.matchByPosition = !arraysHaveMatchByRef(array1, array2, len1, len2);
+  }
+
+  // separate common head
+  while (commonHead < len1 && commonHead < len2 && matchItems(array1, array2, commonHead, commonHead, matchContext)) {
+    index = commonHead;
+    child = new DiffContext(context.left[index], context.right[index]);
+    context.push(child, index);
+    commonHead++;
+  }
+  // separate common tail
+  while (commonTail + commonHead < len1 && commonTail + commonHead < len2 && matchItems(array1, array2, len1 - 1 - commonTail, len2 - 1 - commonTail, matchContext)) {
+    index1 = len1 - 1 - commonTail;
+    index2 = len2 - 1 - commonTail;
+    child = new DiffContext(context.left[index1], context.right[index2]);
+    context.push(child, index2);
+    commonTail++;
+  }
+  var result = void 0;
+  if (commonHead + commonTail === len1) {
+    if (len1 === len2) {
+      // arrays are identical
+      context.setResult(undefined).exit();
+      return;
+    }
+    // trivial case, a block (1 or more consecutive items) was added
+    result = result || {
+      _t: 'a'
+    };
+    for (index = commonHead; index < len2 - commonTail; index++) {
+      result[index] = [array2[index]];
+    }
+    context.setResult(result).exit();
+    return;
+  }
+  if (commonHead + commonTail === len2) {
+    // trivial case, a block (1 or more consecutive items) was removed
+    result = result || {
+      _t: 'a'
+    };
+    for (index = commonHead; index < len1 - commonTail; index++) {
+      result['_' + index] = [array1[index], 0, 0];
+    }
+    context.setResult(result).exit();
+    return;
+  }
+  // reset hash cache
+  delete matchContext.hashCache1;
+  delete matchContext.hashCache2;
+
+  // diff is not trivial, find the LCS (Longest Common Subsequence)
+  var trimmed1 = array1.slice(commonHead, len1 - commonTail);
+  var trimmed2 = array2.slice(commonHead, len2 - commonTail);
+  var seq = lcs.get(trimmed1, trimmed2, matchItems, matchContext);
+  var removedItems = [];
+  result = result || {
+    _t: 'a'
+  };
+  for (index = commonHead; index < len1 - commonTail; index++) {
+    if (arrayIndexOf(seq.indices1, index - commonHead) < 0) {
+      // removed
+      result['_' + index] = [array1[index], 0, 0];
+      removedItems.push(index);
+    }
+  }
+
+  var detectMove = true;
+  if (context.options && context.options.arrays && context.options.arrays.detectMove === false) {
+    detectMove = false;
+  }
+  var includeValueOnMove = false;
+  if (context.options && context.options.arrays && context.options.arrays.includeValueOnMove) {
+    includeValueOnMove = true;
+  }
+
+  var removedItemsLength = removedItems.length;
+  for (index = commonHead; index < len2 - commonTail; index++) {
+    var indexOnArray2 = arrayIndexOf(seq.indices2, index - commonHead);
+    if (indexOnArray2 < 0) {
+      // added, try to match with a removed item and register as position move
+      var isMove = false;
+      if (detectMove && removedItemsLength > 0) {
+        for (var removeItemIndex1 = 0; removeItemIndex1 < removedItemsLength; removeItemIndex1++) {
+          index1 = removedItems[removeItemIndex1];
+          if (matchItems(trimmed1, trimmed2, index1 - commonHead, index - commonHead, matchContext)) {
+            // store position move as: [originalValue, newPosition, ARRAY_MOVE]
+            result['_' + index1].splice(1, 2, index, ARRAY_MOVE);
+            if (!includeValueOnMove) {
+              // don't include moved value on diff, to save bytes
+              result['_' + index1][0] = '';
+            }
+
+            index2 = index;
+            child = new DiffContext(context.left[index1], context.right[index2]);
+            context.push(child, index2);
+            removedItems.splice(removeItemIndex1, 1);
+            isMove = true;
+            break;
+          }
+        }
+      }
+      if (!isMove) {
+        // added
+        result[index] = [array2[index]];
+      }
+    } else {
+      // match, do inner diff
+      index1 = seq.indices1[indexOnArray2] + commonHead;
+      index2 = seq.indices2[indexOnArray2] + commonHead;
+      child = new DiffContext(context.left[index1], context.right[index2]);
+      context.push(child, index2);
+    }
+  }
+
+  context.setResult(result).exit();
+};
+diffFilter$1.filterName = 'arrays';
+
+var compare = {
+  numerically: function numerically(a, b) {
+    return a - b;
+  },
+  numericallyBy: function numericallyBy(name) {
+    return function (a, b) {
+      return a[name] - b[name];
+    };
+  }
+};
+
+var patchFilter$2 = function nestedPatchFilter(context) {
+  if (!context.nested) {
+    return;
+  }
+  if (context.delta._t !== 'a') {
+    return;
+  }
+  var index = void 0;
+  var index1 = void 0;
+
+  var delta = context.delta;
+  var array = context.left;
+
+  // first, separate removals, insertions and modifications
+  var toRemove = [];
+  var toInsert = [];
+  var toModify = [];
+  for (index in delta) {
+    if (index !== '_t') {
+      if (index[0] === '_') {
+        // removed item from original array
+        if (delta[index][2] === 0 || delta[index][2] === ARRAY_MOVE) {
+          toRemove.push(parseInt(index.slice(1), 10));
+        } else {
+          throw new Error('only removal or move can be applied at original array indices,' + (' invalid diff type: ' + delta[index][2]));
+        }
+      } else {
+        if (delta[index].length === 1) {
+          // added item at new array
+          toInsert.push({
+            index: parseInt(index, 10),
+            value: delta[index][0]
+          });
+        } else {
+          // modified item at new array
+          toModify.push({
+            index: parseInt(index, 10),
+            delta: delta[index]
+          });
+        }
+      }
+    }
+  }
+
+  // remove items, in reverse order to avoid sawing our own floor
+  toRemove = toRemove.sort(compare.numerically);
+  for (index = toRemove.length - 1; index >= 0; index--) {
+    index1 = toRemove[index];
+    var indexDiff = delta['_' + index1];
+    var removedValue = array.splice(index1, 1)[0];
+    if (indexDiff[2] === ARRAY_MOVE) {
+      // reinsert later
+      toInsert.push({
+        index: indexDiff[1],
+        value: removedValue
+      });
+    }
+  }
+
+  // insert items, in reverse order to avoid moving our own floor
+  toInsert = toInsert.sort(compare.numericallyBy('index'));
+  var toInsertLength = toInsert.length;
+  for (index = 0; index < toInsertLength; index++) {
+    var insertion = toInsert[index];
+    array.splice(insertion.index, 0, insertion.value);
+  }
+
+  // apply modifications
+  var toModifyLength = toModify.length;
+  var child = void 0;
+  if (toModifyLength > 0) {
+    for (index = 0; index < toModifyLength; index++) {
+      var modification = toModify[index];
+      child = new PatchContext(context.left[modification.index], modification.delta);
+      context.push(child, modification.index);
+    }
+  }
+
+  if (!context.children) {
+    context.setResult(context.left).exit();
+    return;
+  }
+  context.exit();
+};
+patchFilter$2.filterName = 'arrays';
+
+var collectChildrenPatchFilter$1 = function collectChildrenPatchFilter(context) {
+  if (!context || !context.children) {
+    return;
+  }
+  if (context.delta._t !== 'a') {
+    return;
+  }
+  var length = context.children.length;
+  var child = void 0;
+  for (var index = 0; index < length; index++) {
+    child = context.children[index];
+    context.left[child.childName] = child.result;
+  }
+  context.setResult(context.left).exit();
+};
+collectChildrenPatchFilter$1.filterName = 'arraysCollectChildren';
+
+var reverseFilter$2 = function arraysReverseFilter(context) {
+  if (!context.nested) {
+    if (context.delta[2] === ARRAY_MOVE) {
+      context.newName = '_' + context.delta[1];
+      context.setResult([context.delta[0], parseInt(context.childName.substr(1), 10), ARRAY_MOVE]).exit();
+    }
+    return;
+  }
+  if (context.delta._t !== 'a') {
+    return;
+  }
+  var name = void 0;
+  var child = void 0;
+  for (name in context.delta) {
+    if (name === '_t') {
+      continue;
+    }
+    child = new ReverseContext(context.delta[name]);
+    context.push(child, name);
+  }
+  context.exit();
+};
+reverseFilter$2.filterName = 'arrays';
+
+var reverseArrayDeltaIndex = function reverseArrayDeltaIndex(delta, index, itemDelta) {
+  if (typeof index === 'string' && index[0] === '_') {
+    return parseInt(index.substr(1), 10);
+  } else if (isArray$2(itemDelta) && itemDelta[2] === 0) {
+    return '_' + index;
+  }
+
+  var reverseIndex = +index;
+  for (var deltaIndex in delta) {
+    var deltaItem = delta[deltaIndex];
+    if (isArray$2(deltaItem)) {
+      if (deltaItem[2] === ARRAY_MOVE) {
+        var moveFromIndex = parseInt(deltaIndex.substr(1), 10);
+        var moveToIndex = deltaItem[1];
+        if (moveToIndex === +index) {
+          return moveFromIndex;
+        }
+        if (moveFromIndex <= reverseIndex && moveToIndex > reverseIndex) {
+          reverseIndex++;
+        } else if (moveFromIndex >= reverseIndex && moveToIndex < reverseIndex) {
+          reverseIndex--;
+        }
+      } else if (deltaItem[2] === 0) {
+        var deleteIndex = parseInt(deltaIndex.substr(1), 10);
+        if (deleteIndex <= reverseIndex) {
+          reverseIndex++;
+        }
+      } else if (deltaItem.length === 1 && deltaIndex <= reverseIndex) {
+        reverseIndex--;
+      }
+    }
+  }
+
+  return reverseIndex;
+};
+
+function collectChildrenReverseFilter$1(context) {
+  if (!context || !context.children) {
+    return;
+  }
+  if (context.delta._t !== 'a') {
+    return;
+  }
+  var length = context.children.length;
+  var child = void 0;
+  var delta = {
+    _t: 'a'
+  };
+
+  for (var index = 0; index < length; index++) {
+    child = context.children[index];
+    var name = child.newName;
+    if (typeof name === 'undefined') {
+      name = reverseArrayDeltaIndex(context.delta, child.childName, child.result);
+    }
+    if (delta[name] !== child.result) {
+      delta[name] = child.result;
+    }
+  }
+  context.setResult(delta).exit();
+}
+collectChildrenReverseFilter$1.filterName = 'arraysCollectChildren';
+
+var diffFilter$2 = function datesDiffFilter(context) {
+  if (context.left instanceof Date) {
+    if (context.right instanceof Date) {
+      if (context.left.getTime() !== context.right.getTime()) {
+        context.setResult([context.left, context.right]);
+      } else {
+        context.setResult(undefined);
+      }
+    } else {
+      context.setResult([context.left, context.right]);
+    }
+    context.exit();
+  } else if (context.right instanceof Date) {
+    context.setResult([context.left, context.right]).exit();
+  }
+};
+diffFilter$2.filterName = 'dates';
+
+/* global diff_match_patch */
+var TEXT_DIFF = 2;
+var DEFAULT_MIN_LENGTH = 60;
+var cachedDiffPatch = null;
+
+var getDiffMatchPatch = function getDiffMatchPatch(required) {
+  /* jshint camelcase: false */
+
+  if (!cachedDiffPatch) {
+    var instance = void 0;
+    /* eslint-disable camelcase, new-cap */
+    if (typeof diff_match_patch !== 'undefined') {
+      // already loaded, probably a browser
+      instance = typeof diff_match_patch === 'function' ? new diff_match_patch() : new diff_match_patch.diff_match_patch();
+    } else if (dmp) {
+      try {
+        instance = dmp && new dmp();
+      } catch (err) {
+        instance = null;
+      }
+    }
+    /* eslint-enable camelcase, new-cap */
+    if (!instance) {
+      if (!required) {
+        return null;
+      }
+      var error = new Error('text diff_match_patch library not found');
+      // eslint-disable-next-line camelcase
+      error.diff_match_patch_not_found = true;
+      throw error;
+    }
+    cachedDiffPatch = {
+      diff: function diff(txt1, txt2) {
+        return instance.patch_toText(instance.patch_make(txt1, txt2));
+      },
+      patch: function patch(txt1, _patch) {
+        var results = instance.patch_apply(instance.patch_fromText(_patch), txt1);
+        for (var i = 0; i < results[1].length; i++) {
+          if (!results[1][i]) {
+            var _error = new Error('text patch failed');
+            _error.textPatchFailed = true;
+          }
+        }
+        return results[0];
+      }
+    };
+  }
+  return cachedDiffPatch;
+};
+
+var diffFilter$3 = function textsDiffFilter(context) {
+  if (context.leftType !== 'string') {
+    return;
+  }
+  var minLength = context.options && context.options.textDiff && context.options.textDiff.minLength || DEFAULT_MIN_LENGTH;
+  if (context.left.length < minLength || context.right.length < minLength) {
+    context.setResult([context.left, context.right]).exit();
+    return;
+  }
+  // large text, try to use a text-diff algorithm
+  var diffMatchPatch = getDiffMatchPatch();
+  if (!diffMatchPatch) {
+    // diff-match-patch library not available,
+    // fallback to regular string replace
+    context.setResult([context.left, context.right]).exit();
+    return;
+  }
+  var diff = diffMatchPatch.diff;
+  context.setResult([diff(context.left, context.right), 0, TEXT_DIFF]).exit();
+};
+diffFilter$3.filterName = 'texts';
+
+var patchFilter$3 = function textsPatchFilter(context) {
+  if (context.nested) {
+    return;
+  }
+  if (context.delta[2] !== TEXT_DIFF) {
+    return;
+  }
+
+  // text-diff, use a text-patch algorithm
+  var patch = getDiffMatchPatch(true).patch;
+  context.setResult(patch(context.left, context.delta[0])).exit();
+};
+patchFilter$3.filterName = 'texts';
+
+var textDeltaReverse = function textDeltaReverse(delta) {
+  var i = void 0;
+  var l = void 0;
+  var lines = void 0;
+  var line = void 0;
+  var lineTmp = void 0;
+  var header = null;
+  var headerRegex = /^@@ +-(\d+),(\d+) +\+(\d+),(\d+) +@@$/;
+  var lineHeader = void 0;
+  lines = delta.split('\n');
+  for (i = 0, l = lines.length; i < l; i++) {
+    line = lines[i];
+    var lineStart = line.slice(0, 1);
+    if (lineStart === '@') {
+      header = headerRegex.exec(line);
+      lineHeader = i;
+
+      // fix header
+      lines[lineHeader] = '@@ -' + header[3] + ',' + header[4] + ' +' + header[1] + ',' + header[2] + ' @@';
+    } else if (lineStart === '+') {
+      lines[i] = '-' + lines[i].slice(1);
+      if (lines[i - 1].slice(0, 1) === '+') {
+        // swap lines to keep default order (-+)
+        lineTmp = lines[i];
+        lines[i] = lines[i - 1];
+        lines[i - 1] = lineTmp;
+      }
+    } else if (lineStart === '-') {
+      lines[i] = '+' + lines[i].slice(1);
+    }
+  }
+  return lines.join('\n');
+};
+
+var reverseFilter$3 = function textsReverseFilter(context) {
+  if (context.nested) {
+    return;
+  }
+  if (context.delta[2] !== TEXT_DIFF) {
+    return;
+  }
+
+  // text-diff, use a text-diff algorithm
+  context.setResult([textDeltaReverse(context.delta[0]), 0, TEXT_DIFF]).exit();
+};
+reverseFilter$3.filterName = 'texts';
+
+var DiffPatcher = function () {
+  function DiffPatcher(options) {
+    classCallCheck(this, DiffPatcher);
+
+    this.processor = new Processor(options);
+    this.processor.pipe(new Pipe('diff').append(collectChildrenDiffFilter, diffFilter, diffFilter$2, diffFilter$3, objectsDiffFilter, diffFilter$1).shouldHaveResult());
+    this.processor.pipe(new Pipe('patch').append(collectChildrenPatchFilter, collectChildrenPatchFilter$1, patchFilter, patchFilter$3, patchFilter$1, patchFilter$2).shouldHaveResult());
+    this.processor.pipe(new Pipe('reverse').append(collectChildrenReverseFilter, collectChildrenReverseFilter$1, reverseFilter, reverseFilter$3, reverseFilter$1, reverseFilter$2).shouldHaveResult());
+  }
+
+  createClass(DiffPatcher, [{
+    key: 'options',
+    value: function options() {
+      var _processor;
+
+      return (_processor = this.processor).options.apply(_processor, arguments);
+    }
+  }, {
+    key: 'diff',
+    value: function diff(left, right) {
+      return this.processor.process(new DiffContext(left, right));
+    }
+  }, {
+    key: 'patch',
+    value: function patch(left, delta) {
+      return this.processor.process(new PatchContext(left, delta));
+    }
+  }, {
+    key: 'reverse',
+    value: function reverse(delta) {
+      return this.processor.process(new ReverseContext(delta));
+    }
+  }, {
+    key: 'unpatch',
+    value: function unpatch(right, delta) {
+      return this.patch(right, this.reverse(delta));
+    }
+  }, {
+    key: 'clone',
+    value: function clone$$1(value) {
+      return clone(value);
+    }
+  }]);
+  return DiffPatcher;
+}();
+
+var isArray$3 = typeof Array.isArray === 'function' ? Array.isArray : function (a) {
+  return a instanceof Array;
+};
+
+var getObjectKeys = typeof Object.keys === 'function' ? function (obj) {
+  return Object.keys(obj);
+} : function (obj) {
+  var names = [];
+  for (var property in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, property)) {
+      names.push(property);
+    }
+  }
+  return names;
+};
+
+var trimUnderscore = function trimUnderscore(str) {
+  if (str.substr(0, 1) === '_') {
+    return str.slice(1);
+  }
+  return str;
+};
+
+var arrayKeyToSortNumber = function arrayKeyToSortNumber(key) {
+  if (key === '_t') {
+    return -1;
+  } else {
+    if (key.substr(0, 1) === '_') {
+      return parseInt(key.slice(1), 10);
+    } else {
+      return parseInt(key, 10) + 0.1;
+    }
+  }
+};
+
+var arrayKeyComparer = function arrayKeyComparer(key1, key2) {
+  return arrayKeyToSortNumber(key1) - arrayKeyToSortNumber(key2);
+};
+
+var BaseFormatter = function () {
+  function BaseFormatter() {
+    classCallCheck(this, BaseFormatter);
+  }
+
+  createClass(BaseFormatter, [{
+    key: 'format',
+    value: function format(delta, left) {
+      var context = {};
+      this.prepareContext(context);
+      this.recurse(context, delta, left);
+      return this.finalize(context);
+    }
+  }, {
+    key: 'prepareContext',
+    value: function prepareContext(context) {
+      context.buffer = [];
+      context.out = function () {
+        var _buffer;
+
+        (_buffer = this.buffer).push.apply(_buffer, arguments);
+      };
+    }
+  }, {
+    key: 'typeFormattterNotFound',
+    value: function typeFormattterNotFound(context, deltaType) {
+      throw new Error('cannot format delta type: ' + deltaType);
+    }
+  }, {
+    key: 'typeFormattterErrorFormatter',
+    value: function typeFormattterErrorFormatter(context, err) {
+      return err.toString();
+    }
+  }, {
+    key: 'finalize',
+    value: function finalize(_ref) {
+      var buffer = _ref.buffer;
+
+      if (isArray$3(buffer)) {
+        return buffer.join('');
+      }
+    }
+  }, {
+    key: 'recurse',
+    value: function recurse(context, delta, left, key, leftKey, movedFrom, isLast) {
+      var useMoveOriginHere = delta && movedFrom;
+      var leftValue = useMoveOriginHere ? movedFrom.value : left;
+
+      if (typeof delta === 'undefined' && typeof key === 'undefined') {
+        return undefined;
+      }
+
+      var type = this.getDeltaType(delta, movedFrom);
+      var nodeType = type === 'node' ? delta._t === 'a' ? 'array' : 'object' : '';
+
+      if (typeof key !== 'undefined') {
+        this.nodeBegin(context, key, leftKey, type, nodeType, isLast);
+      } else {
+        this.rootBegin(context, type, nodeType);
+      }
+
+      var typeFormattter = void 0;
+      try {
+        typeFormattter = this['format_' + type] || this.typeFormattterNotFound(context, type);
+        typeFormattter.call(this, context, delta, leftValue, key, leftKey, movedFrom);
+      } catch (err) {
+        this.typeFormattterErrorFormatter(context, err, delta, leftValue, key, leftKey, movedFrom);
+        if (typeof console !== 'undefined' && console.error) {
+          console.error(err.stack);
+        }
+      }
+
+      if (typeof key !== 'undefined') {
+        this.nodeEnd(context, key, leftKey, type, nodeType, isLast);
+      } else {
+        this.rootEnd(context, type, nodeType);
+      }
+    }
+  }, {
+    key: 'formatDeltaChildren',
+    value: function formatDeltaChildren(context, delta, left) {
+      var self = this;
+      this.forEachDeltaKey(delta, left, function (key, leftKey, movedFrom, isLast) {
+        self.recurse(context, delta[key], left ? left[leftKey] : undefined, key, leftKey, movedFrom, isLast);
+      });
+    }
+  }, {
+    key: 'forEachDeltaKey',
+    value: function forEachDeltaKey(delta, left, fn) {
+      var keys = getObjectKeys(delta);
+      var arrayKeys = delta._t === 'a';
+      var moveDestinations = {};
+      var name = void 0;
+      if (typeof left !== 'undefined') {
+        for (name in left) {
+          if (Object.prototype.hasOwnProperty.call(left, name)) {
+            if (typeof delta[name] === 'undefined' && (!arrayKeys || typeof delta['_' + name] === 'undefined')) {
+              keys.push(name);
+            }
+          }
+        }
+      }
+      // look for move destinations
+      for (name in delta) {
+        if (Object.prototype.hasOwnProperty.call(delta, name)) {
+          var value = delta[name];
+          if (isArray$3(value) && value[2] === 3) {
+            moveDestinations[value[1].toString()] = {
+              key: name,
+              value: left && left[parseInt(name.substr(1))]
+            };
+            if (this.includeMoveDestinations !== false) {
+              if (typeof left === 'undefined' && typeof delta[value[1]] === 'undefined') {
+                keys.push(value[1].toString());
+              }
+            }
+          }
+        }
+      }
+      if (arrayKeys) {
+        keys.sort(arrayKeyComparer);
+      } else {
+        keys.sort();
+      }
+      for (var index = 0, length = keys.length; index < length; index++) {
+        var key = keys[index];
+        if (arrayKeys && key === '_t') {
+          continue;
+        }
+        var leftKey = arrayKeys ? typeof key === 'number' ? key : parseInt(trimUnderscore(key), 10) : key;
+        var isLast = index === length - 1;
+        fn(key, leftKey, moveDestinations[leftKey], isLast);
+      }
+    }
+  }, {
+    key: 'getDeltaType',
+    value: function getDeltaType(delta, movedFrom) {
+      if (typeof delta === 'undefined') {
+        if (typeof movedFrom !== 'undefined') {
+          return 'movedestination';
+        }
+        return 'unchanged';
+      }
+      if (isArray$3(delta)) {
+        if (delta.length === 1) {
+          return 'added';
+        }
+        if (delta.length === 2) {
+          return 'modified';
+        }
+        if (delta.length === 3 && delta[2] === 0) {
+          return 'deleted';
+        }
+        if (delta.length === 3 && delta[2] === 2) {
+          return 'textdiff';
+        }
+        if (delta.length === 3 && delta[2] === 3) {
+          return 'moved';
+        }
+      } else if ((typeof delta === 'undefined' ? 'undefined' : _typeof(delta)) === 'object') {
+        return 'node';
+      }
+      return 'unknown';
+    }
+  }, {
+    key: 'parseTextDiff',
+    value: function parseTextDiff(value) {
+      var output = [];
+      var lines = value.split('\n@@ ');
+      for (var i = 0, l = lines.length; i < l; i++) {
+        var line = lines[i];
+        var lineOutput = {
+          pieces: []
+        };
+        var location = /^(?:@@ )?[-+]?(\d+),(\d+)/.exec(line).slice(1);
+        lineOutput.location = {
+          line: location[0],
+          chr: location[1]
+        };
+        var pieces = line.split('\n').slice(1);
+        for (var pieceIndex = 0, piecesLength = pieces.length; pieceIndex < piecesLength; pieceIndex++) {
+          var piece = pieces[pieceIndex];
+          if (!piece.length) {
+            continue;
+          }
+          var pieceOutput = {
+            type: 'context'
+          };
+          if (piece.substr(0, 1) === '+') {
+            pieceOutput.type = 'added';
+          } else if (piece.substr(0, 1) === '-') {
+            pieceOutput.type = 'deleted';
+          }
+          pieceOutput.text = piece.slice(1);
+          lineOutput.pieces.push(pieceOutput);
+        }
+        output.push(lineOutput);
+      }
+      return output;
+    }
+  }]);
+  return BaseFormatter;
+}();
+
+
+
+var base = Object.freeze({
+	default: BaseFormatter
+});
+
+var HtmlFormatter = function (_BaseFormatter) {
+  inherits(HtmlFormatter, _BaseFormatter);
+
+  function HtmlFormatter() {
+    classCallCheck(this, HtmlFormatter);
+    return possibleConstructorReturn(this, (HtmlFormatter.__proto__ || Object.getPrototypeOf(HtmlFormatter)).apply(this, arguments));
+  }
+
+  createClass(HtmlFormatter, [{
+    key: 'typeFormattterErrorFormatter',
+    value: function typeFormattterErrorFormatter(context, err) {
+      context.out('<pre class="jsondiffpatch-error">' + err + '</pre>');
+    }
+  }, {
+    key: 'formatValue',
+    value: function formatValue(context, value) {
+      context.out('<pre>' + htmlEscape(JSON.stringify(value, null, 2)) + '</pre>');
+    }
+  }, {
+    key: 'formatTextDiffString',
+    value: function formatTextDiffString(context, value) {
+      var lines = this.parseTextDiff(value);
+      context.out('<ul class="jsondiffpatch-textdiff">');
+      for (var i = 0, l = lines.length; i < l; i++) {
+        var line = lines[i];
+        context.out('<li><div class="jsondiffpatch-textdiff-location">' + ('<span class="jsondiffpatch-textdiff-line-number">' + line.location.line + '</span><span class="jsondiffpatch-textdiff-char">' + line.location.chr + '</span></div><div class="jsondiffpatch-textdiff-line">'));
+        var pieces = line.pieces;
+        for (var pieceIndex = 0, piecesLength = pieces.length; pieceIndex < piecesLength; pieceIndex++) {
+          /* global decodeURI */
+          var piece = pieces[pieceIndex];
+          context.out('<span class="jsondiffpatch-textdiff-' + piece.type + '">' + htmlEscape(decodeURI(piece.text)) + '</span>');
+        }
+        context.out('</div></li>');
+      }
+      context.out('</ul>');
+    }
+  }, {
+    key: 'rootBegin',
+    value: function rootBegin(context, type, nodeType) {
+      var nodeClass = 'jsondiffpatch-' + type + (nodeType ? ' jsondiffpatch-child-node-type-' + nodeType : '');
+      context.out('<div class="jsondiffpatch-delta ' + nodeClass + '">');
+    }
+  }, {
+    key: 'rootEnd',
+    value: function rootEnd(context) {
+      context.out('</div>' + (context.hasArrows ? '<script type="text/javascript">setTimeout(' + (adjustArrows.toString() + ',10);</script>') : ''));
+    }
+  }, {
+    key: 'nodeBegin',
+    value: function nodeBegin(context, key, leftKey, type, nodeType) {
+      var nodeClass = 'jsondiffpatch-' + type + (nodeType ? ' jsondiffpatch-child-node-type-' + nodeType : '');
+      context.out('<li class="' + nodeClass + '" data-key="' + leftKey + '">' + ('<div class="jsondiffpatch-property-name">' + leftKey + '</div>'));
+    }
+  }, {
+    key: 'nodeEnd',
+    value: function nodeEnd(context) {
+      context.out('</li>');
+    }
+
+    /* jshint camelcase: false */
+    /* eslint-disable camelcase */
+
+  }, {
+    key: 'format_unchanged',
+    value: function format_unchanged(context, delta, left) {
+      if (typeof left === 'undefined') {
+        return;
+      }
+      context.out('<div class="jsondiffpatch-value">');
+      this.formatValue(context, left);
+      context.out('</div>');
+    }
+  }, {
+    key: 'format_movedestination',
+    value: function format_movedestination(context, delta, left) {
+      if (typeof left === 'undefined') {
+        return;
+      }
+      context.out('<div class="jsondiffpatch-value">');
+      this.formatValue(context, left);
+      context.out('</div>');
+    }
+  }, {
+    key: 'format_node',
+    value: function format_node(context, delta, left) {
+      // recurse
+      var nodeType = delta._t === 'a' ? 'array' : 'object';
+      context.out('<ul class="jsondiffpatch-node jsondiffpatch-node-type-' + nodeType + '">');
+      this.formatDeltaChildren(context, delta, left);
+      context.out('</ul>');
+    }
+  }, {
+    key: 'format_added',
+    value: function format_added(context, delta) {
+      context.out('<div class="jsondiffpatch-value">');
+      this.formatValue(context, delta[0]);
+      context.out('</div>');
+    }
+  }, {
+    key: 'format_modified',
+    value: function format_modified(context, delta) {
+      context.out('<div class="jsondiffpatch-value jsondiffpatch-left-value">');
+      this.formatValue(context, delta[0]);
+      context.out('</div>' + '<div class="jsondiffpatch-value jsondiffpatch-right-value">');
+      this.formatValue(context, delta[1]);
+      context.out('</div>');
+    }
+  }, {
+    key: 'format_deleted',
+    value: function format_deleted(context, delta) {
+      context.out('<div class="jsondiffpatch-value">');
+      this.formatValue(context, delta[0]);
+      context.out('</div>');
+    }
+  }, {
+    key: 'format_moved',
+    value: function format_moved(context, delta) {
+      context.out('<div class="jsondiffpatch-value">');
+      this.formatValue(context, delta[0]);
+      context.out('</div><div class="jsondiffpatch-moved-destination">' + delta[1] + '</div>');
+
+      // draw an SVG arrow from here to move destination
+      context.out(
+      /* jshint multistr: true */
+      '<div class="jsondiffpatch-arrow" ' + 'style="position: relative; left: -34px;">\n          <svg width="30" height="60" ' + 'style="position: absolute; display: none;">\n          <defs>\n              <marker id="markerArrow" markerWidth="8" markerHeight="8"\n                 refx="2" refy="4"\n                     orient="auto" markerUnits="userSpaceOnUse">\n                  <path d="M1,1 L1,7 L7,4 L1,1" style="fill: #339;" />\n              </marker>\n          </defs>\n          <path d="M30,0 Q-10,25 26,50"\n            style="stroke: #88f; stroke-width: 2px; fill: none; ' + 'stroke-opacity: 0.5; marker-end: url(#markerArrow);"\n          ></path>\n          </svg>\n      </div>');
+      context.hasArrows = true;
+    }
+  }, {
+    key: 'format_textdiff',
+    value: function format_textdiff(context, delta) {
+      context.out('<div class="jsondiffpatch-value">');
+      this.formatTextDiffString(context, delta[0]);
+      context.out('</div>');
+    }
+  }]);
+  return HtmlFormatter;
+}(BaseFormatter);
+
+function htmlEscape(text) {
+  var html = text;
+  var replacements = [[/&/g, '&amp;'], [/</g, '&lt;'], [/>/g, '&gt;'], [/'/g, '&apos;'], [/"/g, '&quot;']];
+  for (var i = 0; i < replacements.length; i++) {
+    html = html.replace(replacements[i][0], replacements[i][1]);
+  }
+  return html;
+}
+
+var adjustArrows = function jsondiffpatchHtmlFormatterAdjustArrows(nodeArg) {
+  var node = nodeArg || document;
+  var getElementText = function getElementText(_ref) {
+    var textContent = _ref.textContent,
+        innerText = _ref.innerText;
+    return textContent || innerText;
+  };
+  var eachByQuery = function eachByQuery(el, query, fn) {
+    var elems = el.querySelectorAll(query);
+    for (var i = 0, l = elems.length; i < l; i++) {
+      fn(elems[i]);
+    }
+  };
+  var eachChildren = function eachChildren(_ref2, fn) {
+    var children = _ref2.children;
+
+    for (var i = 0, l = children.length; i < l; i++) {
+      fn(children[i], i);
+    }
+  };
+  eachByQuery(node, '.jsondiffpatch-arrow', function (_ref3) {
+    var parentNode = _ref3.parentNode,
+        children = _ref3.children,
+        style = _ref3.style;
+
+    var arrowParent = parentNode;
+    var svg = children[0];
+    var path = svg.children[1];
+    svg.style.display = 'none';
+    var destination = getElementText(arrowParent.querySelector('.jsondiffpatch-moved-destination'));
+    var container = arrowParent.parentNode;
+    var destinationElem = void 0;
+    eachChildren(container, function (child) {
+      if (child.getAttribute('data-key') === destination) {
+        destinationElem = child;
+      }
+    });
+    if (!destinationElem) {
+      return;
+    }
+    try {
+      var distance = destinationElem.offsetTop - arrowParent.offsetTop;
+      svg.setAttribute('height', Math.abs(distance) + 6);
+      style.top = -8 + (distance > 0 ? 0 : distance) + 'px';
+      var curve = distance > 0 ? 'M30,0 Q-10,' + Math.round(distance / 2) + ' 26,' + (distance - 4) : 'M30,' + -distance + ' Q-10,' + Math.round(-distance / 2) + ' 26,4';
+      path.setAttribute('d', curve);
+      svg.style.display = '';
+    } catch (err) {}
+  });
+};
+
+/* jshint camelcase: true */
+/* eslint-enable camelcase */
+
+var showUnchanged = function showUnchanged(show, node, delay) {
+  var el = node || document.body;
+  var prefix = 'jsondiffpatch-unchanged-';
+  var classes = {
+    showing: prefix + 'showing',
+    hiding: prefix + 'hiding',
+    visible: prefix + 'visible',
+    hidden: prefix + 'hidden'
+  };
+  var list = el.classList;
+  if (!list) {
+    return;
+  }
+  if (!delay) {
+    list.remove(classes.showing);
+    list.remove(classes.hiding);
+    list.remove(classes.visible);
+    list.remove(classes.hidden);
+    if (show === false) {
+      list.add(classes.hidden);
+    }
+    return;
+  }
+  if (show === false) {
+    list.remove(classes.showing);
+    list.add(classes.visible);
+    setTimeout(function () {
+      list.add(classes.hiding);
+    }, 10);
+  } else {
+    list.remove(classes.hiding);
+    list.add(classes.showing);
+    list.remove(classes.hidden);
+  }
+  var intervalId = setInterval(function () {
+    adjustArrows(el);
+  }, 100);
+  setTimeout(function () {
+    list.remove(classes.showing);
+    list.remove(classes.hiding);
+    if (show === false) {
+      list.add(classes.hidden);
+      list.remove(classes.visible);
+    } else {
+      list.add(classes.visible);
+      list.remove(classes.hidden);
+    }
+    setTimeout(function () {
+      list.remove(classes.visible);
+      clearInterval(intervalId);
+    }, delay + 400);
+  }, delay);
+};
+
+var hideUnchanged = function hideUnchanged(node, delay) {
+  return showUnchanged(false, node, delay);
+};
+
+var defaultInstance = void 0;
+
+function format(delta, left) {
+  if (!defaultInstance) {
+    defaultInstance = new HtmlFormatter();
+  }
+  return defaultInstance.format(delta, left);
+}
+
+
+
+var html = Object.freeze({
+	showUnchanged: showUnchanged,
+	hideUnchanged: hideUnchanged,
+	default: HtmlFormatter,
+	format: format
+});
+
+var AnnotatedFormatter = function (_BaseFormatter) {
+  inherits(AnnotatedFormatter, _BaseFormatter);
+
+  function AnnotatedFormatter() {
+    classCallCheck(this, AnnotatedFormatter);
+
+    var _this = possibleConstructorReturn(this, (AnnotatedFormatter.__proto__ || Object.getPrototypeOf(AnnotatedFormatter)).call(this));
+
+    _this.includeMoveDestinations = false;
+    return _this;
+  }
+
+  createClass(AnnotatedFormatter, [{
+    key: 'prepareContext',
+    value: function prepareContext(context) {
+      get(AnnotatedFormatter.prototype.__proto__ || Object.getPrototypeOf(AnnotatedFormatter.prototype), 'prepareContext', this).call(this, context);
+      context.indent = function (levels) {
+        this.indentLevel = (this.indentLevel || 0) + (typeof levels === 'undefined' ? 1 : levels);
+        this.indentPad = new Array(this.indentLevel + 1).join('&nbsp;&nbsp;');
+      };
+      context.row = function (json, htmlNote) {
+        context.out('<tr><td style="white-space: nowrap;">' + '<pre class="jsondiffpatch-annotated-indent"' + ' style="display: inline-block">');
+        context.out(context.indentPad);
+        context.out('</pre><pre style="display: inline-block">');
+        context.out(json);
+        context.out('</pre></td><td class="jsondiffpatch-delta-note"><div>');
+        context.out(htmlNote);
+        context.out('</div></td></tr>');
+      };
+    }
+  }, {
+    key: 'typeFormattterErrorFormatter',
+    value: function typeFormattterErrorFormatter(context, err) {
+      context.row('', '<pre class="jsondiffpatch-error">' + err + '</pre>');
+    }
+  }, {
+    key: 'formatTextDiffString',
+    value: function formatTextDiffString(context, value) {
+      var lines = this.parseTextDiff(value);
+      context.out('<ul class="jsondiffpatch-textdiff">');
+      for (var i = 0, l = lines.length; i < l; i++) {
+        var line = lines[i];
+        context.out('<li><div class="jsondiffpatch-textdiff-location">' + ('<span class="jsondiffpatch-textdiff-line-number">' + line.location.line + '</span><span class="jsondiffpatch-textdiff-char">' + line.location.chr + '</span></div><div class="jsondiffpatch-textdiff-line">'));
+        var pieces = line.pieces;
+        for (var pieceIndex = 0, piecesLength = pieces.length; pieceIndex < piecesLength; pieceIndex++) {
+          var piece = pieces[pieceIndex];
+          context.out('<span class="jsondiffpatch-textdiff-' + piece.type + '">' + piece.text + '</span>');
+        }
+        context.out('</div></li>');
+      }
+      context.out('</ul>');
+    }
+  }, {
+    key: 'rootBegin',
+    value: function rootBegin(context, type, nodeType) {
+      context.out('<table class="jsondiffpatch-annotated-delta">');
+      if (type === 'node') {
+        context.row('{');
+        context.indent();
+      }
+      if (nodeType === 'array') {
+        context.row('"_t": "a",', 'Array delta (member names indicate array indices)');
+      }
+    }
+  }, {
+    key: 'rootEnd',
+    value: function rootEnd(context, type) {
+      if (type === 'node') {
+        context.indent(-1);
+        context.row('}');
+      }
+      context.out('</table>');
+    }
+  }, {
+    key: 'nodeBegin',
+    value: function nodeBegin(context, key, leftKey, type, nodeType) {
+      context.row('&quot;' + key + '&quot;: {');
+      if (type === 'node') {
+        context.indent();
+      }
+      if (nodeType === 'array') {
+        context.row('"_t": "a",', 'Array delta (member names indicate array indices)');
+      }
+    }
+  }, {
+    key: 'nodeEnd',
+    value: function nodeEnd(context, key, leftKey, type, nodeType, isLast) {
+      if (type === 'node') {
+        context.indent(-1);
+      }
+      context.row('}' + (isLast ? '' : ','));
+    }
+
+    /* jshint camelcase: false */
+
+    /* eslint-disable camelcase */
+
+  }, {
+    key: 'format_unchanged',
+    value: function format_unchanged() {}
+  }, {
+    key: 'format_movedestination',
+    value: function format_movedestination() {}
+  }, {
+    key: 'format_node',
+    value: function format_node(context, delta, left) {
+      // recurse
+      this.formatDeltaChildren(context, delta, left);
+    }
+  }]);
+  return AnnotatedFormatter;
+}(BaseFormatter);
+
+/* eslint-enable camelcase */
+
+var wrapPropertyName = function wrapPropertyName(name) {
+  return '<pre style="display:inline-block">&quot;' + name + '&quot;</pre>';
+};
+
+var deltaAnnotations = {
+  added: function added(delta, left, key, leftKey) {
+    var formatLegend = ' <pre>([newValue])</pre>';
+    if (typeof leftKey === 'undefined') {
+      return 'new value' + formatLegend;
+    }
+    if (typeof leftKey === 'number') {
+      return 'insert at index ' + leftKey + formatLegend;
+    }
+    return 'add property ' + wrapPropertyName(leftKey) + formatLegend;
+  },
+  modified: function modified(delta, left, key, leftKey) {
+    var formatLegend = ' <pre>([previousValue, newValue])</pre>';
+    if (typeof leftKey === 'undefined') {
+      return 'modify value' + formatLegend;
+    }
+    if (typeof leftKey === 'number') {
+      return 'modify at index ' + leftKey + formatLegend;
+    }
+    return 'modify property ' + wrapPropertyName(leftKey) + formatLegend;
+  },
+  deleted: function deleted(delta, left, key, leftKey) {
+    var formatLegend = ' <pre>([previousValue, 0, 0])</pre>';
+    if (typeof leftKey === 'undefined') {
+      return 'delete value' + formatLegend;
+    }
+    if (typeof leftKey === 'number') {
+      return 'remove index ' + leftKey + formatLegend;
+    }
+    return 'delete property ' + wrapPropertyName(leftKey) + formatLegend;
+  },
+  moved: function moved(delta, left, key, leftKey) {
+    return 'move from <span title="(position to remove at original state)">' + ('index ' + leftKey + '</span> to <span title="(position to insert at final') + (' state)">index ' + delta[1] + '</span>');
+  },
+  textdiff: function textdiff(delta, left, key, leftKey) {
+    var location = typeof leftKey === 'undefined' ? '' : typeof leftKey === 'number' ? ' at index ' + leftKey : ' at property ' + wrapPropertyName(leftKey);
+    return 'text diff' + location + ', format is <a href="https://code.google.com/' + 'p/google-diff-match-patch/wiki/Unidiff">a variation of Unidiff</a>';
+  }
+};
+
+var formatAnyChange = function formatAnyChange(context, delta) {
+  var deltaType = this.getDeltaType(delta);
+  var annotator = deltaAnnotations[deltaType];
+  var htmlNote = annotator && annotator.apply(annotator, Array.prototype.slice.call(arguments, 1));
+  var json = JSON.stringify(delta, null, 2);
+  if (deltaType === 'textdiff') {
+    // split text diffs lines
+    json = json.split('\\n').join('\\n"+\n   "');
+  }
+  context.indent();
+  context.row(json, htmlNote);
+  context.indent(-1);
+};
+
+/* eslint-disable camelcase */
+AnnotatedFormatter.prototype.format_added = formatAnyChange;
+AnnotatedFormatter.prototype.format_modified = formatAnyChange;
+AnnotatedFormatter.prototype.format_deleted = formatAnyChange;
+AnnotatedFormatter.prototype.format_moved = formatAnyChange;
+AnnotatedFormatter.prototype.format_textdiff = formatAnyChange;
+var defaultInstance$1 = void 0;
+
+function format$1(delta, left) {
+  if (!defaultInstance$1) {
+    defaultInstance$1 = new AnnotatedFormatter();
+  }
+  return defaultInstance$1.format(delta, left);
+}
+
+
+
+var annotated = Object.freeze({
+	default: AnnotatedFormatter,
+	format: format$1
+});
+
+var OPERATIONS = {
+  add: 'add',
+  remove: 'remove',
+  replace: 'replace',
+  move: 'move'
+};
+
+var JSONFormatter = function (_BaseFormatter) {
+  inherits(JSONFormatter, _BaseFormatter);
+
+  function JSONFormatter() {
+    classCallCheck(this, JSONFormatter);
+
+    var _this = possibleConstructorReturn(this, (JSONFormatter.__proto__ || Object.getPrototypeOf(JSONFormatter)).call(this));
+
+    _this.includeMoveDestinations = true;
+    return _this;
+  }
+
+  createClass(JSONFormatter, [{
+    key: 'prepareContext',
+    value: function prepareContext(context) {
+      get(JSONFormatter.prototype.__proto__ || Object.getPrototypeOf(JSONFormatter.prototype), 'prepareContext', this).call(this, context);
+      context.result = [];
+      context.path = [];
+      context.pushCurrentOp = function (obj) {
+        var op = obj.op,
+            value = obj.value;
+
+        var val = {
+          op: op,
+          path: this.currentPath()
+        };
+        if (typeof value !== 'undefined') {
+          val.value = value;
+        }
+        this.result.push(val);
+      };
+
+      context.pushMoveOp = function (to) {
+        var from = this.currentPath();
+        this.result.push({
+          op: OPERATIONS.move,
+          from: from,
+          path: this.toPath(to)
+        });
+      };
+
+      context.currentPath = function () {
+        return '/' + this.path.join('/');
+      };
+
+      context.toPath = function (toPath) {
+        var to = this.path.slice();
+        to[to.length - 1] = toPath;
+        return '/' + to.join('/');
+      };
+    }
+  }, {
+    key: 'typeFormattterErrorFormatter',
+    value: function typeFormattterErrorFormatter(context, err) {
+      context.out('[ERROR] ' + err);
+    }
+  }, {
+    key: 'rootBegin',
+    value: function rootBegin() {}
+  }, {
+    key: 'rootEnd',
+    value: function rootEnd() {}
+  }, {
+    key: 'nodeBegin',
+    value: function nodeBegin(_ref, key, leftKey) {
+      var path = _ref.path;
+
+      path.push(leftKey);
+    }
+  }, {
+    key: 'nodeEnd',
+    value: function nodeEnd(_ref2) {
+      var path = _ref2.path;
+
+      path.pop();
+    }
+
+    /* jshint camelcase: false */
+    /* eslint-disable camelcase */
+
+  }, {
+    key: 'format_unchanged',
+    value: function format_unchanged() {}
+  }, {
+    key: 'format_movedestination',
+    value: function format_movedestination() {}
+  }, {
+    key: 'format_node',
+    value: function format_node(context, delta, left) {
+      this.formatDeltaChildren(context, delta, left);
+    }
+  }, {
+    key: 'format_added',
+    value: function format_added(context, delta) {
+      context.pushCurrentOp({ op: OPERATIONS.add, value: delta[0] });
+    }
+  }, {
+    key: 'format_modified',
+    value: function format_modified(context, delta) {
+      context.pushCurrentOp({ op: OPERATIONS.replace, value: delta[1] });
+    }
+  }, {
+    key: 'format_deleted',
+    value: function format_deleted(context) {
+      context.pushCurrentOp({ op: OPERATIONS.remove });
+    }
+  }, {
+    key: 'format_moved',
+    value: function format_moved(context, delta) {
+      var to = delta[1];
+      context.pushMoveOp(to);
+    }
+  }, {
+    key: 'format_textdiff',
+    value: function format_textdiff() {
+      throw new Error('Not implemented');
+    }
+  }, {
+    key: 'format',
+    value: function format(delta, left) {
+      var context = {};
+      this.prepareContext(context);
+      this.recurse(context, delta, left);
+      return context.result;
+    }
+  }]);
+  return JSONFormatter;
+}(BaseFormatter);
+
+var last = function last(arr) {
+  return arr[arr.length - 1];
+};
+
+var sortBy = function sortBy(arr, pred) {
+  arr.sort(pred);
+  return arr;
+};
+
+var compareByIndexDesc = function compareByIndexDesc(indexA, indexB) {
+  var lastA = parseInt(indexA, 10);
+  var lastB = parseInt(indexB, 10);
+  if (!(isNaN(lastA) || isNaN(lastB))) {
+    return lastB - lastA;
+  } else {
+    return 0;
+  }
+};
+
+var opsByDescendingOrder = function opsByDescendingOrder(removeOps) {
+  return sortBy(removeOps, function (a, b) {
+    var splitA = a.path.split('/');
+    var splitB = b.path.split('/');
+    if (splitA.length !== splitB.length) {
+      return splitA.length - splitB.length;
+    } else {
+      return compareByIndexDesc(last(splitA), last(splitB));
+    }
+  });
+};
+
+var partitionOps = function partitionOps(arr, fns) {
+  var initArr = Array(fns.length + 1).fill().map(function () {
+    return [];
+  });
+  return arr.map(function (item) {
+    var position = fns.map(function (fn) {
+      return fn(item);
+    }).indexOf(true);
+    if (position < 0) {
+      position = fns.length;
+    }
+    return { item: item, position: position };
+  }).reduce(function (acc, item) {
+    acc[item.position].push(item.item);
+    return acc;
+  }, initArr);
+};
+var isMoveOp = function isMoveOp(_ref3) {
+  var op = _ref3.op;
+  return op === 'move';
+};
+var isRemoveOp = function isRemoveOp(_ref4) {
+  var op = _ref4.op;
+  return op === 'remove';
+};
+
+var reorderOps = function reorderOps(diff) {
+  var _partitionOps = partitionOps(diff, [isMoveOp, isRemoveOp]),
+      _partitionOps2 = slicedToArray(_partitionOps, 3),
+      moveOps = _partitionOps2[0],
+      removedOps = _partitionOps2[1],
+      restOps = _partitionOps2[2];
+
+  var removeOpsReverse = opsByDescendingOrder(removedOps);
+  return [].concat(toConsumableArray(removeOpsReverse), toConsumableArray(moveOps), toConsumableArray(restOps));
+};
+
+var defaultInstance$2 = void 0;
+
+var format$2 = function format(delta, left) {
+  if (!defaultInstance$2) {
+    defaultInstance$2 = new JSONFormatter();
+  }
+  return reorderOps(defaultInstance$2.format(delta, left));
+};
+
+var log = function log(delta, left) {
+  console.log(format$2(delta, left));
+};
+
+
+
+var jsonpatch = Object.freeze({
+	default: JSONFormatter,
+	partitionOps: partitionOps,
+	format: format$2,
+	log: log
+});
+
+function chalkColor(name) {
+  return chalk && chalk[name] || function () {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return args;
+  };
+}
+
+var colors = {
+  added: chalkColor('green'),
+  deleted: chalkColor('red'),
+  movedestination: chalkColor('gray'),
+  moved: chalkColor('yellow'),
+  unchanged: chalkColor('gray'),
+  error: chalkColor('white.bgRed'),
+  textDiffLine: chalkColor('gray')
+};
+
+var ConsoleFormatter = function (_BaseFormatter) {
+  inherits(ConsoleFormatter, _BaseFormatter);
+
+  function ConsoleFormatter() {
+    classCallCheck(this, ConsoleFormatter);
+
+    var _this = possibleConstructorReturn(this, (ConsoleFormatter.__proto__ || Object.getPrototypeOf(ConsoleFormatter)).call(this));
+
+    _this.includeMoveDestinations = false;
+    return _this;
+  }
+
+  createClass(ConsoleFormatter, [{
+    key: 'prepareContext',
+    value: function prepareContext(context) {
+      get(ConsoleFormatter.prototype.__proto__ || Object.getPrototypeOf(ConsoleFormatter.prototype), 'prepareContext', this).call(this, context);
+      context.indent = function (levels) {
+        this.indentLevel = (this.indentLevel || 0) + (typeof levels === 'undefined' ? 1 : levels);
+        this.indentPad = new Array(this.indentLevel + 1).join('  ');
+        this.outLine();
+      };
+      context.outLine = function () {
+        this.buffer.push('\n' + (this.indentPad || ''));
+      };
+      context.out = function () {
+        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+          args[_key2] = arguments[_key2];
+        }
+
+        for (var i = 0, l = args.length; i < l; i++) {
+          var lines = args[i].split('\n');
+          var text = lines.join('\n' + (this.indentPad || ''));
+          if (this.color && this.color[0]) {
+            text = this.color[0](text);
+          }
+          this.buffer.push(text);
+        }
+      };
+      context.pushColor = function (color) {
+        this.color = this.color || [];
+        this.color.unshift(color);
+      };
+      context.popColor = function () {
+        this.color = this.color || [];
+        this.color.shift();
+      };
+    }
+  }, {
+    key: 'typeFormattterErrorFormatter',
+    value: function typeFormattterErrorFormatter(context, err) {
+      context.pushColor(colors.error);
+      context.out('[ERROR]' + err);
+      context.popColor();
+    }
+  }, {
+    key: 'formatValue',
+    value: function formatValue(context, value) {
+      context.out(JSON.stringify(value, null, 2));
+    }
+  }, {
+    key: 'formatTextDiffString',
+    value: function formatTextDiffString(context, value) {
+      var lines = this.parseTextDiff(value);
+      context.indent();
+      for (var i = 0, l = lines.length; i < l; i++) {
+        var line = lines[i];
+        context.pushColor(colors.textDiffLine);
+        context.out(line.location.line + ',' + line.location.chr + ' ');
+        context.popColor();
+        var pieces = line.pieces;
+        for (var pieceIndex = 0, piecesLength = pieces.length; pieceIndex < piecesLength; pieceIndex++) {
+          var piece = pieces[pieceIndex];
+          context.pushColor(colors[piece.type]);
+          context.out(piece.text);
+          context.popColor();
+        }
+        if (i < l - 1) {
+          context.outLine();
+        }
+      }
+      context.indent(-1);
+    }
+  }, {
+    key: 'rootBegin',
+    value: function rootBegin(context, type, nodeType) {
+      context.pushColor(colors[type]);
+      if (type === 'node') {
+        context.out(nodeType === 'array' ? '[' : '{');
+        context.indent();
+      }
+    }
+  }, {
+    key: 'rootEnd',
+    value: function rootEnd(context, type, nodeType) {
+      if (type === 'node') {
+        context.indent(-1);
+        context.out(nodeType === 'array' ? ']' : '}');
+      }
+      context.popColor();
+    }
+  }, {
+    key: 'nodeBegin',
+    value: function nodeBegin(context, key, leftKey, type, nodeType) {
+      context.pushColor(colors[type]);
+      context.out(leftKey + ': ');
+      if (type === 'node') {
+        context.out(nodeType === 'array' ? '[' : '{');
+        context.indent();
+      }
+    }
+  }, {
+    key: 'nodeEnd',
+    value: function nodeEnd(context, key, leftKey, type, nodeType, isLast) {
+      if (type === 'node') {
+        context.indent(-1);
+        context.out(nodeType === 'array' ? ']' : '}' + (isLast ? '' : ','));
+      }
+      if (!isLast) {
+        context.outLine();
+      }
+      context.popColor();
+    }
+
+    /* jshint camelcase: false */
+    /* eslint-disable camelcase */
+
+  }, {
+    key: 'format_unchanged',
+    value: function format_unchanged(context, delta, left) {
+      if (typeof left === 'undefined') {
+        return;
+      }
+      this.formatValue(context, left);
+    }
+  }, {
+    key: 'format_movedestination',
+    value: function format_movedestination(context, delta, left) {
+      if (typeof left === 'undefined') {
+        return;
+      }
+      this.formatValue(context, left);
+    }
+  }, {
+    key: 'format_node',
+    value: function format_node(context, delta, left) {
+      // recurse
+      this.formatDeltaChildren(context, delta, left);
+    }
+  }, {
+    key: 'format_added',
+    value: function format_added(context, delta) {
+      this.formatValue(context, delta[0]);
+    }
+  }, {
+    key: 'format_modified',
+    value: function format_modified(context, delta) {
+      context.pushColor(colors.deleted);
+      this.formatValue(context, delta[0]);
+      context.popColor();
+      context.out(' => ');
+      context.pushColor(colors.added);
+      this.formatValue(context, delta[1]);
+      context.popColor();
+    }
+  }, {
+    key: 'format_deleted',
+    value: function format_deleted(context, delta) {
+      this.formatValue(context, delta[0]);
+    }
+  }, {
+    key: 'format_moved',
+    value: function format_moved(context, delta) {
+      context.out('==> ' + delta[1]);
+    }
+  }, {
+    key: 'format_textdiff',
+    value: function format_textdiff(context, delta) {
+      this.formatTextDiffString(context, delta[0]);
+    }
+  }]);
+  return ConsoleFormatter;
+}(BaseFormatter);
+
+var defaultInstance$3 = void 0;
+
+var format$3 = function format(delta, left) {
+  if (!defaultInstance$3) {
+    defaultInstance$3 = new ConsoleFormatter();
+  }
+  return defaultInstance$3.format(delta, left);
+};
+
+function log$1(delta, left) {
+  console.log(format$3(delta, left));
+}
+
+
+
+var console$1 = Object.freeze({
+	default: ConsoleFormatter,
+	format: format$3,
+	log: log$1
+});
+
+
+
+var index = Object.freeze({
+	base: base,
+	html: html,
+	annotated: annotated,
+	jsonpatch: jsonpatch,
+	console: console$1
+});
+
+// use as 2nd parameter for JSON.parse to revive Date instances
+function dateReviver(key, value) {
+  var parts = void 0;
+  if (typeof value === 'string') {
+    // eslint-disable-next-line max-len
+    parts = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d*))?(Z|([+-])(\d{2}):(\d{2}))$/.exec(value);
+    if (parts) {
+      return new Date(Date.UTC(+parts[1], +parts[2] - 1, +parts[3], +parts[4], +parts[5], +parts[6], +(parts[7] || 0)));
+    }
+  }
+  return value;
+}
+
+function create(options) {
+  return new DiffPatcher(options);
+}
+
+var defaultInstance$4 = void 0;
+
+function diff() {
+  if (!defaultInstance$4) {
+    defaultInstance$4 = new DiffPatcher();
+  }
+  return defaultInstance$4.diff.apply(defaultInstance$4, arguments);
+}
+
+function patch() {
+  if (!defaultInstance$4) {
+    defaultInstance$4 = new DiffPatcher();
+  }
+  return defaultInstance$4.patch.apply(defaultInstance$4, arguments);
+}
+
+function unpatch() {
+  if (!defaultInstance$4) {
+    defaultInstance$4 = new DiffPatcher();
+  }
+  return defaultInstance$4.unpatch.apply(defaultInstance$4, arguments);
+}
+
+function reverse() {
+  if (!defaultInstance$4) {
+    defaultInstance$4 = new DiffPatcher();
+  }
+  return defaultInstance$4.reverse.apply(defaultInstance$4, arguments);
+}
+
+function clone$1() {
+  if (!defaultInstance$4) {
+    defaultInstance$4 = new DiffPatcher();
+  }
+  return defaultInstance$4.clone.apply(defaultInstance$4, arguments);
+}
+
+__webpack_unused_export__ = DiffPatcher;
+__webpack_unused_export__ = index;
+exports.iV = console$1;
+__webpack_unused_export__ = create;
+__webpack_unused_export__ = dateReviver;
+exports.Hg = diff;
+__webpack_unused_export__ = patch;
+__webpack_unused_export__ = unpatch;
+__webpack_unused_export__ = reverse;
+__webpack_unused_export__ = clone$1;
+//# sourceMappingURL=jsondiffpatch.cjs.js.map
+
+
+/***/ }),
+
+/***/ 662:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
+const escapeStringRegexp = __nccwpck_require__(691);
+const ansiStyles = __nccwpck_require__(68);
+const stdoutColor = (__nccwpck_require__(318).stdout);
 
-var callable      = __nccwpck_require__(6097)
-  , forEach       = __nccwpck_require__(9575)
-  , extensions    = __nccwpck_require__(4334)
-  , configure     = __nccwpck_require__(5769)
-  , resolveLength = __nccwpck_require__(1257);
+const template = __nccwpck_require__(820);
 
-module.exports = function self(fn /*, options */) {
-	var options, length, conf;
+const isSimpleWindowsTerm = process.platform === 'win32' && !(process.env.TERM || '').toLowerCase().startsWith('xterm');
 
-	callable(fn);
-	options = Object(arguments[1]);
+// `supportsColor.level` → `ansiStyles.color[name]` mapping
+const levelMapping = ['ansi', 'ansi', 'ansi256', 'ansi16m'];
 
-	if (options.async && options.promise) {
-		throw new Error("Options 'async' and 'promise' cannot be used together");
+// `color-convert` models to exclude from the Chalk API due to conflicts and such
+const skipModels = new Set(['gray']);
+
+const styles = Object.create(null);
+
+function applyOptions(obj, options) {
+	options = options || {};
+
+	// Detect level if not set manually
+	const scLevel = stdoutColor ? stdoutColor.level : 0;
+	obj.level = options.level === undefined ? scLevel : options.level;
+	obj.enabled = 'enabled' in options ? options.enabled : obj.level > 0;
+}
+
+function Chalk(options) {
+	// We check for this.template here since calling `chalk.constructor()`
+	// by itself will have a `this` of a previously constructed chalk object
+	if (!this || !(this instanceof Chalk) || this.template) {
+		const chalk = {};
+		applyOptions(chalk, options);
+
+		chalk.template = function () {
+			const args = [].slice.call(arguments);
+			return chalkTag.apply(null, [chalk.template].concat(args));
+		};
+
+		Object.setPrototypeOf(chalk, Chalk.prototype);
+		Object.setPrototypeOf(chalk.template, chalk);
+
+		chalk.template.constructor = Chalk;
+
+		return chalk.template;
 	}
 
-	// Do not memoize already memoized function
-	if (hasOwnProperty.call(fn, "__memoized__") && !options.force) return fn;
+	applyOptions(this, options);
+}
 
-	// Resolve length;
-	length = resolveLength(options.length, fn.length, options.async && extensions.async);
+// Use bright blue on Windows as the normal blue color is illegible
+if (isSimpleWindowsTerm) {
+	ansiStyles.blue.open = '\u001B[94m';
+}
 
-	// Configure cache map
-	conf = configure(fn, length, options);
+for (const key of Object.keys(ansiStyles)) {
+	ansiStyles[key].closeRe = new RegExp(escapeStringRegexp(ansiStyles[key].close), 'g');
 
-	// Bind eventual extensions
-	forEach(extensions, function (extFn, name) {
-		if (options[name]) extFn(options[name], conf, options);
+	styles[key] = {
+		get() {
+			const codes = ansiStyles[key];
+			return build.call(this, this._styles ? this._styles.concat(codes) : [codes], this._empty, key);
+		}
+	};
+}
+
+styles.visible = {
+	get() {
+		return build.call(this, this._styles || [], true, 'visible');
+	}
+};
+
+ansiStyles.color.closeRe = new RegExp(escapeStringRegexp(ansiStyles.color.close), 'g');
+for (const model of Object.keys(ansiStyles.color.ansi)) {
+	if (skipModels.has(model)) {
+		continue;
+	}
+
+	styles[model] = {
+		get() {
+			const level = this.level;
+			return function () {
+				const open = ansiStyles.color[levelMapping[level]][model].apply(null, arguments);
+				const codes = {
+					open,
+					close: ansiStyles.color.close,
+					closeRe: ansiStyles.color.closeRe
+				};
+				return build.call(this, this._styles ? this._styles.concat(codes) : [codes], this._empty, model);
+			};
+		}
+	};
+}
+
+ansiStyles.bgColor.closeRe = new RegExp(escapeStringRegexp(ansiStyles.bgColor.close), 'g');
+for (const model of Object.keys(ansiStyles.bgColor.ansi)) {
+	if (skipModels.has(model)) {
+		continue;
+	}
+
+	const bgModel = 'bg' + model[0].toUpperCase() + model.slice(1);
+	styles[bgModel] = {
+		get() {
+			const level = this.level;
+			return function () {
+				const open = ansiStyles.bgColor[levelMapping[level]][model].apply(null, arguments);
+				const codes = {
+					open,
+					close: ansiStyles.bgColor.close,
+					closeRe: ansiStyles.bgColor.closeRe
+				};
+				return build.call(this, this._styles ? this._styles.concat(codes) : [codes], this._empty, model);
+			};
+		}
+	};
+}
+
+const proto = Object.defineProperties(() => {}, styles);
+
+function build(_styles, _empty, key) {
+	const builder = function () {
+		return applyStyle.apply(builder, arguments);
+	};
+
+	builder._styles = _styles;
+	builder._empty = _empty;
+
+	const self = this;
+
+	Object.defineProperty(builder, 'level', {
+		enumerable: true,
+		get() {
+			return self.level;
+		},
+		set(level) {
+			self.level = level;
+		}
 	});
 
-	if (self.__profiler__) self.__profiler__(conf);
+	Object.defineProperty(builder, 'enabled', {
+		enumerable: true,
+		get() {
+			return self.enabled;
+		},
+		set(enabled) {
+			self.enabled = enabled;
+		}
+	});
 
-	conf.updateEnv();
-	return conf.memoized;
+	// See below for fix regarding invisible grey/dim combination on Windows
+	builder.hasGrey = this.hasGrey || key === 'gray' || key === 'grey';
+
+	// `__proto__` is used because we must return a function, but there is
+	// no way to create a function with a different prototype
+	builder.__proto__ = proto; // eslint-disable-line no-proto
+
+	return builder;
+}
+
+function applyStyle() {
+	// Support varags, but simply cast to string in case there's only one arg
+	const args = arguments;
+	const argsLen = args.length;
+	let str = String(arguments[0]);
+
+	if (argsLen === 0) {
+		return '';
+	}
+
+	if (argsLen > 1) {
+		// Don't slice `arguments`, it prevents V8 optimizations
+		for (let a = 1; a < argsLen; a++) {
+			str += ' ' + args[a];
+		}
+	}
+
+	if (!this.enabled || this.level <= 0 || !str) {
+		return this._empty ? '' : str;
+	}
+
+	// Turns out that on Windows dimmed gray text becomes invisible in cmd.exe,
+	// see https://github.com/chalk/chalk/issues/58
+	// If we're on Windows and we're dealing with a gray color, temporarily make 'dim' a noop.
+	const originalDim = ansiStyles.dim.open;
+	if (isSimpleWindowsTerm && this.hasGrey) {
+		ansiStyles.dim.open = '';
+	}
+
+	for (const code of this._styles.slice().reverse()) {
+		// Replace any instances already present with a re-opening code
+		// otherwise only the part of the string until said closing code
+		// will be colored, and the rest will simply be 'plain'.
+		str = code.open + str.replace(code.closeRe, code.open) + code.close;
+
+		// Close the styling before a linebreak and reopen
+		// after next line to fix a bleed issue on macOS
+		// https://github.com/chalk/chalk/pull/92
+		str = str.replace(/\r?\n/g, `${code.close}$&${code.open}`);
+	}
+
+	// Reset the original `dim` if we changed it to work around the Windows dimmed gray issue
+	ansiStyles.dim.open = originalDim;
+
+	return str;
+}
+
+function chalkTag(chalk, strings) {
+	if (!Array.isArray(strings)) {
+		// If chalk() was called by itself or with a string,
+		// return the string itself as a string.
+		return [].slice.call(arguments, 1).join(' ');
+	}
+
+	const args = [].slice.call(arguments, 2);
+	const parts = [strings.raw[0]];
+
+	for (let i = 1; i < strings.length; i++) {
+		parts.push(String(args[i - 1]).replace(/[{}\\]/g, '\\$&'));
+		parts.push(String(strings.raw[i]));
+	}
+
+	return template(chalk, parts.join(''));
+}
+
+Object.defineProperties(Chalk.prototype, styles);
+
+module.exports = Chalk(); // eslint-disable-line new-cap
+module.exports.supportsColor = stdoutColor;
+module.exports["default"] = module.exports; // For TypeScript
+
+
+/***/ }),
+
+/***/ 820:
+/***/ ((module) => {
+
+
+const TEMPLATE_REGEX = /(?:\\(u[a-f\d]{4}|x[a-f\d]{2}|.))|(?:\{(~)?(\w+(?:\([^)]*\))?(?:\.\w+(?:\([^)]*\))?)*)(?:[ \t]|(?=\r?\n)))|(\})|((?:.|[\r\n\f])+?)/gi;
+const STYLE_REGEX = /(?:^|\.)(\w+)(?:\(([^)]*)\))?/g;
+const STRING_REGEX = /^(['"])((?:\\.|(?!\1)[^\\])*)\1$/;
+const ESCAPE_REGEX = /\\(u[a-f\d]{4}|x[a-f\d]{2}|.)|([^\\])/gi;
+
+const ESCAPES = new Map([
+	['n', '\n'],
+	['r', '\r'],
+	['t', '\t'],
+	['b', '\b'],
+	['f', '\f'],
+	['v', '\v'],
+	['0', '\0'],
+	['\\', '\\'],
+	['e', '\u001B'],
+	['a', '\u0007']
+]);
+
+function unescape(c) {
+	if ((c[0] === 'u' && c.length === 5) || (c[0] === 'x' && c.length === 3)) {
+		return String.fromCharCode(parseInt(c.slice(1), 16));
+	}
+
+	return ESCAPES.get(c) || c;
+}
+
+function parseArguments(name, args) {
+	const results = [];
+	const chunks = args.trim().split(/\s*,\s*/g);
+	let matches;
+
+	for (const chunk of chunks) {
+		if (!isNaN(chunk)) {
+			results.push(Number(chunk));
+		} else if ((matches = chunk.match(STRING_REGEX))) {
+			results.push(matches[2].replace(ESCAPE_REGEX, (m, escape, chr) => escape ? unescape(escape) : chr));
+		} else {
+			throw new Error(`Invalid Chalk template style argument: ${chunk} (in style '${name}')`);
+		}
+	}
+
+	return results;
+}
+
+function parseStyle(style) {
+	STYLE_REGEX.lastIndex = 0;
+
+	const results = [];
+	let matches;
+
+	while ((matches = STYLE_REGEX.exec(style)) !== null) {
+		const name = matches[1];
+
+		if (matches[2]) {
+			const args = parseArguments(name, matches[2]);
+			results.push([name].concat(args));
+		} else {
+			results.push([name]);
+		}
+	}
+
+	return results;
+}
+
+function buildStyle(chalk, styles) {
+	const enabled = {};
+
+	for (const layer of styles) {
+		for (const style of layer.styles) {
+			enabled[style[0]] = layer.inverse ? null : style.slice(1);
+		}
+	}
+
+	let current = chalk;
+	for (const styleName of Object.keys(enabled)) {
+		if (Array.isArray(enabled[styleName])) {
+			if (!(styleName in current)) {
+				throw new Error(`Unknown Chalk style: ${styleName}`);
+			}
+
+			if (enabled[styleName].length > 0) {
+				current = current[styleName].apply(current, enabled[styleName]);
+			} else {
+				current = current[styleName];
+			}
+		}
+	}
+
+	return current;
+}
+
+module.exports = (chalk, tmp) => {
+	const styles = [];
+	const chunks = [];
+	let chunk = [];
+
+	// eslint-disable-next-line max-params
+	tmp.replace(TEMPLATE_REGEX, (m, escapeChar, inverse, style, close, chr) => {
+		if (escapeChar) {
+			chunk.push(unescape(escapeChar));
+		} else if (style) {
+			const str = chunk.join('');
+			chunk = [];
+			chunks.push(styles.length === 0 ? str : buildStyle(chalk, styles)(str));
+			styles.push({inverse, styles: parseStyle(style)});
+		} else if (close) {
+			if (styles.length === 0) {
+				throw new Error('Found extraneous } in Chalk template literal');
+			}
+
+			chunks.push(buildStyle(chalk, styles)(chunk.join('')));
+			chunk = [];
+			styles.pop();
+		} else {
+			chunk.push(chr);
+		}
+	});
+
+	chunks.push(chunk.join(''));
+
+	if (styles.length > 0) {
+		const errMsg = `Chalk template literal is missing ${styles.length} closing bracket${styles.length === 1 ? '' : 's'} (\`}\`)`;
+		throw new Error(errMsg);
+	}
+
+	return chunks.join('');
 };
 
 
 /***/ }),
 
-/***/ 4152:
-/***/ ((module) => {
+/***/ 318:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
+const os = __nccwpck_require__(37);
+const hasFlag = __nccwpck_require__(621);
 
-var ensureCallable = function (fn) {
-	if (typeof fn !== 'function') throw new TypeError(fn + " is not a function");
-	return fn;
-};
+const env = process.env;
 
-var byObserver = function (Observer) {
-	var node = document.createTextNode(''), queue, currentQueue, i = 0;
-	new Observer(function () {
-		var callback;
-		if (!queue) {
-			if (!currentQueue) return;
-			queue = currentQueue;
-		} else if (currentQueue) {
-			queue = currentQueue.concat(queue);
-		}
-		currentQueue = queue;
-		queue = null;
-		if (typeof currentQueue === 'function') {
-			callback = currentQueue;
-			currentQueue = null;
-			callback();
-			return;
-		}
-		node.data = (i = ++i % 2); // Invoke other batch, to handle leftover callbacks in case of crash
-		while (currentQueue) {
-			callback = currentQueue.shift();
-			if (!currentQueue.length) currentQueue = null;
-			callback();
-		}
-	}).observe(node, { characterData: true });
-	return function (fn) {
-		ensureCallable(fn);
-		if (queue) {
-			if (typeof queue === 'function') queue = [queue, fn];
-			else queue.push(fn);
-			return;
-		}
-		queue = fn;
-		node.data = (i = ++i % 2);
+let forceColor;
+if (hasFlag('no-color') ||
+	hasFlag('no-colors') ||
+	hasFlag('color=false')) {
+	forceColor = false;
+} else if (hasFlag('color') ||
+	hasFlag('colors') ||
+	hasFlag('color=true') ||
+	hasFlag('color=always')) {
+	forceColor = true;
+}
+if ('FORCE_COLOR' in env) {
+	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;
+}
+
+function translateLevel(level) {
+	if (level === 0) {
+		return false;
+	}
+
+	return {
+		level,
+		hasBasic: true,
+		has256: level >= 2,
+		has16m: level >= 3
 	};
+}
+
+function supportsColor(stream) {
+	if (forceColor === false) {
+		return 0;
+	}
+
+	if (hasFlag('color=16m') ||
+		hasFlag('color=full') ||
+		hasFlag('color=truecolor')) {
+		return 3;
+	}
+
+	if (hasFlag('color=256')) {
+		return 2;
+	}
+
+	if (stream && !stream.isTTY && forceColor !== true) {
+		return 0;
+	}
+
+	const min = forceColor ? 1 : 0;
+
+	if (process.platform === 'win32') {
+		// Node.js 7.5.0 is the first version of Node.js to include a patch to
+		// libuv that enables 256 color output on Windows. Anything earlier and it
+		// won't work. However, here we target Node.js 8 at minimum as it is an LTS
+		// release, and Node.js 7 is not. Windows 10 build 10586 is the first Windows
+		// release that supports 256 colors. Windows 10 build 14931 is the first release
+		// that supports 16m/TrueColor.
+		const osRelease = os.release().split('.');
+		if (
+			Number(process.versions.node.split('.')[0]) >= 8 &&
+			Number(osRelease[0]) >= 10 &&
+			Number(osRelease[2]) >= 10586
+		) {
+			return Number(osRelease[2]) >= 14931 ? 3 : 2;
+		}
+
+		return 1;
+	}
+
+	if ('CI' in env) {
+		if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {
+			return 1;
+		}
+
+		return min;
+	}
+
+	if ('TEAMCITY_VERSION' in env) {
+		return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env.TEAMCITY_VERSION) ? 1 : 0;
+	}
+
+	if (env.COLORTERM === 'truecolor') {
+		return 3;
+	}
+
+	if ('TERM_PROGRAM' in env) {
+		const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);
+
+		switch (env.TERM_PROGRAM) {
+			case 'iTerm.app':
+				return version >= 3 ? 3 : 2;
+			case 'Apple_Terminal':
+				return 2;
+			// No default
+		}
+	}
+
+	if (/-256(color)?$/i.test(env.TERM)) {
+		return 2;
+	}
+
+	if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(env.TERM)) {
+		return 1;
+	}
+
+	if ('COLORTERM' in env) {
+		return 1;
+	}
+
+	if (env.TERM === 'dumb') {
+		return min;
+	}
+
+	return min;
+}
+
+function getSupportLevel(stream) {
+	const level = supportsColor(stream);
+	return translateLevel(level);
+}
+
+module.exports = {
+	supportsColor: getSupportLevel,
+	stdout: getSupportLevel(process.stdout),
+	stderr: getSupportLevel(process.stderr)
 };
 
-module.exports = (function () {
-	// Node.js
-	if ((typeof process === 'object') && process && (typeof process.nextTick === 'function')) {
-		return process.nextTick;
-	}
-
-	// queueMicrotask
-	if (typeof queueMicrotask === "function") {
-		return function (cb) { queueMicrotask(ensureCallable(cb)); };
-	}
-
-	// MutationObserver
-	if ((typeof document === 'object') && document) {
-		if (typeof MutationObserver === 'function') return byObserver(MutationObserver);
-		if (typeof WebKitMutationObserver === 'function') return byObserver(WebKitMutationObserver);
-	}
-
-	// W3C Draft
-	// http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html
-	if (typeof setImmediate === 'function') {
-		return function (cb) { setImmediate(ensureCallable(cb)); };
-	}
-
-	// Wide available standard
-	if ((typeof setTimeout === 'function') || (typeof setTimeout === 'object')) {
-		return function (cb) { setTimeout(ensureCallable(cb), 0); };
-	}
-
-	return null;
-}());
-
 
 /***/ }),
 
-/***/ 3686:
-/***/ ((module) => {
-
-
-
-module.exports = 2147483647;
-
-
-/***/ }),
-
-/***/ 9953:
+/***/ 294:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-
-
-var toPosInt   = __nccwpck_require__(3755)
-  , maxTimeout = __nccwpck_require__(3686);
-
-module.exports = function (value) {
-	value = toPosInt(value);
-	if (value > maxTimeout) throw new TypeError(value + " exceeds maximum possible timeout");
-	return value;
-};
+module.exports = __nccwpck_require__(219);
 
 
 /***/ }),
 
-/***/ 4294:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-module.exports = __nccwpck_require__(4219);
-
-
-/***/ }),
-
-/***/ 4219:
+/***/ 219:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
 
-var net = __nccwpck_require__(1808);
-var tls = __nccwpck_require__(4404);
-var http = __nccwpck_require__(3685);
-var https = __nccwpck_require__(5687);
-var events = __nccwpck_require__(2361);
-var assert = __nccwpck_require__(9491);
-var util = __nccwpck_require__(3837);
+var net = __nccwpck_require__(808);
+var tls = __nccwpck_require__(404);
+var http = __nccwpck_require__(685);
+var https = __nccwpck_require__(687);
+var events = __nccwpck_require__(361);
+var assert = __nccwpck_require__(491);
+var util = __nccwpck_require__(837);
 
 
 exports.httpOverHttp = httpOverHttp;
@@ -8506,308 +8451,70 @@ exports.debug = debug; // for test
 
 /***/ }),
 
-/***/ 8951:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isPrototype = __nccwpck_require__(2884);
-
-module.exports = function (value) {
-	if (typeof value !== "function") return false;
-
-	if (!hasOwnProperty.call(value, "length")) return false;
-
-	try {
-		if (typeof value.length !== "number") return false;
-		if (typeof value.call !== "function") return false;
-		if (typeof value.apply !== "function") return false;
-	} catch (error) {
-		return false;
-	}
-
-	return !isPrototype(value);
-};
-
-
-/***/ }),
-
-/***/ 6010:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue       = __nccwpck_require__(3134)
-  , isObject      = __nccwpck_require__(862)
-  , stringCoerce  = __nccwpck_require__(8113)
-  , toShortString = __nccwpck_require__(1887);
-
-var resolveMessage = function (message, value) {
-	return message.replace("%v", toShortString(value));
-};
-
-module.exports = function (value, defaultMessage, inputOptions) {
-	if (!isObject(inputOptions)) throw new TypeError(resolveMessage(defaultMessage, value));
-	if (!isValue(value)) {
-		if ("default" in inputOptions) return inputOptions["default"];
-		if (inputOptions.isOptional) return null;
-	}
-	var errorMessage = stringCoerce(inputOptions.errorMessage);
-	if (!isValue(errorMessage)) errorMessage = defaultMessage;
-	throw new TypeError(resolveMessage(errorMessage, value));
-};
-
-
-/***/ }),
-
-/***/ 6765:
-/***/ ((module) => {
-
-
-
-module.exports = function (value) {
-	try {
-		return value.toString();
-	} catch (error) {
-		try { return String(value); }
-		catch (error2) { return null; }
-	}
-};
-
-
-/***/ }),
-
-/***/ 1887:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var safeToString = __nccwpck_require__(6765);
-
-var reNewLine = /[\n\r\u2028\u2029]/g;
-
-module.exports = function (value) {
-	var string = safeToString(value);
-	if (string === null) return "<Non-coercible to string value>";
-	// Trim if too long
-	if (string.length > 100) string = string.slice(0, 99) + "…";
-	// Replace eventual new lines
-	string = string.replace(reNewLine, function (char) {
-		switch (char) {
-			case "\n":
-				return "\\n";
-			case "\r":
-				return "\\r";
-			case "\u2028":
-				return "\\u2028";
-			case "\u2029":
-				return "\\u2029";
-			/* istanbul ignore next */
-			default:
-				throw new Error("Unexpected character");
-		}
-	});
-	return string;
-};
-
-
-/***/ }),
-
-/***/ 862:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue = __nccwpck_require__(3134);
-
-// prettier-ignore
-var possibleTypes = { "object": true, "function": true, "undefined": true /* document.all */ };
-
-module.exports = function (value) {
-	if (!isValue(value)) return false;
-	return hasOwnProperty.call(possibleTypes, typeof value);
-};
-
-
-/***/ }),
-
-/***/ 3681:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var resolveException = __nccwpck_require__(6010)
-  , is               = __nccwpck_require__(6796);
-
-module.exports = function (value/*, options*/) {
-	if (is(value)) return value;
-	return resolveException(value, "%v is not a plain function", arguments[1]);
-};
-
-
-/***/ }),
-
-/***/ 6796:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isFunction = __nccwpck_require__(8951);
-
-var classRe = /^\s*class[\s{/}]/, functionToString = Function.prototype.toString;
-
-module.exports = function (value) {
-	if (!isFunction(value)) return false;
-	if (classRe.test(functionToString.call(value))) return false;
-	return true;
-};
-
-
-/***/ }),
-
-/***/ 2884:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isObject = __nccwpck_require__(862);
-
-module.exports = function (value) {
-	if (!isObject(value)) return false;
-	try {
-		if (!value.constructor) return false;
-		return value.constructor.prototype === value;
-	} catch (error) {
-		return false;
-	}
-};
-
-
-/***/ }),
-
-/***/ 8113:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var isValue  = __nccwpck_require__(3134)
-  , isObject = __nccwpck_require__(862);
-
-var objectToString = Object.prototype.toString;
-
-module.exports = function (value) {
-	if (!isValue(value)) return null;
-	if (isObject(value)) {
-		// Reject Object.prototype.toString coercion
-		var valueToString = value.toString;
-		if (typeof valueToString !== "function") return null;
-		if (valueToString === objectToString) return null;
-		// Note: It can be object coming from other realm, still as there's no ES3 and CSP compliant
-		// way to resolve its realm's Object.prototype.toString it's left as not addressed edge case
-	}
-	try {
-		return "" + value; // Ensure implicit coercion
-	} catch (error) {
-		return null;
-	}
-};
-
-
-/***/ }),
-
-/***/ 942:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-
-
-var resolveException = __nccwpck_require__(6010)
-  , is               = __nccwpck_require__(3134);
-
-module.exports = function (value/*, options*/) {
-	if (is(value)) return value;
-	return resolveException(value, "Cannot use %v", arguments[1]);
-};
-
-
-/***/ }),
-
-/***/ 3134:
-/***/ ((module) => {
-
-
-
-// ES3 safe
-var _undefined = void 0;
-
-module.exports = function (value) { return value !== _undefined && value !== null; };
-
-
-/***/ }),
-
-/***/ 9491:
+/***/ 491:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("assert");
 
 /***/ }),
 
-/***/ 2361:
+/***/ 361:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("events");
 
 /***/ }),
 
-/***/ 7147:
+/***/ 147:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("fs");
 
 /***/ }),
 
-/***/ 3685:
+/***/ 685:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("http");
 
 /***/ }),
 
-/***/ 5687:
+/***/ 687:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("https");
 
 /***/ }),
 
-/***/ 1808:
+/***/ 808:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("net");
 
 /***/ }),
 
-/***/ 2037:
+/***/ 37:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("os");
 
 /***/ }),
 
-/***/ 1017:
+/***/ 17:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("path");
 
 /***/ }),
 
-/***/ 4404:
+/***/ 404:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("tls");
 
 /***/ }),
 
-/***/ 3837:
+/***/ 837:
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("util");
@@ -8828,8 +8535,8 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("util");
 /******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
 /******/ 	var module = __webpack_module_cache__[moduleId] = {
-/******/ 		// no module.id needed
-/******/ 		// no module.loaded needed
+/******/ 		id: moduleId,
+/******/ 		loaded: false,
 /******/ 		exports: {}
 /******/ 	};
 /******/ 
@@ -8842,11 +8549,23 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("util");
 /******/ 		if(threw) delete __webpack_module_cache__[moduleId];
 /******/ 	}
 /******/ 
+/******/ 	// Flag the module as loaded
+/******/ 	module.loaded = true;
+/******/ 
 /******/ 	// Return the exports of the module
 /******/ 	return module.exports;
 /******/ }
 /******/ 
 /************************************************************************/
+/******/ /* webpack/runtime/node module decorator */
+/******/ (() => {
+/******/ 	__nccwpck_require__.nmd = (module) => {
+/******/ 		module.paths = [];
+/******/ 		if (!module.children) module.children = [];
+/******/ 		return module;
+/******/ 	};
+/******/ })();
+/******/ 
 /******/ /* webpack/runtime/compat */
 /******/ 
 /******/ if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = new URL('.', import.meta.url).pathname.slice(import.meta.url.match(/^file:\/\/\/\w:/) ? 1 : 0, -1) + "/";
@@ -8857,9 +8576,9 @@ var __webpack_exports__ = {};
 (() => {
 
 // EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
-var core = __nccwpck_require__(2186);
-// EXTERNAL MODULE: ./node_modules/json-diff/lib/index.js
-var lib = __nccwpck_require__(9031);
+var core = __nccwpck_require__(186);
+// EXTERNAL MODULE: ./node_modules/jsondiffpatch/dist/jsondiffpatch.cjs.js
+var jsondiffpatch_cjs = __nccwpck_require__(468);
 ;// CONCATENATED MODULE: ./node_modules/chalk/source/vendor/ansi-styles/index.js
 const ANSI_BACKGROUND_OFFSET = 10;
 
@@ -9509,7 +9228,9 @@ const chalkStderr = createChalk({level: stderrColor ? stderrColor.level : 0});
     const expected = parseJSON('expected', core.getInput('expected'))
     const actual = parseJSON('actual', core.getInput('actual'))
 
-    if (!(0,lib.diff)(actual, expected)) {
+    const delta = (0,jsondiffpatch_cjs/* diff */.Hg)(expected, actual)
+
+    if (!delta) {
       core.info(source.green('"expected" and "actual" are equivalent JSON'))
       core.setOutput('equal', 'true')
       return
@@ -9521,9 +9242,7 @@ const chalkStderr = createChalk({level: stderrColor ? stderrColor.level : 0});
 
     core.setOutput('equal', 'false')
 
-    const output = (0,lib.diffString)(actual, expected)
-    core.setOutput('diff', output)
-    console.log(output)
+    jsondiffpatch_cjs/* console.log */.iV.log(delta)
   } catch (err) {
     core.setFailed(err.message)
   }

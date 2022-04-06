@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-import {diff, diffString} from 'json-diff'
+import {diff, console as consoleDiff} from 'jsondiffpatch'
 import chalk from 'chalk'
 
 ;(function () {
@@ -7,7 +7,9 @@ import chalk from 'chalk'
     const expected = parseJSON('expected', core.getInput('expected'))
     const actual = parseJSON('actual', core.getInput('actual'))
 
-    if (!diff(actual, expected)) {
+    const delta = diff(expected, actual)
+
+    if (!delta) {
       core.info(chalk.green('"expected" and "actual" are equivalent JSON'))
       core.setOutput('equal', 'true')
       return
@@ -19,9 +21,7 @@ import chalk from 'chalk'
 
     core.setOutput('equal', 'false')
 
-    const output = diffString(actual, expected)
-    core.setOutput('diff', output)
-    console.log(output)
+    consoleDiff.log(delta)
   } catch (err) {
     core.setFailed(err.message)
   }
