@@ -1,0 +1,16 @@
+name: Test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu
+    steps:
+      - uses: ./
+        with:
+          expected: |
+            { "a" : 1 }
+          actual: |
+            {"a":1}
