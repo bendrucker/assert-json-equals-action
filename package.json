@@ -3,6 +3,9 @@
   "type": "module",
   "version": "1.0.0",
   "description": "GitHub Action for asserting that one JSON string is equal to another, for testing",
+  "scripts": {
+    "build": "ncc build ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bendrucker/assert-json-equals-action.git"
@@ -11,5 +14,8 @@
     "@actions/core": "^1.6.0",
     "chalk": "^5.0.1",
     "json-diff": "^0.7.3"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3"
   }
 }
