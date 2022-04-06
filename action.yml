@@ -1,0 +1,23 @@
+name: Assert JSON Equals
+description: Assert that one JSON string is equal to another, for testing
+runs:
+  using: node16
+  main: dist/index.js
+branding:
+  color: blue
+  icon: code
+inputs:
+  expected:
+    description: The expected JSON string
+    required: true
+  actual:
+    description: The actual JSON string
+    required: true
+  fail:
+    type: boolean
+    description: Fail when the "expected" and "actual" JSON are not equal
+outputs:
+  equal:
+    description: Indicates whether the "expected" and "actual" JSON were equal (true, false)
+  diff:
+    description: The colorized diff representation of the difference between the JSON inputs
