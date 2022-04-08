@@ -32,3 +32,13 @@ jobs:
       - name: Assert not equivalent JSON has "equal=false" output
         if: steps.error.outputs.equal != 'false'
         run: exit 1
+      - name: Not equivalent JSON fail=false
+        id: no-fail
+        uses: ./
+        with:
+          expected: '{"a": 1}'
+          actual: '{"b": 2}'
+          fail: false
+      - name: Assert not equivalent JSON has "equal=false" output
+        if: steps.no-fail.outputs.equal != 'false'
+        run: exit 1
