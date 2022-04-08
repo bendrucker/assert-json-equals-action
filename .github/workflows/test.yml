@@ -20,15 +20,15 @@ jobs:
           expected: '{"a": 1, "b": 2}'
           actual: '{"b": 2, "a": 1}'
       - name: Not equivalent JSON
-        id: not-equivalent
+        id: error
         uses: ./
         continue-on-error: true
         with:
           expected: '{"a": 1}'
           actual: '{"b": 2}'
       - name: Assert not equivalent JSON fails
-        if: steps.not-equvialent.outcome != 'failure'
+        if: steps.error.outcome != 'failure'
         run: exit 1
       - name: Assert not equivalent JSON has "equal=false" output
-        if: steps.not-equvialent.outputs.equal != 'false'
+        if: steps.error.outputs.equal != 'false'
         run: exit 1
