@@ -10,13 +10,13 @@ import chalk from 'chalk'
     const delta = diff(expected, actual)
 
     if (!delta) {
-      core.info(chalk.green('"expected" and "actual" are equivalent JSON'))
+      core.info(chalk.green('✅ "expected" and "actual" are equivalent JSON'))
       core.setOutput('equal', 'true')
       return
     }
 
     if (core.getBooleanInput('fail')) {
-      core.setFailed('"expected" and "actual" are not equivalent JSON')
+      core.setFailed('❌ "expected" and "actual" are not equivalent JSON')
     }
 
     core.setOutput('equal', 'false')

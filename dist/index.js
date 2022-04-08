@@ -9231,13 +9231,13 @@ const chalkStderr = createChalk({level: stderrColor ? stderrColor.level : 0});
     const delta = (0,jsondiffpatch_cjs/* diff */.Hg)(expected, actual)
 
     if (!delta) {
-      core.info(source.green('"expected" and "actual" are equivalent JSON'))
+      core.info(source.green('✅ "expected" and "actual" are equivalent JSON'))
       core.setOutput('equal', 'true')
       return
     }
 
     if (core.getBooleanInput('fail')) {
-      core.setFailed('"expected" and "actual" are not equivalent JSON')
+      core.setFailed('❌ "expected" and "actual" are not equivalent JSON')
     }
 
     core.setOutput('equal', 'false')
