@@ -16,6 +16,7 @@ inputs:
   fail:
     type: boolean
     description: Fail when the "expected" and "actual" JSON are not equal
+    default: true
 outputs:
   equal:
     description: Indicates whether the "expected" and "actual" JSON were equal (true, false)

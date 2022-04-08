@@ -9,9 +9,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./
+      - name: Identical JSON
+        uses: ./
         with:
-          expected: |
-            { "a" : 1 }
-          actual: |
-            {"a":1}
+          expected: '{ "a" : 1 }'
+          actual: '{"a":1}'
+      - name: Equivalent JSON
+        uses: ./
+        with:
+          expected: '{"a": 1, "b": 2}'
+          actual: '{"b": 2, "a": 1}'
+      - name: Not equivalent JSON
+        uses: ./
+        continue-on-error: true
+        with:
+          expected: '{"a": 1}'
+          actual: '{"b": 2}'
+      - name: Not equivalent JSON
+        id: not-equivalent
+        uses: ./
+        continue-on-error: true
+        with:
+          expected: '{"a": 1}'
+          actual: '{"b": 2}'
+      - name: Assert not equivalent JSON fails
+        if: steps.not-equvialent.outcome != 'failure'
+        run: exit 1
+      - name: Assert not equivalent JSON has "equal=false" output
+        if: steps.not-equvialent.outputs.equal != 'false'
+        run: exit 1
