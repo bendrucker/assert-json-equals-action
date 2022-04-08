@@ -5396,13 +5396,13 @@ var deep_equal = __nccwpck_require__(3414);
   }
 })()
 
-
-function parseJSON(name, json) {
+function parseJSON (name, json) {
   try {
     return JSON.parse(json)
   } catch (err) {
     throw new Error(`Failed to parse "${name}" as JSON: ${err}`)
   }
 }
+
 })();
 

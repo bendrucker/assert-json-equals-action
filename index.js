@@ -26,8 +26,7 @@ import deepEqual from 'deep-equal'
   }
 })()
 
-
-function parseJSON(name, json) {
+function parseJSON (name, json) {
   try {
     return JSON.parse(json)
   } catch (err) {
