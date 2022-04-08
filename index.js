@@ -1,15 +1,13 @@
 import * as core from '@actions/core'
-import {diff, console as consoleDiff} from 'jsondiffpatch'
 import chalk from 'chalk'
+import deepEqual from 'deep-equal'
 
-;(function () {
+;(async function () {
   try {
     const expected = parseJSON('expected', core.getInput('expected'))
     const actual = parseJSON('actual', core.getInput('actual'))
 
-    const delta = diff(expected, actual)
-
-    if (!delta) {
+    if (deepEqual(expected, actual)) {
       core.info(chalk.green('✅ "expected" and "actual" are equivalent JSON'))
       core.setOutput('equal', 'true')
       return
@@ -17,7 +15,8 @@ import chalk from 'chalk'
 
     core.setOutput('equal', 'false')
 
-    consoleDiff.log(delta)
+    await core.group('Expected JSON:', () => core.info(JSON.stringify(expected, null, 2)))
+    await core.group('Actual JSON:', () => core.info(JSON.stringify(actual, null, 2)))
 
     if (core.getBooleanInput('fail')) {
       core.setFailed('"expected" and "actual" are not equivalent JSON')

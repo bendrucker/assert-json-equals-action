@@ -20,5 +20,3 @@ inputs:
 outputs:
   equal:
     description: Indicates whether the "expected" and "actual" JSON were equal (true, false)
-  diff:
-    description: The colorized diff representation of the difference between the JSON inputs

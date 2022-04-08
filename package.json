@@ -13,8 +13,7 @@
   "dependencies": {
     "@actions/core": "^1.6.0",
     "chalk": "^5.0.1",
-    "json-diff": "^0.7.3",
-    "jsondiffpatch": "^0.4.1"
+    "deep-equal": "^2.0.5"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.33.3"
