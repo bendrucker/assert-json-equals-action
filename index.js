@@ -15,13 +15,13 @@ import chalk from 'chalk'
       return
     }
 
-    if (core.getBooleanInput('fail')) {
-      core.setFailed('❌ "expected" and "actual" are not equivalent JSON')
-    }
-
     core.setOutput('equal', 'false')
 
     consoleDiff.log(delta)
+
+    if (core.getBooleanInput('fail')) {
+      core.setFailed('"expected" and "actual" are not equivalent JSON')
+    }
   } catch (err) {
     core.setFailed(err.message)
   }
